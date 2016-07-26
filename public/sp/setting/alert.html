@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン前TOP | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+            <h1 class="ttl">
+                <span class="ttl_english">SETTING</span>
+                <span class="ttl_lang">通知</span>
+            </h1>
+            <div id="content">
+                <h2 class="subTtl">通知設定</h2>
+
+                <form class="setting">
+                    <h3 class="setting_ttl">Juristerra内表示</h3>
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">通知音</dt>
+                        <dd class="setting_item_alert">
+                            新しいお知らせが届いた時にサウンドを鳴らす
+                            <input type="checkbox" id="switch1" class="setting_item_alert_switch">
+                            <label for="switch1"></label>
+                        </dd><!-- [/ .setting_item_alert] -->
+                        <dd class="setting_item_alert second">
+                            メッセージを受信した時に音で知らせる
+                            <input type="checkbox" id="switch2" class="setting_item_alert_switch">
+                            <label for="switch2"></label>
+                        </dd><!-- [/ .setting_item_alert] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">お知らせを受け取るアクティビティ</dt>
+                        <dd class="setting_item_alert">
+                            自分に関連するアクティビティ
+                            <p class="setting_item_alert_cap">あなたの投稿が推薦を受けたり、シェアされた場合など、あなたのアクティビティに関するお知らせは常に届きます。</p>
+                            <input type="checkbox" id="switch3" class="setting_item_alert_switch">
+                            <label for="switch3"></label>
+                        </dd><!-- [/ .setting_item_alert] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">デスクトップ通知</dt>
+                        <dd class="setting_item_alert">
+                            CHROMEデスクトップ通知を有効にする
+                            <p class="setting_item_alert_cap">お知らせはコンピューターの画面隅に表示</p>
+                            <input type="checkbox" id="switch4" class="setting_item_alert_switch">
+                            <label for="switch4"></label>
+                        </dd><!-- [/ .setting_item_alert] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dd class="setting_item_edit alert">
+                            <div class="setting_item_edit_submit alert">
+                                <input type="submit" value="保存">
+                                <input type="reset" value="キャンセル">
+                            </div><!-- [/ .setting_item_edit] -->
+                        </dd>
+                    </dl><!-- [/ .setting_item] -->
+                </form><!-- [/ .setting] -->
+
+                <form class="setting">
+                    <h3 class="setting_ttl">メール送信</h3>
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">通知音</dt>
+                        <dd class="setting_item_edit alert">
+                            <input type="radio" id="all" name="alert" value="">
+                            <label for="all">全てのお知らせ<br>（フォローをやめたものを除く）</label><br>
+                            <input type="radio" id="relative" name="alert" value="">
+                            <label for="relative" class="second">あなたに関する重要なお知らせや<br>未読のアクティビティ</label><br>
+                            <input type="radio" id="limited" name="alert" value="">
+                            <label for="limited" class="second">アカウント、セキュリティ、プライバシーに<br>関するお知らせのみ</label>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dd class="setting_item_edit alert">
+                            <div class="setting_item_edit_submit alert">
+                                <input type="submit" value="保存">
+                                <input type="reset" value="キャンセル">
+                            </div><!-- [/ .setting_item_edit] -->
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                </form><!-- [/ .setting] -->
+
+            </div><!-- [/ #content] -->
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+</body>
+</html>

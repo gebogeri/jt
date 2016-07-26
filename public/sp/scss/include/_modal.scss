@@ -1,0 +1,84 @@
+@import '../_mixin';
+
+.modal{
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 94%;
+  max-height: 90%;
+  padding: 27px 15px;
+  border: 1px solid #e5e8eb;
+  background: #fff;
+  cursor: default;
+  overflow-x: visible;
+  overflow-y: scroll;
+  @include e(select){
+    @include select2($l:true,$box-sizing: border-box);
+    @include m(second){
+      @include select2($l:true,$box-sizing: border-box,$t:false);
+    }
+  }// select
+  @include e(fileAdd){
+    position: relative;
+    @include flex($a:center);
+    @include inner($padt:0);
+    height: 3.3rem;
+    @include border;
+    border-top: none;
+    color: #bbb;
+    &:before{
+      content: "";
+      width: 1.5rem;
+      height: 1.1rem;
+      margin-right: .5rem;
+      background: url(/sp/img/common/icon_picture.png) center no-repeat;
+      background-size: cover;
+    }
+    input[type="file"]{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index: 996;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #ecf1f2;
+}
+
+#modal,
+#modal_edit{
+  display: none;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 997;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 12.9%;
+  margin: auto;
+  cursor: pointer;
+  .select2-selection.select2-selection--multiple{
+    padding-right: 0;
+  }
+  .select2-search--inline .select2-search__field{
+    min-width: 60vw;
+  }
+  .form_sep2_50 + .select2-container .select2-selection input{
+    min-width: 100%!important;
+  }
+}
+

@@ -1,0 +1,42 @@
+
+<footer class="footer">
+<div class="content_inner">
+    <div id="footer_section">
+		<dl>
+			<dd>
+				<dt><img src="/img/login/img_footlogo.png" alt="JURISTERRA"></dt>
+			</dd>
+		</dl>
+
+
+    </div>
+    <div id="copy">
+        COPYRIGHT &copy; JURISTERRA ALLRIGHTS RESERVED.
+    </div>
+</div>
+</footer>
+<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+<script src="/js/plugin/jquery.leanModal.min.js"></script>
+<script src="/js/common/login_modal.js"></script>
+<script>
+$(function(){
+    $( 'a[rel*=leanModal]').leanModal({
+        top: 220,                     // モーダルウィンドウの縦位置を指定
+        overlay : 0.9,               // 背面の透明度
+        closeButton: ".modal_close"  // 閉じるボタンのCSS classを指定
+    });
+    $("#jurisdiction_s").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#lawField_s").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#businessArea_s").select2({
+      placeholder: "テキストを入力"
+    });
+    $(".postTags").select2({
+      placeholder: "投稿タグ",
+      tags: true
+    });
+});
+</script>

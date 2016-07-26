@@ -1,0 +1,1712 @@
+@charset "UTF-8";
+
+@import "./mixin";
+
+//----------------------------------------------------
+// common
+//----------------------------------------------------
+
+.va_b {
+  vertical-align: bottom;
+}
+
+#container {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 160px;
+  padding-left: 0;
+}
+
+// 
+.side-title {
+  color: #bbbbbb;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 40px;
+  padding: 0 12px;
+}
+.side-links {
+  font-size: 11px;
+  > li {
+    p {
+      color: #bbb;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 12px;
+    }
+    ul {
+      a {
+        padding-left: 22px;
+      }
+    }
+    a {
+      position: relative;
+      display: block;
+      height: 40px;
+      padding-left: 12px;
+      color: #fff;
+      line-height: 40px;
+      @include clearfix;
+      &.selected {
+        padding-left: 8px;
+        border-left: 4px solid #44d095;
+        background: #22313d;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+  .icon_green {
+    float: right;
+    margin: 13.5px 15px 13.5px 8px;
+  }
+}
+
+// communication用に上書き
+.icon_msg {
+  background: url(/img/common/icon_msg.png) center 0 no-repeat;
+  @include size(14px, 13px);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.side-links {
+  .icon_green {
+    float: none;
+    display: inline-block;
+  }
+  .icon_message_new {
+    float: right;
+    background: url(/img/common/icon_msg_new.png) 0 0 no-repeat;
+    @include size(13px, 12px, true);
+    display: block;
+    margin: 13.5px 11px 13.5px 0;
+  }
+}
+
+#column-communication-sub {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 160px;
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 240px;
+  height: 100%;
+  background-color: #212931;
+}
+#column-communication-sub-content {
+  box-sizing: border-box;
+  padding: 35px 0 50px;
+
+  > p {
+    margin: 0 10px 10px;
+  }
+}
+#column-communication-main {
+  // width: 100%;
+  // width: 580px;
+  // box-sizing: border-box;
+  // float: left;
+  padding-left: 400px;
+}
+
+.btn-default {
+  display: inline-block;
+  background: #bbb;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 120px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 30px;
+  &:hover {
+    background: darken(#bbb, 10%);
+  }
+}
+.btn-primary {
+  display: inline-block;
+  background-color: #44d095;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 120px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 30px;
+  &:hover {
+    background: darken(#44d095, 10%);
+  }
+}
+
+//----------------------------------------------------
+// column-communication-sub 内
+//----------------------------------------------------
+.communication-headline {
+  margin: 0 10px 25px;
+  @include clearfix;
+  h2 {
+    display: inline;
+  }
+  + p {
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  .icon_message_new {
+    float: right;
+    background: url(/img/common/icon_msg_new.png) 0 0 no-repeat;
+    width: 18px;
+    height: 14px;
+    display: block;
+    @include textHide;
+  }
+  .icon_search {
+    float: right;
+    background: url(/img/common/icon_search.png) 0 0 no-repeat;
+    width: 15px;
+    height: 15px;
+    display: block;
+    @include textHide;
+    margin-left: 14px;
+  }
+}
+
+// 新規フォルダ名を入力フォーム
+.form-folder-add {
+  border: 1px solid #35414e;
+  background-color: #212931;
+  margin: 0 10px 25px;
+  @include clearfix;
+  input[type="text"] {
+    width: 163px;
+    height: 25px;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #fff;
+    float: left;
+    @include placeholderColor(#3a4755);
+  }
+  button {
+    background-color: #35414e;
+    color: #fff;
+    width: 55px;
+    height: 25px;
+  }
+}
+
+.folder-group + .folder-group {
+  margin-top: 40px;
+}
+.folder-item {
+  color: #fff;
+
+  &.open {
+    .folder-head,
+    .folder-head02 {
+      background-color: #111b25;
+      background-image: url(/img/common/arrow_close.png);
+    }
+    .in-folder-list {
+      display: block;
+    }
+  }
+}
+
+.folder-head {
+  position: relative;
+  height: 28px;
+  background: url(/img/common/arrow_open.png) 207px center no-repeat;
+  cursor: pointer;
+  border-top: 1px solid #262f38;
+  border-bottom: 1px solid #262f38;
+
+  p {
+    line-height: 28px;
+    letter-spacing: 1.4px;
+    padding-left: 15px;
+    &.folder-name {
+      background: url(/img/common/icon_folder.png) 11px 7px no-repeat;
+      padding-left: 30px;
+    }
+  }
+  .icon_green {
+    display: inline-block;
+  }
+  .btn_gear {
+    right: 3px;
+  }
+}
+
+.folder-head02 {
+  position: relative;
+  height: 28px;
+  background: url(/img/common/arrow_open.png) 224px center no-repeat;
+  cursor: pointer;
+  border-bottom: 1px solid #262f38;
+
+  .folder-name {
+    line-height: 28px;
+    letter-spacing: 1.4px;
+    padding-left: 10px;
+  }
+  .icon_green {
+    display: inline-block;
+  }
+}
+
+.in-folder-list {
+  display: none;
+  > li {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding: 15px 10px;
+    border-bottom: 1px solid #262f38;
+    @include clearfix;
+    &:first-child {
+      border-top: none;
+    }
+    &:hover {
+      background: #212931;
+    }
+    &.selected {
+      background: #111b25;
+    }
+    .icon_circle {
+      float: left;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .in-folder-reply {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    line-height: 20px;
+    .icon_circle {
+      width: 20px;
+      height: 20px;
+      margin-left: 2px;
+    }
+  }
+  .label-question {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    display: block;
+  }
+}
+
+.in-folder-cap {
+  position: relative;
+  margin-left: 48px;
+  line-height: 20px;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 105px;
+  }
+  .btn_gear {
+    margin: 0;
+  }
+}
+.in-folder-name {
+  font-weight: bold;
+}
+// .in-folder-heading {
+// }
+.in-folder-time {
+  position: absolute;
+  width: 50px;
+  top: 0;
+  right: 20px;
+  text-align: right;
+}
+
+.in-folder-setting-popup {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  z-index: 10;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  width: 150px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  &:after, &:before {
+    bottom: 100%;
+    left: 122px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+  &:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-bottom-color: #bbb;
+    border-width: 9px;
+    margin-left: -9px;
+  }
+  li {
+    padding: 3px 12px;
+    &:hover {
+      background: #ededed;
+    }
+  }
+  p {
+    padding: 3px 12px;
+    color: #bbb;
+  }
+  p + ul li:before {
+    content: "- "
+  }
+}
+
+
+// Bookmark
+.bookmark-item {
+  color: #fff;
+  margin-bottom: 5px;
+  &.open {
+    .bookmark-head {
+      background-image: url(/img/common/arrow_close.png);
+    }
+    .bookmark-links {
+      display: block;
+    }
+  }
+  .bookmark-head {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    background: url(/img/common/arrow_open.png) 43px center no-repeat;
+    padding: 0 10px;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .bookmark-links {
+    display: none;
+    a {
+      color: #fff;
+      display: inline-block;
+      text-decoration: underline;
+      margin: 0 0 10px 10px;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+
+//----------------------------------------------------
+// column-communication-main 内
+//----------------------------------------------------
+
+// タイトル部分
+.communication-title {
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 130px;
+  padding: 35px 30px 0;
+  &_container {
+    // width: 620px;
+    // margin: 0 auto;
+    p {
+      font-size: 14px;
+    }
+    .communication-title-sub {
+      img {
+        margin-right: 16px;
+      }
+    }
+    h1 {
+      font-size: 16px;
+      line-height: 23px;
+      padding: 8px 0;
+      margin: 0;
+      border-bottom: 1px solid #e5e8eb;
+      &.none-title {
+        color: #ddd;
+      }
+      input[type="text"] {
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        @include placeholderColor(#ddd);
+      }
+    }
+  }
+
+  .entry_user {
+    padding: 7px 0;
+    .icon_circle, p {
+      float: left;
+      margin-right: 9px;
+      line-height: 30px;
+    }
+    .select2-search__field {
+      height: 28px;
+      @include placeholderColor(#ddd);
+    }
+  }
+  .search-box {
+    padding: 7px 0;
+    .search-input {
+      font-size: 16px;
+      line-height: 40px;
+      width: 480px;
+      @include placeholderColor(#ddd);
+    }
+    .btn-search {
+      display: block;
+      border: none;
+      background: url(/img/common/icon_search.png) center center no-repeat;
+      background-size: 12px;
+      @include size(40px, 40px);
+
+    }
+  }
+}
+
+.post-bookmark {
+  display: inline-block;
+  background: url(/img/common/icon_bookmark.png) center center no-repeat;
+  @include size(16px);
+  @include textHide;
+  &:hover, &.selected {
+    background-image: url(/img/common/icon_bookmark-selected.png);
+  }
+}
+.post-medal {
+  display: inline-block;
+  background: url(/img/common/icon_medal.png) center center no-repeat;
+  @include size(16px);
+  @include textHide;
+  // &:hover, &.selected {
+  //   background-image: url(/img/common/icon_bookmark-selected.png);
+  // }
+}
+
+.communication-post-area {
+  width: 540px;
+  margin: 10px auto;
+}
+.communication-post-box {
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #e5e8eb;
+  padding: 25px 25px 5px;
+  + .communication-post-box {
+    margin-top: 10px;
+  }
+  &.close .communication-post-block {
+    display: none;
+  }
+}
+.communication-post-block {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.communication-post-form {
+  font-size: 12px;
+  h2 {
+    font-size: 14px;
+    border-bottom: 1px solid #e5e8eb;
+    padding-bottom: 10px;
+  }
+  table {
+    margin-bottom: 20px;
+  }
+  th, td {
+    padding: 4px 0;
+  }
+  th {
+    width: 160px;
+    text-align: right;
+    padding-right: 20px;
+  }
+  td {
+    width: 360px;
+    .select-input-box {
+      line-height: 35px;
+    }
+  }
+  input[type="text"], select {
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #e5e8eb;
+  }
+  select {
+    width: 100%;
+    // color: #c4c4c4;
+    padding: 8px 10px;
+    border: 1px solid #e5e8eb;
+    border-radius: 0;
+    box-sizing: border-box;
+    background: #fff url("../../img/setting/arrow_select.png") right 10px center no-repeat;
+    &.select_short {
+      width: 130px;
+    }
+  }
+  .select-input-box {
+    border: 1px solid #e5e8eb;
+    line-height: 35px;
+    height: 35px;
+    + input {
+      margin-top: 9px;
+    }
+  }
+  .select2-selection__choice {
+    margin-top: 4px;
+  }
+  .horizontal1 {
+    width: 140px !important;
+    margin-right: 4px;
+  }
+  .horizontal2 {
+    width: 91px !important;
+    margin-right: 4px;
+  }
+  .horizontal3 {
+    width: 110px !important;
+  }
+
+}
+.communication-post-toggle {
+  color: #bbb;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 0 0;
+  span {
+    font-size: 13px;
+    line-height: 24px;
+    &:after {
+      content: "";
+      display: inline-block;
+      background: url(/img/common/arrow_select.png) center center no-repeat;
+      @include size(24px);
+      vertical-align: bottom;
+    }
+  }
+  // &:hover {
+  //   background-color: #eee;
+  // }
+  &.open {
+    span:after {
+      background-image: url(/img/common/arrow_select_open.png);
+    }
+  }
+}
+
+.communication-post-info {
+  margin-bottom: 10px;
+  .icon_circle {
+    float: left;
+  }
+  .txt_author {
+    line-height: 30px;
+    margin-left: 10px;
+  }
+}
+
+.communication-post-meta {
+  float: right;
+  .post-time {
+    width: 62px;
+    text-align: right;
+    line-height: 16px;
+  }
+  .post-time,
+  .post-bookmark,
+  .post-setting,
+  .post-to-quote {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.communication-post-content {
+  color: #333;
+  font-size: 13px;
+  line-height: 23px;
+  padding: 0 0 20px 40px;
+
+  // 引用
+  .quote_source_user {
+    display: block;
+    margin: 20px 0 10px;
+    .icon_circle {
+      display: inline-block;
+      vertical-align: middle;
+      @include size(18px);
+    }
+    span {
+      display: inline-block;
+      line-height: 18px;
+      margin-left: 8px;
+    }
+  }
+  blockquote {
+    border-left: 4px solid #bbb;
+    margin: 5px 0;
+    padding-left: 18px;
+  }
+}
+
+// 返信
+.communication-post-reply {
+  margin: 10px 0 18px;
+  .reply-to {
+    display: inline-block;
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    background-color: #44d095;
+    width: 30px;
+    height: 17px;
+    line-height: 17px;
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+  .icon_circle {
+    display: inline-block;
+    vertical-align: middle;
+    @include size(18px);
+  }
+  .reply-name {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    span {
+      font-size: 11px;
+      font-weight: normal;
+    }
+  }
+}
+
+// コネクション引用
+.quote_connection {
+  .connection-content {
+    padding: 12px 0 0 10px;
+    @include clearfix;
+    // + .connection-info {
+    //   margin-top: 12px;
+    // }
+    &:last-child {
+      padding-bottom: 12px;
+    }
+  }
+  .icon_circle {
+    @include size(80px);
+    float: left;
+  }
+  .connection-meta {
+    margin-left: 100px;
+    line-height: 14px;
+  }
+  .connection-name {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .connection-company {
+    font-size: 11px;
+    margin-bottom: 5px;
+    span {
+      display: block;
+      font-weight: bold;
+    }
+  }
+  .connection-admission {
+    font-size: 11px;
+    span {
+      display: block;
+      font-size: 8px;
+      color: #bbb;
+    }
+  }
+}
+
+// MYFILE引用
+.icon_circle_arrow_right {
+  display: inline-block;
+  background: url(/img/common/icon_circle_arrow_right.png) center center no-repeat;
+  @include size(16px);
+}
+.icon_download {
+  display: inline-block;
+  background: url(/img/common/icon_download.png) center center no-repeat;
+  @include size(16px);
+}
+
+.quote_myfile {
+  .myfile-content {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 15px 0;
+    border-top: 1px solid #e5e8eb;
+    border-bottom: 1px solid #e5e8eb;
+    + .myfile-content {
+      border-top: none;
+    }
+    &.select {
+      background: #edfbfc;
+    }
+    span {
+      display: block;
+      font-size: 11px;
+      font-weight: normal;
+      color: #bbb;
+      line-height: 20px;
+    }
+    .myfile-btns {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -8px;
+      .icon_circle_arrow_right,
+      .icon_download {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+// 間の日付
+.communication-next-date {
+  color: #bbb;
+  font-size: 12px;
+  padding: 8px;
+  text-align: center;
+}
+
+//----------------------------------------------------
+// 新規投稿エリア
+//----------------------------------------------------
+
+.communication-new-post {
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #e5e8eb;
+  border-bottom: none;
+}
+.new-post-textarea {
+  padding: 35px 30px 30px;
+  textarea {
+    width: 100%;
+    min-height: 90px;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 23px;
+  }
+
+}
+.btn_post_large {
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  display: block;
+  cursor: pointer;
+  background: url(/img/communication/btn_post_large.png) 0 0 no-repeat;
+  @include size(12px);
+}
+
+.communication-post-control-box {
+  margin-left: 10px;
+  .control-box-inner {
+    float: left;
+    width: 80%;
+    border-top: 1px solid #e5e8eb;
+  }
+  .icons {
+    float: left;
+    padding: 5px 0 4px 25px;
+    > a {
+      margin-right: 8px;
+    }
+  }
+  .input_checkbox + label {
+    display: block;
+    float: right;
+    line-height: 34px;
+    padding: 0 0 0 25px;
+    margin-right: 14px;
+  }
+  .btn_post_send {
+    float: right;
+    color: #fff;
+    text-align: center;
+    // border: 1px solid #e5e8eb;
+    box-sizing: border-box;
+    background-color: #44d095;
+    width: 20%;
+    height: 36px;
+  }
+}
+.icon_to {
+  display: inline-block;
+  background: url(/img/common/icon_to.png) center center no-repeat;
+  @include size(26px, 22px);
+  @include textHide;
+}
+.icon_clip {
+  display: inline-block;
+  background: url(/img/common/icon_clip.png) center center no-repeat;
+  @include size(22px);
+  @include textHide;
+}
+.icon_contact {
+  display: inline-block;
+  background: url(/img/common/icon_contact.png) center center no-repeat;
+  @include size(22px);
+  @include textHide;
+}
+.icon_team {
+  display: inline-block;
+  background: url(/img/common/icon_team.png) center center no-repeat;
+  @include size(22px, 22px);
+  @include textHide;
+}
+
+
+//----------------------------------------------------
+// Modal
+//----------------------------------------------------
+
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #dae0e1;
+  display: none;
+}
+
+.modal_box {
+  background: none repeat scroll 0 0 #fff;
+  display: none;
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+  > h2 {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 30px;
+  }
+}
+.modal-btn-box {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.modal-head {
+  #search-form {
+    width: 240px;
+    display: block;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+}
+.modal-tab {
+  margin-bottom: 8px;
+  li {
+    float: left;
+    display: block;
+    border: 1px solid #e5e8eb;
+    border-left: none;
+    box-sizing: border-box;
+    background-color: #bbb;
+    width: 105px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    &:first-child {
+      border-left-width: 1px
+    }
+    &:hover {
+      background-color: #22313d;
+    }
+    &.selected {
+      position: relative;
+      background-color: #22313d;
+      &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(34, 49, 61, 0);
+        border-top-color: #22313d;
+        border-width: 6px;
+        margin-left: -6px;
+      }
+    }
+  }
+  &.type02 {
+    display: table;
+    width: 100%;
+    li {
+      display: table-cell;
+      width: auto;
+      min-width: 46px;
+      float: none;
+    }
+  }
+}
+
+.modal-tab-content > ul {
+  display: none;
+  &.selected {
+    display: block;
+  }
+}
+
+// line 1192
+
+.to-list
+.to-content.select,
+.myfile-list
+.myfile-content.select {
+  background: #edfbfc;
+}
+
+
+//----------------------------------------------------
+// メッセージ検索
+//----------------------------------------------------
+.modal-search-box {
+  margin: 0 30px 24px 30px;
+  // line-height: 12px;
+  background: url(/img/common/icon_search_contact.png) 5px center no-repeat !important;
+  border-bottom: 1px solid #ddd !important;
+  .select2-container {
+    padding-left: 21px;
+  }
+  .select2-selection__rendered {
+    padding-left: 21px;
+  }
+  .select2-search__field {
+    width: 100%;
+    line-height: 30px;
+    box-sizing: border-box;
+    // padding: 6px 0 6px 21px !important;
+  }
+}
+.modal-search-result {
+  line-height: 31px;
+  font-size: 13px;
+  font-weight: bold;
+  dt {
+    display: inline-block;
+  }
+  dd {
+    display: inline-block;
+    text-align: right;
+    width: 50px;
+  }
+}
+
+.modal-message-list {
+  height: 318px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  border: 1px solid #e5e8eb;
+  li {
+    border-bottom: 1px solid #e5e8eb;
+    @include clearfix;
+    &:hover {
+      background-color: #eee !important;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &.no-result {
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 40px;
+      text-align: center;
+      padding: 26px !important;
+      background: none !important;
+    }
+    > a {
+      float: right;
+      display: block;
+      font-size: 12px;
+      color: #bbb;
+      background: url(/img/common/icon_circle_arrow_right.png) 0 center no-repeat;
+      padding-left: 18px;
+    }
+  }
+  &.folder {
+    li {
+      background: url(/img/common/icon_folder.png) 15px center no-repeat;
+      font-size: 11px;
+      line-height: 44px;
+      padding: 0 21px 0 35px;
+    }
+  }
+  &.thread {
+    li {
+      font-size: 11px;
+      line-height: 44px;
+      padding: 0 21px 0 10px;
+    }
+    .icon_circle {
+      float: left;
+      @include size(23px);
+      margin: 11px 14px 0 0;
+    }
+  }
+  &.keyword {
+    li {
+      font-size: 11px;
+      padding: 16px 50px 0 13px;
+    }
+    .modal-message-list-head {
+      line-height: 44px;
+      .icon_circle {
+        float: left;
+        @include size(29px);
+        margin: 7px 14px 0 0;
+      }
+    }
+  }
+  &.tag {
+    .icon_circle {
+      float: left;
+      @include size(40px);
+      margin: 14px 14px 0 0;
+    }
+    li {
+      padding: 10px 13px;
+      line-height: 70px;
+      > div {
+        span {
+          display: block;
+          color: #bbb;
+          font-size: 8px;
+          font-weight: 600;
+          line-height: 14px;
+        }
+      }
+      > a {
+        line-height: 70px;
+      }
+
+    }
+    .label {
+      margin-left: 10px;
+    }
+    .multi {
+      line-height: 16px;
+      .icon_circle {
+        float: none;
+        display: inline-block;
+        @include size(20px);
+        margin: 8px 2px 0 0;
+      }
+    }
+  }
+}
+
+
+//----------------------------------------------------
+// TO 参照
+//----------------------------------------------------
+.to-list {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  max-height: 368px;
+  border: 1px solid #e5e8eb;
+  .to-content {
+    padding: 12px 20px 10px;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    &:last-child {
+      padding-bottom: 12px;
+    }
+    &:hover {
+      background: #eee;
+    }
+  }
+  .icon_circle {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .to-name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    display: block;
+    color: #444;
+    .fw_b {
+      margin-left: 10px;
+      font-size: 80%;
+      font-weight: normal;
+    }
+  }
+}
+
+
+//----------------------------------------------------
+// Myfile参照
+//----------------------------------------------------
+.myfile-list {
+  // width: 500px;
+  max-height: 368px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  border: 1px solid #e5e8eb;
+  .myfile-content {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    &:hover {
+      background: #eee;
+    }
+    > div {
+      padding: 15px 0;
+      margin: 0 10px;
+      border-bottom: 1px solid #e5e8eb;
+    }
+    &:last-child > div {
+      border-bottom: none;
+    }
+    span {
+      display: block;
+      font-size: 11px;
+      font-weight: normal;
+      color: #bbb;
+      line-height: 20px;
+    }
+  }
+}
+
+//----------------------------------------------------
+// コネクション参照
+//----------------------------------------------------
+.connection-list {
+  // width: 500px;
+  max-height: 368px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  border: 1px solid #e5e8eb;
+  .connection-content {
+    padding: 12px 0 0 10px;
+    @include clearfix;
+    &:last-child {
+      padding-bottom: 12px;
+    }
+    &:hover {
+      background: #eee;
+    }
+  }
+  .icon_circle {
+    @include size(80px);
+    float: left;
+  }
+  .connection-name {
+    display: block;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #e5e8eb;
+  }
+  .connection-icon-group {
+    float: right;
+    display: block;
+    font-size: 11px;
+    color: #bbb;
+    span {
+      display: inline-block;
+      padding-left: 17px;
+      margin-right: 12px;
+      font-weight: normal;
+    }
+    .connection-icon1 {
+      background: url(/img/common/icon_medal.png) 0 center no-repeat;
+    }
+    .connection-icon2 {
+      background: url(/img/common/icon_exp.png) 0 center no-repeat;
+    }
+    .connection-icon3 {
+      background: url(/img/common/icon_team2.png) 0 center no-repeat;
+    }
+  }
+  .connection-meta {
+    font-size: 12px;
+    margin-left: 100px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+  }
+  .connection-meta-left {
+    width: 200px;
+    line-height: 22px;
+  }
+  .connection-meta-hr {
+    content: "";
+    display: block;
+    border-width: 0;
+    border-right: 1px solid #e5e8eb;
+    margin: 10px;
+    width: 0;
+    height: 48px;
+  }
+  .connection-meta-right {
+    line-height: 14px;
+    span {
+      font-size: 8px;
+      color: #bbb;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .connection-locale {
+    background: url(/img/common/icon_locate.png) 0 center no-repeat;
+    padding-left: 17px;
+    color: #bbb;
+  }
+}
+
+//----------------------------------------------------
+// NEW MESSAGE
+//----------------------------------------------------
+
+.port_user_li {
+  @include clearfix;
+  p {
+    font-size: 13px;
+    margin-left: 40px;
+    line-height: 30px;
+  }
+}
+
+//----------------------------------------------------
+// QUERY
+//----------------------------------------------------
+
+.query-side-tab {
+  background: #3a4755;
+  margin-bottom: 20px;
+  @include clearfix;
+  a {
+    width: 25%;
+    display: block;
+    font-size: 10px;
+    color: #bbb;
+    text-align: center;
+    height: 27px;
+    line-height: 27px;
+    float: left;
+    &.selected {
+      background: #101b26;
+    }
+  }
+  &.tab3 a {
+    width: 80px;
+  }
+}
+
+.query-metadata {
+  @include clearfix;
+  // border-top: 1px solid #e5e8eb;
+  border-bottom: 1px solid #e5e8eb;
+  padding: 14px 0;
+}
+.query-metadata-box1 {
+  display: table-cell;
+  width: 330px;
+  box-sizing: border-box;
+  border-right: 1px solid #e5e8eb;
+  dt {
+    float: left;
+    color: #bbb;
+    font-size: 11px;
+    width: 64px;
+    padding: 7px 0;
+    .small {
+      font-size: 9px;
+    }
+  }
+  dd {
+    font-size: 12px;
+    padding: 7px 0;
+    span {
+      color: #bbb;
+      font-size: 11px;
+    }
+  }
+}
+.query-metadata-box2 {
+  display: table-cell;
+  width: 190px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  &.p0 {padding: 0;}
+
+  dt {
+    color: #bbb;
+    font-size: 8px;
+  }
+  dd {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 7px 0;
+    margin: 0;
+  }
+}
+.query-metadata-box3 {
+  display: table-cell;
+  width: 330px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border-left: 1px solid #e5e8eb;
+
+  dt {
+    color: #bbb;
+    font-size: 8px;
+  }
+  dd {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 7px 0;
+    margin: 0;
+    > div {
+      margin-bottom: 10px;
+      @include clearfix;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .query-icon-group {
+    float: right;
+    display: block;
+    .query-txt,
+    .query-icon1,
+    .query-icon2,
+    .query-icon3 {
+      display: inline-block;
+      margin-right: 8px;
+      font-weight: normal;
+      color: #bbb;
+      font-size: 11px;
+    }
+    .query-txt {
+      font-size: 8px;
+      span {
+        color: #333;
+        font-size: 11px;
+      }
+    }
+    .query-icon1 {
+      background: url(/img/common/icon_medal.png) 0 center no-repeat;
+      padding-left: 16px;
+    }
+    .query-icon2 {
+      background: url(/img/common/icon_exp.png) 0 center no-repeat;
+      padding-left: 16px;
+    }
+  }
+}
+
+.query-detail {
+  border-bottom: 1px solid #e5e8eb;
+  .query-detail-content {
+    display: none;
+    .communication-new-post {
+      border-bottom: 1px solid #e5e8eb;
+    }
+  }
+  p {
+    font-size: 13px;
+    line-height: 21px;
+    padding: 20px 0;
+  }
+  .query-detail-meta {
+    border-top: 1px solid #e5e8eb;
+    padding-top: 20px;
+    .post-setting {
+      margin-left: 15px;
+    }
+    .appending {
+      display: inline-block;
+      font-size: 11px;
+      color: #fff;
+      text-align: center;
+      background-color: #44d095;
+      height: 17px;
+      line-height: 17px;
+      border-radius: 2px;
+      padding: 2px 5px;
+      margin-right: 5px;
+    }
+  }
+  .btn-toggle {
+    color: #bbb;
+    text-align: center;
+    cursor: pointer;
+    margin: 8px 0;
+    span {
+      font-size: 13px;
+      line-height: 24px;
+      &:after {
+        content: "";
+        display: inline-block;
+        background: url(/img/common/arrow_select.png) center center no-repeat;
+        @include size(24px);
+        vertical-align: bottom;
+      }
+    }
+  }
+  &.open {
+    .query-detail-content {
+      display: block;
+    }
+    .btn-toggle {
+      span:after {
+        background-image: url(/img/common/arrow_select_open.png);
+      }
+    }
+  }
+}
+
+
+.query-post-info {
+  position: relative;
+  line-height: 11px;
+  border-bottom: 1px solid #e5e8eb;
+  padding-bottom: 10px;
+  .icon_circle {
+    float: left;
+    @include size(40px);
+    margin-right: 7px;
+  }
+  .txt_author {
+    line-height: 30px;
+    margin-left: 10px;
+  }
+
+  &.is-no-archive,
+  &.is-archive {
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -25px;
+      content: "";
+      height: 40px;
+    }
+  }
+  &.is-no-archive:before {
+    border-left: 6px solid #44d095;
+  }
+  &.is-archive {
+    color: #bbb !important;
+    &:before {
+      border-left: 6px solid #bbb;
+    }
+
+  }
+}
+
+.query-post-meta {
+  text-align: right;
+  float: right;
+  .post-time {
+    width: 62px;
+    text-align: right;
+    line-height: 16px;
+  }
+  .post-time,
+  .post-medal,
+  .post-bookmark,
+  .post-setting,
+  .post-to-quote {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.post-archive {
+  display: inline-block;
+  line-height: 15px;
+  margin-top: 9px;
+  &:before {
+    content: "";
+    display: inline-block;
+    background: url(/img/common/icon_archive.png) center center no-repeat;
+    @include size(10px, 13px);
+    vertical-align: bottom;
+    margin-right: 5px;
+  }
+}
+
+.query-post-content {
+  font-size: 13px;
+  line-height: 23px;
+  padding: 20px 0;
+  color: #333;
+  a {
+    text-decoration: underline;
+  }
+}
+
+// 「？」ポップアップリンク
+.pop_up {
+  position: relative;
+  padding-left: 7px;
+  display: inline-block;
+  vertical-align: bottom;
+  cursor: pointer;
+  .pop_message {
+    display: none;
+    width: 160px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 22px;
+    background: #66d7db;
+    padding: 16px 20px;
+    color: #fff;
+    position: absolute;
+    top: 26px;
+    left: -120px;
+    z-index: 2;
+    &:after {
+      bottom: 100%;
+      left: 84%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(102, 215, 219, 0);
+      border-bottom-color: #66d7db;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
+  &:hover .pop_message {
+    display: block;
+  }
+}
+
+
+//----------------------------------------------------
+// 誰かが追加したやつ
+//----------------------------------------------------
+
+/* line 106 */
+
+#column-communication-sub-content .query-side-content li > p {
+  margin: 0 10px 10px;
+}
+
+/* line 305 */
+
+.latest .in-folder-list {
+  display: block;
+  color: #FFF;
+}
+
+/* line 992 */
+
+.new-post-textarea textarea {
+  height: 100%;
+}
+
+/* line 1000 */
+
+.btn_post_large.select {
+  background-image: url(/img/communication/btn_post_large_on.png);
+}
+
+/* line 1015 */
+
+.communication-post-control-box .control-box-inner {
+  height: 36px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.query-side-content > li {
+  display: none;
+  &.selected {
+    display: block;
+  }
+}
+
+.innerBox {
+  min-width: 100%;/****201503221変更 min-width: 960px;*****/
+  max-width: 100%;/****201503221変更 min-width: 960px;*****/
+}
+
+#wrapper {
+  min-width:980px;/****201503221変更 min-width: 960px;*****/
+  max-width:100%;/****201503221変更 max-width: 1080px;*****/
+  padding-top: 50px;
+  margin-right:1%;
+}
+/*******コニュニケーション一括送信からの検索********/
+.communication-title .entry_user button{
+  padding: 7px 0;
+  background:#ffffff;
+  border:1px solid #ffffff;
+  font-size:16px!important;
+  color:#cccccc;
+}
+footer {
+    box-sizing: border-box;
+    padding-left: 320px;
+}

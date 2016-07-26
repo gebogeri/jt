@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>アカウント | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/sp/css/common/normalize.css">
+<link rel="stylesheet" href="/sp/css/common/style.css">
+<link rel="stylesheet" href="/sp/css/common/setting.css">
+<link rel="stylesheet" href="/sp/css/common/invite.css">
+<link rel="stylesheet" href="/sp/css/plugin/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+<!--#include virtual="/sp/include/header.html"-->
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray">SETTING</p>
+            <h1>アカウント</h1>
+            <p class="btn_pageBack"><a href="../">BACK TO LIST</a></p>
+        </div>
+    </div>
+    <main class="innerBox">
+            <p class="txt_16 fw_b">氏名の編集</p>
+            <form action="" method="">
+                <div class="form_table">
+                    <div class="edit_area">
+                    <div class="edit_block">
+                      <div class="dt">氏名</div>
+                        <input type="text" name="性" placeholder="性" size="50" class="mb10">
+                        <input type="text" name="名" placeholder="名" size="50" class="mb10">
+                        <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                      </div>
+                      <div class="edit_block">
+                      <div class="dt">プロフィール画像を変更する</div>
+                      <table>
+                          <td class="under_padding">
+                              <table>
+                                  <td>
+                                        <div id="imgView" class="icon_circle setting_pic large_circle">
+                                            <img src="/img/common/icon_profile.jpg" alt="近藤 和志" class="imgView">
+                                        </div>
+                                  </td>
+                                  <td>
+                                    <span id="fileName"></span>
+                                    <div class="btn_upload">
+                                        ファイルを参照
+                                        <input type="file" id="imgProf" accept="image/*">
+                                    </div>
+                                  </td>
+                              </table>
+                          </td>
+                      </table>
+                      </div>
+                        <ul class="list_settingBtn">
+                            <li><input type="submit" name="" value="保存"></li>
+                            <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                        </ul>
+                </div>
+              </div>
+          </form>
+    </main>
+</div>
+<!--#include virtual="/sp/include/footer_under.html"-->
+<script src="/sp/js/common/setting.js"></script>
+<!-- <script src="../js/plugin/accordion.js"></script> -->
+</body>
+</html>

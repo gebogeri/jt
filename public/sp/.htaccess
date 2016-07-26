@@ -1,0 +1,6 @@
+Options +Includes
+AddHandler server-parsed .html .htm
+AuthUserFile "/home/netter1/viewerwarning.net/htpasswd/juristerra/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user

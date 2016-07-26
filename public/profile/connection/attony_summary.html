@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログイン前TOP | </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="/css/common/normalize.css">
+  <link rel="stylesheet" href="/css/common/style.css">
+  <link rel="stylesheet" href="/css/plugin/select2.min.css">
+  <link rel="stylesheet" href="/css/common/profile.css">
+  <link rel="stylesheet" href="/css/common/profile_add.css">
+  <link rel="stylesheet" href="/css/common/invite.css">
+
+  <!-- cache -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+  <!--#include virtual="/include/header.html" -->
+  <div id="wrapper">
+    <div id="container" class="clear">
+      <main class="clear">
+        <div class="column-main-profile">
+          <div class="profile-title">
+            <div class="profile-title_container">
+              <p class="txt_gray">CONNECTION - ATTORNEY</p>
+              <h1>弁護士情報サマリー</h1>
+            </div>
+            <div class="profile-title-checkbox-area">
+              <p>サマリーを表示させたい弁護士の以下の分類にチェックを入れてください。</p>
+              <br>
+              <form action="">
+                <div class="horizontal">
+                  <div>
+                    <input type="checkbox" name="name" value="" id="check01" class="input_checkbox" checked>
+                    <label for="check01">コネクションを確立した弁護士</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="name" value="" id="check02" class="input_checkbox" checked>
+                    <label for="check02">フォローしている弁護士</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="name" value="" id="check03" class="input_checkbox" checked>
+                    <label for="check03">所属弁護士事務所の弁護士</label>
+                  </div>
+                </div>
+                <div class="ta-c">
+                  <button type="button" name="button" class="btn-primary">再表示</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="profile-wrap">
+            <div class="box clear ">
+              <div class="box-title">
+                <p>INFOMATION</p>
+              </div>
+              <div class="graph-box" id="graph1">
+
+                <div class="expart_graph">
+                  <p class="graph_innner">直近3年間の<br>割合</p>
+                  <canvas id="sample_country" height="240" width="180"></canvas>
+                </div>
+
+              </div>
+
+              <div class="country_box">
+                <ul class="country_list">
+                  <li class="js-accordion">
+                    <div class="country-summary">
+                      <span></span>
+                      <div class="left">
+                        <span class="country-europe">●</span>
+                        ヨーロッパ
+                      </div>
+                      <div class="right">
+                        <span class="dots">・・・</span>
+                        <span class="number">30人</span>
+                        <span class="arrow"></span>
+                      </div>
+
+                    </div>
+                    <div class="country-detail" style="display: none;">
+                      <ul>
+                        <li>
+                          <span class="left">
+                            <span class="country-flag">
+                             <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                           </span> オーストラリア
+                         </span>
+                         <span class="right">
+                          <span class="dots">・・・</span>
+                          <span class="number">15人</span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="js-accordion">
+                  <div class="country-summary">
+                    <span></span>
+                    <div class="left">
+                      <span class="country-asia">●</span>
+                      アジア
+                    </div>
+                    <div class="right">
+                      <span class="dots">・・・</span>
+                      <span class="number">30人</span>
+                      <span class="arrow"></span>
+                    </div>
+
+                  </div>
+                  <div class="country-detail" style="display: none;">
+                    <ul>
+                      <li>
+                        <span class="left">
+                          <span class="country-flag">
+                           <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                         </span> オーストラリア
+                       </span>
+                       <span class="right">
+                        <span class="dots">・・・</span>
+                        <span class="number">15人</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="js-accordion">
+                <div class="country-summary">
+                  <span></span>
+                  <div class="left">
+                    <span class="country-africa">●</span>
+                    アフリカ
+                  </div>
+                  <div class="right">
+                    <span class="dots">・・・</span>
+                    <span class="number">30人</span>
+                    <span class="arrow"></span>
+                  </div>
+
+                </div>
+                <div class="country-detail" style="display: none;">
+                  <ul>
+                    <li>
+                      <span class="left">
+                        <span class="country-flag">
+                         <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                       </span> オーストラリア
+                     </span>
+                     <span class="right">
+                      <span class="dots">・・・</span>
+                      <span class="number">15人</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="js-accordion">
+              <div class="country-summary">
+                <span></span>
+                <div class="left">
+                  <span class="country-northamerica">●</span>
+                  北アメリカ
+                </div>
+                <div class="right">
+                  <span class="dots">・・・</span>
+                  <span class="number">30人</span>
+                  <span class="arrow"></span>
+                </div>
+              </div>
+              <div class="country-detail" style="display: none;">
+                <ul>
+                  <li>
+                    <span class="left">
+                      <span class="country-flag">
+                       <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                     </span> オーストラリア
+                   </span>
+                   <span class="right">
+                    <span class="dots">・・・</span>
+                    <span class="number">15人</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="js-accordion">
+            <div class="country-summary">
+              <span></span>
+              <div class="left">
+                <span class="country-southamerica">●</span>
+                南アメリカ
+              </div>
+              <div class="right">
+                <span class="dots">・・・</span>
+                <span class="number">30人</span>
+                <span class="arrow"></span>
+              </div>
+            </div>
+            <div class="country-detail" style="display: none;">
+              <ul>
+                <li>
+                  <span class="left">
+                    <span class="country-flag">
+                     <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                   </span> オーストラリア
+                 </span>
+                 <span class="right">
+                  <span class="dots">・・・</span>
+                  <span class="number">15人</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+
+        <li class="js-accordion">
+          <div class="country-summary">
+            <span></span>
+            <div class="left">
+              <span class="country-australia">●</span>
+              オーストラリア・オセアニア
+            </div>
+            <div class="right">
+              <span class="dots">・・・</span>
+              <span class="number">30人</span>
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="country-detail" style="display: none;">
+            <ul>
+              <li>
+                <span class="left">
+                  <span class="country-flag">
+                   <img src="/img/profile/flag-sample-1.jpg" alt="オーストラリア">
+                 </span> オーストラリア
+               </span>
+               <span class="right">
+                <span class="dots">・・・</span>
+                <span class="number">15人</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- /.box -->
+
+
+<div class="slide-tabs" id="slide-tabs1">
+  <div class="slide-tabs-inner">
+    <ul>
+      <li class="selected">US</li>
+      <li>JAPAN</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+      <li>COUNTRY</li>
+    </ul>
+  </div>
+  <div class="slide-arrow-left"></div>
+  <div class="slide-arrow-right"></div>
+</div><!-- /.slide-tab -->
+
+<div class="box">
+  <div class="box-title">
+    <p>選択した弁護士グループのジュリスディクション及び法律分野</p>
+  </div>
+  <div class="box-column">
+    <div class="clear">
+      <div class="expart_legeng">
+        <div class="circle" style="background-color:#73afc0;"></div>
+        <p class="legend_list">ATTORNEY</p>
+        <div class="circle" style="background-color:#406175;"></div>
+        <p class="legend_list">CLIENT</p>
+      </div>
+    </div>
+    <div class="graph-box02">
+      <div>
+        <div class="graph-bar left">
+          <div class="bar-color1" style="width: 30%; min-width:10%;"><a rel="leanModal" href="#modal_likelist" class="likename modal_like_list td_u"><span class="like_number">30</span><span class="like_list">Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            ...<span class="andmore">andmore</span></span></a>
+          </div>
+          <div class="bar-color2" style="width: 24%; min-width:10%;"><a rel="leanModal" href="#modal_likelist" class="likename modal_like_list td_u"><span class="like_number">60</span><span class="like_list">Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            ...<span class="andmore">andmore</span></span></a>
+          </div>
+        </div>
+        <p>90・・・ <span class="txt_gray">推薦数</span></p>
+      </div>
+      <div class="graph-box-center">ファイナンス</div>
+      <div>
+        <div class="graph-bar">
+          <div class="bar-color3" style="width: 100%;"></div>
+        </div>
+        <p class="ta-r"><span class="txt_gray">推薦数</span> ・・・100</p>
+      </div>
+      <p class="graph-box-specialty like_target"><span class="txt_gray">得意分野：</span> 株式譲渡、合併、クロスボーダー</p>
+    </div>
+    <div id="modal_likelist" class="modal_linklist"></div><!-- モーダルウィンドウ -->
+
+    <div class="graph-box02">
+      <div>
+        <div class="graph-bar left">
+          <div class="bar-color1" style="width: 20%; min-width:10%;"><a rel="leanModal" href="#modal_likelist" class="likename modal_like_list td_u"><span class="like_number">30</span><span class="like_list">Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            ...<span class="andmore">andmore</span></span></a>
+          </div>
+          <div class="bar-color2" style="width: 50%; min-width:10%;"><a rel="leanModal" href="#modal_likelist" class="likename modal_like_list td_u"><span class="like_number">60</span><span class="like_list">Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            Minami Asano<br>
+            Hayakawa Kazuaki<br>
+            Kotaro Akisawa<br>
+            ...<span class="andmore">andmore</span></span></a>
+          </div>
+        </div>
+        <p>90・・・ <span class="txt_gray">推薦数</span></p>
+      </div>
+      <div class="graph-box-center">M&amp;A</div>
+      <div>
+        <div class="graph-bar">
+          <div class="bar-color3" style="width: 70%;"></div>
+        </div>
+        <p class="ta-r"><span class="txt_gray">推薦数</span> ・・・100</p>
+      </div>
+      <p class="graph-box-specialty"><span class="txt_gray">得意分野：</span> 株式譲渡、合併、クロスボーダー</p>
+    </div>
+
+  </div><!-- /.box-column -->
+</div><!-- /.box -->
+</div>
+</div><!-- /.column-main-profile -->
+</main>
+<aside>
+  <h2 class="ttl_side">PROFILE</h2>
+  <div id="side-link" class="txt_11">
+    <a href="/profile/recent_activity.html"> RECENT ACTIVITY</a>
+    <a href=""> ABOUT</a>
+    <a href=""> MESSAGE / INTERVIEW</a>
+    <a href="" class="selected"> CONNECTION</a>
+    <h3 class="ttl_sub_side">MY FILE</h3>
+    <a href="/profile/myfile">- LATEST</a>
+    <a href="/profile/myfile/projects">- 取り扱い案件</a>
+    <a href="/profile/myfile/monograph">- 論文/書籍</a>
+    <a href="/profile/myfile/seminar">- セミナー,講演</a>
+    <a href="/profile/myfile/award">- 受賞</a>
+    <a href="/profile/myfile/blog">- コラム/ブログ</a>
+    <a href="/profile/myfile/link">- リンク</a>
+  </div>
+  <div class="sub-aside">
+   <div id="side-link" class="txt_11">
+    <div id="column-sub-profile">
+     <h3 class="ttl_sub_side">ATTORNEY</h3>
+     <a href="" class="selected"> - SUMMERY</a>
+     <a href=""> - LIST</a>
+     <a href=""> - FOLLOWING</a>
+     <h3 class="ttl_sub_side">CLIENT</h3>
+     <a href=""> - LIST</a>
+     <a href=""> - FOLLOWING</a>
+     <h3 class="ttl_sub_side">OTHER</h3>
+     <a href="" class="txt_short"> - CONNECTION SUGGESTION</a>
+     <a href=""> - REQUESTS RECEIVED</a>
+     <a href=""> - REQUESTS SENT</a>
+   </div><!-- /.column-sub-profile -->
+ </div>
+</div>
+</aside>
+</div>
+</div>
+<!--#include virtual="/include/footer.html"-->
+
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/js/plugin/d3-legend.js"></script>
+<script src="/js/common/profile.js"></script>
+<script src="/js/common/profile_likelist.js"></script>
+<script src="/js/plugin/profile/Chart.min.js"></script>
+<script>
+  $(function(){
+    $(".js-accordion .country-summary").click(function(){
+      $(this).next(".country-detail").slideToggle();
+      $(this).children("span").toggleClass("icon_open");
+    });
+  });
+</script>
+<script>
+  var doughnutData = [
+  {
+    value: 15,
+    label: "15",
+    color:"#73afc0"
+  },
+  {
+    value: 15,
+    label: "15",
+    color:"#406175"
+  },
+  {
+    value: 15,
+    label: "15",
+    color:"#13253e"
+  },
+  {
+    value: 15,
+    label: "15",
+    color:"#244574"
+  },
+  {
+    value: 15,
+    label: "15",
+    color:"#5c92de"
+  },
+  {
+    value: 25,
+    label: "25",
+    color:"#dddddd"
+  },
+  ];
+// オプション
+var options = {
+    // セグメントの枠線の表示
+    segmentShowStroke : false,
+    // セグメントの枠線の色
+    segmentStrokeColor : "#fff",
+    // セグメントの枠線の太さ
+    segmentStrokeWidth : 2,
+    // 中央の円のカットの大きさ ( パーセント )
+    percentageInnerCutout : 70,
+    // 表示の時のアニメーション
+    animation : true,
+    // アニメーションの速度 ( ステップ数 )
+    animationSteps : 60,
+    // アニメーションの種類, 以下が用意されている
+    // linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic,
+    // easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint,
+    // easeOutQuint, easeInOutQuint, easeInSine, easeOutSine, easeInOutSine,
+    // easeInExpo, easeOutExpo, easeInOutExpo, easeInCirc, easeOutCirc, easeInOutCirc,
+    // easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack,
+    // easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce
+    animationEasing : "easeOutQuad",
+    // 回転で表示するアニメーションの有無
+    animateRotate : true,
+    // 中央から拡大しながら表示するアニメーションの有無
+    animateScale : true,
+    // アニメーション終了後に実行する処理
+    // animation: false の時にも実行されるようです
+    // e.g. onAnimationComplete : function() {alert('complete');}
+    onAnimationComplete : null,
+    tooltipTemplate: "<%if (label){%><%=label%><%}%>",
+    onAnimationComplete: function(){
+      this.showTooltip(this.segments, true);
+    },
+    tooltipEvents: [],
+    showTooltips: false
+  }
+
+  var chart = new Chart(document.getElementById("sample_country").getContext("2d")).Doughnut(doughnutData, options);
+</script>
+<script>
+  $(function(){
+    $('.folder-head, .folder-head02').on('click', function() {
+      $(this).closest(".folder-item").toggleClass('open');
+    });
+  });
+</script>
+<script type="text/javascript">
+
+  //円グラフの半径
+  var r = 90;
+  //カテゴリ
+  var category = ['M&A ・・・・・・・８年', 'ファイナンス ・・・８年', '知的財産 ・・・・・８年','その他']
+  var ratio = [30, 25, 15, 30];
+
+  //データセットをランダムに表示
+  var dataSet = d3.range(4).map(function(d,i){
+    return {category:category[i], value:ratio[i]}
+  });
+
+  //カラースケールをオリジナルスケールとして指定する
+  var colorScale = d3.scale.ordinal()
+  .domain(category)	//カテゴリを指定
+  .range([ '#73afc0', '#406175', '#13253e', '#bbb']);
+
+  // 作る場所を指定
+  var svg = d3.select('#graph1');
+
+  var arcsGroup = svg
+    .data([dataSet])   //pieで変換するために要素１の配列としてデータを渡す
+    .append('g')
+    .attr("width", 180)
+    .attr("height", 180);
+
+  var pie = d3.layout.pie().value(function(d) { return d.value; });            //値からstartAngle,endAngleを生成する
+  var arc = d3.svg.arc().outerRadius(r).innerRadius(65);      //starAnge,endAngleからd要素を生成する
+
+  var sliceGroup = arcsGroup.selectAll('g')
+  .data(pie)
+  .enter()
+  .append('g')
+  .attr('transform', 'translate('+ [300, 90] + ')' );
+
+  //円グラフ描画
+  var slicePaths = sliceGroup.append('path')
+  .attr({
+    'd': arc,
+    'fill': function(d, i){ return colorScale(category[i]) }
+  })
+
+  //凡例を表示するグループ要素
+  svg.append('g')
+  .attr('class', 'legendLinear')
+  .attr('transform', 'translate(20, 20)');
+
+
+  //スケールを元に凡例を生成する
+  var legendLinear = d3.legend.color()
+  .shape('circle')
+  .shapeWidth(15)
+  .scale(colorScale);
+
+  //凡例を描画する
+  svg.select('.legendLinear').call(legendLinear);
+</script>
+</body>
+</html>

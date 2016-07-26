@@ -1,0 +1,45 @@
+@import '../_mixin';
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width:100%;
+    @include e(nav){
+        @include flex;
+        @include reset;
+        background: $dark;
+        @include e(btn){
+            width: 9.5%;
+            padding: 1.5%;
+            list-style-type: none;
+            @include m(isOpen){
+                background: #333f49;
+            }
+        }//btn
+        @include e(target){
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-top:105%;
+            text-align: center;
+            cursor: pointer;
+            & img{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 58%;
+                margin: auto;
+                vertical-align: bottom;
+            }
+            @include e(notification){
+                @include notification;
+                bottom: .1rem;
+                right: .1rem;
+            }
+        }//target
+    }//nav
+}

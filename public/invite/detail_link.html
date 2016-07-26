@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to Middleman</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/plugin/select2.min.css">
+    <link href="/css/common/knowledge.css" rel="stylesheet" />
+    <link href="/css/common/invite.css" rel="stylesheet" />
+	<link href="/css/common/invite_add.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/plugin/select2.min.css">
+  </head>
+
+
+
+
+<body class="knowledge knowledge_savefile knowledge_savefile edit">
+
+
+  <!--#include virtual="/include/header.html"-->
+
+
+<div id="wrapper">
+    <div id="container" class="clear">
+
+
+<div id="modal_invite_parent" style="display: block; position: relative; margin: 40px auto 0;">                <div id="modal_top_link">
+
+
+
+
+                <div>
+                  <div class="modal-progress">
+                    <div class="step1 current">
+                      <p>01<br>招待先を入力</p>
+                    </div>
+                    <div class="step2">
+                      <p>02<br>入力確認</p>
+                    </div>
+                    <div class="step3">
+                      <p>03<br>リンク発行</p>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="modal-explain">
+                    <h2 class="txt_14 fw_b">招待リンクの発行</h2>
+                    <p class="txt-detail">必要事項を記入の上、確認ボタンをクリックしてください。</p>
+                  </div>
+
+                  <table class="table-modal is-mail-top">
+                    <tbody><tr class="table-first">
+                      <th>
+                        招待される方の<br>メンバー区分
+                      </th>
+                      <td>
+                        <span class="radiobutton-area">
+                          <input checked="checked" type="radio" name="user_type" value="0" id="lawyer2" class="input_radiobutton">
+                          <label for="lawyer2" class="txt_11">弁護士</label>
+                        </span>
+
+                        <span class="radiobutton-area">
+                          <input type="radio" name="user_type" value="1" id="client2" class="input_radiobutton">
+                          <label for="client2" class="txt_11">依頼者</label>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        招待される方の氏名
+                      </th>
+                      <td>
+                        <input class="input column2" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        メッセージのタイトル
+                      </th>
+                      <td>
+                        <input class="input" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        メッセージ本文
+                      </th>
+                      <td>
+                        <textarea class="textarea" name=""></textarea>
+                      </td>
+                    </tr>
+                  </tbody></table>
+
+                  <span class="modal-checkboxarea">
+                    <input type="checkbox" name="name" value="" id="enter_on1" class="input_checkbox"><label for="enter_on1" class="txt_11">個人情報の取り扱いに同意する<span>プライバシーポリシーのご確認は<a href="/policy" target="_blank">こちら</a></span></label>
+                  </span>
+
+                  <div class="ta_c">
+                    <a href="lawyer_link.html" class="confirm_link">入力内容を確認</a>
+                    <a href="/" class="btn_can modal_close">キャンセル</a>
+                  </div>
+
+                  <script>$('.scroll-box').slimscroll();</script>
+                </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+  <!--#include virtual="/include/footer.html"-->
+
+
+
+</body>
+</html>
+
+
+
+

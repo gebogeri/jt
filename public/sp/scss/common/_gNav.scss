@@ -1,0 +1,113 @@
+@import '../_mixin';
+
+.gNav{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 9998;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-top: 12.94%;
+    line-height: 1;
+    background: #333f49;
+    transition: left .25s;
+    overflow-y: scroll;
+    @include m(isOpen){
+        left: 0;
+    }
+    @include e(scroll){
+        @include flex($j:space-between, $a:stretch);
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        min-height: 100%;
+    }
+    @include e(inner){
+        @include inner;
+        padding-top: 4.2%;
+    }
+    @include e(prof){
+        margin-bottom: 4.2%;
+        line-height: 1.4;
+        text-decoration: none;
+        @include flex($a:center);
+        @include e(photo){
+            width: 17%;
+            padding-top: 17%;
+            background-size: cover;
+            background-position: center;
+        }//photo
+        @include e(name){
+            margin: 0 0 0 4.2%;
+            color: #fff;
+            @include e(bold){
+                display: block;
+                font-weight: bold;
+            }
+        }//name
+    }//prof
+    @include e(menu){
+        @include reset;
+        border-top: .1rem solid #22313d;
+        @include e(item){
+            border-bottom: .1rem solid #22313d;
+            @include ff;
+            list-style: none;
+            @include e(listWrap){
+                display: none;
+                padding: 1% 0 6.8% 9.7%;
+            }
+            @include e(list){
+                display: block;
+                padding: 2.8% 0;
+                color: #fff;
+                font-size: 1.4rem;
+                text-decoration: none;
+                @include m(sub){
+                    font-size: 1.2rem;
+                }
+            }//sub
+        }//item
+        @include e(target){
+            display: block;
+            padding: 5.5% 0 5.1% 1.4%;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            @include m(arrow){
+                background: url(/sp/img/common/arrow_menu.png) right 3.3% center no-repeat;
+                background-size: .85rem;
+                @include m(isOpen){
+                    background-image: url(/sp/img/common/arrow_menu_open.png);
+                }
+            }//arrow
+        }//target
+    }//menu
+    @include e(foot){
+        background: #22313d;
+        font-size: 1.2rem;
+        @include ff;
+        @include e(inner){
+            @include flex($w:wrap);
+            @include e(item){
+                display: block;
+                box-sizing: border-box;
+                width: 50%;
+                padding: 3.33% 0;
+                border-bottom: .1rem solid #333f49;
+                color: #999;
+                text-align: center;
+                text-decoration: none;
+                &:nth-child(even){
+                    border-left: .1rem solid #333f49;
+                }
+            }//item
+        }//inner
+        @include e(copy){
+            padding: 3.33% 0;
+            margin: 0;
+            color: #999;
+            text-align: center;
+        }
+    }//foot
+}

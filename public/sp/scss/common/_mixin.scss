@@ -1,0 +1,49 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// テキスト隠すヤツ
+@mixin textHide {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// * @include size(10px, 23px);
+// * widthとheightを入れる。引数1つの場合はwidthとheight同じサイズにする。
+@mixin size($width: null , $height: null, $bg_size: false) {
+  @if $height == null {
+    $height: $width;
+  }
+  @if $bg_size {
+    background-size: $width $height;
+  }
+  width: $width;
+  height: $height;
+}
+
+// * Mixin for placeholder
+// * @include placeholderColor(#00ff00);
+@mixin placeholderColor($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color:$color;
+  }
+  &:-moz-placeholder {
+    color:$color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color:$color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color:$color;
+  }
+}

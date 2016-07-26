@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+          <h1 class="ttl">
+              <span class="ttl_english">BASIC INFOMATION</span>
+              <span class="ttl_lang btn">INFOMATIONの編集</span>
+          </h1>
+          <div class="ttl_back">
+            <div class="innerBox">
+              <a class="ttl_back_btn">BACK TO LIST</a>
+            </div>
+          </div>
+
+          <form id="content">
+            <h2 class="subTtl">職歴<span class="subTtl_add profileEdit">職歴を追加</span></h2>
+            <div class="profileAddArea">
+              <div class="profile_edit" data-select2="country" data-num="1">
+                <h3 class="knowledge_edit_header"><span>職歴<span class="mainNum">1</span></span></h3>
+
+                <h4 class="profile_edit_ttl">職歴</h4>
+                <input type="text" class="profile_edit_inputTxt" placeholder="組織名を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+
+                <h4 class="profile_edit_ttl">所在地</h4>
+                <select class="profile_edit_select2 select2_country select2_single">
+                  <!--#include virtual="/sp/include/select-country.html"-->
+                </select>
+                <div class="profile_edit_select full">
+                  <select>
+                    <option value="" selected disabled>CITY</option>
+                  </select>
+                </div>
+
+                <h4 class="profile_edit_ttl">役職</h4>
+                <div class="profile_edit_block_copyArea">
+                  <input type="text" class="profile_edit_inputTxt" placeholder="役職名を入力">
+                  <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+                  <div class="profile_edit_flex">
+                    期間&nbsp;&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                    &nbsp;～&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                  </div><!-- [/ .profile_edit_flex] -->
+                </div><!-- [/ .profile_edit_block_copyArea] -->
+                <span class="profile_edit_block_addBtn">役職と期間を追加</span>
+              </div><!-- [/ .profile_edit] -->
+            </div><!-- [/ .profileAddArea] -->
+
+            <h2 class="subTtl">学歴<span class="subTtl_add profileEdit">学歴を追加</span></h2>
+            <div class="profileAddArea">
+              <div class="profile_edit" data-select2="lawField_country" data-num="1">
+                <h3 class="knowledge_edit_header"><span>学歴<span class="mainNum">1</span></span></h3>
+
+                <h4 class="profile_edit_ttl">学歴</h4>
+                <input type="text" class="profile_edit_inputTxt" placeholder="学校名を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="学校URLを入力">
+
+                <h4 class="profile_edit_ttl">学部/学科</h4>
+                <input type="text" class="profile_edit_inputTxt" placeholder="学部/学科を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="専攻を入力">
+                <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+
+                <h4 class="profile_edit_ttl">法分野<span class="num">1</span></h4>
+                <select class="profile_edit_select2 select2_lawField select2_single">
+                  <!--#include virtual="/sp/include/select-law.html"-->
+                </select>
+
+                <h4 class="profile_edit_ttl">所在地</h4>
+                <select class="profile_edit_select2 select2_country select2_single">
+                  <!--#include virtual="/sp/include/select-country.html"-->
+                </select>
+                <div class="profile_edit_select full">
+                  <select>
+                    <option value="" selected disabled>CITY</option>
+                  </select>
+                </div>
+
+                <h4 class="profile_edit_ttl">期間</h4>
+                <div class="profile_edit_flex">
+                  期間&nbsp;&nbsp;
+                  <div class="profile_edit_select">
+                    <select>
+                      <option value="">1980</option>
+                      <option value="">1981</option>
+                      <option value="">1982</option>
+                      <option value="">1983</option>
+                      <option value="">1984</option>
+                    </select>
+                  </div>
+                  &nbsp;～&nbsp;
+                  <div class="profile_edit_select">
+                    <select>
+                      <option value="">1980</option>
+                      <option value="">1981</option>
+                      <option value="">1982</option>
+                      <option value="">1983</option>
+                      <option value="">1984</option>
+                    </select>
+                  </div>
+                </div><!-- [/ .profile_edit_flex] -->
+
+              </div><!-- [/ .profile_edit] -->
+            </div><!-- [/ .profileAddArea] -->
+
+
+            <h2 class="subTtl">公開範囲</h2>
+            <div class="profile_edit_range range">
+              <span>非公開</span>
+              <div class="range_content up">
+                  <input name="range" type="radio" id="range01"><label for="range01">非公開</label>
+                  <input name="range" type="radio" id="range02"><label for="range02">全メンバー</label>
+                  <input name="range" type="radio" id="range03"><label for="range03" class="range_content_detail">表示範囲を限定</label>
+
+                  <input name="range_detail" type="checkbox" id="range03-01"><label for="range03-01">全ての弁護士</label>
+                  <input name="range_detail" type="checkbox" id="range03-02"><label for="range03-02">全ての依頼者</label>
+                  <input name="range_detail" type="checkbox" id="range03-03"><label for="range03-03">コネクトしている弁護士</label>
+                  <input name="range_detail" type="checkbox" id="range03-04"><label for="range03-04">コネクトしているクライアント</label>
+              </div>
+            </div>
+            <div class="profile_edit_btn">
+                <input type="reset" value="キャンセル">
+                <input type="submit" value="登録内容を確認">
+            </div>
+          </form><!-- [/ #content] -->
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+    <!--#include virtual="/sp/include/country-city-js.html"-->
+</body>
+</html>

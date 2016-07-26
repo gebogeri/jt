@@ -1,0 +1,345 @@
+.fr{
+  float: right;
+}
+.list_settingBtn {
+  width: 245px;
+  margin-top: 10px;
+}
+.list_settingBtn:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.list_settingBtn li {
+  float: left;
+  width: 119px;
+}
+
+.list_settingBtn li input {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.list_settingBtn li input[type='button'], .list_settingBtn li input[type='submit'] {
+  background: #44d095;
+}
+
+.list_settingBtn li input[type='reset'] {
+  margin-left: 5px;
+  background: #bbb;
+}
+.modal_box {
+  background: none repeat scroll 0 0 #fff;
+  padding: 50px 80px;
+  width: 460px;
+  margin: 0 auto;
+  text-align: center;
+}
+.re-password {
+  padding: 20px 80px 50px;
+}
+.modal_box_sns {
+  background: none repeat scroll 0 0 #fff;
+  padding: 50px 80px;
+  width: 460px;
+  margin: 0 auto;
+  text-align: center;
+}
+.modal_close {
+  background: #bbb;
+  display: block;
+  width: 115px;
+  z-index: 2;
+  padding: 10px 0;
+  color: #fff;
+  margin: 35px auto 0;
+}
+
+.static a.modal_close{
+  text-decoration: none;
+}
+
+
+#forgot_pass .modal_close {
+  margin: 0 0 0 5px;
+}
+
+#forgot_pass .list_settingBtn {
+  margin: 10px auto 0;
+}
+
+.alert_table {
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e5e8eb;
+}
+
+.alert_table tr {
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  padding: 24px 0;
+  border-top: 1px solid #e5e8eb;
+}
+
+.alert_table thead tr {
+  padding: 10px 0 20px;
+  border: none;
+}
+
+.alert_table thead td {
+  width: 480px;
+  text-align: right;
+}
+
+.alert_table tbody {
+  vertical-align: top;
+}
+
+.alert_table tbody tr:last-child {
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.alert_table tbody th {
+  width: 113px;
+  text-align: right;
+  line-height: 17px;
+}
+
+.alert_table tbody td {
+  padding: 0 10px 0 20px;
+}
+
+.alert_table .btn_edit {
+  width: 50px;
+  padding-left: 15px;
+  color: #bbb;
+  background: url("../../img/setting/btn_edit.png") center left no-repeat;
+}
+
+.input_swichArea {
+  width: 444px;
+  line-height: 20px;
+}
+
+.input_radioArea .input_radio + label {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.not_login_text{
+  color: #44d095;
+  font-weight: bold;
+  line-height: 25px;
+  margin-top: 30px;
+}
+.forgot_pass{
+  font-size: 11px;
+  margin-top: 7px;
+}
+.forgot_pass a{
+  color: #44d095;
+  text-decoration: underline;
+}
+.re-issue_table{
+  width: 300px;
+  margin: 25px auto 0;
+}
+.re-issue_table th,.re-issue_table td{
+  display: block;
+  text-align: left;
+}
+.re-issue_table th{
+  margin-bottom: 8px;
+}
+.re-issue_table td{
+  margin-bottom: 15px;
+}
+.re-issue_table input{
+  width: 100%;
+  padding: 7px 0 7px 8px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+.pass_form input[type="button"]{
+  width: 250px;
+  margin: 15px auto 0;
+  padding: 15px 0;
+  font-size: 14px;
+  background: #44d095;
+  border: none;
+  color: #fff;
+}
+.input_checkbox {
+  display: none;
+}
+.input_checkbox + label {
+  line-height: 15px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.input_checkbox + label:before {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  content: '';
+  border: 1px solid #bbb;
+  background: #fff;
+}
+.input_checkbox + label:after {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  content: '';
+  transition: all .2s;
+  opacity: 0;
+  background-color: #44d095;
+}
+.input_checkbox:checked + label:after {
+  opacity: 1;
+}
+.chk-box{
+  display: block;
+  border: none;
+  position: inherit;
+  width: 300px;
+  text-align: left;
+  margin: 0 auto;
+}
+.chk-box label{
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 6px;
+  padding-left: 25px;
+}
+.chk-box label span{
+  font-size: 11px;
+  font-weight: normal;
+}
+.chk-box label span a{
+  color: #44d095;
+  text-decoration: underline;
+}
+.chk-box label:hover{
+  background: transparent;
+}
+.login_form input[type="button"]{
+  width: 300px;
+  padding: 15px 0;
+  margin: 15px auto 0;
+  font-size: 14px;
+  background: #44d095;
+  border: none;
+  color: #fff;
+}
+.login_form input[type="submit"]{
+  width: 300px;
+  padding: 15px 0;
+  margin: 15px auto 0;
+  font-size: 14px;
+  background: #44d095;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/******SNSログイン******/
+.fw_b{
+	font-size:16px;
+	font-weight:bold;
+}
+.socia_login{
+	border-top:1px solid #bbbbbb;
+	border-bottom:1px solid #bbbbbb;
+	margin:35px auto 15px;;
+	width: 300px;
+	padding-bottom:25px;
+}
+.socia_login .socia_login_text{
+	font-size:12px;
+	margin:25px 0 0px;
+	text-align:center;
+	font-weight:bold;
+}
+.socia_login .sns_btn{
+	float:left;
+	margin-right:6px;
+	margin-top:20px;
+}
+.socia_login .sns_btn:last-child{
+	margin-right:0px;
+}
+.no_account{
+	width:300px;
+	margin:0 auto;
+}
+.no_account_text{
+	font-size:12px;
+	text-align:left;
+}
+.no_account_text .forgot_pass{
+	position:relative;
+	top:-8px;
+}
+/***パスワード設定****/
+.modal_box_wide{
+	background: none repeat scroll 0 0 #fff;
+	padding: 50px 80px;
+	width: 620px;
+	margin: 0 auto;
+	text-align: center;
+}
+.modal_box_wide p{
+	margin-top:10px;
+	font-size:14px;
+	line-height:27px;
+}
+.ta_c{
+	width:245px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.ta_c input[type="submit"]{
+	float:left;
+	width: 120px;
+	padding: 15px 0;
+	margin: 15px auto 0;
+	font-size: 14px;
+	background: #44d095;
+	border: none;
+	color: #fff;
+	margin-right:5px;
+	cursor: pointer;
+}
+.ta_c input[type="button"]{
+	float:left;
+	width: 120px;
+	padding: 15px 0;
+	margin: 15px auto 0;
+	font-size: 14px;
+	background: #bbbbbb;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+.small_test{
+	font-size:12px;
+}

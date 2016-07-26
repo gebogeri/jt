@@ -1,0 +1,51 @@
+<div id="modal">
+    <div class="modal">
+        <form id="modalFirst">
+            <h2 class="modal_ttl">ログイン</h2>
+            <p class="modal_subTtl">メールアドレス<a rel="modalNext" data-next="Second">パスワードをお忘れですか？</a></p>
+            <input type="text">
+            <p class="modal_subTtl">パスワード</p>
+            <input type="text">
+            <p class="modal_checkbox">
+                <input type="checkbox" id="save"><label for="save">ログイン状態を保持する</label>
+            </p>
+            <input type="submit" class="modal_submit" value="サインイン">
+            <div class="modal_sns">
+                <p class="modal_sns_ttl">SNSアカウントでログイン</p>
+                <p class="modal_sns_content">※これはSNSによる「ログイン」機能です。<br>新規ご登録の方は以下のリンクをご利用ください。</p>
+                <div class="modal_sns_btn">
+                    <a href=""><img src="/sp/img/login/btn_facebook.png" width="100%" alt="facebook"></a>
+                    <a href=""><img src="/sp/img/login/btn_linkedin.png" width="100%" alt="Linked in"></a>
+                    <a href=""><img src="/sp/img/login/btn_twitter.png" width="100%" alt="twitter"></a>
+                </div>
+            </div>
+            <div class="modal_q">
+                <span id="modal_q">ご利用方法<img src="/sp/img/common/question_icon_circle.png" width="14" height="14"></span>
+                <p class="faq_box">
+                    まずメールアドレスおよびパスワードでログイン後、「設定」→「アカウント」で各SNSと連携のうえ、ご利用ください。
+                </p>
+            </div>
+            <div class="modal_bottom">
+                <div class="flex">アカウントをお持ちでない場合<a href="">新規会員登録はこちら</a></div>
+                <span class="modal_close">キャンセル</span>
+            </div>
+        </form>
+
+        <form id="modalSecond">
+            <h2 class="modal_ttl">パスワード再設定</h2>
+            <p class="modal_center">パスワードを再発行致します。<br>
+            ご登録されているメールアドレスを<br>
+            入力してください</p>
+            <input type="text">
+            <div class="modal_btn">
+                <input type="submit" class="modal_submit" rel="modalNext" data-next="Third">
+                <span class="modal_close">キャンセル</span>
+            </div>
+        </form>
+        <form id="modalThird">
+            <h2 class="modal_ttl">メールを送信しました</h2>
+            <p class="modal_center">登録されたメールアドレス宛に送信しました</p>
+            <span class="modal_close full">OK</span>
+        </form>
+    </div>
+</div>

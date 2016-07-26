@@ -1,0 +1,186 @@
+/* setting
+/*************************/
+
+.form_table {
+  position: relative;
+  font-size: 12px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  border: 1px solid #e5e8eb;
+  background: #fff;
+  > h2 {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    margin: 0 20px;
+    padding: 0 0 18px;
+    .btn_delete {
+      font-size: 11px;
+      font-weight: normal;
+    }
+  }
+  dl {
+    margin: 0;
+    padding: 0 20px;
+  }
+  dt {
+    display: table-cell;
+    width: 120px;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  // ddが広いテーブル
+  &.dd_large dd {
+    width: 450px;
+  }
+  dd {
+    display: table-cell;
+    width: 410px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 17px;
+    border-bottom: 1px solid #eee;
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  // 編集ボタン
+  .btn_edit {
+    // display: table-cell;
+    width: 50px;
+    padding-left: 15px;
+    color: #bbb;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url("../../img/setting/btn_edit.png") center left no-repeat;
+  }
+
+  input {
+    &[type="text"] {
+      border: 1px solid #e5e8eb;
+      width: 360px;
+      padding: 7.5px 10px;
+    }
+    &.text_short {
+      width: 164px;
+      margin-bottom: 8px;
+    }
+    &.text_medium {
+      width: 250px;
+    }
+  }
+}
+
+// 開閉メニュー開いてるとき(.form_tableのdlと併用)
+.normal_area {
+  line-height: 40px;
+  &:hover {
+    background: #eee;
+  }
+}
+
+// 開閉メニュー閉じてるとき(.form_tableのdlと併用)
+.edit_area {
+  display: none;
+  background: #eee;
+  border-top: none;
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #fff;
+  dl {
+    padding: 0;
+  }
+
+  dd {
+    width: 390px;
+  }
+  input[type="radio"] + label {
+    display: block;
+    padding: 6px 20px;
+  }
+  select {
+    width: 60px;
+    color: #c4c4c4;
+    padding: 8px 10px;
+    border: 1px solid #e5e8eb;
+    border-radius: 0;
+    background: #fff url("../../img/setting/arrow_select.png") right 10px center no-repeat;
+    &.select_long {
+      width: 100%;
+    }
+  }
+}
+
+// 削除ボタン
+.btn_delete {
+  color: #bbb;
+  background: transparent url("../../img/setting/btn_delete.png") left center no-repeat;
+  padding: 10px 0 10px 17px;
+  cursor: pointer;
+
+  // アドレス削除のとき
+  &.delete_address {
+    float: right;
+    padding: 7px 0 7px 17px;
+  }
+
+  // アカウント削除のとき
+  &.delete_account {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+  }
+}
+
+// ボタン横並び
+.list_settingBtn {
+  width: 245px;
+  margin-top: 10px;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  li {
+    width: 120px;
+    float: left;
+    input {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      padding: 8px 0;
+      border: none;
+      &[type="button"], &[type="submit"] {
+        background: #44d095;
+      }
+      &[type="reset"] {
+        background: #bbb;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// サイドメニュー
+//----------------------------------------------------
+
+.gear_right {
+  left: 0;
+  right: initial;
+}
+
+//----------------------------------------------------
+// 各ページインポート
+//----------------------------------------------------
+
+@import "./setting/account";
+
+@import "./setting/alert";
+
+@import "./setting/language";
+

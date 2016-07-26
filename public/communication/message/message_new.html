@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/style.css">
+<link rel="stylesheet" href="/css/common/communication.css">
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link rel="stylesheet" href="/css/plugin/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/css/common/invite.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+<!--#include virtual="/include/header.html"-->
+<div id="wrapper">
+  <div id="container">
+    <main class="clear">
+      <!--#include virtual="/communication/include/side_message.html"-->
+
+      <div id="column-communication-main">
+        <div class="communication-title">
+          <div class="communication-title_container">
+            <p class="txt_gray txt_14">MESAGE</p>
+            <h1 class="none-title">
+              <input type="text" name="name" value="" placeholder="タイトル未指定（タイトルありの場合は＃３３３）">
+            </h1>
+          </div>
+          <form class="" action="index.html" method="post">
+            <div id="post_user" class="select-input-box entry_user">
+              <select name="" id="postUser" multiple="multiple">
+                <option value="0" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="1" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="2" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="3" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="4" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="communication-new-post">
+          <div class="btn_post_large"></div>
+          <form action="">
+            <div class="new-post-textarea">
+              <textarea name="name">
+【通常ポスト時】　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu auctor lacinia. Suspendisse et arcu convallis, condimentum dolor ut, faucibus nisl. Morbi placerat, purus quis laoreet mattis, dolor libero consectetur nibh, id faucibus sem quam vitae augue. Vestibulum feugiat quam quis placerat varius. Etiam aliquet velit eget nisl facilisis, eu sagittis nisl aliquam. Fusce vehicula tellus eget ipsum dapibus ultricies sed et metus. Aenean fermentum imperdiet tincidunt. In at lorem congue, congue metus lobortis, tempor tortor. In hac habitasse platea dictumst. Praesent iaculis facilisis erat vitae aliquam. Donec sagittis odio vitae lectus consectetur, at viverra orci mollis. Cras eu quam erat. Curabitur posuere quis diam et laoreet. Morbi cursus posuere nibh, et dictum sapien posuere eu. Aenean eget libero nulla.
+              </textarea>
+            </div>
+            <div class="communication-post-control-box clear">
+              <div class="control-box-inner">
+                <div class="icons">
+                  <a href="#modal_to" rel="leanModal" class="icon_to">TO:</a>
+                  <a href="#modal_">
+                    <form method="post" enctype="multipart/form-data">
+                      <input class="icon_clip" type="file" name="ファイルを送信">
+                    </form>
+                  </a>
+                  <a href="#modal_myfile" rel="leanModal" class="icon_contact">MyFile参照</a>
+                  <a href="#modal_connection" rel="leanModal" class="icon_team">コネクション参照</a>
+                </div>
+                <input type="checkbox" name="name" value="" id="enter_on" class="input_checkbox">
+                <label for="enter_on" class="txt_11 txt_gray">ENTERを押してメッセージを送信</label>
+              </div>
+              <input type="submit" name="name" value="SEND" class="btn_post_send">
+            </div>
+          </form>
+        </div><!-- [ / communication-new-post ] -->
+      </div><!-- [ / column-communication-main ] -->
+    </main>
+    <!--#include virtual="/communication/include/aside.html"-->
+  </div>
+  <!--#include virtual="/communication/include/modal_search_message.html"-->
+  <!--#include virtual="/communication/include/modal_to.html"-->
+  <!--#include virtual="/communication/include/modal_connection.html"-->
+  <!--#include virtual="/communication/include/modal_myfile.html"-->
+</div>
+
+<!--#include virtual="/include/footer.html"-->
+<script src="/js/plugin/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
+<script src="/js/plugin/select2.min.js"></script>
+<script src="/js/common/communication.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#column-communication-sub").perfectScrollbar();
+
+  $("#container a[rel*=leanModal]").leanModal({
+    top: 70,                     // モーダルウィンドウの縦位置を指定
+    overlay : 0.5,               // 背面の透明度
+    closeButton: ".modal_close"  // 閉じるボタンのCSS classを指定
+  });
+
+  function formatUser (user) {
+    if (!user.id) { return user.text; }
+    console.log(user);
+    var $user = $(
+      '<div class="port_user_li"><span class="icon_circle fl"><img src="/img/common/icon_profile.jpg"></span><p><b>' + user.text + '</b> ' + user.element.dataset.company + '</p></div>'
+      // '<span class="icon_circle"><img src="/img/common/' + user.element.value.toLowerCase() + '.png"> ' + user.text + '</span>'
+    );
+    return $user;
+  };
+
+  $("#postUser").select2({
+    placeholder: "送信先を指定",
+    templateResult: formatUser
+  });
+});
+</script>
+</body>
+</html>

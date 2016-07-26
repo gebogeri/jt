@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>アカウント | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/common/normalize.css">
+<link rel="stylesheet" href="../css/common/style.css">
+<link rel="stylesheet" href="../css/common/setting.css">
+<link rel="stylesheet" href="../css/common/invite.css">
+<link rel="stylesheet" href="../css/plugin/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<!--#include virtual="../include/header.html"-->
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray txt_14">SETTING</p>
+            <h1>アカウント</h1>
+        </div>
+    </div>
+    <div id="container" class="clear">
+        <main class="clear">
+            <div id="column-main-single">
+                <p class="txt_14 fw_b">本人アカウント</p>
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>基本情報</h2>
+
+                        <dl class="normal_area">
+                            <dt>氏名</dt>
+                            <dd><img src="../img/setting/setting_icon_circle.png" alt="">Kazushi Kondo</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>氏名</dt>
+                          <dd>
+                            <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                            <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                            <div class="change_img clear">
+                                <img src="../img/setting/setting_icon_circle.png" alt="">
+                                <div class="change_left">
+                                    <p>プロフィール画像を変更する</p>
+                                    <div class="btn_upload">
+                                        ファイルを参照
+                                        <input type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
+                                        <input type="text" id="uv" class="uploadValue" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list_settingBtn">
+                                <li><input type="submit" name="" value="保存"></li>
+                                <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                            </ul>
+                          </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>母国語表記</dt>
+                            <dd>近藤　和志　（コンドウ　カズシ）</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>母国語表記</dt>
+                            <dd>
+                                <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                                <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>性別</dt>
+                            <dd>男性</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>性別</dt>
+                            <dd>
+                                <input type="radio" name="gender" id="select1" class="input_radio" value="1" checked><label for="select1">男性</label>
+                                <input type="radio" name="gender" id="select2" class="input_radio" value="0"><label for="select2">女性</label>
+                                <input type="radio" name="gender" id="select3" class="input_radio" value="0"><label for="select3">指定しない</label>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>誕生日</dt>
+                            <dd>1988年9月8日</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>誕生日</dt>
+                            <dd>
+                                <select name="誕生日（年）" id="">
+                                    <option value="YYYY1">YYYY</option>
+                                    <option value="YYYY2">YYYY</option>
+                                    <option value="YYYY3">YYYY</option>
+                                    <option value="YYYY4">YYYY</option>
+                                    <option value="YYYY5">YYYY</option>
+                                </select>
+                                <select name="誕生日（月）" id="">
+                                    <option value="MM1">MM</option>
+                                    <option value="MM2">MM</option>
+                                    <option value="MM3">MM</option>
+                                    <option value="MM4">MM</option>
+                                    <option value="MM5">MM</option>
+                                </select>
+                                <select name="誕生日（日）" id="">
+                                    <option value="MM1">MM</option>
+                                    <option value="MM2">MM</option>
+                                    <option value="MM3">MM</option>
+                                    <option value="MM4">MM</option>
+                                    <option value="MM5">MM</option>
+                                </select>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>ユーザーID</dt>
+                            <dd>ttps://www.juristerra.net/user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>ユーザーID</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">登録されたユーザーID は、あなたのプロフィールURLへ反映されます</p>
+                                <input type="text" name="ユーザーID" size="50">
+                                <p class="not_useID">このIDは使用できません</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>メールアドレス</dt>
+                            <dd>
+                                aaaa@aaaaaa.com   メインで使用<br>
+                                aaaa@aaaaaa.com
+                            </dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <div class="edit_area">
+                            <dl class="mailAddress_content">
+                                <dt>メールアドレス <span class="mailAddress_no">01</span></dt>
+                                <dd>
+                                    <input type="text" name="メールアドレス01" class="text_medium">
+                                    <p><input type="radio" name="mainEmail" id="Email1" class="input_radio" value="0" checked><label for="Email1">メインのメールアドレスに設定する</label></p>
+                                    <ul class="list_settingBtn">
+                                        <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                        <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="mailAddress_content">
+                                <dt>メールアドレス <span class="mailAddress_no">02</span></dt>
+                                <dd>
+                                    <input type="text" name="メールアドレス02" class="text_medium">
+                                    <p class="btn_delete delete_address">アドレスを削除</p>
+                                    <p><input type="radio" name="mainEmail" id="Email2" class="input_radio" value="1"><label for="Email2">メインのメールアドレスに設定する</label></p>
+                                    <ul class="list_settingBtn">
+                                        <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                        <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <p class="btn_add add_mail" id="mailAddress_add">新しいメールアドレスを登録する</p>
+                        </div>
+
+                        <dl class="normal_area">
+                            <dt>パスワード</dt>
+                            <dd>パスワードの最終変更日時は1年以上前です。</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="text" name="現在のパスワード" placeholder="現在のパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード" placeholder="新しいパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード(確認用)" placeholder="新しいパスワードを再入力(確認用)" size="50" class="mb10">
+                                <p class="txt_11"><a rel="leanModal" href="#forgot_pass" class="txt_gray">パスワードを忘れた場合</a></p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>SNS連携</h2>
+
+                        <dl class="normal_area">
+                            <dt>Facebook</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Facebook</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">認証を解除</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Twitter</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Twitter</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">認証を解除</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Google+</dt>
+                            <dd>&nbsp;</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Google+</dt>
+                            <dd class="auth_cell">&nbsp;</dd>
+                            <dd>
+                              <button type="submit" class="btn_auth">認証する</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Linkedin</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Twitter</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">認証を解除</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+
+                <div class="clear mt40">
+                    <p class="txt_14 fw_b fl">アカウント管理者</p>
+                    <p class="pop_up">
+                        <img src="../img/setting/question_icon_circle.png" alt="？">
+                        <span class="pop_message">アカウント管理者は、あなたに代わって、情報の入力などを行うことができます。ただし、メッセージを読むことはできません。</span>
+                    </p>
+                    <p class="btn_add fr" id="btn_add_account">アカウント管理者を追加</p>
+                </div>
+                <form action="" id="add_account_area">
+                    <div class="form_table dd_large">
+                        <h2>アカウント管理者を追加</h2>
+                        <dl>
+                            <dt>氏名</dt>
+                            <dd>
+                                <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                                <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>ユーザーID</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">登録されたユーザーID は、あなたのプロフィールURLへ反映されます</p>
+                                <input type="text" name="ユーザーID" size="50" class="mb10">
+                                <p class="not_useID">このIDは使用できません</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>メールアドレス</dt>
+                            <dd>
+                                <input type="text" name="メールアドレス" size="50">
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="text" name="パスワード" placeholder="パスワードを入力" size="50" class="mb10">
+                                <input type="text" name="パスワード再入力" placeholder="パスワード再入力(確認用)" size="50" class="mb10">
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+						<dl>
+                            <dt></dt>
+                            <dd>
+                                <ul class="list_settingBtn">
+									<li><input type="submit" name="" value="保存"></li>
+									<li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+								</ul>
+                            </dd>
+                        </dl>
+						
+					
+                    </div>
+                </form>
+
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2 class="clear">ユーザー01</h2>
+                        <p class="btn_delete delete_account">登録を削除</p>
+
+                        <dl class="normal_area">
+                            <dt>氏名</dt>
+                            <dd>INAMI ASANO</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>氏名</dt>
+                            <dd>
+                                <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                                <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>ユーザー名(ID)</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>ユーザー名(ID)</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">登録されたユーザーID は、あなたのプロフィールURLへ反映されます</p>
+                                <input type="text" name="ユーザーID" size="50" class="mb10">
+                                <p class="not_useID">このIDは使用できません</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>メールアドレス</dt>
+                            <dd>aaa@aaaa.com</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>メールアドレス</dt>
+                            <dd>
+                                <input type="text" name="メールアドレス" size="50" class="text_medium">
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>パスワード</dt>
+                            <dd>パスワードの最終変更日時は1年以上前です。</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="text" name="現在のパスワード" placeholder="現在のパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード" placeholder="新しいパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード(確認用)" placeholder="新しいパスワードを再入力(確認用)" size="50" class="mb10">
+                                <p class="txt_11 txt_gray">パスワードを忘れた場合</p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>ユーザー02</h2>
+                        <p class="btn_delete delete_account">登録を削除</p>
+
+                        <dl class="normal_area">
+                            <dt>氏名</dt>
+                            <dd>INAMI ASANO</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>氏名</dt>
+                            <dd>
+                                <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                                <input type="text" name="ミドルネーム" placeholder="ミドルネーム" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>ユーザー名(ID)</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>ユーザー名(ID)</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">登録されたユーザーID は、あなたのプロフィールURLへ反映されます</p>
+                                <input type="text" name="ユーザーID" size="50" class="mb10">
+                                <p class="not_useID">このIDは使用できません</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>メールアドレス</dt>
+                            <dd>aaa@aaaa.com</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>メールアドレス</dt>
+                            <dd>
+                                <input type="text" name="メールアドレス" size="50" class="text_medium">
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>パスワード</dt>
+                            <dd>パスワードの最終変更日時は1年以上前です。</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="text" name="現在のパスワード" placeholder="現在のパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード" placeholder="新しいパスワードを入力" size="50" class="mb10">
+                                <input type="text" name="新しいパスワード(確認用)" placeholder="新しいパスワードを再入力(確認用)" size="50" class="mb10">
+                                <p class="txt_11 txt_gray">パスワードを忘れた場合</p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="確認メールを送信"></a></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <div id="side-profile">
+                <div id="side-name" class="txt_12">
+                    <p class="pdl20 txt_gray">SETTING</p>
+                    <a href="" class="btn_gear gear_right"></a>
+                </div>
+                <div id="side-link" class="txt_11">
+                    <a href="/setting" class="selected">アカウント</a>
+                    <a href="/setting/language.html">言語</a>
+                    <a href="/setting/alert.html">通知</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="modal_box" id="confirm_email">
+        <p class="fw_b mb10">メールを送信しました</p>
+        <p class="lh35">メールアドレスが有効であることを確認するために、<br>
+        lesud.minna@gmail.com 宛てにメールが送信されました。</p>
+        <p class="modal_close">OK</p>
+    </div>
+    <div class="modal_box" id="forgot_pass">
+        <p class="fw_b mb10">パスワードの再設定</p>
+        <p class="lh35">登録されたメールアドレス宛に<br>
+        パスワード再設定のメールを送信します。</p>
+        <ul class="list_settingBtn">
+            <li><a rel="leanModal" href="#submit_pass"><input type="button" name="" value="送信"></a></li>
+            <li><input type="reset" name="" value="キャンセル" class="modal_close"></li>
+        </ul>
+    </div>
+    <div class="modal_box" id="submit_pass">
+        <p class="fw_b mb10">メールを送信しました</p>
+        <p class="lh35">パスワード再設定のご案内を<br>
+        登録されたメールアドレス宛に送信しました。</p>
+        <p class="modal_close">OK</p>
+    </div>
+</div>
+<!--#include virtual="../include/footer.html"-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/plugin/lean_modal.js"></script>
+<script src="/js/common/setting.js"></script>
+<!-- <script src="../js/plugin/accordion.js"></script> -->
+<script>
+$(function(){
+    $("#btn_add_account").on("click", function() {
+        $("#add_account_area").slideToggle();
+    });
+
+    // 新しいメールアドレス追加
+    $("#mailAddress_add").on("click", function() {
+        var target = $(this).prev(".mailAddress_content")
+        console.log(target);
+        var mailForm = target.clone();
+        target.after(mailForm);
+    });
+
+    // メールアドレス削除
+    $(document).on("click", ".delete_address", function() {
+        $(this).closest(".mailAddress_content").fadeOut(300, function() {
+          $(this).remove();
+        });
+    });
+
+});
+</script>
+</body>
+</html>

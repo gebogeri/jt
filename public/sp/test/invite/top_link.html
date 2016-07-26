@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" href="/css/common/invite.css">
+<script>
+setTimeout(resizeEvent,100); //処理を若干遅延させる（colorboxの処理終了後に処理させるため）
+ 
+function resizeEvent() {
+ 
+ var parentW = $(window.parent).width(); //ライトボックスの横位置を合わせるために親ウィンドウの横幅取得
+ var cboxWidth = window.parent.$('#colorbox').width(); //ライトボックスに動的な横幅を取得
+ var left = parentW/2 - cboxWidth/2; //親の横幅／2　-　ライトボックス横幅／2をして、横の余白を算出
+ 
+ var PageHeight = $("body").height() + 0; //iframeページの高さを取得
+ 
+ var parentH = $(window.parent).height(); //ライトボックス表示の位置を調整するために親のウィンドウの高さを取得
+ var dt = parseInt(window.parent.$("#colorbox").css('top')); //ライトボックスに動的に入った「top」の値を取得
+ var pL = dt - (PageHeight/2); //動的なtopの値からライトボックスの高さの半分を引く
+ if(pL <= 0){ var pL = 0;} //引いた値が0以下なら、0を割り当てる 
+  
+ window.parent.$("#colorbox").animate({
+  'height': (PageHeight + 14) + 'px', //iframeの高さを、ライトボックスの高さに割り当て
+  'top': pL + 'px', //算出したtopの値を割り当てる
+  'left': left //算出したleftの値を割り当てる
+ },400);
+ 
+ //他、高さが必要なボックスにiframeの高さを入れていく
+ window.parent.$("#cboxWrapper").animate({"height": (PageHeight + 14) + "px"},500);
+ window.parent.$("#cboxMiddleLeft").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxContent").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxLoadedContent").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxLoadedContent iframe").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxMiddleRight").animate({"height": PageHeight + "px"},500);
+}
+</script>
+</head>
+<body>
+<div id="modal_top_link">
+
+
+
+
+                <div>
+                  <div class="modal-progress">
+                    <div class="step1">
+                      <img src="/img/invite/progress_step1_on.png" alt="招待先を入力">
+                    </div>
+                    <div class="step2"><img class="" src="/img/invite/progress_step2_off.png" alt="入力確認"></div>
+                    <div class="step3"><img class="" src="/img/invite/progress_step3_off.png" alt="リンク発行"></div>
+                  </div>
+                  </div>
+
+                  <div class="modal-explain">
+                    <h2 class="txt_14 fw_b">招待リンクの発行</h2>
+                    <p class="txt-detail">必要事項を記入の上、確認ボタンをクリックしてください。</p>
+                  </div>
+
+                  <table class="table-modal">
+                    <tr class="table-first">
+                      <th>
+                        招待される方の<br>ユーザー区分
+                      </th>
+                      <td>
+                        <span class="radiobutton-area">
+                          <input checked="checked" type="radio" name="user_type" value="0" id="" class="input_radiobutton" >
+                          <label for="" class="txt_11 txt_gray">弁護士</label>
+                        </span>
+
+                        <span class="radiobutton-area">
+                          <input type="radio" name="user_type" value="1" id="" class="input_radiobutton">
+                          <label for="" class="txt_11 txt_gray">クライアント</label>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        招待される方の指名
+                      </th>
+                      <td>
+                        <input class="input column2" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        メッセージのタイトル
+                      </th>
+                      <td>
+                        <input class="input" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        メッセージ本文
+                      </th>
+                      <td>
+                        <textarea class="textarea"  name=""></textarea>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <span class="modal-checkboxarea">
+                    <input type="checkbox" name="name" value="" id="enter_on1" class="input_checkbox"><label for="enter_on1" class="txt_11 txt_gray">個人情報の取り扱いに同意する<span>プライバシーポリシーのご確認は<a href="">こちら</a></span></label>
+                  </span>
+
+                  <div class="ta_c">
+                    <span class="btn_modalEdit confirm_link">入力内容を確認</span>
+                    <span class="btn_can modal_close">キャンセル</span>
+                  </div>
+
+                </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+#careerForm .profile-form-table{
+  padding-bottom:0;
+}
+
+#search_toggle{
+  display: none;
+}
+
+.btn_search{
+  display: block;
+  height:43px;
+  line-height: 43px;
+  width:100%;
+  background:#44d095;
+  color:#fff;
+  font-size:12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius:4px;
+  margin-top:16px;
+}
+
+.profile-form-table .head_search{
+  border:none;
+  padding: 0 0 14px;
+  margin:30px 0 14px;
+  border-top:none;
+  border-bottom:1px solid #e5e8eb;
+}
+
+.profile-form-table .head_search th{
+  margin:0;
+  font-size:16px;
+}
+
+.profile-form-table .btn_search_toggle{
+  margin:16px 0 0;
+  padding:0;
+}
+
+.profile-form-table .btn_search_toggle td{
+  text-align: center;
+  cursor: pointer;
+  height:35px;
+}
+
+.profile-form-table .btn_search_toggle td:before{
+  content:"OPEN";
+  display:inline-block;
+  padding-right:25px;
+  line-height:35px;
+  background:url(/sp/img/profile/arrow_select.png) right center no-repeat;
+  background-size: 8px;
+  color:#bbb;
+  font-weight:bold;
+}
+
+.active .btn_search_toggle td:before{
+  content:"CLOSE";
+  background-image:url(/sp/img/profile/arrow_select_open.png);
+
+}

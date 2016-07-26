@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン前TOP | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+            <h1 class="ttl">
+                <span class="ttl_english">SETTING</span>
+                <span class="ttl_lang">言語</span>
+            </h1>
+            <div id="content">
+                <h2 class="subTtl">言語設定</h2>
+
+                <div class="setting">
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">使用する言語</dt>
+                        <dd class="setting_item_display">日本語、English</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <div class="setting_item_edit_language use">
+                                    <select>
+                                        <option value="" disabled selected>使用する言語</option>
+                                        <option value="">英語</option>
+                                        <option value="">日本語</option>
+                                    </select>
+                                </div><!-- [/ .setting_item_edit_language] -->
+                                <div class="setting_item_edit_language level">
+                                    <select>
+                                        <option value="" disabled selected>言語レベル</option>
+                                        <option value="">初級</option>
+                                        <option value="">制限付実務</option>
+                                        <option value="">一般実務</option>
+                                        <option value="">高等実務</option>
+                                        <option value="">ネイティブ</option>
+                                    </select>
+                                </div><!-- [/ .setting_item_edit_language] -->
+                                <div class="setting_item_edit_languageAdd lang">
+                                    <span class="setting_item_edit_languageAdd_btn">言語を追加</span>
+                                </div>
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="保存">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">当サービスで表示する言語</dt>
+                        <dd class="setting_item_display">日本語</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <div class="setting_item_edit_language use">
+                                    <select>
+                                        <option value="" disabled selected>テキスト</option>
+                                        <option value="">英語</option>
+                                        <option value="">日本語</option>
+                                    </select>
+                                </div><!-- [/ .setting_item_edit_language] -->
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="保存">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">記事の自動翻訳</dt>
+                        <dd class="setting_item_display">日本語</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <div class="setting_item_edit_language use">
+                                    <select>
+                                        <option value="" disabled selected>テキスト</option>
+                                        <option value="">英語</option>
+                                        <option value="">日本語</option>
+                                    </select>
+                                </div><!-- [/ .setting_item_edit_language] -->
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="保存">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                    <dl class="setting_item">
+                        <dt class="setting_item_ttl">翻訳しない言語</dt>
+                        <dd class="setting_item_display">English</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <div class="setting_item_edit_language use">
+                                    <select>
+                                        <option value="" disabled selected>テキスト</option>
+                                        <option value="">英語</option>
+                                        <option value="">日本語</option>
+                                    </select>
+                                </div><!-- [/ .setting_item_edit_language] -->
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="保存">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
+                </div><!-- [/ .setting] -->
+
+            </div><!-- [/ #content] -->
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+</body>
+</html>

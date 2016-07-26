@@ -1,0 +1,35 @@
+<div id="wrapper">
+    <div class="modal_box" id="ajax_wrap">
+        <p class="fw_b mb10">ログイン</p>
+        <p class="not_login_text">メールアドレスまたはパスワードが無効です。<br>
+        もう一度お試しください。</p>
+        <form action="" method="" class="login_form">
+        	<table class="re-issue_table">
+        		<tr>
+        			<th>メールアドレス</th>
+        			<td><input type="text" size="35"></td>
+        		</tr>
+                <tr>
+                    <th>パスワード<span class="forgot_pass fr"><a class="ajax" href="/modal/password_re-issue">パスワードをお忘れですか？</a></span>
+                    <div class="clear"></div>
+                    </th>
+                    <td><input type="text" size="35"></td>
+                </tr>
+        	</table>
+            <div class="chk-box">
+                <input type="checkbox" value="" name="" id="yes" class="input_checkbox"><label for="yes">ログイン状態を保持する</label>
+            </div>
+        	<input type="button" name="" value="サインイン">
+            <p class="modal_close">閉じる</p>
+        </form>
+    </div>
+</div>
+<script>
+$(function() {
+    $(".ajax").colorbox({
+    maxWidth:"80%",
+    maxHeight:"80%",
+    opacity: 0.7
+  });
+});
+</script>

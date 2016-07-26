@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/style.css">
+<link rel="stylesheet" href="/css/common/communication.css">
+<link rel="stylesheet" href="/css/common/invite.css">
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link rel="stylesheet" href="/css/plugin/perfect-scrollbar.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+<!--#include virtual="/include/header.html"-->
+<div id="wrapper">
+  <div id="container">
+    <main class="clear">
+      <!--#include virtual="/communication/include/side_query_client.html"-->
+      <div id="column-communication-main">
+      </div><!-- [ / column-communication-main ] -->
+    </main>
+    <!--#include virtual="/communication/include/aside.html"-->
+  </div>
+  <!--#include virtual="/communication/include/modal_to.html"-->
+  <!--#include virtual="/communication/include/modal_connection.html"-->
+  <!--#include virtual="/communication/include/modal_myfile.html"-->
+</div>
+
+<!--#include virtual="/include/footer.html"-->
+<script src="/js/plugin/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
+<script src="/js/common/communication.js"></script>
+<script src="/js/common/comAjax.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#column-communication-sub").perfectScrollbar();
+
+  // サイドのselected用。モック用で実際はいらない
+  $(".side-links li a").removeClass("selected").eq(2).addClass("selected");
+});
+</script>
+</body>
+</html>

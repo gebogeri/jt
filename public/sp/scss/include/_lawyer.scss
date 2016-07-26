@@ -1,0 +1,127 @@
+@import '../mixin';
+
+.lawyer{
+    max-height: 60rem;
+    @include border;
+    background: #fff;
+    overflow-y: scroll;
+    @include e(item){
+        padding: 2rem 3.71% .8rem;
+        cursor: pointer;
+        @include m(isSelected){
+            background: #edfbfc;
+        }
+        @include e(photo){
+            width: 7rem;
+            height: 7rem;
+            border-radius: 100%;
+            margin-right: 1rem;
+            overflow: hidden;
+        }//photo
+        @include e(head){
+            flex: 1;
+            padding-top: 1rem;
+            @include border(bottom);
+            @include e(name){
+                margin: 0 0 .5rem;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+            @include e(meta){
+                @include e(fav,data,com){
+                    display: inline-block;
+                    height: 1.4rem;
+                    margin-right: .5rem;
+                    color: #bbb;
+                    line-height: 1.4rem;
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+                @include e(fav){
+                    padding-left: 1.4rem;
+                    background: url(/sp/img/common/icon_medal.png) left center no-repeat;
+                    background-size: 1rem;
+                }
+                @include e(data){
+                    padding-left: 1.5rem;
+                    background: url(/sp/img/common/icon_medal.png) left center no-repeat;
+                    background-size: 1.1rem;
+                }
+                @include e(com){
+                    padding-left: 2.1rem;
+                    background: url(/sp/img/common/icon_com.png) left center no-repeat;
+                    background-size: 1.6rem;
+                }
+            }//meta
+        }//head
+        @include e(company){
+            padding: 1rem 0;
+            @include border(bottom);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            @include e(name){
+                font-weight: bold;
+            }
+            @include e(other){
+                @include texthide;
+            }
+            @include e(place){
+                padding-left: 1.8rem;
+                background: url(/sp/img/common/icon_locate.png) left center no-repeat;
+                background-size: .8rem;
+                color: #bbb;
+            }
+        }//company
+        @include e(area){
+            @include flex;
+            margin: 0;
+            line-height: 2.3rem;
+            dt{
+                color: #bbb;
+                font-size: 1rem;
+            }
+            dd{
+                flex: 1;
+                margin-left: .5rem;
+                @include texthide;
+            }
+        }
+        @include e(btn){
+            @include flex($j:space-between);
+            margin-top: 1.3rem;
+            font-size: 1.2rem;
+            @include ff;
+            a{
+                box-sizing: border-box;
+                display: block;
+                width: 31.5%;
+                height: 3.8rem;
+                @include border;
+                border-radius: .4rem;
+                line-height: 3.8rem;
+                text-decoration: none;
+                text-align: center;
+            }
+            @include e(follow,profile,message){
+                display: inline-block;
+                color: #bbb;
+                letter-spacing: .08rem;
+            }
+            @include e(follow){
+                padding-left: 2rem;
+                background: url(/sp/img/common/icon_follow.png) left center no-repeat;
+                background-size: 1.4rem;
+            }
+            @include e(profile){
+                padding-left: 1.9rem;
+                background: url(/sp/img/common/icon_profile.png) left center no-repeat;
+                background-size: 1.2rem;
+            }
+            @include e(message){
+                padding-left: 2.2rem;
+                background: url(/sp/img/common/icon_message.png) left center no-repeat;
+                background-size: 1.5rem;
+            }
+        }//btn
+    }//item
+}

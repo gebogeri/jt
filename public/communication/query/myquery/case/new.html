@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/style.css">
+<link href="/css/common/invite.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/common/communication.css">
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link rel="stylesheet" href="/css/plugin/perfect-scrollbar.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+<!--#include virtual="/include/header.html"-->
+<div id="wrapper">
+  <div id="container">
+    <main class="clear">
+      <!--#include virtual="/communication/include/side_query_myquery.html"-->
+
+      <div id="column-communication-main">
+        <div class="communication-title">
+          <div class="communication-title_container">
+            <p class="txt_gray txt_14">MY QUERY</p>
+            <h1><input type="text" name="name" value="" placeholder="タイトルを入力"></h1>
+            <form class="" action="/search/" target="_blank" method="post">
+            <div id="post_user" class="select-input-box entry_user">
+
+              <button type="submit" name="id" value="送信する弁護士を検索" onclick="open3(this.form)"/>送信する弁護士を検索</button>
+
+              <select name="" id="postUser" multiple="" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+              <option value="近藤" data-select2-tag="true">近藤</option></select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 520px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="近藤和志"><span class="select2-selection__choice__remove" role="presentation">×</span>近藤和志</li><li class="select2-selection__choice" title="近藤和志"><span class="select2-selection__choice__remove" role="presentation">×</span>近藤和志</li><li class="select2-selection__choice" title="近藤和志"><span class="select2-selection__choice__remove" role="presentation">×</span>近藤和志</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 2.25em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+            </div>
+
+
+          </form>
+
+          </div>
+        </div>
+
+
+        <div class="communication-post-area">
+          <div class="communication-post-box">
+            <form class="" action="index.html" method="post">
+              <div class="communication-post-form">
+                <h2>基本情報</h2>
+                <table id="addRow">
+                  <tr>
+                    <th>分類</th>
+                    <td>
+                      <select name="" id="addSelect" class="select_short">
+                        <option value="" disabled selected>項目を選択</option>
+                        <option value="1">QUESTION</option>
+                        <option value="2">CASE</option>
+                        <option value="3">OTHERS</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>ジュリスディクション</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="jurisdiction" multiple="multiple">
+                          <option value="0">テキスト0</option>
+                          <option value="1">テキスト1</option>
+                          <option value="2">テキスト2</option>
+                          <option value="3">テキスト3</option>
+                          <option value="4">テキスト4</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>専門法分野</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="law_field" multiple="multiple">
+                          <option value="0">テキスト0</option>
+                          <option value="1">テキスト1</option>
+                          <option value="2">テキスト2</option>
+                          <option value="3">テキスト3</option>
+                          <option value="4">テキスト4</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>事業地域</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="business_regional" multiple="multiple">
+                          <option value="0">テキスト0</option>
+                          <option value="1">テキスト1</option>
+                          <option value="2">テキスト2</option>
+                          <option value="3">テキスト3</option>
+                          <option value="4">テキスト4</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+
+              </div><!-- [ / communication-post-form ] -->
+              <div class="communication-new-post">
+                <div class="btn_post_large"></div>
+                <div class="new-post-textarea">
+                  <textarea name="name">
+                  【通常ポスト時】　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu auctor lacinia. Suspendisse et arcu convallis, condimentum dolor ut, faucibus nisl. Morbi placerat, purus quis laoreet mattis, dolor libero consectetur nibh, id faucibus sem quam vitae augue. Vestibulum feugiat quam quis placerat varius. Etiam aliquet velit eget nisl facilisis, eu sagittis nisl aliquam. Fusce vehicula tellus eget ipsum dapibus ultricies sed et metus. Aenean fermentum imperdiet tincidunt. In at lorem congue, congue metus lobortis, tempor tortor. In hac habitasse platea dictumst. Praesent iaculis facilisis erat vitae aliquam. Donec sagittis odio vitae lectus consectetur, at viverra orci mollis. Cras eu quam erat. Curabitur posuere quis diam et laoreet. Morbi cursus posuere nibh, et dictum sapien posuere eu. Aenean eget libero nulla.
+                  </textarea>
+                </div>
+                <div class="communication-post-control-box clear">
+                  <div class="control-box-inner">
+                    <div class="icons">
+                      <a href="#modal_to" rel="leanModal" class="icon_to">TO:</a>
+                      <a href="#modal_" class="icon_clip">引用</a>
+                      <a href="#modal_myfile" rel="leanModal" class="icon_contact">MyFile参照</a>
+                      <a href="#modal_connection" rel="leanModal" class="icon_team">コネクション参照</a>
+                    </div>
+                    <input type="checkbox" name="name" value="" id="enter_on" class="input_checkbox">
+                    <label for="enter_on" class="txt_11 txt_gray">ENTERを押してメッセージを送信</label>
+                  </div>
+                  <input type="submit" name="name" value="SEND" class="btn_post_send">
+                </div>
+              </div><!-- [ / communication-new-post ] -->
+            </form>
+
+          </div><!-- [ / communication-post-box ] -->
+        </div><!-- [ / communication-post-area ] -->
+      </div><!-- [ / column-communication-main ] -->
+    </main>
+    <aside>
+      <h2 class="side-title"><span class="icon_msg"></span>COMMUNICATION</h2>
+      <ul class="side-links">
+        <li><a href="/communication/message/">MESSAGE<span class="icon_green">2</span><span class="icon_message_new"></span></a></li>
+        <li>
+          <p>QUERY</p>
+          <ul>
+            <li><a href="/communication/query/attony/">- ATTORNEY</a></li>
+            <li><a href="/communication/query/client/">- CLIENT</a></li>
+            <li><a href="/communication/query/myquery/" class="selected">- MYQUERY</a></li>
+          </ul>
+        </li>
+        <li><a href="">BOOKMARK<span class="icon_green">2</span><span class="icon_message_new"></span></a></li>
+      </ul>
+    </aside>
+  </div>
+  <!--#include virtual="/communication/include/modal_search_query.html"-->
+  <!--#include virtual="/communication/include/modal_to.html"-->
+  <!--#include virtual="/communication/include/modal_connection.html"-->
+  <!--#include virtual="/communication/include/modal_myfile.html"-->
+</div>
+
+<!--#include virtual="/include/footer.html"-->
+<script src="/js/plugin/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
+<script src="/js/plugin/select2.min.js"></script>
+<script src="/js/plugin/jquery.leanModal.min.js"></script>
+<script src="/js/common/communication.js"></script>
+<script src="/js/common/communication_edit.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#column-communication-sub").perfectScrollbar();
+
+  $(".select-input-box select").select2({
+    placeholder: "テキストを入力",
+    tags: true
+  });
+
+  // サイドのselected用。モック用で実際はいらない
+  $(".side-links li a").removeClass("selected").eq(3).addClass("selected");
+});
+</script>
+<script type="text/javascript">
+function open3(f) {
+    window.name = (new Date()).getTime();
+    var date = new Date();
+    var time = date.getTime()
+    f.target = window.name + time;
+    var w = window.open("about:blank", f.target, 'width=1080, height=700');
+    w.focus();
+    f.submit();
+}
+</script>
+</body>
+</html>

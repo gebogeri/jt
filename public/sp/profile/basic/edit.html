@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+          <h1 class="ttl">
+              <span class="ttl_english">BASIC INFOMATION</span>
+              <span class="ttl_lang btn">INFOMATIONの編集</span>
+          </h1>
+          <div class="ttl_back">
+            <div class="innerBox">
+              <a class="ttl_back_btn">BACK TO LIST</a>
+            </div>
+          </div>
+
+          <form id="content">
+            <div class="profile_edit single">
+              <h4 class="profile_edit_ttl">所属</h4>
+              <input type="text" class="profile_edit_inputTxt" placeholder="所属事務所または所属会社名を入力">
+              <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+
+              <h4 class="profile_edit_ttl">役職</h4>
+              <input type="text" class="profile_edit_inputTxt" placeholder="役職を入力">
+              <input type="text" class="profile_edit_inputTxt" placeholder="英語表記を入力">
+
+              <h4 class="profile_edit_ttl">所属事務所または所属会社サイトURL（任意）</h4>
+              <input type="text" class="profile_edit_inputTxt" placeholder="サイトURLを入力">
+
+              <h4 class="profile_edit_ttl">所属会社内自己プロフィールURL（任意）</h4>
+              <input type="text" class="profile_edit_inputTxt" placeholder="サイトURLを入力">
+
+              <h4 class="profile_edit_ttl">所在地</h4>
+              <select class="profile_edit_select2 select2_country select2_single">
+                  <!--#include virtual="/sp/include/select-country.html"-->
+              </select>
+              <div class="profile_edit_select full">
+                <select>
+                  <option value="" selected disabled>CITY</option>
+                </select>
+              </div>
+
+              <h4 class="profile_edit_ttl">人数を入力</h4>
+              <div class="profile_edit_flex">
+                <input type="text" class="profile_edit_inputTxt full" placeholder="人数を入力">&nbsp;人&nbsp;～&nbsp;<input type="text" class="profile_edit_inputTxt full" placeholder="任意">&nbsp;人
+              </div>
+
+              <h4 class="profile_edit_ttl">オフィス数</h4>
+              <div class="profile_edit_flex">
+                国内&nbsp;<input type="text" class="profile_edit_inputTxt full">&nbsp;箇所&nbsp;&nbsp;国外&nbsp;<input type="text" class="profile_edit_inputTxt full">&nbsp;箇所
+              </div>
+
+              <div class="profile_edit_block">
+                <div class="profile_edit_block_copyArea" data-select2="lawArea_lawField" data-num="1">
+                  <h4 class="profile_edit_ttl">ランキング<span class="num">1</span>:</h4>
+                  <select class="profile_edit_select2 select2_lawArea select2_single">
+                    <!--#include virtual="/sp/include/select-country.html"-->
+                  </select>
+                  <select class="profile_edit_select2 select2_lawField select2_single">
+                    <!--#include virtual="/sp/include/select-law.html"-->
+                  </select>
+                  <div class="profile_edit_flex">
+                    <input type="text" class="profile_edit_inputTxt mid" placeholder="順位">位
+                  </div>
+                  <ul class="profile_edit_caution">
+                    <li>外部機関から弁護士個人または所属法律事務所についてランク付けされたことがある場合にご記載ください。</li>
+                    <li>弁護士事務所に所属さている方のみご記入ください</li>
+                  </ul>
+                  <input type="text" class="profile_edit_inputTxt" placeholder="関連URLを入力">
+                </div><!-- [/ .profile_edit_block_copyArea] -->
+                <span class="profile_edit_block_addBtn">さらにアドミッションを追加</span>
+              </div><!-- [/ .profile_edit_block] -->
+
+              <div class="profile_edit_block">
+                <h4 class="profile_edit_ttl">弁護士フィー</h4>
+                <p class="profile_edit_comment">通常レート</p>
+                <div class="profile_edit_flex">
+                  <input type="text" class="profile_edit_inputTxt part-3">
+                  <div class="profile_edit_select part-3">
+                    <select>
+                      <!--#include virtual="/sp/include/select-money.html"-->
+                    </select>
+                  </div><!-- [/ .profile_edit_select] -->
+                  <input type="checkbox" id="kaiji"><label for="kaiji" class="part-3">開示しない</label>
+                </div><!-- [/ .profile_edit_flex] -->
+                <p class="profile_edit_comment">特別レート</p>
+                <div class="profile_edit_flex">
+                  <input type="text" class="profile_edit_inputTxt part-3">
+                  <div class="profile_edit_select part-3">
+                    <select>
+                      <!--#include virtual="/sp/include/select-money.html"-->
+                    </select>
+                  </div><!-- [/ .profile_edit_select] -->
+                  <input type="checkbox" id="kaiji_special"><label for="kaiji_special" class="part-3">開示しない</label>
+                </div><!-- [/ .profile_edit_flex] -->
+                <p class="profile_edit_comment">その他</p>
+                <input type="radio" name="other" id="other1">
+                <label for="other1">固定給での受任可</label>
+                <input type="radio" name="other" id="other2">
+                <label for="other2">成果報酬可</label>
+                <input type="radio" name="other" id="other3">
+                <label for="other3">手付金不要</label>
+                <p class="profile_edit_comment">コメント</p>
+                <textarea name="" id=""></textarea>
+              </div><!-- [/ .profile_edit_block] -->
+
+              <div class="profile_edit_block">
+                <div class="profile_edit_block_copyArea" data-select2="juris" data-num="1">
+                  <h4 class="profile_edit_ttl">アドミッション<span class="num">1</span>:</h4>
+                  <select class="profile_edit_select2 select2_juris select2_single">
+                      <!--#include virtual="/sp/include/select-country.html"-->
+                  </select>
+                  <div class="profile_edit_flex">
+                    期間&nbsp;&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                    &nbsp;～&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                  </div><!-- [/ .profile_edit_flex] -->
+                </div><!-- [/ .profile_edit_block_copyArea] -->
+                <div class="profile_edit_block_copyArea multi" data-select2="juris" data-num="2">
+                  <h4 class="profile_edit_ttl">アドミッション<span class="num">2</span>:</h4>
+                  <select class="profile_edit_select2 select2_juris select2_single">
+                  <!--#include virtual="/sp/include/select-country.html"-->
+                  </select>
+                  <div class="profile_edit_flex">
+                    期間&nbsp;&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                    &nbsp;～&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                  </div><!-- [/ .profile_edit_flex] -->
+                  <span class="profile_edit_block_copyArea_delete"></span>
+                </div><!-- [/ .profile_edit_block_copyArea] -->
+                <span class="profile_edit_block_addBtn">さらにアドミッションを追加</span>
+              </div><!-- [/ .profile_edit_block] -->
+
+              <div class="profile_edit_block">
+                <div class="profile_edit_block_copyArea" data-select2="juris" data-num="1">
+                  <h4 class="profile_edit_ttl">所属弁護士会:</h4>
+                  <input type="text" class="profile_edit_inputTxt" placeholder="名称">
+                  <input type="text" class="profile_edit_inputTxt" placeholder="関連URLを入力">
+                  <select class="profile_edit_select2 select2_juris" multiple>
+                  <!--#include virtual="/sp/include/select-country.html"-->
+                  </select>
+                  <div class="profile_edit_flex">
+                    期間&nbsp;&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                    &nbsp;～&nbsp;
+                    <div class="profile_edit_select">
+                      <select>
+                        <option value="">1980</option>
+                        <option value="">1981</option>
+                        <option value="">1982</option>
+                        <option value="">1983</option>
+                        <option value="">1984</option>
+                      </select>
+                    </div>
+                  </div><!-- [/ .profile_edit_flex] -->
+                </div><!-- [/ .profile_edit_block_copyArea] -->
+                <span class="profile_edit_block_addBtn">さらに所属弁護士会を追加</span>
+              </div><!-- [/ .profile_edit_block] -->
+            </div><!-- [/ .profile_edit] -->
+
+            <h2 class="subTtl">公開範囲</h2>
+            <div class="profile_edit_range range">
+              <span>非公開</span>
+              <div class="range_content up">
+                  <input name="range" type="radio" id="range01"><label for="range01">非公開</label>
+                  <input name="range" type="radio" id="range02"><label for="range02">全メンバー</label>
+                  <input name="range" type="radio" id="range03"><label for="range03" class="range_content_detail">表示範囲を限定</label>
+
+                  <input name="range_detail" type="checkbox" id="range03-01"><label for="range03-01">全ての弁護士</label>
+                  <input name="range_detail" type="checkbox" id="range03-02"><label for="range03-02">全ての依頼者</label>
+                  <input name="range_detail" type="checkbox" id="range03-03"><label for="range03-03">コネクトしている弁護士</label>
+                  <input name="range_detail" type="checkbox" id="range03-04"><label for="range03-04">コネクトしているクライアント</label>
+              </div>
+            </div>
+            <div class="profile_edit_btn">
+                <input type="reset" value="キャンセル">
+                <input type="submit" value="登録内容を確認">
+            </div>
+          </form><!-- [/ #content] -->
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+    <!--#include virtual="/sp/include/country-city-js.html"-->
+</body>
+</html>

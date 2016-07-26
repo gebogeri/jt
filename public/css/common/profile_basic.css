@@ -1,0 +1,93 @@
+
+/******Basic info グラフ******/
+.profile-wrap {
+  width: 750px!important;
+  margin: 0 auto 20px;
+}
+.clear{
+	/*clear:both;*/
+}
+.box-column{
+	/*overflow:hidden;*/
+}
+.graph_hidden{
+	overflow:hidden;
+}
+.box-column .expart_legeng{
+	float:left;
+	width:30%;
+	margin-left:3%;
+}
+.box-column .expart_legeng .legent_title{
+	color:#bbbbbb;
+	font-size:12px;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+.box-column .expart_legeng .legend_list{
+	color:#333333;
+	font-size:12px;
+	line-height:25px;
+
+}
+.box-column .expart_legeng .circle{
+	width: 15px;
+	height: 15px;
+	-webkit-border-radius: 7.5px;
+	-moz-border-radius: 7.5px;
+	border-radius: 7.5px;
+	float:left;
+	margin-right:5px;
+	margin-top:4px;
+}
+.box-column .expart_graph{
+	float:left;
+	width:30%;
+}
+
+.graph_innner{
+	/*margin-top:150px;
+	margin-bottom:-150px;
+	text-align:center;*/
+	text-align:center;
+	font-size:13px;
+	line-height:15px;
+	color:#bbbbbb;
+	position:relative;
+	top:255px;
+	left:-20px;
+	margin-top:-40px;
+#sample{
+	z-index:1;
+}
+
+.like_list {
+  display: none;
+  position: fixed;
+  background: #ffffff;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 100;
+  top: 40px;
+  left: 0px;
+  font-size: 10px;
+  z-index:1000;
+}
+
+.likename:hover .like_list {
+  /*display: block;*/
+}
+.likename .like_list:after {
+  bottom: 100%;
+  left: 22%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(102, 215, 219, 0);
+  border-bottom-color: #66d7db;
+  border-width: 10px;
+  margin-left: -10px;
+}

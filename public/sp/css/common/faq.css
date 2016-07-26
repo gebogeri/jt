@@ -1,0 +1,59 @@
+.faq_inner{
+	width: 780px;
+	margin: 0 auto;
+}
+.faq_inner .entry_section .search_block{
+	width: 100%;
+}
+.faq_inner .entry_section .serves_block{
+	padding: 0;
+}
+.displayNone {
+    display: none;
+}
+.contentWrap{
+	border-top: 1px solid #e1e6e7;
+	padding: 15px 0;
+	width: 720px;
+	margin: 0 auto;
+}
+.contentWrap .icon_a{
+	color: #161c20;
+	font-size: 24px;
+}
+.faq_inner .entry_section .serves_block .faq_text{
+	font-size: 14px;
+}
+.accordion {
+    margin: 0 0 10px;
+}
+.switch {
+    font-weight: bold;
+}
+.faq_inner .entry_section .serves_block .switch{
+	font-size: 18px;
+	width: 720px;
+	margin-bottom: 0;
+	padding: 30px;
+	line-height: inherit;
+	background: url("../../img/faq/close_back.jpg") no-repeat 95% center;
+}
+.faq_inner .entry_section .serves_block .switch.open {
+	width: 720px;
+	background: url("../../img/faq/open_back.jpg") no-repeat 95% center;
+	padding-bottom: 15px;
+}
+.faq_inner .entry_section .serves_block .close{
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+}
+.icon_q{
+	font-size: 24px;
+	color: #44d095;
+	padding-right: 10px;
+}
+#header .innerBox .signup{
+	display: block;
+	float:right;
+}

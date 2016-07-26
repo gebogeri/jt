@@ -1,0 +1,51 @@
+@import '../_mixin';
+
+.tabs{
+    @include flex;
+    @include inner(2rem , .5rem);
+    padding: 0;
+    @include m(under){
+        margin-top: 0;
+        width: 100%;
+    }
+    @include e(item){
+        position: relative;
+        width: 50%;
+        height: 3.3rem;
+        @include ff;
+        color: #fff;
+        list-style: none;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 3.3rem;
+        font-weight: bold;
+        background: #bbb;
+        cursor: pointer;
+        @include m(under){
+            height: 4.5rem;
+            line-height: 4.5rem;
+            font-size: 1.7rem;
+        }
+        @include m(isSelected){
+            background: $dark2;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: .5rem solid transparent;
+                border-top-color: $dark2;
+                margin-left: -.25rem;
+            }
+        }//isSelected
+    }//item
+}//tabs
+
+
+.tabsBox{
+    ul + ul{
+        display: none;
+    }
+}

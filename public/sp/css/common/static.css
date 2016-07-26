@@ -1,0 +1,187 @@
+*******ヘッダー********/
+
+.login_head{
+  background:url(../../img/login/bg_mv.png) center no-repeat!important;
+  height:640px;
+  margin-top:43px;
+  background-color:#ffffff;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:9px 0;
+    background: #fff;
+}
+
+#header > .content_inner{
+    display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+}
+
+#header > .content_inner > a{
+    display: block;
+    width:100px;
+    height: 25px;
+    border-radius: 5px;
+    font-size:10px;
+    line-height: 25px;
+    text-align: center;
+    color:#fff;
+    background: #44d095;
+}
+#header > .content_inner > a + a{
+    box-sizing:border-box;
+    margin-left: 5px;
+    color:#555;
+    border:1px solid #555;
+    background: transparent;
+}
+
+#header > .content_inner > .clear{
+    flex:1;
+}
+
+#btn_menu{ display: block;cursor: pointer; }
+
+.right {
+    float: right;
+}
+.content_inner {
+    width:93.33%;
+  margin:0 auto;
+}
+/*
+/*    グロナビ
+/*
+/***********************************/
+#gNav{
+    position: fixed;
+    overflow-y: scroll;
+    bottom: 100%;
+    left: 0;
+    background: rgba(255,255,255,.9);
+    height: 100%;
+    width: 100%;
+    transition: bottom .2s;
+}
+
+#gNav.active{
+    bottom:0;
+}
+
+#gNav ul{
+    padding-top:60px;
+}
+
+#gNav ul li{
+    margin-bottom:18px;
+}
+
+#gNav ul li p{
+    text-align: center;
+    font-size: 12px;
+    height:24px;
+}
+
+#gNav ul li p a{
+    line-height:24px;
+    cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+
+#gNav #btn_navClose{
+  text-align: center;
+  margin-bottom:0;
+}
+
+#gNav #btn_navClose span{
+  display: inline-block;
+  font-size:10px;
+  height:22px;
+  line-height:22px;
+  padding-right:15px;
+  background:url(/sp/img/login/btn_navClose.png) right center no-repeat;
+  background-size:8px 8px;
+}
+.footer{
+  background:#161c20;
+  padding:0;
+  overflow:hidden;
+}
+
+#footer_section{
+  padding-top:30px;
+}
+#footer_section{
+  padding-top:30px;
+}
+
+#footer_section .flex{
+  display:flex;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-flex-wrap:wrap;
+  flex-wrap:wrap;
+      width:72%;
+      margin: 0 auto;
+}
+#footer_section li{
+  display: block;
+  width:48%;
+  margin-bottom:30px;
+}
+#footer_section li a{
+  color:#fff;
+  text-decoration: none;
+  font-size:11px;
+  line-height:21px;
+}
+#footer_section li a:first-child{
+  font-weight: bold;
+}
+#footer_logo{
+  border-top:1px solid #333f49;
+  padding:11px 0;
+  text-align: center;
+}
+#footer_logo img{
+  width:47.7%;
+}
+#copy{
+  border-top:1px solid #333f49;
+  padding:13px 0;
+  font-size:9px;
+  color:#fff;
+  text-align: center;
+}
+.innerBox {
+    width: 93.33%;
+    margin: 30px auto;
+}
+
+/*****お問い合わせ確認*****/
+.entry .confirm_preview{
+  width:100%;
+}
+
+.entry .confirm_btn .invite_btn-green{
+  width: 93.33%;
+}
+
+/*****利用規約******/
+.term p{
+   word-wrap:break-all;
+}
+
+.term .invite_form_head{
+    margin-top:15px;
+}
+.static_leadText{
+    margin-bottom:20px;
+    font-size:12px;
+}

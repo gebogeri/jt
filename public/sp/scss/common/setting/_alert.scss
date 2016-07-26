@@ -1,0 +1,75 @@
+// ==================================================================
+// 通知ページ
+// ==================================================================
+
+//----------------------------------------------------
+// 通知ページのみのスタイル
+//----------------------------------------------------
+
+// 通知ページテーブル
+.alert_table {
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e5e8eb;
+  tr {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    padding: 24px 0;
+    border-top: 1px solid #e5e8eb;
+  }
+  thead {
+    tr {
+      padding: 10px 0 20px;
+      border: none;
+    }
+    td {
+      width: 480px;
+      text-align: right;
+    }
+  }
+  tbody {
+    vertical-align: top;
+    tr:last-child {
+      border-bottom: 1px solid #e5e8eb;
+    }
+    th {
+      width: 113px;
+      text-align: right;
+      line-height: 17px;
+    }
+    td {
+      padding: 0 10px 0 20px;
+    }
+  }
+  .btn_edit {
+    width: 50px;
+    padding-left: 15px;
+    color: #bbb;
+    background: url("../../img/setting/btn_edit.png") center left no-repeat;
+  }
+}
+
+.input_swichArea {
+  width: 444px;
+  line-height: 20px;
+}
+
+.input_radioArea {
+  .input_radio + label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+  }
+}
+.annotation {
+  font-size: 11px;
+  line-height: 14px;
+  display: block;
+  margin-top: 5px;
+}

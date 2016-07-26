@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>事務局直接承認依頼 _基本情報入力 | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/common/knowledge.css">
+<link rel="stylesheet" href="/css/common/login.css">
+<link rel="stylesheet" href="/css/common/entry.css">
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link rel="stylesheet" href="/css/plugin/perfect-scrollbar.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+<div class="login_head">
+	<!--#include virtual="/include/login_header.html"-->
+</div>
+<div id="wrapper">
+    <div id="container" class="clear">
+
+		<section class="serves">
+			<div class="content_inner inner_entry">
+				<h2><span>SIGN UP</span></h2>
+        <div class="chart_progress chart_secre">
+          <ul>
+            <li class="first_step current"><span>01<br>基本情報の入力</span></li>
+            <li><span>02<br>入力を確認</span></li>
+            <li class="last_step"><span>03<br>送信完了</span></li>
+          </ul>
+        <div class="clear"></div>
+        </div>
+				<h1>基本情報をご入力ください</h1>
+				<p class="serves_leadText">事務局へ承認依頼を送信します。<br>
+        下記必須項目をご入力の上、確認ボタンをクリックしてください。</p>
+				<div class="serves_section entry_section">
+					<div class="serves_block search_block">
+            <div class="search_info ask_form">
+              <div class="search_info">
+						<form action="" method="">
+							<table>
+								<tr class="input_column_2 mr15">
+                    <th>氏名</th>
+                    <td><input type="text" size="15"></td>
+                </tr>
+                <tr class="input_column_2">
+                    <th>メールアドレス</th>
+                    <td><input type="text" size="25"></td>
+								</tr>
+								<tr>
+									<th>所属法律事務所/法人</th>
+								</tr>
+                <tr>
+                  <td><input type="text" size="35"></td>
+                </tr>
+                <tr>
+                  <th>所属法律事務所/法人のURL</th>
+                </tr>
+                <tr>
+                  <td><input type="text" size="35"></td>
+                </tr>
+                <tr>
+                  <th>
+                  自己プロフィールURL
+                    <span class="pop_up pop_up_secre">
+                      <img src="/img/setting/question_icon_circle.png" alt="？">
+                      <span class="pop_message">
+                        所属する弁護士事務所のウェブサイト内の個人プロフィールページなど、弁護士としての経歴が記載されたサイトのリンクをご記載ください
+                      </span>
+                    </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td><input type="text" size="35"></td>
+                </tr>
+                <tr>
+                  <th>
+                  弁護士資格証明のURL
+                    <span class="pop_up pop_up_secre">
+                      <img src="/img/setting/question_icon_circle.png" alt="？">
+                      <span class="pop_message">
+                        自身の名前が弁護士として表示された公的機関又は準公的機関のウェブサイトなど、弁護士資格を客観的に証明できるサイトのリンクをご記載ください
+                      </span>
+                    </span>
+                  </th>
+                </tr>
+                <tr>
+                  <td><input type="text" size="35"></td>
+                </tr>
+                <tr>
+                  <td>または、証明するファイルをアップロードする<div class="btn_upload">
+                                        ファイルを参照
+                                        <input type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
+                                        <input type="text" id="uv" class="uploadValue" disabled />
+                                    </div></td>
+                </tr>
+								<tr>
+									<th>備考</th>
+								</tr>
+								<tr>
+                    <td><textarea cols="30" rows="10"></textarea></td>
+								</tr>
+							</table>
+              <div class="chk-box">
+                <input type="checkbox" value="" name="" id="yes" class="input_checkbox"><label for="yes">個人情報の取り扱いに同意する <span>プライバシーポリシーのご確認は<a href="">こちら</a></span></label>
+              </div>
+              <ul class="entryAsk_btn entrySecre_btn">
+                <li><input type="submit" name="" value="内容を確認する"></li>
+                <div class="clear"></div>
+              </ul>
+						  </form>
+					   </div>
+             </div>
+					 </div>
+          </div>
+			 </div><!--/content_inner -->
+		  </section>
+    </div>
+</div>
+<!--#include virtual="/include/login_footer.html"-->
+</body>
+</html>

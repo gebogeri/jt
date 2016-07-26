@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/common/normalize.css">
+<link rel="stylesheet" href="../css/common/style.css">
+<link rel="stylesheet" href="../css/common/setting.css">
+<link rel="stylesheet" href="../css/common/invite.css">
+<link rel="stylesheet" href="../css/plugin/select2.min.css">
+
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body class="whead">
+<!--#include virtual="../include/header.html"-->
+
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray txt_14">SETTING</p>
+            <h1>言語</h1>
+        </div>
+    </div>
+    <div id="container" class="clear">
+        <main class="clear">
+            <div id="column-main-single">
+                <p class="txt_14 fw_b">言語設定</p>
+                <form action="" method="">
+                    <div class="form_table form_language">
+                        <dl class="normal_area">
+                            <dt>使用する言語</dt>
+                            <dd>日本語、English</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>言語設定</dt>
+                          <dd>
+                            <div id="edit_language_area">
+                              <div class="select-box">
+                                   <select name="" class="useLang">
+                                      <option value="" disabled selected>使用する言語</option>
+                                       <option value="0">日本語</option>
+                                       <option value="1">英語</option>
+                                       <option value="2">投稿タグ候補</option>
+                                       <option value="3">投稿タグ候補</option>
+                                       <option value="4">投稿タグ候補</option>
+                                   </select>
+                                   <span class="btn_arrow"></span>
+                               </div>
+              							   <div class="select-box">
+  							                 <select name="" id="" class="list_settingBtn">
+                    								<option value="" disabled selected>言語レベル</option>
+                                    <option value="">初級</option>
+                                    <option value="">制限付実務</option>
+                                    <option value="">一般実務</option>
+                  								  <option value="">高度実務</option>
+                  								  <option value="">ネイティブ</option>
+                                </select>
+                              </div>
+                            </div>
+                            <p id="add_language"><span>言語を追加する</span></p>
+
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="保存"></li>
+                                    <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                                </ul>
+                          </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>当サービスで表示する言語</dt>
+                            <dd>日本語</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>当サービスで表示する言語</dt>
+                          <dd>
+                              <select name="" id="" class="select_long">
+                                  <option value="">テキスト</option>
+                              </select>
+                              <ul class="list_settingBtn">
+                                  <li><input type="submit" name="" value="保存"></li>
+                                  <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                              </ul>
+                          </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>記事の自動翻訳</dt>
+                            <dd>日本語</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>記事の自動翻訳</dt>
+                          <dd>
+                              <select name="" id="" class="select_long">
+                                  <option value="">テキスト</option>
+                              </select>
+                              <ul class="list_settingBtn">
+                                  <li><input type="submit" name="" value="保存"></li>
+                                  <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                              </ul>
+                          </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>翻訳しない言語</dt>
+                            <dd>&nbsp;</dd>
+                            <dd class="btn_edit">編集</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>記事の自動翻訳</dt>
+                          <dd>
+                              <select name="" id="" class="select_long">
+                                  <option value="">日本語</option>
+                                  <option value="">English</option>
+                                  <option value="">Chinese</option>
+                              </select>
+                              <ul class="list_settingBtn">
+                                  <li><input type="submit" name="" value="保存"></li>
+                                  <li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+                              </ul>
+                          </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <div id="side-profile">
+                <div id="side-name" class="txt_12">
+                    <p class="pdl20 txt_gray">SETTING</p>
+                    <a href="" class="btn_gear gear_right"></a>
+                </div>
+                <div id="side-link" class="txt_11">
+                    <a href="./index.html">アカウント</a>
+                    <a href="./language.html" class="selected">言語</a>
+                    <a href="./alert.html">通知</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+<!--#include virtual="../include/footer.html"-->
+<script src="/js/common/setting.js?date=20160329"></script>
+<script>
+$(function(){
+    // 編集ボタントグル
+    $(".btn_edit").click(function() {
+        $(this).closest(".init_display").next().toggleClass("show");
+    });
+
+    var addLang = $('#add_language span'),
+    addLangArea = $('#edit_language_area'),
+    _html = (function () {/*
+                              <div class="select-box">
+                                   <select name="" class="useLang">
+                                      <option value="" selected disabled="disabled">使用する言語</option>
+                                       <option value="0">日本語</option>
+                                       <option value="1">英語</option>
+                                       <option value="2">投稿タグ候補</option>
+                                       <option value="3">投稿タグ候補</option>
+                                       <option value="4">投稿タグ候補</option>
+                                   </select>
+                                   <span class="btn_arrow"></span>
+                               </div>
+                               <div class="select-box">
+                                 <select name="" class="list_settingBtn">
+                                    <option value="" selected disabled>言語レベル</option>
+                                    <option value="">初級</option>
+                                    <option value="">制限付実務</option>
+                                    <option value="">一般実務</option>
+                                    <option value="">高度実務</option>
+                                    <option value="">ネイティブ</option>
+                                </select>
+                              </div>
+    */}).toString().replace(/(\n)/g, '').split('*')[1];
+    addLang.on('click',function(){
+      addLangArea.append(_html);
+    });
+});
+</script>
+</body>
+</html>

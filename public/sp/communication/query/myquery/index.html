@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <link rel="stylesheet" href="/sp/css/common/communication.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body class="index">
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+          <div id="column-communication" data-query="myquery">
+            <h1 class="ttl">
+                <span class="ttl_english">QUERY-MYQUERY</span>
+                <span class="ttl_lang">マイクエリーリスト</span>
+            </h1>
+            <form class="search">
+              <input class="search_input" type="text" placeholder="SEARCH">
+            </form>
+          </div>
+
+          <ul id="tabs" class="tabs query-side-tab query-side-content">
+              <li data-tabs="0" data-query="attorney" class="tabs_item isSelected">LATEST</li>
+              <li data-tabs="1" data-query="attorney" class="tabs_item">QUESTION</li>
+              <li data-tabs="2" data-query="attorney" class="tabs_item">CASE</li>
+              <li data-tabs="3" data-query="attorney" class="tabs_item">OTHER</li>
+          </ul>
+
+          <div id="column-communication-data" data-query="myquery">
+
+          </div>
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+    <script src="/js/common/communication.js"></script>
+    <script src="/sp/js/common/comAjax.js"></script>
+    <script>
+    function toggle() {
+      var $fhead = $('.folder-head'),
+          $bhead = $('.bookmark-head');
+      $fhead.on('click', function(e) {
+        console.log("aaa");
+        if(!$(e.target).closest('.btn_gear').length){
+          $(this).toggleClass('open').next().slideToggle();
+        }
+      });
+      $bhead.on('click', function() {
+        $(this).closest('.bookmark-item').toggleClass('open');
+        $(this).next().slideToggle();
+      });
+    }
+    </script>
+</body>
+</html>

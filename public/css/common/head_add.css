@@ -1,0 +1,141 @@
+.setting_head-meta{
+	position: absolute;
+	right: 10px;
+	top: 15px;
+}
+.head-baloon{
+	width: 90px;
+	padding: 3px 5px;
+	top: 30px;
+}
+.head-baloon:before,.head-baloon:after{
+	left: 76px;
+}
+.head-baloon a:hover,#btn_profile a.head-meta_first:hover{
+	color: #44d095;
+}
+#btn_profile a.head-meta_first{
+	color: #333;
+	padding-left: 0;
+	width: auto;
+	height: auto;
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom:-20px;
+	/*display: initial;
+	line-height: initial;*/
+}
+.menu_up.menu_tag{
+	display: block;
+	height: 50px;
+	text-align: center;
+	position: relative;
+}
+.notice_area:before, .notice_area:after{
+	left: 50px;
+	bottom: 100%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.notice_area:before{
+	border-color: rgba(187, 187, 187, 0);
+	border-bottom-color: #bbb;
+	border-width: 7px;
+	margin-left: 260px;
+	margin-top:10px;
+}
+.notice_area{
+	width: 340px;
+	margin-top:10px;
+	display: none;
+	position: absolute;
+	cursor: auto;
+	z-index: 1;
+	border: 1px solid #bbb;
+	right: 0px;
+
+}
+.notice_area .notice_fix{
+	height: 390px;
+	overflow: scroll;
+	background: #fff;
+}
+.active .notice_area{
+	display: block;
+}
+.notice_head {
+	padding:10px;
+	border-bottom:1px solid #dddddd;
+	height:15px;
+}
+.notice_head .notice_title{
+	font-size:11px;
+	float:left;
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting{
+	font-size:11px;
+	float:right;
+	/*width:100px;*/
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting a{
+	width:50px;
+	height:20px!important;
+	display:inline!important;
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting a:hover{
+	background:#eeeeee!important;
+}
+.notice_content .notice_img{
+	float:left;
+	margin:0;
+	width: 40px;
+	max-height: 40px;
+	overflow: hidden;
+	border-radius: 100%;
+	margin-left:15px;
+}
+.notice_content .notice_img img{
+	width:40px;
+}
+.notice_list li{
+	width:100%;
+	padding:10px 0 0;
+	font-size:11px;
+	border-bottom:1px solid #dddddd;
+	padding-bottom:-5px;
+}
+.notice_list li:hover{
+	background:#eeeeee;
+}
+.notice_list .notice_text{
+	padding-top:10px;
+}
+
+.more_btn{
+	background:#22313d;
+	padding:0;
+	margin:0;
+	height:30px;
+}
+.more_btn a{
+	color:#ffffff;
+	font-size:12px;
+	display:block;
+	line-height:30px;
+}
+.notice_content .new-msg{
+	background:#edfbfc;
+}
+.btn_block a:hover{
+	cursor:pointer;
+}

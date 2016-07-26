@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+          <h1 class="ttl">
+              <span class="ttl_english">MY FILE</span>
+              <span class="ttl_lang btn">取扱案件の登録（または編集）</span>
+          </h1>
+          <div class="ttl_back">
+            <div class="innerBox">
+              <a class="ttl_back_btn">BACK TO LIST</a>
+            </div>
+          </div>
+          <form id="content">
+            <h2 class="subTtl">案件概要</h2>
+            <div class="knowledge_edit">
+              <h3 class="knowledge_edit_header">基本情報</h3>
+
+              <h4 class="knowledge_edit_ttl">案件名</h4>
+              <input type="text" class="knowledge_edit_inputTxt">
+              <div class="knowledge_edit_flex">
+                期間&nbsp;&nbsp;
+                <div class="knowledge_edit_select">
+                  <select>
+                    <option value="">1980</option>
+                    <option value="">1981</option>
+                    <option value="">1982</option>
+                    <option value="">1983</option>
+                    <option value="">1984</option>
+                  </select>
+                </div>
+                &nbsp;～&nbsp;
+                <div class="knowledge_edit_select">
+                  <select>
+                    <option value="">1980</option>
+                    <option value="">1981</option>
+                    <option value="">1982</option>
+                    <option value="">1983</option>
+                    <option value="">1984</option>
+                  </select>
+                </div>
+              </div><!-- [/ .knowledge_edit_flex] -->
+
+              <h4 class="knowledge_edit_ttl">クライアント名</h4>
+              <input type="text" placeholder="テキストを入力" class="knowledge_edit_inputTxt">
+              <div class="knowledge_edit_flex">
+                公開範囲&nbsp;&nbsp;
+                <div class="knowledge_edit_select full">
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="">公開</option>
+                    <option value="">非公開</option>
+                  </select>
+                </div><!-- [/ .knowledge_edit_select] -->
+              </div><!-- [/ .knowledge_edit_flex] -->
+              <input type="text" placeholder="関連URLを入力" class="knowledge_edit_inputTxt">
+
+              <h4 class="knowledge_edit_ttl">專門法分野</h4>
+              <select class="knowledge_edit_select2 select2_text" multiple>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+              </select>
+              <select class="knowledge_edit_select2 select2_tags" multiple>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+              </select>
+
+              <h4 class="knowledge_edit_ttl">事業領域</h4>
+              <select class="knowledge_edit_select2 select2_text" multiple>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+              </select>
+              <select class="knowledge_edit_select2 select2_tags" multiple>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+              </select>
+
+              <h3 class="knowledge_edit_header">詳細情報</h3>
+
+              <h4 class="knowledge_edit_ttl">相手方</h4>
+              <input type="text" placeholder="テキストを入力" class="knowledge_edit_inputTxt">
+              <div class="knowledge_edit_flex">
+                公開範囲&nbsp;&nbsp;
+                <div class="knowledge_edit_select full">
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="">公開</option>
+                    <option value="">非公開</option>
+                  </select>
+                </div><!-- [/ .knowledge_edit_select] -->
+              </div><!-- [/ .knowledge_edit_flex] -->
+              <input type="text" placeholder="関連URLを入力" class="knowledge_edit_inputTxt">
+
+              <h4 class="knowledge_edit_ttl">相手方</h4>
+              <input type="text" placeholder="テキストを入力" class="knowledge_edit_inputTxt">
+              <div class="knowledge_edit_flex">
+                公開範囲&nbsp;&nbsp;
+                <div class="knowledge_edit_select full">
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="">公開</option>
+                    <option value="">非公開</option>
+                  </select>
+                </div><!-- [/ .knowledge_edit_select] -->
+              </div><!-- [/ .knowledge_edit_flex] -->
+              <input type="text" placeholder="関連URLを入力" class="knowledge_edit_inputTxt">
+
+              <h4 class="knowledge_edit_ttl">裁判機関</h4>
+              <input type="text" placeholder="テキストを入力" class="knowledge_edit_inputTxt">
+              <div class="knowledge_edit_flex">
+                公開範囲&nbsp;&nbsp;
+                <div class="knowledge_edit_select full">
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="">公開</option>
+                    <option value="">非公開</option>
+                  </select>
+                </div><!-- [/ .knowledge_edit_select] -->
+              </div><!-- [/ .knowledge_edit_flex] -->
+              <input type="text" placeholder="関連URLを入力" class="knowledge_edit_inputTxt">
+
+              <h4 class="knowledge_edit_ttl">分類</h4>
+              <div class="knowledge_edit_select full">
+                <select>
+                  <option value="" disabled selected></option>
+                  <option value="">テキスト</option>
+                  <option value="">テキスト</option>
+                </select>
+              </div><!-- [/ .knowledge_edit_select] -->
+
+              <h4 class="knowledge_edit_ttl">関与レベル</h4>
+              <div class="knowledge_edit_select full">
+                <select>
+                  <option value="" disabled selected></option>
+                  <option value="">テキスト</option>
+                  <option value="">テキスト</option>
+                </select>
+              </div><!-- [/ .knowledge_edit_select] -->
+
+              <h4 class="knowledge_edit_ttl">案件規模</h4>
+              <div class="knowledge_edit_flex">
+                <input type="text" placeholder="金額を入力" class="knowledge_edit_inputTxt mid">
+                <div class="knowledge_edit_select full">
+                  <select>
+                    <option value="" disabled selected>通貨</option>
+                    <option value="">テキスト</option>
+                    <option value="">テキスト</option>
+                  </select>
+                </div><!-- [/ .knowledge_edit_select] -->
+              </div><!-- [/ .knowledge_edit_flex] -->
+              <div class="knowledge_edit_select single">
+                <select>
+                  <option value="" disabled selected>金額種類</option>
+                  <option value="">テキスト</option>
+                  <option value="">テキスト</option>
+                </select>
+              </div><!-- [/ .knowledge_edit_select] -->
+
+            </div><!-- [/ .knowledge_edit] -->
+
+            <h2 class="subTtl">内容</h2>
+            <div class="knowledge_edit">
+              <textarea class="knowledge_edit_textarea" placeholder="内容を入力"></textarea>
+            </div><!-- [/ .knowledge_edit] -->
+
+            <h2 class="subTtl">関与弁護士の選択</h2>
+            <ul id="tabs" class="tabs under">
+                <li class="tabs_item under isSelected">ALL</li>
+                <li class="tabs_item under" id="knowledgeLawyer">SELECTED</li>
+            </ul>
+            <div class="tabsBox">
+                <ul class="lawyer" id="choiceArea">
+                    <li class="lawyer_item" data-num='0'>
+                        <div class="flex">
+                            <div class="lawyer_item_photo">
+                                <img src="/sp/img/common/icon_profile.jpg" width="100%" alt="近藤 和志">
+                            </div>
+                            <div class="lawyer_item_head">
+                                <p class="lawyer_item_head_name">近藤 和志</p>
+                                <div class="lawyer_item_head_meta">
+                                    <span class="lawyer_item_head_meta_fav">100</span>
+                                    <span class="lawyer_item_head_meta_data">200</span>
+                                    <span class="lawyer_item_head_meta_com">50</span>
+                                </div>
+                            </div><!-- [/ .lawyer_item_photo] -->
+                        </div>
+                        <div class="lawyer_item_company">
+                            <p class="lawyer_item_company_name">C&amp;R リーガルエージェンシー社</p>
+                            <p class="lawyer_item_company_other">Senior Vice President,, General manSenior Vice President,, General manSenior Vice President,, General man</p>
+                            <p class="lawyer_item_company_place">Tokyo, JAPAN</p>
+                        </div><!-- [/ .lawyer_item_company] -->
+                        <dl class="lawyer_item_area">
+                            <dt>アドミッション</dt>
+                            <dd>Japan / Newyork,US</dd>
+                        </dl>
+                        <dl class="lawyer_item_area">
+                            <dt>法分野　　　　</dt>
+                            <dd>会社法、M&amp;A、金融法...</dd>
+                        </dl>
+                        <div class="lawyer_item_btn">
+                            <a href="">
+                                <span class="lawyer_item_btn_follow">FOLLOW</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_profile">PROFILE</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_message">MESSAGE</span>
+                            </a>
+                        </div><!-- [/ .lawyer_item_btn] -->
+                    </li><!-- [/ .lawyer_item] -->
+                    <li class="lawyer_item" data-num='1'>
+                        <div class="flex">
+                            <div class="lawyer_item_photo">
+                                <img src="/sp/img/common/icon_profile.jpg" width="100%" alt="近藤 和志">
+                            </div>
+                            <div class="lawyer_item_head">
+                                <p class="lawyer_item_head_name">近藤 和志</p>
+                                <div class="lawyer_item_head_meta">
+                                    <span class="lawyer_item_head_meta_fav">100</span>
+                                    <span class="lawyer_item_head_meta_data">200</span>
+                                    <span class="lawyer_item_head_meta_com">50</span>
+                                </div>
+                            </div><!-- [/ .lawyer_item_photo] -->
+                        </div>
+                        <div class="lawyer_item_company">
+                            <p class="lawyer_item_company_name">C&amp;R リーガルエージェンシー社</p>
+                            <p class="lawyer_item_company_other">Senior Vice President,, General manSenior Vice President,, General manSenior Vice President,, General man</p>
+                            <p class="lawyer_item_company_place">Tokyo, JAPAN</p>
+                        </div><!-- [/ .lawyer_item_company] -->
+                        <dl class="lawyer_item_area">
+                            <dt>アドミッション</dt>
+                            <dd>Japan / Newyork,US</dd>
+                        </dl>
+                        <dl class="lawyer_item_area">
+                            <dt>法分野　　　　</dt>
+                            <dd>会社法、M&amp;A、金融法...</dd>
+                        </dl>
+                        <div class="lawyer_item_btn">
+                            <a href="">
+                                <span class="lawyer_item_btn_follow">FOLLOW</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_profile">PROFILE</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_message">MESSAGE</span>
+                            </a>
+                        </div><!-- [/ .lawyer_item_btn] -->
+                    </li><!-- [/ .lawyer_item] -->
+                    <li class="lawyer_item" data-num='2'>
+                        <div class="flex">
+                            <div class="lawyer_item_photo">
+                                <img src="/sp/img/common/icon_profile.jpg" width="100%" alt="近藤 和志">
+                            </div>
+                            <div class="lawyer_item_head">
+                                <p class="lawyer_item_head_name">近藤 和志</p>
+                                <div class="lawyer_item_head_meta">
+                                    <span class="lawyer_item_head_meta_fav">100</span>
+                                    <span class="lawyer_item_head_meta_data">200</span>
+                                    <span class="lawyer_item_head_meta_com">50</span>
+                                </div>
+                            </div><!-- [/ .lawyer_item_photo] -->
+                        </div>
+                        <div class="lawyer_item_company">
+                            <p class="lawyer_item_company_name">C&amp;R リーガルエージェンシー社</p>
+                            <p class="lawyer_item_company_other">Senior Vice President,, General manSenior Vice President,, General manSenior Vice President,, General man</p>
+                            <p class="lawyer_item_company_place">Tokyo, JAPAN</p>
+                        </div><!-- [/ .lawyer_item_company] -->
+                        <dl class="lawyer_item_area">
+                            <dt>アドミッション</dt>
+                            <dd>Japan / Newyork,US</dd>
+                        </dl>
+                        <dl class="lawyer_item_area">
+                            <dt>法分野　　　　</dt>
+                            <dd>会社法、M&amp;A、金融法...</dd>
+                        </dl>
+                        <div class="lawyer_item_btn">
+                            <a href="">
+                                <span class="lawyer_item_btn_follow">FOLLOW</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_profile">PROFILE</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_message">MESSAGE</span>
+                            </a>
+                        </div><!-- [/ .lawyer_item_btn] -->
+                    </li><!-- [/ .lawyer_item] -->
+                    <li class="lawyer_item" data-num='3'>
+                        <div class="flex">
+                            <div class="lawyer_item_photo">
+                                <img src="/sp/img/common/icon_profile.jpg" width="100%" alt="近藤 和志">
+                            </div>
+                            <div class="lawyer_item_head">
+                                <p class="lawyer_item_head_name">近藤 和志</p>
+                                <div class="lawyer_item_head_meta">
+                                    <span class="lawyer_item_head_meta_fav">100</span>
+                                    <span class="lawyer_item_head_meta_data">200</span>
+                                    <span class="lawyer_item_head_meta_com">50</span>
+                                </div>
+                            </div><!-- [/ .lawyer_item_photo] -->
+                        </div>
+                        <div class="lawyer_item_company">
+                            <p class="lawyer_item_company_name">C&amp;R リーガルエージェンシー社</p>
+                            <p class="lawyer_item_company_other">Senior Vice President,, General manSenior Vice President,, General manSenior Vice President,, General man</p>
+                            <p class="lawyer_item_company_place">Tokyo, JAPAN</p>
+                        </div><!-- [/ .lawyer_item_company] -->
+                        <dl class="lawyer_item_area">
+                            <dt>アドミッション</dt>
+                            <dd>Japan / Newyork,US</dd>
+                        </dl>
+                        <dl class="lawyer_item_area">
+                            <dt>法分野　　　　</dt>
+                            <dd>会社法、M&amp;A、金融法...</dd>
+                        </dl>
+                        <div class="lawyer_item_btn">
+                            <a href="">
+                                <span class="lawyer_item_btn_follow">FOLLOW</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_profile">PROFILE</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_message">MESSAGE</span>
+                            </a>
+                        </div><!-- [/ .lawyer_item_btn] -->
+                    </li><!-- [/ .lawyer_item] -->
+                    <li class="lawyer_item" data-num='4'>
+                        <div class="flex">
+                            <div class="lawyer_item_photo">
+                                <img src="/sp/img/common/icon_profile.jpg" width="100%" alt="近藤 和志">
+                            </div>
+                            <div class="lawyer_item_head">
+                                <p class="lawyer_item_head_name">近藤 和志</p>
+                                <div class="lawyer_item_head_meta">
+                                    <span class="lawyer_item_head_meta_fav">100</span>
+                                    <span class="lawyer_item_head_meta_data">200</span>
+                                    <span class="lawyer_item_head_meta_com">50</span>
+                                </div>
+                            </div><!-- [/ .lawyer_item_photo] -->
+                        </div>
+                        <div class="lawyer_item_company">
+                            <p class="lawyer_item_company_name">C&amp;R リーガルエージェンシー社</p>
+                            <p class="lawyer_item_company_other">Senior Vice President,, General manSenior Vice President,, General manSenior Vice President,, General man</p>
+                            <p class="lawyer_item_company_place">Tokyo, JAPAN</p>
+                        </div><!-- [/ .lawyer_item_company] -->
+                        <dl class="lawyer_item_area">
+                            <dt>アドミッション</dt>
+                            <dd>Japan / Newyork,US</dd>
+                        </dl>
+                        <dl class="lawyer_item_area">
+                            <dt>法分野　　　　</dt>
+                            <dd>会社法、M&amp;A、金融法...</dd>
+                        </dl>
+                        <div class="lawyer_item_btn">
+                            <a href="">
+                                <span class="lawyer_item_btn_follow">FOLLOW</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_profile">PROFILE</span>
+                            </a>
+                            <a href="">
+                                <span class="lawyer_item_btn_message">MESSAGE</span>
+                            </a>
+                        </div><!-- [/ .lawyer_item_btn] -->
+                    </li><!-- [/ .lawyer_item] -->
+                </ul><!-- [/ .lawyer] -->
+                <ul class="lawyer" id="selectedArea">
+                </ul><!-- [/ .lawyer] -->
+            </div><!-- [/ .tabsBox] -->
+            <h2 class="subTtl">公開範囲</h2>
+            <div class="knowledge_edit_range range">
+                <span>非公開</span>
+                <div class="range_content up">
+                    <input name="range" type="radio" id="range01"><label for="range01">非公開</label>
+                    <input name="range" type="radio" id="range02"><label for="range02">全メンバー</label>
+                    <input name="range" type="radio" id="range03"><label for="range03" class="range_content_detail">表示範囲を限定</label>
+
+                    <input name="range_detail" type="checkbox" id="range03-01"><label for="range03-01">全ての弁護士</label>
+                    <input name="range_detail" type="checkbox" id="range03-02"><label for="range03-02">全ての依頼者</label>
+                    <input name="range_detail" type="checkbox" id="range03-03"><label for="range03-03">コネクトしている弁護士</label>
+                    <input name="range_detail" type="checkbox" id="range03-04"><label for="range03-04">コネクトしているクライアント</label>
+                </div>
+            </div>
+            <div class="knowledge_edit_btn">
+                <input type="reset" value="キャンセル">
+                <input type="submit" value="登録内容を確認">
+            </div>
+          </form><!-- [/ #content] -->
+        </div><!-- [/ #container] -->
+        <!--#include virtual="/sp/include/footer_under.html"-->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+</body>
+</html>

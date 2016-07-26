@@ -1,0 +1,24 @@
+.mt10{
+	margin-top: 10px;
+}
+.ttl_notify{
+	background: url("/img/notification/ttl_side_notification.png") no-repeat 12px center;
+}
+.notification_item .fl.icon_circle{
+	width: 60px;
+	height: 60px;
+}
+.notification_item .fl.lawyer-content{
+	width: 490px;
+	padding-left: 15px;
+}
+.scroll-box .notification_item .txt_14{
+	line-height: 20px;
+}
+.scroll-box .notification_item .fl .wrap_text{
+	white-space: normal;
+}
+.load_anime{
+	width: 25px;
+	margin: 0 auto;
+}

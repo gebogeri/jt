@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/*****右寄せ解除****/
+#container {
+    box-sizing: border-box;
+    padding-left: 0; 
+    padding-left: 0; 
+}
+/******エラーページ****/
+.error ul{
+	text-align:center;
+	margin:50px auto;
+	width:340px;
+}
+.error li{
+	float:left;
+	display: inline-block; 
+	margin: 0 10px;
+}

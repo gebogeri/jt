@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to Middleman</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/plugin/select2.min.css">
+    <link href="/css/common/knowledge.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/common/login.css">
+    <link rel="stylesheet" href="/css/common/login.css">
+    <link href="/css/common/invite.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/plugin/select2.min.css">
+  </head>
+
+
+<body class="knowledge knowledge_myfile whead edit">
+
+
+  <header id="header" class="clear">
+    <div class="innerBox">
+    <div class="logo">
+        <a href="/login.html" id="logo">
+            <img src="/img/common/logo.png" width="100%">
+        </a>
+    </div>
+    <div class="signup">
+      <ul class="clear">
+        <li class="btn_sign">
+          <a href="">
+            SIGN UP
+          </a>
+        </li>
+        <li class="btn_login">
+          <a href="">
+            LOG IN
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</header>
+
+
+
+
+<div id="wrapper">
+    <div id="container" class="clear">
+
+      <div class="title-modal">
+        <p class="title-signup">SIGN UP</p>
+        <h2>アカウント情報の登録</h2>
+        <p class="txt-detail">
+          招待を受け入れ、アカウント情報を登録する場合、<br>
+          登録ボタンをクリックしてください。
+        </p>
+      </div>
+      <div class="modal-invite">
+        <p class="txt_12 txt_gray">指名</p>
+        <p class="info-txt">TAKESHI KIMURA</p>
+        <p class="txt_12 txt_gray">招待者</p>
+        <p class="info-txt">KOTARO AKIZAWA</p>
+        <p class="txt_12 txt_gray">メッセージ</p>
+        <p class="info-txt txt_14 fw_b">JURISTERRAに招待します。</p>
+        <p class="modal-detail">
+          We are happy to announce that we are approaching the 10th anniversary of our Romania factory.
+          This would not have been possible without the strong support and ongoing partronage of all customers and government officials.
+          To express our appreciation and to celebrate this date, we coordially invite you to be our honored guest.
+          Details
+          Date and time:
+          March 15th, 2014 from 10:00 a.m. to 11:00 a.m.
+          Location:
+          XXX-XXX
+        </p>
+        <div class="btnarea">
+          <a rel="leanModal" href="#modal_edit" class="btn_import btn_modalEdit btn_modalOpen">アカウント登録する
+          </a>
+        </div>
+      </div>
+
+      <div id="modal_edit">
+      </div><!-- モーダルウィンドウ -->
+
+
+    </div>
+</div>
+
+<!--#include virtual="/include/footer.html"-->
+<script type="text/javascript" src="/js/plugin/select2.min.js"></script>
+<script src="/js/common/knowledge.js"></script>
+<script src="/js/common/file_invite_mail.js"></script>
+<script src="/js/plugin/jquery.leanModal.min.js"></script>
+<script src="/js/plugin/jquery.slimscroll.min.js"></script>
+<script>
+$(function(){
+    $("#jurisdiction").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#lawField").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#businessArea").select2({
+      placeholder: "テキストを入力"
+    });
+    $(".postTags").select2({
+      placeholder: "投稿タグ",
+      tags: true
+    });
+
+    $( 'a[rel*=leanModal]').leanModal({
+        top: 40,                     // モーダルウィンドウの縦位置を指定
+        overlay : 0.9,               // 背面の透明度
+        closeButton: ".modal_close"  // 閉じるボタンのCSS classを指定
+    });
+
+});
+</script>
+</body>
+</html>

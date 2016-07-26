@@ -1,0 +1,157 @@
+@import '../_mixin';
+
+.post{
+    @include e(item){
+        @include border;
+        margin-bottom: 1rem;
+        background: #fff;
+        @include e(meta){
+            @include flex($j:space-between, $a:flex-start);
+            @include inner;
+            padding: 1.1rem 0;
+            @include border(bottom);
+            @include e(photo){
+                display: block;
+                width: 12.8%;
+                padding-top: 12.8%;
+                border-radius: 100%;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+            }
+            @include e(info){
+                width: 85%;
+                @include e(name){
+                    display: block;
+                    font-weight: bold;
+                    color: #333;
+                    line-height: 1.4rem;
+                    text-decoration: none;
+                }//name
+                @include e(gray){
+                    @include flex;
+                    @include e(time){
+                        color: #bbb;
+                        font-size: 1.2rem;
+                        line-height: 1.4rem;
+                    }
+                    @include e(share,setting){
+                        position: relative;
+                        display: block;
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        background-size: cover;
+                    }
+                    @include e(share){
+                        margin-left: 1.8rem;
+                        background-image: url(/sp/img/common/btn_share.png);
+                    }
+                    @include e(setting){
+                        margin-left: 1rem;
+                        background-image: url(/sp/img/common/btn_gear.png);
+                    }
+                }//gray
+                @include e(tag){
+                    padding-left: 1.9rem;
+                    margin-top: .5rem;
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                    background: url(/sp/img/common/icon_tag.png) left .3rem no-repeat;
+                    background-size: 1.4rem;
+                    @include e(target){
+                        display: inline-block;
+                        color: #333;
+                    }
+                }//tag
+            }//info
+        }//meta
+        @include e(content){
+            @include inner;
+            padding: 1.5rem 0 2rem;
+            line-height: 1.9rem;
+        }
+
+        @include e(media){
+            text-decoration: none;
+            @include e(photo){
+                position: relative;
+                padding-top: 52.4%;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    max-width: 100%;
+                    margin: auto;
+                }
+            }//photo
+            @include e(content){
+                @include inner;
+                padding: 1.5rem 0;
+                @include e(title){
+                    margin-bottom: .7rem;
+                    font-weight: bold;
+                    color: #333;
+                }
+                @include e(text){
+                    font-size: 1.2rem;
+                    color: #333;
+                }
+                @include e(link){
+                    margin-top: .7rem;
+                    color: #bbb;
+                    font-size: 1rem;
+                }
+            }
+        }//media
+
+        @include e(btn){
+            position: relative;
+            @include flex;
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: .1rem;
+                height: 100%;
+                margin: auto;
+                background: #fff;
+            }
+            @include e(rec, share){
+                @include flex($a:center, $j:center);
+                width: 50%;
+                height: 4.5rem;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #fff;
+                background: #bbb;
+                @include e(count){
+                    margin-left: 1.2rem;
+                }
+                &:before{
+                    content: "";
+                    background-size: cover;
+                    margin-right: 1rem;
+                }
+            }//rec, share
+            @include e(rec){
+                &:before{
+                    width: 1.05rem;
+                    height: 1.55rem;
+                    background-image: url(/sp/img/common/icon_recommend.png);
+                }
+            }//rec
+            @include e(share){
+                &:before{
+                    width: 1.05rem;
+                    height: 1.25rem;
+                    background-image: url(/sp/img/common/icon_share.png);
+                }
+            }//share
+        }//btn
+    }//item
+}

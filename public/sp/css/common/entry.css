@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* リセット
+/*************************/
+
+.entry h2{
+	text-align:center;
+	font-size: 10px;
+    font-weight: normal;
+    margin: 30px auto;
+    padding-bottom: 8px;
+}
+.entry  h2 span {
+    border-bottom: 3px solid #44d095;
+    padding-bottom: 7px;
+}
+.entry .invite_flow li{
+	text-align: center;
+	font-size:10px;
+}
+.entry h1{
+    font-size: 14px;
+    margin:20px 0 15px;
+    text-align: center;
+}
+.entry .serves_leadText{
+	text-align: center;
+	font-size:12px;
+	line-height: 22px;
+}
+.entry h3{
+	text-align:center;
+	font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+.entry  h3 span {
+    border-bottom: 3px solid #6a8e98;
+    padding-bottom: 7px;
+}
+.entry .flex{
+	border-bottom:1px solid #dddddd;
+	padding-bottom:10px;
+	margin-bottom:30px;
+}
+.entry .lawyer-box .lawyer-item {
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    transition: opacity .2s;
+}
+.entry .prof_left{
+	width:30%;
+	float:left;
+}
+.entry .icon_circle {
+    position: relative;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    background-size: cover;
+}
+.entry .prof_left .entry_prof_name{
+	text-align:center;
+	font-size: 14px;
+	color:#444444;
+	margin-top:10px;
+}
+.entry .lawyer-item > .flex:first-child .icon_circle + div p + p {
+    padding-bottom: 13px;
+    height: 15px;
+}
+.entry .lawyer-item > .flex:first-child .icon_circle + div p {
+    padding-bottom: 7px;
+}
+.entry .lawyer-item > .flex:first-child .icon_circle + div span {
+    display: inline-block;
+    padding-left: 14px;
+    margin-right: 14px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #bbb;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.entry .icon-rec {
+    background-image: url(/sp/img/common/icon_medal.png);
+    background-size: 9.5px;
+    padding:0 15px;
+    background-repeat:no-repeat;
+}
+.entry .icon-credit {
+    background-image: url(/sp/img/common/icon_exp.png);
+    background-size: 11px;
+    padding:0 15px;
+    background-repeat:no-repeat;
+}
+.entry .icon-com {
+    background-image: url(/sp/img/common/icon_team2.png);
+    background-size: 16px;
+    padding-left:15px;
+    background-repeat:no-repeat;
+}
+.entry .txt_locate {
+    display: block;
+    background: url(/sp/img/common/icon_locate.png) left center no-repeat;
+    background-size: 8px 11px;
+    color: #bbb;
+    padding-left: 11px;
+    margin-left: auto;
+    border-bottom:1px solid #dddddd;
+    margin-bottom:5px;
+}
+.entry .entry_prof .entry_prof_icon{
+	color: #bbb;
+	text-align:right;
+}
+.entry .entry_prof dt{
+	color: #bbb;
+    font-size: 9px;
+}
+.entry .link{
+	color:#44d095;
+	text-decoration: underline;
+}
+/******弁護士確認画面******/
+.entry .confirm_preview{
+	width:86%;
+	margin:0 auto;
+}
+.entry .confirm_preview .confirm_preview_text{
+	text-align: center;
+	color:#44d095;
+	margin-top:15px;
+}
+.entry .message_logo{
+	text-align:center;
+	width:18%;
+	margin:0 auto 20px;
+}
+.entry .confirm_prof_left{
+	width:20%;
+	float:left;
+}
+.entry .confirm_name{
+	margin:5px auto 5px 10px;
+}
+.entry .confirm_text{
+	font-size:12px;
+	margin-bottom:10px;
+}
+.entry .confirm_box{
+	border-bottom:1px solid #dddddd;
+	padding-bottom:30px;
+	margin-bottom:30px;
+}
+.entry .confirm_box_name{
+	font-size:14px;
+	font-weight:bold;
+}
+.entry .confirm_box_gray{
+	font-size:10px;
+	color:#bbbbbb;
+}
+.entry .entry_wide_button .invite_btn-green{
+	width:100%;
+}
+.entry .confirm_btn .invite_btn-gray,
+.entry .confirm_btn .invite_btn-green{
+	width:40%;
+	margin:50px auto;
+	font-weight: normal;
+	height:40px;
+	line-height: 40px;
+}
+.entry .wide_button .invite_btn-gray,
+.entry .wide_button .invite_btn-green{
+	width:100%;
+}
+
+.search .invite_btn-green,
+.search .invite_btn-gray{
+	width:100%;
+}
+.search_all{
+	margin-top:50px;
+	border-top:8px solid #e1e6e7;
+	padding-top:5px;
+	overflow: hidden;
+}
+.search_all .subTtl_main{
+	font-size:12px;
+}
+.search_all .search_resultText{
+	font-size:14px;
+	font-weight:bold;
+}
+.search_all .about_icon{
+	margin-left:auto;
+	width:45%;
+}
+.entry .search_all .lawyer-box{
+	height: 415px;
+    overflow-y: scroll;
+}
+
+.entry .search_all .lawyer-item{
+	margin-top:30px;
+}
+.entry .btn_upload {
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    background: #bbb;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    width: 110px;
+    line-height: 25px;
+    margin: 8px 0 18px 10px;
+    cursor: pointer;
+}
+.entry_top {
+	margin-bottom:0;
+}
+
+/*****アカウント完了****/
+.account_entry{
+	margin-top: 0px;
+    border-top: none;
+}
+.entry .accounr_entry_button{
+	 width: 100%;
+}
+
+
+.entry .subTtl_main_faq.isOpen + .faqBox{
+    position: relative;
+}

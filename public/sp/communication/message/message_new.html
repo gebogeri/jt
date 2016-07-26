@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <link rel="stylesheet" href="/sp/css/common/communication.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body class="index">
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+          <h1 class="ttl">
+              <span class="ttl_english">MESSAGE</span>
+              <span class="ttl_lang none-title">タイトル未指定</span>
+          </h1>
+          <form class="" action="index.html" method="post">
+            <div id="post_user" class="select-input-box entry_user">
+              <select name="" id="postUser" multiple="multiple" class="select2-hidden-accessible">
+                <option value="0" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="1" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="2" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="3" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                <option value="4" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+              </select>
+            </div>
+          </form>
+        </div><!-- [/ #container] -->
+
+        <div class="communication-new-post">
+          <form action="">
+            <div class="new-post-textarea">
+              <textarea name="name">  【通常ポスト時】　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu auctor lacinia. Suspendisse et arcu convallis, condimentum dolor ut, faucibus nisl. Morbi placerat, purus quis laoreet mattis, dolor libero consectetur nibh, id faucibus sem quam vitae augue. Vestibulum feugiat quam quis placerat varius. Etiam aliquet velit eget nisl facilisis, eu sagittis nisl aliquam. Fusce vehicula tellus eget ipsum dapibus ultricies sed et metus. Aenean fermentum imperdiet tincidunt. In at lorem congue, congue metus lobortis, tempor tortor. In hac habitasse platea dictumst. Praesent iaculis facilisis erat vitae aliquam. Donec sagittis odio vitae lectus consectetur, at viverra orci mollis. Cras eu quam erat. Curabitur posuere quis diam et laoreet. Morbi cursus posuere nibh, et dictum sapien posuere eu. Aenean eget libero nulla.
+              </textarea>
+            </div>
+            <div class="communication-post-control-box clear">
+              <div class="control-box-inner">
+                <div class="icons">
+                  <a href="#modal_to" rel="leanModal" class="icon_to">TO:</a>
+                  <a href="#modal_">
+                      <input class="icon_clip" type="file" name="ファイルを送信">
+                  </a>
+                  <a href="#modal_myfile" rel="leanModal" class="icon_contact">MyFile参照</a>
+                  <a href="#modal_connection" rel="leanModal" class="icon_team">コネクション参照</a>
+                </div>
+              </div>
+              <input type="submit" name="name" value="SEND" class="btn_post_send">
+            </div>
+          </form>
+        </div>
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+    <script src="/js/common/communication.js"></script>
+    <script>
+    $(function(){
+      function formatUser (user) {
+        if (!user.id) { return user.text; }
+        console.log(user);
+        var $user = $(
+          '<div class="port_user_li"><span class="icon_circle fl"><img src="/img/common/icon_profile.jpg"></span><p><b>' + user.text + '</b> ' + user.element.dataset.company + '</p></div>'
+        );
+        return $user;
+      };
+
+      $("#postUser").select2({
+        placeholder: "送信先を指定",
+        templateResult: formatUser
+      });
+    });
+    </script>
+</body>
+</html>

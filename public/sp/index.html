@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン前TOP | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body class="index">
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+            <form class="form index">
+                <div class="form_sep2">
+                    <select name="" id="" class="form_sep2_50 first firstRow select2_juris" multiple>
+                    <!--#include virtual="/sp/include/select-country.html"-->
+                    </select>
+                    <select name="" id="" class="form_sep2_50 firstRow field select2_field" multiple>
+                    <!--#include virtual="/sp/include/select-law.html"-->
+                    </select>
+                </div><!-- [/ .form_sep2] -->
+                <textarea name="" id="" class="form_textarea first index" placeholder="テキストを入力"></textarea>
+                <div class="form_tags">
+                    <select name="" id="" class="form_tags_select select2_tags" multiple>
+                        <option value="">投稿タグ</option>
+                        <option value="">投稿タグ</option>
+                        <option value="">投稿タグ</option>
+                        <option value="">投稿タグ</option>
+                        <option value="">投稿タグ</option>
+                    </select><!-- [/ .form_tags_select] -->
+                </div><!-- [/ .form_tags] -->
+                <div class="form_sep3">
+                    <div class="form_sep3_file">
+                        画像を追加
+                        <input type="file">
+                    </div>
+                    <div class="form_sep3_range range">
+                        <span>非公開</span>
+                        <div class="range_content">
+                            <input name="range" type="radio" id="range01"><label for="range01">非公開</label>
+                            <input name="range" type="radio" id="range02"><label for="range02">全メンバー</label>
+                            <input name="range" type="radio" id="range03"><label for="range03" class="range_content_detail">表示範囲を限定</label>
+
+                            <input name="range_detail" type="checkbox" id="range03-01"><label for="range03-01">全ての弁護士</label>
+                            <input name="range_detail" type="checkbox" id="range03-02"><label for="range03-02">全ての依頼者</label>
+                            <input name="range_detail" type="checkbox" id="range03-03"><label for="range03-03">コネクトしている弁護士</label>
+                            <input name="range_detail" type="checkbox" id="range03-04"><label for="range03-04">コネクトしているクライアント</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="POST" class="form_sep3_submit">
+                </div><!-- [/ form_sep3] -->
+            </form>
+            <ul id="tabs" class="tabs">
+                <li data-tab="all" class="tabs_item isSelected">ALL</li>
+                <li data-tab="follow" class="tabs_item">FOLLOW</li>
+            </ul>
+            <div class="tabsBox">
+                <ul class="post">
+                    <li class="post_item">
+                        <div class="post_item_meta">
+                            <a href="" class="post_item_meta_photo" style="background-image: url(/sp/img/common/icon_profile.jpg);"></a>
+                            <div class="post_item_meta_info">
+                                <div class="flex">
+                                    <a href="" class="post_item_meta_info_name">近藤&nbsp;和志</a>
+                                    <div class="post_item_meta_info_gray">
+                                        <p class="post_item_meta_info_gray_time">10:30&nbsp;PM</p>
+                                        <span class="post_item_meta_info_gray_share"></span>
+                                        <span class="post_item_meta_info_gray_setting btn_balloon">
+                                            <div class="balloon">
+                                                <a class="balloon_item" rel="leanModal" href="#modal_edit">Edit this post</a>
+                                                <a class="balloon_item">Hide this post</a>
+                                                <a class="balloon_item">Stop following</a>
+                                            </div>
+                                        </span><!-- [/ .post_item_meta_info_gray_setting] -->
+                                    </div><!-- [/ .post_item_meta_info_gray] -->
+                                </div>
+                                <p class="post_item_meta_info_tag">
+                                    <a href="" class="post_item_meta_info_tag_target">ジュリスディクション</a>
+                                    <a href="" class="post_item_meta_info_tag_target">專門法分野</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                </p>
+                            </div><!-- [/. post_item_meta_info] -->
+                        </div><!-- [/ .post_item_meta] -->
+                        <p class="post_item_content">
+                            あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu
+                        </p>
+                        <div class="post_item_btn">
+                            <a class="post_item_btn_rec">
+                                推薦する
+                                <span class="post_item_btn_rec_count">155</span>
+                            </a>
+                            <a class="post_item_btn_share" rel="leanModal" href="#modal">
+                                シェアする
+                                <span class="post_item_btn_share_count">56</span>
+                            </a>
+                        </div>
+                    </li><!-- [/ .post_item] -->
+                    <li class="post_item">
+                        <div class="post_item_meta">
+                            <a href="" class="post_item_meta_photo" style="background-image: url(/sp/img/common/icon_profile.jpg);"></a>
+                            <div class="post_item_meta_info">
+                                <div class="flex">
+                                    <a href="" class="post_item_meta_info_name">近藤&nbsp;和志</a>
+                                    <div class="post_item_meta_info_gray">
+                                        <p class="post_item_meta_info_gray_time">10:30&nbsp;PM</p>
+                                        <span class="post_item_meta_info_gray_share"></span>
+                                        <span class="post_item_meta_info_gray_setting btn_balloon">
+                                            <div class="balloon">
+                                                <a class="balloon_item" rel="leanModal" href="#modal_edit">Edit this post</a>
+                                                <a class="balloon_item">Hide this post</a>
+                                                <a class="balloon_item">Stop following</a>
+                                            </div>
+                                        </span><!-- [/ .post_item_meta_info_gray_setting] -->
+                                    </div><!-- [/ .post_item_meta_info_gray] -->
+                                </div>
+                                <p class="post_item_meta_info_tag">
+                                    <a href="" class="post_item_meta_info_tag_target">ジュリスディクション</a>
+                                    <a href="" class="post_item_meta_info_tag_target">專門法分野</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                </p>
+                            </div><!-- [/. post_item_meta_info] -->
+                        </div><!-- [/ .post_item_meta] -->
+                        <p class="post_item_content">
+                            あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu
+                        </p>
+                        <a href="" class="post_item_media">
+                            <div class="post_item_media_photo"><img src="/sp/img/top/thumb_ogp.jpg" alt="メディア"></div>
+                            <div class="post_item_media_content">
+                                <p class="post_item_media_content_title">シェアしたリンクのタイトルを表示サンプルタイトルサンプルタイトル</p>
+                                <p class="post_item_media_content_text">シェアしたリンク先の記事を表示します。サンプルテキスト SAMPLE TEXT サンプルテキス ト SAMPLE TEXT サンプ</p>
+                                <p class="post_item_media_content_link">リンク先ドメイン</p>
+                            </div>
+                        </a>
+                        <div class="post_item_btn">
+                            <a class="post_item_btn_rec">
+                                推薦する
+                                <span class="post_item_btn_rec_count">155</span>
+                            </a>
+                            <a class="post_item_btn_share" rel="leanModal" href="#modal">
+                                シェアする
+                                <span class="post_item_btn_share_count">56</span>
+                            </a>
+                        </div><!-- [/ .post_item_btn] -->
+                    </li><!-- [/ .post_item] -->
+                </ul><!-- [/ .post] -->
+                <ul class="post">
+                    <li class="post_item">
+                        <div class="post_item_meta">
+                            <a href="" class="post_item_meta_photo" style="background-image: url(/sp/img/common/icon_profile.jpg);"></a>
+                            <div class="post_item_meta_info">
+                                <div class="flex">
+                                    <a href="" class="post_item_meta_info_name">近藤&nbsp;和志2</a>
+                                    <div class="post_item_meta_info_gray">
+                                        <p class="post_item_meta_info_gray_time">10:30&nbsp;PM</p>
+                                        <span class="post_item_meta_info_gray_share"></span>
+                                        <span class="post_item_meta_info_gray_setting btn_balloon">
+                                            <div class="balloon">
+                                                <a class="balloon_item" rel="leanModal" href="#modal_edit">Edit this post</a>
+                                                <a class="balloon_item">Hide this post</a>
+                                                <a class="balloon_item">Stop following</a>
+                                            </div>
+                                        </span><!-- [/ .post_item_meta_info_gray_setting] -->
+                                    </div><!-- [/ .post_item_meta_info_gray] -->
+                                </div>
+                                <p class="post_item_meta_info_tag">
+                                    <a href="" class="post_item_meta_info_tag_target">ジュリスディクション</a>
+                                    <a href="" class="post_item_meta_info_tag_target">專門法分野</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                </p>
+                            </div><!-- [/. post_item_meta_info] -->
+                        </div><!-- [/ .post_item_meta] -->
+                        <p class="post_item_content">
+                            あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu
+                        </p>
+                        <div class="post_item_btn">
+                            <a class="post_item_btn_rec">
+                                推薦する
+                                <span class="post_item_btn_rec_count">155</span>
+                            </a>
+                            <a class="post_item_btn_share" rel="leanModal" href="#modal">
+                                シェアする
+                                <span class="post_item_btn_share_count">56</span>
+                            </a>
+                        </div>
+                    </li><!-- [/ .post_item] -->
+                    <li class="post_item">
+                        <div class="post_item_meta">
+                            <a href="" class="post_item_meta_photo" style="background-image: url(/sp/img/common/icon_profile.jpg);"></a>
+                            <div class="post_item_meta_info">
+                                <div class="flex">
+                                    <a href="" class="post_item_meta_info_name">近藤&nbsp;和志</a>
+                                    <div class="post_item_meta_info_gray">
+                                        <p class="post_item_meta_info_gray_time">10:30&nbsp;PM</p>
+                                        <span class="post_item_meta_info_gray_share"></span>
+                                        <span class="post_item_meta_info_gray_setting btn_balloon">
+                                            <div class="balloon">
+                                                <a class="balloon_item" rel="leanModal" href="#modal_edit">Edit this post</a>
+                                                <a class="balloon_item">Hide this post</a>
+                                                <a class="balloon_item">Stop following</a>
+                                            </div>
+                                        </span><!-- [/ .post_item_meta_info_gray_setting] -->
+                                    </div><!-- [/ .post_item_meta_info_gray] -->
+                                </div>
+                                <p class="post_item_meta_info_tag">
+                                    <a href="" class="post_item_meta_info_tag_target">ジュリスディクション</a>
+                                    <a href="" class="post_item_meta_info_tag_target">專門法分野</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                    <a href="" class="post_item_meta_info_tag_target">投稿タグ</a>
+                                </p>
+                            </div><!-- [/. post_item_meta_info] -->
+                        </div><!-- [/ .post_item_meta] -->
+                        <p class="post_item_content">
+                            あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu
+                        </p>
+                        <a href="" class="post_item_media">
+                            <div class="post_item_media_photo"><img src="/sp/img/top/thumb_ogp.jpg" alt="メディア"></div>
+                            <div class="post_item_media_content">
+                                <p class="post_item_media_content_title">シェアしたリンクのタイトルを表示サンプルタイトルサンプルタイトル</p>
+                                <p class="post_item_media_content_text">シェアしたリンク先の記事を表示します。サンプルテキスト SAMPLE TEXT サンプルテキス ト SAMPLE TEXT サンプ</p>
+                                <p class="post_item_media_content_link">リンク先ドメイン</p>
+                            </div>
+                        </a>
+                        <div class="post_item_btn">
+                            <a class="post_item_btn_rec">
+                                推薦する
+                                <span class="post_item_btn_rec_count">155</span>
+                            </a>
+                            <a class="post_item_btn_share" rel="leanModal" href="#modal">
+                                シェアする
+                                <span class="post_item_btn_share_count">56</span>
+                            </a>
+                        </div><!-- [/ .post_item_btn] -->
+                    </li><!-- [/ .post_item] -->
+                </ul><!-- [/ .post] -->
+            </div><!-- [/ .tabsBox] -->
+            <div id="loading"><img src="/sp/img/common/icon_loading.png" width="42" alt="読込中"></div>
+        </div><!-- [/ #container] -->
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/edit_modal.html"-->
+    <!--#include virtual="/sp/include/share_modal.html"-->
+    <!--#include virtual="/sp/include/footer.html"-->
+</body>
+</html>

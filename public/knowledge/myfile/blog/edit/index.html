@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Welcome to Middleman</title>
+<!-- stylesheet -->
+<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<link href="/css/common/knowledge.css" rel="stylesheet" />
+<link href="/css/common/knowledge_add.css" rel="stylesheet" />
+<link href="/css/common/invite.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+</head>
+<body class="knowledge knowledge_myfile whead edit">
+<!--#include virtual="/include/header.html"-->
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray txt_13 fw_b">MY FILE</p>
+            <h1>コラム/ブログの登録（編集の場合の表記は「コラム/ブログの編集」）</h1>
+            <a href="/knowledge/myfile/projects/" class="btn_back txt_12 txt_gray">BACK TO LIST</a>
+        </div>
+    </div>
+    <div id="container" class="clear">
+        <main>
+          <div id="column-main-single">
+            <form action="" method="">
+              <p class="txt_14 fw_b mb10">概要</p>
+              <div class="basic_info">
+                <p class="txt_14 fw_b ttl_edit">基本情報</p>
+                <table>
+                  <tr>
+                    <th>タイトル</th>
+                    <td><input type="text" name=""></td>
+                  </tr>
+                  <tr>
+                    <th>URL</th>
+                    <td>
+                      <input type="text" name="" placeholder="論文、書籍の関連URLを入力">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>ジュリスディクション</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="jurisdiction" multiple="multiple">
+                          <option value="0">アフガニスタン</option>
+                          <option value="1">オーランド諸島</option>
+                          <option value="2">アルバニア</option>
+                          <option value="3">アルジェリア</option>
+                          <option value="4">アメリカ領サモア</option>
+                          <option value="5">アンドラ</option>
+                          <option value="6">アンゴラ</option>
+                          <option value="7">アングィラ</option>
+                          <option value="8">アンティグア</option>
+                          <option value="9">アルゼンチン</option>
+                          <option value="10">アルメニア</option>
+                          <option value="11">アルバ</option>
+                          <option value="12">オーストラリア</option>
+                          <option value="13">オーストリア</option>
+                          <option value="14">アゼルバイジャン</option>
+                          <option value="15">バハマ</option>
+                          <option value="16">バーレーン</option>
+                          <option value="17">バングラデシュ</option>
+                          <option value="18">バルバドス</option>
+                          <option value="19">ベラルーシ</option>
+                          <option value="20">ベルギー</option>
+                          <option value="21">ベリーズ</option>
+                          <option value="22">ベニン</option>
+                          <option value="23">バミューダ</option>
+                          <option value="24">ブータン</option>
+                          <option value="25">ボリビア</option>
+                          <option value="26">ボスニア</option>
+                          <option value="27">ボツワナ</option>
+                          <option value="28">ブーヴェ島</option>
+                          <option value="29">ブラジル</option>
+                          <option value="30">英領ヴァージン諸島</option>
+                          <option value="31">ブルネイ</option>
+                          <option value="32">ブルガリア</option>
+                          <option value="33">ブルキナファソ</option>
+                          <option value="34">ビルマ</option>
+                          <option value="35">ブルンジ</option>
+                          <option value="36">カイコス諸島</option>
+                          <option value="37">カンボジア</option>
+                          <option value="38">カメルーン</option>
+                          <option value="39">カナダ</option>
+                          <option value="40">カーボベルデ</option>
+                          <option value="41">ケイマン諸島</option>
+                          <option value="42">中央アフリカ共和国</option>
+                          <option value="43">チャド</option>
+                          <option value="44">チリ</option>
+                          <option value="45">中国</option>
+                          <option value="46">クリスマス島</option>
+                          <option value="47">ココス諸島</option>
+                          <option value="48">コロンビア</option>
+                          <option value="49">コモロ</option>
+                          <option value="50">コンゴブラザビル</option>
+                          <option value="51">コンゴ</option>
+                          <option value="52">クック諸島</option>
+                          <option value="53">コスタリカ</option>
+                          <option value="54">コート・ジボワール</option>
+                          <option value="55">クロアチア</option>
+                          <option value="56">キューバ</option>
+                          <option value="57">キプロス</option>
+                          <option value="58">チェコ共和国</option>
+                          <option value="59">デンマーク</option>
+                          <option value="60">ジブチ</option>
+                          <option value="61">ドミニカ</option>
+                          <option value="62">ドミニカ共和国</option>
+                          <option value="63">エクアドル</option>
+                          <option value="64">エジプト</option>
+                          <option value="65">エルサルバドル</option>
+                          <option value="66">イングランド</option>
+                          <option value="67">赤道ギニア</option>
+                          <option value="68">エリトリア</option>
+                          <option value="69">エストニア</option>
+                          <option value="70">エチオピア</option>
+                          <option value="71">欧州連合</option>
+                          <option value="72">フォークランド諸島</option>
+                          <option value="73">フェロー諸島</option>
+                          <option value="74">フィジー</option>
+                          <option value="75">フィンランド</option>
+                          <option value="76">フランス</option>
+                          <option value="77">仏領ギアナ</option>
+                          <option value="78">フランス領ポリネシア</option>
+                          <option value="79">フランス領</option>
+                          <option value="80">ガボン</option>
+                          <option value="81">ガンビア</option>
+                          <option value="82">ジョージア</option>
+                          <option value="83">ドイツ</option>
+                          <option value="84">ガーナ</option>
+                          <option value="85">ジブラルタル</option>
+                          <option value="86">ギリシャ</option>
+                          <option value="87">グリーンランド</option>
+                          <option value="88">グレナダ</option>
+                          <option value="89">グアドループ島</option>
+                          <option value="90">グアム</option>
+                          <option value="91">グアテマラ</option>
+                          <option value="92">ギニアビサウ</option>
+                          <option value="93">ギニア</option>
+                          <option value="94">ガイアナ</option>
+                          <option value="95">ハイチ</option>
+                          <option value="96">ハード島</option>
+                          <option value="97">ホンジュラス</option>
+                          <option value="98">香港</option>
+                          <option value="99">ハンガリー</option>
+                          <option value="100">アイスランド</option>
+                          <option value="101">インド</option>
+                          <option value="102">インド洋地域</option>
+                          <option value="103">インドネシア</option>
+                          <option value="104">イラン</option>
+                          <option value="105">イラク</option>
+                          <option value="106">アイルランド</option>
+                          <option value="107">イスラエル</option>
+                          <option value="108">イタリア</option>
+                          <option value="109">ジャマイカ</option>
+                          <option value="110">日本</option>
+                          <option value="111">ヨルダン</option>
+                          <option value="112">カザフスタン</option>
+                          <option value="113">ケニア</option>
+                          <option value="114">キリバス</option>
+                          <option value="115">クウェート</option>
+                          <option value="116">キルギスタン</option>
+                          <option value="117">ラオス</option>
+                          <option value="118">ラトビア</option>
+                          <option value="119">レバノン</option>
+                          <option value="120">レソト</option>
+                          <option value="121">リベリア</option>
+                          <option value="122">リビア</option>
+                          <option value="123">リヒテンシュタイン</option>
+                          <option value="124">リトアニア</option>
+                          <option value="125">ルクセンブルク</option>
+                          <option value="126">マカオ</option>
+                          <option value="127">マケドニア</option>
+                          <option value="128">マダガスカル</option>
+                          <option value="129">マラウィ</option>
+                          <option value="130">マレーシア</option>
+                          <option value="131">モルディブ</option>
+                          <option value="132">マリ</option>
+                          <option value="133">マルタ</option>
+                          <option value="134">マーシャル諸島</option>
+                          <option value="135">マルティニーク島</option>
+                          <option value="136">モーリタニア</option>
+                          <option value="137">モーリシャス</option>
+                          <option value="138">マヨット島</option>
+                          <option value="139">メキシコ</option>
+                          <option value="140">ミクロネシア</option>
+                          <option value="141">モルドバ</option>
+                          <option value="142">モナコ</option>
+                          <option value="143">モンゴル</option>
+                          <option value="144">モンテネグロ</option>
+                          <option value="145">モントセラト</option>
+                          <option value="146">モロッコ</option>
+                          <option value="147">モザンビーク</option>
+                          <option value="148">ナミビア</option>
+                          <option value="149">ナウル</option>
+                          <option value="150">ネパール</option>
+                          <option value="151">オランダ領アンティル</option>
+                          <option value="152">オランダ</option>
+                          <option value="153">ニューカレドニア</option>
+                          <option value="154">ニューギニア</option>
+                          <option value="155">ニュージーランド</option>
+                          <option value="156">ニカラグア</option>
+                          <option value="157">ニジェール</option>
+                          <option value="158">ナイジェリア</option>
+                          <option value="159">ニウエ</option>
+                          <option value="160">ノーフォーク島</option>
+                          <option value="161">北朝鮮</option>
+                          <option value="162">北マリアナ諸島</option>
+                          <option value="163">ノルウェー</option>
+                          <option value="164">オマーン</option>
+                          <option value="165">パキスタン</option>
+                          <option value="166">パラオ</option>
+                          <option value="167">パレスチナ</option>
+                          <option value="168">パナマ</option>
+                          <option value="169">パラグアイ</option>
+                          <option value="170">ペルー</option>
+                          <option value="171">フィリピン</option>
+                          <option value="172">ピトケアン諸島</option>
+                          <option value="173">ポーランド</option>
+                          <option value="174">ポルトガル</option>
+                          <option value="175">プエルトリコ</option>
+                          <option value="176">カタール</option>
+                          <option value="177">リユニオン</option>
+                          <option value="178">ルーマニア</option>
+                          <option value="179">ロシア</option>
+                          <option value="180">ルワンダ</option>
+                          <option value="181">セントヘレナ</option>
+                          <option value="182">セントクリストファー・ネイビス</option>
+                          <option value="183">セントルシア</option>
+                          <option value="184">サンピエール</option>
+                          <option value="185">セントビンセント</option>
+                          <option value="186">サモア</option>
+                          <option value="187">サン・マリノ</option>
+                          <option value="188">サンドウィッチ諸島</option>
+                          <option value="189">サントメ</option>
+                          <option value="190">サウジアラビア</option>
+                          <option value="191">セネガル</option>
+                          <option value="192">セルビア</option>
+                          <option value="193">セルビア</option>
+                          <option value="194">セイシェル</option>
+                          <option value="195">シエラレオネ</option>
+                          <option value="196">シンガポール</option>
+                          <option value="197">スロバキア</option>
+                          <option value="198">スロベニア</option>
+                          <option value="199">ソロモン諸島</option>
+                          <option value="200">ソマリア</option>
+                          <option value="201">南アフリカ</option>
+                          <option value="202">韓国</option>
+                          <option value="203">スペイン</option>
+                          <option value="204">スリランカ</option>
+                          <option value="205">スーダン</option>
+                          <option value="206">スリナム</option>
+                          <option value="207">スバールバル諸島</option>
+                          <option value="208">スワジランド</option>
+                          <option value="209">スウェーデン</option>
+                          <option value="210">スイス</option>
+                          <option value="211">シリア</option>
+                          <option value="212">台湾</option>
+                          <option value="213">タジキスタン</option>
+                          <option value="214">タンザニア</option>
+                          <option value="215">タイ</option>
+                          <option value="216">ティモレステ</option>
+                          <option value="217">トーゴ</option>
+                          <option value="218">トケラウ諸島</option>
+                          <option value="219">トンガ</option>
+                          <option value="220">トリニダード</option>
+                          <option value="221">チュニジア</option>
+                          <option value="222">トルコ</option>
+                          <option value="223">トルクメニスタン</option>
+                          <option value="224">ツバル</option>
+                          <option value="225">ウガンダ</option>
+                          <option value="226">ウクライナ</option>
+                          <option value="227">アラブ首長国連邦</option>
+                          <option value="228">アメリカ</option>
+                          <option value="229">ウルグアイ</option>
+                          <option value="230">米国マイナー諸島</option>
+                          <option value="231">米領バージン諸島</option>
+                          <option value="232">ウズベキスタン</option>
+                          <option value="233">バヌアツ</option>
+                          <option value="234">バチカン市</option>
+                          <option value="235">ベネズエラ</option>
+                          <option value="236">ベトナム</option>
+                          <option value="237">ワリー・エ・フトゥーナ</option>
+                          <option value="238">西サハラ</option>
+                          <option value="239">イエメン</option>
+                          <option value="240">ザンビア</option>
+                          <option value="241">ジンバブエ</option>
+                          <option value="242">アラバマ州</option>
+                          <option value="243">アラスカ州</option>
+                          <option value="244">アリゾナ州</option>
+                          <option value="245">アーカンソー州</option>
+                          <option value="246">カリフォルニア州</option>
+                          <option value="247">コロラド州</option>
+                          <option value="248">コネチカット州</option>
+                          <option value="249">デラウェア州</option>
+                          <option value="250">フロリダ州</option>
+                          <option value="251">ジョージア州</option>
+                          <option value="252">ハワイ州</option>
+                          <option value="253">アイダホ州</option>
+                          <option value="254">イリノイ州インディアナ州</option>
+                          <option value="255">アイオワ州</option>
+                          <option value="256">カンザス州</option>
+                          <option value="257">ケンタッキー州</option>
+                          <option value="258">ルイジアナ州</option>
+                          <option value="259">メイン州</option>
+                          <option value="260">メリーランド州</option>
+                          <option value="261">マサチューセッツ州</option>
+                          <option value="262">ミシガン州</option>
+                          <option value="263">ミネソタ州</option>
+                          <option value="264">ミシシッピー州</option>
+                          <option value="265">ミズーリ州</option>
+                          <option value="266">モンタナネブラスカ</option>
+                          <option value="267">ネバダ州</option>
+                          <option value="268">ニューハンプシャー州</option>
+                          <option value="269">ニュージャージー州</option>
+                          <option value="270">ニューメキシコ州</option>
+                          <option value="271">ニューヨーク州</option>
+                          <option value="272">ノースカロライナ州</option>
+                          <option value="273">ノースダコタ州</option>
+                          <option value="274">オハイオ州</option>
+                          <option value="275">オクラホマ州</option>
+                          <option value="276">オレゴン州</option>
+                          <option value="277">ペンシルベニア州</option>
+                          <option value="278">ロードアイランド州</option>
+                          <option value="279">サウスカロライナ州</option>
+                          <option value="280">サウスダコタ州</option>
+                          <option value="281">テネシー州</option>
+                          <option value="282">テキサス州</option>
+                          <option value="283">ユタ州</option>
+                          <option value="284">バーモント州</option>
+                          <option value="285">バージニア州</option>
+                          <option value="286">ワシントン州</option>
+                          <option value="287">ウェストバージニア州</option>
+                          <option value="288">ウィスコンシン州</option>
+                          <option value="289">ワイオミング州</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                      <div class="select-input-box">
+                        <select name="" class="postTags" multiple="multiple">
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>専門法分野</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="lawField" multiple="multiple">
+                          <option value="0">行政手続・争訟</option>
+                          <option value="1">ロビー活動</option>
+                          <option value="2">地方自治体</option>
+                          <option value="3">アセットファイナンス</option>
+                          <option value="4">アセットマネジメント</option>
+                          <option value="5">バンキング</option>
+                          <option value="6">エクイティ/デット・ファイナンス</option>
+                          <option value="7">プロジェクトファイナンス</option>
+                          <option value="8">ストラクチャード・ファイナンス</option>
+                          <option value="9">一般企業法務</option>
+                          <option value="10">特別委員会・役員会</option>
+                          <option value="11">コーポレートガバナンス</option>
+                          <option value="12">危機管理</option>
+                          <option value="13">虚偽記載</option>
+                          <option value="14">内部調査</option>
+                          <option value="15">国際汚職</option>
+                          <option value="16">ブローカー・ディーラー</option>
+                          <option value="17">キャピタルマーケット</option>
+                          <option value="18">証券</option>
+                          <option value="19">投資</option>
+                          <option value="20">M&A</option>
+                          <option value="21">プライベート・エクイティ</option>
+                          <option value="22">LBO</option>
+                          <option value="23">雇用/労働</option>
+                          <option value="24">経営者報酬</option>
+                          <option value="25">移民法</option>
+                          <option value="26">D＆O保険</option>
+                          <option value="27">環境法</option>
+                          <option value="28">エネルギー・天然資源</option>
+                          <option value="29">エンターテイメント法</option>
+                          <option value="30">家族法</option>
+                          <option value="31">ヘルスケア</option>
+                          <option value="32">保険</option>
+                          <option value="33">知的財産</option>
+                          <option value="34">サイバーセキュリティ/データプライバシー</option>
+                          <option value="35">国際取引</option>
+                          <option value="36">国際経済制裁/OFACコンプライアンス</option>
+                          <option value="37">独占禁止/競争</option>
+                          <option value="38">製造物責任/有害不法行為</option>
+                          <option value="39">ホワイトカラー犯罪/行政対応</option>
+                          <option value="40">不動産</option>
+                          <option value="41">マネーロンダリング</option>
+                          <option value="42">税金</option>
+                          <option value="43">事業再生/倒産</option>
+                          <option value="44">ベンチャー</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                      <div class="select-input-box">
+                        <select class="postTags" name="" multiple="multiple">
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>事業領域</th>
+                    <td>
+                      <div class="select-input-box">
+                        <select name="" id="businessArea" multiple="multiple">
+                          <option value="0">会計士</option>
+                          <option value="1">広告/広報</option>
+                          <option value="2">航空宇宙、防衛請負業者</option>
+                          <option value="3">アグリビジネス</option>
+                          <option value="4">農業サービス・製品</option>
+                          <option value="5">農業</option>
+                          <option value="6">空輸</option>
+                          <option value="7">航空輸送組合</option>
+                          <option value="8">航空会社</option>
+                          <option value="9">アルコール飲料</option>
+                          <option value="10">代替エネルギーの生産・サービス</option>
+                          <option value="11">建築サービス</option>
+                          <option value="12">弁護士/法律事務所</option>
+                          <option value="13">自動車ディーラー</option>
+                          <option value="14">自動車ディーラー、日本人</option>
+                          <option value="15">自動車メーカー</option>
+                          <option value="16">オートモーティブ</option>
+                          <option value="17">銀行、住宅ローン</option>
+                          <option value="18">銀行、商業</option>
+                          <option value="19">銀行、貯蓄・ローン</option>
+                          <option value="20">バー/レストラン</option>
+                          <option value="21">ビール、ワイン・リカー</option>
+                          <option value="22">本、雑誌および新聞</option>
+                          <option value="23">放送局、ラジオ/テレビ</option>
+                          <option value="24">ビルダー/ゼネコン</option>
+                          <option value="25">ビルダー/住宅</option>
+                          <option value="26">建材・設備</option>
+                          <option value="27">建築労働組合</option>
+                          <option value="28">企業団体</option>
+                          <option value="29">ビジネスサービス</option>
+                          <option value="30">ケーブル・衛星放送テレビの生産・流通</option>
+                          <option value="31">候補委員会</option>
+                          <option value="32">候補者委員会、民主党</option>
+                          <option value="33">候補者委員会、共和党</option>
+                          <option value="34">カーディーラー</option>
+                          <option value="35">カーディーラー、輸入</option>
+                          <option value="36">自動車メーカー</option>
+                          <option value="37">カジノ/ギャンブル/賭博</option>
+                          <option value="38">牧場主/畜産</option>
+                          <option value="39">化学・関連製造業</option>
+                          <option value="40">カイロプラクティック</option>
+                          <option value="41">公務員</option>
+                          <option value="42">聖職者/宗教団体</option>
+                          <option value="43">アパレル/服飾/衣料</option>
+                          <option value="44">石炭鉱業</option>
+                          <option value="45">短大、大学・学校</option>
+                          <option value="46">商業銀行</option>
+                          <option value="47">商業テレビ・ラジオ局</option>
+                          <option value="48">通信/エレクトロニクス</option>
+                          <option value="49">コンピューターソフトウェア</option>
+                          <option value="50">建設</option>
+                          <option value="51">建設サービス</option>
+                          <option value="52">建設労働組合</option>
+                          <option value="53">信用組合</option>
+                          <option value="54">作物生産・基本処理</option>
+                          <option value="55">船旅会社</option>
+                          <option value="56">クルーズ船・ライン</option>
+                          <option value="57">乳製品</option>
+                          <option value="58">防衛</option>
+                          <option value="59">防衛航空宇宙</option>
+                          <option value="60">防衛用エレクトロニクス</option>
+                          <option value="61">防衛/外交政策の支持者</option>
+                          <option value="62">民主党候補委員会</option>
+                          <option value="63">民主党のリーダーシップのPAC</option>
+                          <option value="64">民主/リベラル</option>
+                          <option value="65">歯科医</option>
+                          <option value="66">医師その他の医療従事者</option>
+                          <option value="67">医薬品メーカー</option>
+                          <option value="68">教育</option>
+                          <option value="69">電気事業</option>
+                          <option value="70">エレクトロニクス製造・設備</option>
+                          <option value="71">エレクトロニクス、防衛請負業者</option>
+                          <option value="72">エネルギー・天然資源</option>
+                          <option value="73">娯楽産業</option>
+                          <option value="74">環境</option>
+                          <option value="75">ファームビューロー</option>
+                          <option value="76">農耕</option>
+                          <option value="77">ファイナンス/クレジット会社</option>
+                          <option value="78">金融・保険・不動産</option>
+                          <option value="79">飲食</option>
+                          <option value="80">食品加工・販売</option>
+                          <option value="81">食品製造業</option>
+                          <option value="82">食料品店</option>
+                          <option value="83">営利目的の教育</option>
+                          <option value="84">外交・防衛政策</option>
+                          <option value="85">林業・林産物</option>
+                          <option value="86">財団、慈善家・非営利団体</option>
+                          <option value="87">葬儀サービス</option>
+                          <option value="88">ギャンブル・カジノ</option>
+                          <option value="89">ギャンブル、インドのカジノ</option>
+                          <option value="90">ごみ収集/廃棄物管理</option>
+                          <option value="91">ガス・石油</option>
+                          <option value="92">ゲイ・レズビアンの権利関係</option>
+                          <option value="93">ゼネコン</option>
+                          <option value="94">公務員労働組合</option>
+                          <option value="95">公務員</option>
+                          <option value="96">銃規制関係</option>
+                          <option value="97">健康</option>
+                          <option value="98">医療従事者</option>
+                          <option value="99">医療サービス/医療保険</option>
+                          <option value="100">ヘッジファンド</option>
+                          <option value="101">ヘルスケアサービス</option>
+                          <option value="102">病院・特別養護老人ホーム</option>
+                          <option value="103">ホテル、モーテル・ツーリズム</option>
+                          <option value="104">人権関係</option>
+                          <option value="105">工業組合</option>
+                          <option value="106">保険</option>
+                          <option value="107">労働党</option>
+                          <option value="108">ロビイスト</option>
+                          <option value="109">弁護士/法律事務所</option>
+                          <option value="110">政治活動委員会</option>
+                          <option value="111">酒、ワイン・ビール</option>
+                          <option value="112">家畜</option>
+                          <option value="113">ロビイスト</option>
+                          <option value="114">宿泊/観光</option>
+                          <option value="115">木材・製糸工場</option>
+                          <option value="116">製造業、その他</option>
+                          <option value="117">海運</option>
+                          <option value="118">食肉加工・製品</option>
+                          <option value="119">医療用品</option>
+                          <option value="120">鉱業</option>
+                          <option value="121">その他の事業</option>
+                          <option value="122">その他金融</option>
+                          <option value="123">その他製造・配布</option>
+                          <option value="124">その他の組合</option>
+                          <option value="125">その他の防衛</option>
+                          <option value="126">その他のサービス</option>
+                          <option value="127">モーゲージバンカー・ブローカー</option>
+                          <option value="128">映画制作・配給</option>
+                          <option value="129">音楽制作</option>
+                          <option value="130">天然ガスパイプライン</option>
+                          <option value="131">新聞、雑誌・書籍出版</option>
+                          <option value="132">非営利団体、財団・慈善家</option>
+                          <option value="133">看護師</option>
+                          <option value="134">特別養護老人ホーム</option>
+                          <option value="135">病院</option>
+                          <option value="136">栄養・サプリメント</option>
+                          <option value="137">石油・ガス</option>
+                          <option value="138">その他</option>
+                          <option value="139">貸金業</option>
+                          <option value="140">薬物製造</option>
+                          <option value="141">医薬品/健康製品</option>
+                          <option value="142">電話会社</option>
+                          <option value="143">医師/その他の医療従事者</option>
+                          <option value="144">郵便労働組合</option>
+                          <option value="145">家禽/卵</option>
+                          <option value="146">電力会社</option>
+                          <option value="147">印刷出版</option>
+                          <option value="148">プライベート・エクイティ/投資会社</option>
+                          <option value="149">プロスポーツ、スポーツアリーナ・関連機器・サービス</option>
+                          <option value="150">公務員</option>
+                          <option value="151">公共部門の労働組合</option>
+                          <option value="152">出版・印刷</option>
+                          <option value="153">ラジオ/テレビ局</option>
+                          <option value="154">鉄道</option>
+                          <option value="155">不動産</option>
+                          <option value="156">レコード会社/シンガーズ</option>
+                          <option value="157">録音された音楽・音楽制作</option>
+                          <option value="158">レクリエーション/ライブエンターテイメント</option>
+                          <option value="159">宗教団体/聖職者</option>
+                          <option value="160">住宅建築</option>
+                          <option value="161">レストラン・飲料事業所</option>
+                          <option value="162">小売売上高</option>
+                          <option value="163">退職者</option>
+                          <option value="164">貯蓄・ローン</option>
+                          <option value="165">学校/教育</option>
+                          <option value="166">海上輸送</option>
+                          <option value="167">証券投資</option>
+                          <option value="168">特殊貿易業者</option>
+                          <option value="169">プロスポーツ</option>
+                          <option value="170">鉄鋼生産</option>
+                          <option value="171">証券ブローカー/投資業</option>
+                          <option value="172">学生ローン</option>
+                          <option value="173">さとうきび・砂糖大根</option>
+                          <option value="174">教師労働組合</option>
+                          <option value="175">教師/教育</option>
+                          <option value="176">テレコムサービス・設備</option>
+                          <option value="177">電話ユーティリティ</option>
+                          <option value="178">テキスタイル</option>
+                          <option value="179">木材、ロギング・製紙工場</option>
+                          <option value="180">タバコ</option>
+                          <option value="181">交通・輸送</option>
+                          <option value="182">交通労働組合</option>
+                          <option value="183">ごみ収集/廃棄物管理</option>
+                          <option value="184">トラッキング</option>
+                          <option value="185">TV /映画/音楽</option>
+                          <option value="186">テレビ制作</option>
+                          <option value="187">組合</option>
+                          <option value="188">労働組合、航空会社</option>
+                          <option value="189">労働組合、建物取引</option>
+                          <option value="190">労働組合、産業</option>
+                          <option value="191">労働組合、その他</option>
+                          <option value="192">労働組合、公共部門</option>
+                          <option value="193">労働組合、教師</option>
+                          <option value="194">労働組合、交通</option>
+                          <option value="195">大学、短大学校</option>
+                          <option value="196">野菜・フルーツ</option>
+                          <option value="197">ベンチャーキャピタル</option>
+                          <option value="198">廃棄物管理</option>
+                          <option value="199">ワイン、ビール・酒</option>
+                          <option value="200">女性問題</option>
+                          <option value="201">議員</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                      <div class="select-input-box">
+                        <select class="postTags" name="" multiple="multiple">
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                          <option value="">投稿タグ候補</option>
+                        </select>
+                        <span class="btn_arrow"></span>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <p class="txt_14 fw_b mb10">内容</p>
+              <textarea name="" id="edit"></textarea>
+
+              <div id="img_upload" class="clear">
+                <div class="fl txt_12 fw_b">
+                  イメージ画像をアップする
+                </div>
+                <div class="fl">
+                  <div class="fileInput imgInput">
+                    ファイルを参照
+                    <input type="file" name="related_img[]">
+                  </div>
+                  <div class="table">
+                  </div>
+                </div>
+              </div>
+
+              <p class="txt_14 fw_b mb10">関連</p>
+              <div class="basic_info">
+                <table>
+                  <tr>
+                    <th>関連動画をリンクする</th>
+                    <td><input type="text" name="" placeholder="関連動画のURLを入力"></td>
+                  </tr>
+                  <tr>
+                    <th>関連資料をアップする</th>
+                    <td>
+                      <div class="fileInput nameInput">
+                        ファイルを参照
+                        <input type="file" name="related_file[]">
+                      </div>
+                      <div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>関連サイト名</th>
+                    <td>
+                      <input type="text" name="">
+                      <input type="text" name="" placeholder="論文、受賞の関連URLを入力">
+                      <p id="addsite"><a>更に関連サイトを追加する</a></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <p class="txt_14 fw_b mb10">関与弁護士の選択</p>
+              <div id="timeline" class="clear">
+                <ul id="timeline-tab" class="tab clear txt_11 fl">
+                  <li id="tab-all" class="selected">ALL</li>
+                  <li id="tab-selected">SELECTED</li>
+                </ul>
+                <input type="text" id="lawyer-search" class="fr txt_12" placeholder="検索">
+              </div>
+              <div id="all" class="lawyer-box">
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="selected" class="lawyer-box" style="display:none;">
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lawyer-item clear">
+                  <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
+                  <div class="lawyer-content fr">
+                    <div class="lawyer-head mb10">
+                      <div class="fr txt_11 txt_gray">
+                        <span class="icon-rec">100</span>
+                        <span class="icon-credit">200</span>
+                        <span class="icon-com">50</span>
+                      </div>
+                      <p class="txt_16 fw_b">近藤和志</p>
+                    </div>
+                    <div class="lawyer-body clear">
+                      <div class="fl">
+                        <p class="txt_12 fw_b">C&R リーガルエージェンシー社</p>
+                        <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
+                        <p class="txt_12 txt_gray">Tokyo, JAPAN</span>
+                      </div>
+                      <div class="fr">
+                        <p class="txt_8 txt_gray">アドミッション</p>
+                        <p class="txt_11">Japan / Newyork,US</p>
+                        <p class="txt_8 txt_gray">事業領域</p>
+                        <p class="txt_11">会社法、M&A、金融法…</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear">
+                <span id="label_range" class="txt_12 fw_b">表示範囲</span>
+                <div id="edit_range">
+                    <div id="btn_range" class="select-input-box txt_11">
+                        <span class="btn_arrow"></span>
+                        <span class="btn_select txt_gray txt_11">
+                            <ul class="clear">
+                                <li class="tag-select">非公開</li>
+                                <li class="txt_range"><div>表示範囲の設定</div></li>
+                            </ul>
+                        </span>
+                        <div class="chk-box">
+                            <input type="radio" value="非公開" name="range" id="range_d" class="input_radio" checked><label for="range_d">非公開</label>
+                            <input type="radio" value="All Members" name="range" id="range_0" class="input_radio"><label for="range_0">全メンバー</label>
+                            <input name="range" value="Limit who can see this post" type="radio" id="range_1" class="input_radio"><label for="range_1">表示範囲を限定</label>
+                            <div class="chk-box">
+                                <input type="checkbox" value="All Attorneys" name="range_det" id="range_10" class="input_checkbox"><label for="range_10">全ての弁護士</label>
+                                <input type="checkbox" value="All Clients" name="range_det" id="range_11" class="input_checkbox"><label for="range_11">全ての依頼者</label>
+                                <input type="checkbox" value="Attorneys Connected" name="range_det" id="range_12" class="input_checkbox"><label for="range_12">コネクトしている弁護士</label>
+                                <input type="checkbox" value="Client Connected" name="range_det" id="range_13" class="input_checkbox"><label for="range_13">コネクトしているクライアント</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="txt_13 fw_b" value="登録内容を保存">
+                <a id="btn_cancell" class="txt_13 fw_b">キャンセル</a>
+              </div>
+          </form>
+          </div>
+        </main>
+        <aside>
+          <h2 class="ttl_side">KNOWLEDGE</h2>
+          <div id="side-link" class="txt_11">
+            <h3 class="ttl_sub_side">MY FILE</h3>
+            <a href="/knowledge/myfile/">- LATEST</a>
+            <a href="/knowledge/myfile/projects/">- 取り扱い案件</a>
+            <a href="/knowledge/myfile/monograph">- 論文/書籍</a>
+            <a href="/knowledge/myfile/seminar">- セミナー,講演</a>
+            <a href="/knowledge/myfile/winning">- 受賞</a>
+            <a href="/knowledge/myfile/blog" class="selected">- コラム/ブログ</a>
+            <a href="/knowledge/myfile/link">- リンク</a>
+            <h3 class="ttl_sub_side">SAVED FILE</h3>
+            <a href="/knowledge/savefile">- LATEST</a>
+            <a href="/knowledge/savefile/projects">- 案件</a>
+            <a href="/knowledge/savefile/monograph">- 論文/書籍</a>
+            <a href="/knowledge/savefile/seminar">- セミナー,講演</a>
+            <a href="/knowledge/savefile/winning">- 受賞</a>
+            <a href="/knowledge/savefile/blog">- コラム/ブログ</a>
+            <a href="/knowledge/savefile/link">- リンク</a>
+          </div>
+        </aside>
+    </div>
+</div>
+<!--#include virtual="/include/footer.html"-->
+<script src="/js/common/knowledge.js"></script>
+<script src="/js/common/file_edit.js"></script>
+<script>
+$(function(){
+    $("#jurisdiction").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#lawField").select2({
+      placeholder: "テキストを入力"
+    });
+    $("#businessArea").select2({
+      placeholder: "テキストを入力"
+    });
+    $(".postTags").select2({
+      placeholder: "投稿タグ",
+      tags: true
+    });
+});
+</script>
+</body>
+</html>

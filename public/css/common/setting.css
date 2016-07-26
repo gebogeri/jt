@@ -1,0 +1,517 @@
+/* setting
+/*************************/
+.form_table {
+  font-size: 12px;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  border: 1px solid #e5e8eb;
+  background: #fff;
+}
+
+.form_table > h2 {
+  font-size: 14px;
+  margin: 0 20px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.form_table > h2 .btn_delete {
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.form_table dl {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.form_table dt {
+  font-weight: bold;
+  display: table-cell;
+  width: 113px;
+  padding: 10px 0;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.form_table.dd_large dd {
+  width: 450px;
+}
+
+.form_table dd {
+  display: table-cell;
+  width: 380px;
+  padding: 10px 0 10px 17px;
+  border-bottom: 1px solid #eee;
+}
+
+.form_table dd img {
+  vertical-align: middle;
+}
+
+.form_table .btn_edit {
+  width: 50px;
+  padding-left: 15px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #bbb;
+  background: url("../../img/setting/btn_edit.png") center left no-repeat;
+}
+
+.form_table input[type='text'] {
+  width: 360px;
+  padding: 5px 10px;
+  border: 1px solid #e5e8eb;
+}
+.form_table input[type='password'] {
+  width: 360px;
+  padding: 5px 10px;
+  border: 1px solid #e5e8eb;
+}
+
+.form_table input.text_short {
+  width: 164px;
+  margin-bottom: 8px;
+}
+
+.form_table input.text_medium {
+  width: 250px;
+}
+
+.normal_area {
+  line-height: 40px;
+}
+
+.normal_area:hover {
+  background: #eee;
+}
+
+.edit_area {
+  display: none;
+  margin: 0;
+  padding: 15px 20px;
+  border-top: none;
+  border-bottom: 1px solid #fff;
+  background: #eee;
+}
+
+.edit_area dl {
+  padding: 0;
+}
+
+.edit_area dd {
+  width: 390px;
+}
+
+.edit_area input[type='radio'] + label {
+  display: block;
+  padding: 6px 20px;
+}
+
+.edit_area select {
+  width: 60px;
+  padding: 8px 10px;
+  color: #000000;
+  border: 1px solid #e5e8eb;
+  border-radius: 0;
+  background: #fff url("../../img/setting/arrow_select.png") right 10px center no-repeat;
+}
+
+.edit_area select.select_long {
+  box-sizing:border-box;
+  width: 100%;
+}
+.edit_area select.list_settingBtn {
+  width: 245px;
+}
+
+.btn_delete {
+  padding: 10px 0 10px 17px;
+  cursor: pointer;
+  color: #bbb;
+  background: transparent url("../../img/setting/btn_delete.png") left center no-repeat;
+}
+
+.btn_delete.delete_address {
+  float: right;
+  padding: 7px 0 7px 17px;
+}
+
+.btn_delete.delete_account {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+}
+
+.list_settingBtn {
+  width: 245px;
+  margin-top: 10px;
+}
+
+.list_settingBtn:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.list_settingBtn li {
+  float: left;
+  width: 119px;
+}
+
+.list_settingBtn li input {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.list_settingBtn li input[type='button'], .list_settingBtn li input[type='submit'] {
+  background: #44d095;
+}
+
+.list_settingBtn li input[type='reset'] {
+  margin-left: 5px;
+  background: #bbb;
+}
+
+.gear_right {
+  right: initial;
+  left: 0;
+}
+
+.form_table .auth_cell {
+  width: 330px;
+}
+
+.form_table .auth_cell + dd {
+  width: auto;
+}
+
+.change_img {
+  margin: 10px 0;
+}
+
+/*.change_img img {
+  width: 43px;
+  float: left;
+  padding-right: 7px;
+}*/
+
+.change_img .change_left {
+  width: 180px;
+  float: left;
+  margin-top: 3px;
+}
+
+.btn_upload {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #bbb;
+  color: #fff;
+  text-align: center;
+  padding: 5px 2px;
+  width: 110px;
+  line-height: 25px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.btn_upload input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.btn_upload .uploadValue {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  padding: 3px;
+  color: #fff;
+}
+
+.btn_add {
+  padding: 0 0 0 25px;
+  color: #bbb;
+  font-size: 12px;
+  line-height: 17px;
+  cursor: pointer;
+  background: url("../../img/setting/btn_circle_plus.png") 0 0 no-repeat;
+}
+
+.btn_add.add_mail {
+  margin: 20px 0 0 130px;
+}
+
+.btn_auth {
+  color: #fff;
+  padding: 4px 25px;
+  text-align: center;
+  background: #44d095;
+  line-height: 25px;
+}
+
+.not_useID {
+  font-size: 11px;
+  color: #bbb;
+  background: url("../../img/setting/icon_nouse.png") left center no-repeat;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.pop_up {
+  position: relative;
+  padding-left: 11px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pop_up .pop_message {
+  display: none;
+  width: 310px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 22px;
+  background: #66d7db;
+  padding: 16px 20px;
+  color: #fff;
+  position: absolute;
+  top: 32px;
+  left: -50px;
+  z-index: 2;
+}
+
+.pop_up .pop_message:after {
+  bottom: 100%;
+  left: 22%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(102, 215, 219, 0);
+  border-bottom-color: #66d7db;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.pop_up:hover .pop_message {
+  display: block;
+}
+
+#add_account_area {
+  display: none;
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #dae0e1;
+  display: none;
+}
+
+.modal_box {
+  background: none repeat scroll 0 0 #fff;
+  display: none;
+  padding: 50px;
+  width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal_close {
+  background: #bbb;
+  display: block;
+  width: 115px;
+  z-index: 2;
+  padding: 10px 0;
+  color: #fff;
+  margin: 35px auto 0;
+}
+
+#forgot_pass .modal_close {
+  margin: 0 0 0 5px;
+}
+
+#forgot_pass .list_settingBtn {
+  margin: 10px auto 0;
+}
+
+.alert_table {
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e5e8eb;
+}
+
+.alert_table tr {
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  padding: 24px 0;
+  border-top: 1px solid #e5e8eb;
+}
+
+.alert_table thead tr {
+  padding: 10px 0 20px;
+  border: none;
+}
+
+.alert_table thead td {
+  width: 480px;
+  text-align: right;
+}
+
+.alert_table tbody {
+  vertical-align: top;
+}
+
+.alert_table tbody tr:last-child {
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.alert_table tbody th {
+  width: 113px;
+  text-align: right;
+  line-height: 17px;
+}
+
+.alert_table tbody td {
+  padding: 0 10px 0 20px;
+}
+
+.alert_table .btn_edit {
+  width: 50px;
+  padding-left: 15px;
+  color: #bbb;
+  background: url("../../img/setting/btn_edit.png") center left no-repeat;
+}
+
+.input_swichArea {
+  width: 444px;
+  line-height: 20px;
+}
+
+.input_radioArea .input_radio + label {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.annotation {
+  font-size: 11px;
+  line-height: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.form_table.form_language dl {
+  padding: 10px 20px;
+}
+
+.form_table.form_language dt {
+  width: 180px;
+}
+
+.form_table.form_language .select-input-box {
+  background: #fff;
+  padding: 5px 0 0;
+}
+
+.form_table.form_language .select-input-box .select2-search__field {
+  padding-top: 5px;
+  width: auto !important;
+}
+
+
+/* 20160329追加
+/******************************/
+.select-box select{
+  box-sizing:border-box;
+  width:267px;
+  border:1px solid #e5e8eb;
+  padding:10px 28px 10px 7px;
+  font-size:13px;
+  background:url(/img/common/arrow_select.png) right 4px center no-repeat;
+  background-color:#fff;
+}
+
+.select-box select{
+  color:#bbb;
+}
+
+.select-box select.active{
+  color:#333;
+}
+
+.select-box option:first-child{
+  color:#bbb;
+}
+.select-box select option{
+  color:#333;
+}
+
+
+
+.select-box + .select-box .useLang{
+  margin-top:14px;
+}
+#add_language{
+  margin:17px 0 10px;
+  height:18px;
+}
+
+#add_language span{
+  padding-left:23px;
+  line-height:18px;
+  font-size:13px;
+  cursor: pointer;
+  color: #bbb;
+  background:url(/img/common/icon_add.png) left center no-repeat;
+}
+
+.setting_pic{
+	float:left;
+	margin-right:5px;
+}
+
+#remove_account{
+    margin:20px 0 50px;
+}
+
+#remove_account span{
+  display: inline-block;
+  padding:4px;
+  padding-left:0;
+  position: relative;
+  color:#bbb;
+  cursor: pointer;
+  font-size:12px;
+}
+
+#remove_account input[type=submit]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  opacity:0;
+}

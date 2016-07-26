@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" href="/css/common/invite.css">
+<script>
+setTimeout(resizeEvent,100); //処理を若干遅延させる（colorboxの処理終了後に処理させるため）
+ 
+function resizeEvent() {
+ 
+ var parentW = $(window.parent).width(); //ライトボックスの横位置を合わせるために親ウィンドウの横幅取得
+ var cboxWidth = window.parent.$('#colorbox').width(); //ライトボックスに動的な横幅を取得
+ var left = parentW/2 - cboxWidth/2; //親の横幅／2　-　ライトボックス横幅／2をして、横の余白を算出
+ 
+ var PageHeight = $("body").height() + 0; //iframeページの高さを取得
+ 
+ var parentH = $(window.parent).height(); //ライトボックス表示の位置を調整するために親のウィンドウの高さを取得
+ var dt = parseInt(window.parent.$("#colorbox").css('top')); //ライトボックスに動的に入った「top」の値を取得
+ var pL = dt - (PageHeight/2); //動的なtopの値からライトボックスの高さの半分を引く
+ if(pL <= 0){ var pL = 0;} //引いた値が0以下なら、0を割り当てる 
+  
+ window.parent.$("#colorbox").animate({
+  'height': (PageHeight + 14) + 'px', //iframeの高さを、ライトボックスの高さに割り当て
+  'top': pL + 'px', //算出したtopの値を割り当てる
+  'left': left //算出したleftの値を割り当てる
+ },400);
+ 
+ //他、高さが必要なボックスにiframeの高さを入れていく
+ window.parent.$("#cboxWrapper").animate({"height": (PageHeight + 14) + "px"},500);
+ window.parent.$("#cboxMiddleLeft").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxContent").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxLoadedContent").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxLoadedContent iframe").animate({"height": PageHeight + "px"},500);
+ window.parent.$("#cboxMiddleRight").animate({"height": PageHeight + "px"},500);
+}
+</script>
+</head>
+<body>
+<div id="modal_invite">
+    <div class="modal-explain">
+      <h2 class="txt_14 fw_b">JURISTERRAに知人を招待</h2>
+      <p class="txt-detail">
+        メールまはた招待リンクから、<br>
+        知人をJURISTERRAに招待することができます。
+      </p>
+    </div>
+    <div class="ta_c">
+      <span class="btn_modalEdit  btn_top">
+      <span class="icon_share"><img src="/img/invite/icon_share_mail.png" alt="招待メールを送る"></span>
+	  <a href="">招待メールを送る</a>
+      </span>
+      <span class="btn_top_link btn_modalEdit btn_top_link">
+      <span class="icon_share"><img src="/img/invite/icon_share_link.png" alt="招待リンクを発行する"></span>
+	  <a href="top_link.html">招待リンクを発行する</a>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

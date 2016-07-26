@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to Middleman</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/plugin/select2.min.css">
+   <link href="/sp/css/common/style.css" rel="stylesheet" />
+    <link href="/sp/css/common/invite.css" rel="stylesheet" />
+  <link href="/sp/css/common/invite_add.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/sp/css/style.css">
+</head>
+<body class="knowledge knowledge_savefile knowledge_savefile edit">
+<!--#include virtual="/sp/include/header.html"-->
+<div id="wrapper">
+  <div id="container" class="clear">
+    <div class="invite_box innerBox">
+      <ul class="invite_flow">
+        <li class="selected"><span>送信完了</span></li>
+        <li><span>入力確認</span></li>
+        <li><span>招待先を入力</span></li>
+      </ul>
+      <p class="txt_16 fw_b invite_head">招待リンクの発行</p>
+      <p class="txt_12 fw_b invite_subHead">以下のリンクをチャットやメッセージに<br>貼り付けてください</p>
+      <p class="txt_12 center">※割り当てられたURLは、招待された方一名のみ有効となります。
+さらに招待していただきたい場合は、以下の「新たにリンクを作成」
+ボタンから新しいリンクを発行してください。</p>
+      <input type="text" readonly value="https://juristerra.net/invitation?key=XXXX" class="input_text input_read">
+      <div class="invite_form">
+        <div class="invite_btn">
+          <a href="" class="invite_btn-green">続けて招待メールを送信</a>
+          <a href="" class="invite_btn-gray">トップに戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--#include virtual="/sp/include/footer_under.html"-->
+</body>
+</html>

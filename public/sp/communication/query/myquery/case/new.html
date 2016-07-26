@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/sp/css/common/normalize.css">
+    <link rel="stylesheet" href="/sp/css/plugin/select2/select2.min.css">
+    <link rel="stylesheet" href="/sp/css/style.css">
+    <link rel="stylesheet" href="/sp/css/common/communication.css">
+    <!-- cache -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+    <!--#include virtual="/sp/include/header.html"-->
+    <div id="wrapper">
+        <div id="container">
+
+                <div id="column-communication-main-sp">
+                  <div class="communication-title">
+                    <div class="communication-title_container">
+                      <p class="txt_gray txt_14">MY QUERY</p>
+                      <h1><input type="text" name="name" value="" placeholder="タイトルを入力"></h1>
+                      <form class="" action="index.html" method="post">
+                        <div id="post_user" class="select-input-box-box01 entry_user">
+                          <select name="" id="postUser" multiple="multiple" class="select2-hidden-accessible">
+                            <option value="0" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                            <option value="1" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                            <option value="2" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                            <option value="3" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                            <option value="4" data-company="C&amp;R リーガルエージェンシー社">近藤和志</option>
+                          </select>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+
+
+                  <div class="communication-post-area">
+                    <div class="communication-post-box">
+                      <form class="" action="index.html" method="post">
+                        <div class="communication-post-form">
+                          <h2>基本情報</h2>
+                          <dl id="addRow" class="query-metadata-box1　communication-post-form_list">
+                              <dt class="communication-post-form_list_item_ttl">分類</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <select name="" id="addSelect" class="select_short">
+          					              <option value="" disabled selected>項目を選択</option>
+                                  <option value="1">QUESTION</option>
+                                  <option value="2">CASE</option>
+                                  <option value="3">OTHERS</option>
+                                </select>
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">ジュリスディクション</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <div class="select-input-box">
+                                  <select name="" id="jurisdiction" multiple="multiple">
+                                    <option value="0">テキスト0</option>
+                                    <option value="1">テキスト1</option>
+                                    <option value="2">テキスト2</option>
+                                    <option value="3">テキスト3</option>
+                                    <option value="4">テキスト4</option>
+                                  </select>
+                                  <span class="btn_arrow"></span>
+                                </div>
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">専門法分野</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <div class="select-input-box">
+                                  <select name="" id="law_field" multiple="multiple">
+                                    <option value="0">テキスト0</option>
+                                    <option value="1">テキスト1</option>
+                                    <option value="2">テキスト2</option>
+                                    <option value="3">テキスト3</option>
+                                    <option value="4">テキスト4</option>
+                                  </select>
+                                  <span class="btn_arrow"></span>
+                                </div>
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">事業地域</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <div class="select-input-box">
+                                  <select name="" id="business_regional" multiple="multiple">
+                                    <option value="0">テキスト0</option>
+                                    <option value="1">テキスト1</option>
+                                    <option value="2">テキスト2</option>
+                                    <option value="3">テキスト3</option>
+                                    <option value="4">テキスト4</option>
+                                  </select>
+                                  <span class="btn_arrow"></span>
+                                </div>
+                              </dd>
+                          </dl>
+                          <!--
+                          <h2>詳細情報</h2>
+                          <dl class="query-metadata-box1　communication-post-form_list">
+                              <dt class="communication-post-form_list_item_ttl">依頼者</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <input type="text" id="client_name" class="communication-post-form_list_item_detail_input" placeholder="テキストを入力">
+                                <input type="text" id="client_url" class="communication-post-form_list_item_detail_input" placeholder="URLを入力">
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">相手方</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <input type="text" id="endclient_name" class="communication-post-form_list_item_detail_input" placeholder="テキストを入力">
+                                <input type="text" id="endclient_url" class="communication-post-form_list_item_detail_input" placeholder="URLを入力">
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">案件規模</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <input type="text" id="volume_value" class="communication-post-form_list_item_detail_input money" placeholder="金額を入力">
+                                <select id="volume_unit" class="select_short">
+          					              <option value="" disabled selected>通貨</option>
+                                  <option value="1">円</option>
+                                  <option value="2">ドル</option>
+                                  <option value="3">ユーロ</option>
+                                </select>
+                                <select>
+          					              <option id="volume_category" value="" disabled selected>金額種類</option>
+                                  <option value="1">選択肢１</option>
+                                  <option value="2">選択肢２</option>
+                                  <option value="3">選択肢３</option>
+                                </select>
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">役割</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <input type="text" id="role" class="communication-post-form_list_item_detail_input">
+                              </dd>
+                              <dt class="communication-post-form_list_item_ttl">弁護士提案</dt>
+                              <dd class="communication-post-form_list_item_detail">
+                                <input type="text" id="legal_comment" class="communication-post-form_list_item_detail_input">
+                              </dd>
+                          </dl>
+                        -->
+
+
+                        </div> <!-- [ / communication-post-form ] -->
+                      </form>
+
+                    </div><!-- [ / communication-post-box ] -->
+                  </div><!-- [ / communication-post-area ] -->
+                </div><!-- [ / column-communication-main ] -->
+
+        </div><!-- [/ #container] -->
+        <div class="communication-new-post">
+          <form action="">
+            <div class="new-post-textarea">
+              <textarea name="name">  【通常ポスト時】　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu auctor lacinia. Suspendisse et arcu convallis, condimentum dolor ut, faucibus nisl. Morbi placerat, purus quis laoreet mattis, dolor libero consectetur nibh, id faucibus sem quam vitae augue. Vestibulum feugiat quam quis placerat varius. Etiam aliquet velit eget nisl facilisis, eu sagittis nisl aliquam. Fusce vehicula tellus eget ipsum dapibus ultricies sed et metus. Aenean fermentum imperdiet tincidunt. In at lorem congue, congue metus lobortis, tempor tortor. In hac habitasse platea dictumst. Praesent iaculis facilisis erat vitae aliquam. Donec sagittis odio vitae lectus consectetur, at viverra orci mollis. Cras eu quam erat. Curabitur posuere quis diam et laoreet. Morbi cursus posuere nibh, et dictum sapien posuere eu. Aenean eget libero nulla.
+              </textarea>
+            </div>
+            <div class="communication-post-control-box clear">
+              <div class="control-box-inner">
+                <div class="icons">
+                  <a href="#modal_to" rel="leanModal" class="icon_to">TO:</a>
+                  <a href="#modal_">
+                      <input class="icon_clip" type="file" name="ファイルを送信">
+                  </a>
+                  <a href="#modal_myfile" rel="leanModal" class="icon_contact">MyFile参照</a>
+                  <a href="#modal_connection" rel="leanModal" class="icon_team">コネクション参照</a>
+                </div>
+              </div>
+              <input type="submit" name="name" value="SEND" class="btn_post_send">
+            </div>
+          </form>
+        </div>
+
+    </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/footer.html"-->
+    <script type="text/javascript">
+    $(function(){
+      //$("#column-communication-sub").perfectScrollbar();
+
+      $(".select-input-box-box01 select").select2({
+        placeholder: "送信先を選択",
+        tags: true
+      });
+
+      $(".select-input-box select").select2({
+        placeholder: "テキストを入力",
+        tags: true
+      });
+
+    });
+    </script>
+    <script type="text/javascript">
+    function open3(f) {
+        window.name = (new Date()).getTime();
+        var date = new Date();
+        var time = date.getTime()
+        f.target = window.name + time;
+        var w = window.open("about:blank", f.target, 'width=1080, height=700');
+        w.focus();
+        f.submit();
+    }
+    </script>
+    <script src="/js/common/communication_edit.js"></script>
+
+</body>
+</html>

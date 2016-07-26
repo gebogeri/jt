@@ -1,0 +1,306 @@
+$green: #44d095;
+$dark: #102430;
+$dark2: #22313d;
+
+$addurl: url(/sp/img/common/btn_circle_plus.png);
+$deleteurl: url(/sp/img/common/btn_delete.png);
+
+$editurl: url(/sp/img/common/btn_edit.png);
+$settingurl: url(/sp/img/common/btn_gear.png);
+$linkurl: url(/sp/img/common/btn_link.png);
+$shareurl: url(/sp/img/common/btn_share.png);
+
+$nexturl: url(/sp/img/common/icon_next.png);
+$backurl: url(/sp/img/common/icon_back.png);
+
+$searchurl: url(/sp/img/common/icon_search.png);
+
+@mixin e($names...){
+    @each $name in $names{
+        @at-root &_#{$name} {
+            @content;
+        }
+    }
+}
+
+@mixin m($names...){
+    @each $name in $names{
+        @at-root &.#{$name} {
+            @content;
+        }
+    }
+}
+
+@mixin ff{
+    font-family: Gill Sans, Gill Sans MT, Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif;
+}
+
+@mixin reset{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin texthide{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin inner($top:0,$bottom:0,$padt:false, $padb:false){
+    @if $padt == false and $padb == false{
+        width: 94%;
+        @if $top == 0 and $bottom == 0{
+            margin:0 auto;
+        }
+    }@else{
+        box-sizing: border-box;
+        width: 100%;
+        @if $padb != false{
+            padding: $padt 3% $padb;
+        }@else{
+            padding: $padt 3%;
+        }
+    }
+    @if $top != 0 or $bottom != 0{
+        margin: $top auto $bottom;
+    }
+}
+
+@mixin flex($j:false, $a:false, $w:false){
+    display:-webkit-flex;
+    display:flex;
+    @if $j != false{
+        -webkit-justify-content: $j;
+        justify-content: $j;
+    }
+    @if $a != false{
+        -webkit-align-items: $a;
+        align-items: $a;
+    }
+    @if $w != false{
+        -webkit-flex-wrap: $w;
+        flex-wrap: $w;
+    }
+}
+
+@mixin boxarea{
+    @include inner($bottom:1.5rem,$padt:0);
+    @include border;
+    background: #fff;
+}
+
+@mixin notification{
+    position: absolute;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius:100%;
+    font-size: .8rem;
+    line-height: 1.5rem;
+    color: #fff;
+    text-align: center;
+    background: $green;
+}
+
+@mixin border($b:false){
+    @if $b != false {
+        border-#{$b}: .1rem solid #e5e8eb;
+    }
+    @else{
+        border: .1rem solid #e5e8eb;
+    }
+}
+
+
+@mixin arrow{
+    position: relative;
+    @include m(isOpen){
+        &:after{
+            background-image: url(/sp/img/common/arrow_select_op.png);
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top:0;
+        bottom:0;
+        right: .8rem;
+        width: .9rem;
+        height: .6rem;
+        margin: auto;
+        background: url(/sp/img/common/arrow_select.png) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+@mixin select2($w:100%,$m:false,$h:3.1rem,$tags:false,$t:true,$l:false,$box-sizing: content-box){
+    @at-root & + .select2-container {
+        box-sizing: $box-sizing;
+        width: $w;
+        @include border;
+        @if $l == false{
+            border-left: none;
+        }
+        @if $t == false{
+            border-top: none;
+        }
+        @if $tags == true {
+            border: none;
+        }
+        @if $m != false{
+            display: block;
+            margin: $m 0;
+        }
+        @include arrow;
+        background-size:cover;
+        &.select2-container--open{
+            position: relative;
+            &:after{
+                background: url(/sp/img/common/arrow_select_op.png) center center no-repeat;
+                background-size:cover;
+            }
+        }
+        .select2-selection{
+            box-sizing:border-box;
+            height: auto;
+            min-height: $h;
+            border: none!important;
+            border-radius:0;
+            border-left: none;
+            padding-right: 1.8rem;
+            vertical-align: bottom;
+            input{
+                margin-top: 0;
+                padding-left: .3rem;
+            }
+        }
+    }
+    @at-root & + .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: $h;
+    }
+    @at-root &.first + .select2-container {
+        @include border(left);
+    }
+}
+
+
+@mixin selectbox{
+    position: relative;
+    @include arrow;
+    select{
+        width: 100%;
+        border: none;
+        padding-right: 1.8rem;
+    }
+}
+
+@mixin editBtn($size: false){
+    width: $size;
+    height: 0;
+    padding-top: $size;
+    background: $editurl center center no-repeat;
+    background-size: 1.5rem;
+    cursor: pointer;
+}
+
+@mixin faq($top: .7rem,$left: -3.1915%){
+    position: relative;
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(/sp/img/common/question_icon_circle.png) center center no-repeat;
+    background-size: 1.8rem;
+    cursor: pointer;
+    + .faqBox{
+        display: none;
+    }
+    @include m(isOpen){
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: $top;
+            left:50%;
+            margin-left: -1.5rem;
+            border: 1.5rem solid transparent;
+            border-bottom-color: #66d7db;
+        }
+        + .faqBox{
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: $left;
+            display: block;
+            box-sizing: border-box;
+            width: 100vw;
+            padding: 2rem 1.5rem;
+            margin-top: 1.6rem;
+            color: #fff;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            background: #66d7db;
+            box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .59);
+        }
+    }
+}
+
+@mixin addicon{
+    display: inline-block;
+    height: 1.8rem;
+    padding-left: 3rem;
+    color: #bbb;
+    line-height: 1.8rem;
+    vertical-align: middle;
+    background: $addurl left center no-repeat;
+    background-size: 1.6rem;
+    cursor: pointer;
+}
+
+@mixin settingicon($p: false){
+    @if $p!= false{
+        position: $p;
+    }
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: $settingurl center center no-repeat;
+    background-size: 1.4rem;
+    cursor: pointer;
+}
+
+@mixin linkicon($p: relative){
+    @if $p!= false{
+        position: $p;
+    }
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: $linkurl center center no-repeat;
+    background-size: 1.4rem 1.6rem;
+    cursor: pointer;
+}
+
+@mixin select{
+    position: relative;
+    @include inner;
+    @include border;
+    select{
+        box-sizing: border-box;
+        width: 100%;
+        height: 5rem;
+        padding: 0 2.3rem 0 1rem;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 1.3rem;
+        width: .9rem;
+        height: .6rem;
+        margin: auto;
+        background: url(/sp/img/common/arrow_select.png) center center no-repeat;
+        background-size: cover;
+    }
+}

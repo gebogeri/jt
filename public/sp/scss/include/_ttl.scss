@@ -1,0 +1,161 @@
+@import '../_mixin';
+
+.ttl{
+    @include inner($padt:3rem, $padb:1rem);
+    margin: 0;
+    background: #fff;
+    @include e(english){
+        display: block;
+        font-size: 1.2rem;
+        color: #bbb;
+        @include ff;
+    }
+    @include e(lang){
+        @include flex($a:center, $j:space-between);
+        font-size: 1.6rem;
+        @include e(newEntry){
+            padding-left: 2.5rem;
+            font-weight: normal;
+            text-decoration: none;
+            color: #bbb;
+            font-size: 1.4rem;
+            background: $addurl left center no-repeat;
+            background-size: 1.6rem;
+        }// newEntry
+        @include m(noneTtl){
+            color:#ddd;
+        }
+        @include m(btn){
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+        }
+        @include e(btn){
+            @include flex($a:center);
+            width: 5.6rem;
+            padding-left: 1.5rem;
+            padding-right: .2rem;
+            .btn_share, .btn_gear{
+              display: block;
+              width: 1.6rem;
+              height: 1.6rem;
+              margin-right: 1.2rem;
+              cursor: pointer;
+            }
+            .btn_gear{
+              background: $settingurl center center no-repeat;
+              background-size: 1.4rem;
+            }
+            .btn_share{
+              background: $linkurl center center no-repeat;
+              background-size: 1.3rem;
+            }
+        }
+    }// lang
+    @include e(entryUser){
+        @include inner($padt: 0);
+        background: #fff;
+        overflow: hidden;
+        .innerBox{
+            @include flex($a:center, $w:wrap);
+            height: 4rem;
+            @include border(top);
+        }
+        @include e(icon){
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1.5rem;
+        }
+        @include e(name){
+            flex: 1;
+            line-height: 1.4rem;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            span{
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+        }
+    }
+    @include e(search){
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding:1% 3%;
+        margin: 0 auto;
+        background: #FFf;
+        input[type="text"]{
+            width: 100%;
+            padding-left: 2rem;
+            border: none;
+            @include border(top);
+        }
+        @include e(submit){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 3%;
+            width: 1.5rem;
+            height:  1.5rem;
+            margin: auto;
+            background: $searchurl left center no-repeat;
+            background-size: cover;
+            input[type="submit"]{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }// search
+    @include e(back){
+        @include inner($padt:0);
+        background: #fff;
+        .innerBox{
+            padding: 1.2rem 0;
+            @include border(top);
+            @include border(bottom);
+        }
+        @include e(btn){
+            display: inline-block;
+            height: 1.7rem;
+            padding-left: 2rem;
+            @include ff;
+            color: #bbb;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            background: $backurl left center no-repeat;
+            background-size: 1.6rem;
+        }
+    }
+}
+
+.subTtl{
+    position: relative;
+    @include flex($a:center, $j:space-between);
+    font-size: 1.6rem;
+    margin: 3rem 0 .5rem;
+    @include e(main){
+        @include flex($a:center);
+        @include e(faq){
+            @include faq;
+            margin-left: .6rem;
+        }//faq
+    }//main
+    @include e(add){
+        display: block;
+        height: 1.6rem;
+        padding-left: 2.5rem;
+        color: #bbb;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-weight: normal;
+        background: $addurl left center no-repeat;
+        background-size: 1.6rem;
+        cursor: pointer;
+    }
+}

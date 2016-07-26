@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/style.css">
+<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link rel="stylesheet" href="/css/common/profile.css">
+<link rel="stylesheet" href="/css/common/profile_add.css">
+<link rel="stylesheet" href="/css/common/invite.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+  <!--#include virtual="/include/header.html" -->
+  <div id="wrapper">
+    <div id="container" class="clear">
+      <main class="clear">
+        <!--<div id="column-sub-profile">
+          <h3 class="ttl_sub_side">ATTORNEY</h3>
+          <a href=""> - SUMMERY</a>
+          <a href=""> - LIST</a>
+          <a href=""> - FOLLOWING</a>
+          <h3 class="ttl_sub_side">CLIENT</h3>
+          <a href=""> - LIST</a>
+          <a href=""> - FOLLOWING</a>
+          <h3 class="ttl_sub_side">OTHER</h3>
+          <a href="">-CONNECTION SUGGESTION</a>
+          <a href=""> - REQUESTS RECEIVED</a>
+          <a href=""> - REQUESTS SENT</a>
+	  </div>--><!-- /.column-sub-profile -->
+        <div class="column-main-profile">
+          <div class="profile-title">
+            <div class="profile-title_container">
+              <p class="txt_gray">MESSAGE/INTERVIEW</p>
+              <h1>メッセージ / インタビュー</h1>
+            </div>
+          </div><!-- /.profile-title -->
+
+          <div class="message-wrap">
+            <div class="title txt_16 fw_b">
+               MESSAGE
+               <a href="" class="icon_edit">
+                 編集
+               </a>
+            </div>
+            <div>
+              <p>
+                寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝え
+                寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝える。                寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝える。
+              </p>
+            </div>
+          </div>
+
+
+      </main>
+      <aside>
+		<div id="side-profile">
+			<div class="icon_circle">
+				<a href="profile/recent_activity.html"><img src="/img/common/icon_profile.jpg" alt="近藤 和志"></a>
+			</div>
+			<div id="side-name" class="txt_12">
+				<p>近藤 和志</p>
+				<p>Kazushi Kondo</p>
+			</div>
+		</div>
+        <h2 class="ttl_side">PROFILE</h2>
+        <div id="side-link" class="txt_11">
+          <a href="/profile/recent_activity.html" class="selected"> RECENT ACTIVITY</a>
+          <a href=""> ABOUT</a>
+          <a href=""> MESSAGE / INTERVIEW</a>
+          <a href=""> CONNECTION</a>
+          <h3 class="ttl_sub_side">MY FILE</h3>
+          <a href="/profile/myfile">- LATEST</a>
+          <a href="/profile/myfile/projects">- 取り扱い案件</a>
+          <a href="/profile/myfile/monograph">- 論文/書籍</a>
+          <a href="/profile/myfile/seminar">- セミナー,講演</a>
+          <a href="/profile/myfile/award">- 受賞</a>
+          <a href="/profile/myfile/blog">- コラム/ブログ</a>
+          <a href="/profile/myfile/link">- リンク</a>
+        </div>
+		<div class="sub-aside">
+			<div id="side-link" class="txt_11">
+				<h3 class="ttl_sub_side">MESSAGE / INTERVIEW</h3>
+				<a href=""> - MESSAGE</a>
+			</div>
+		</div>
+      </aside>
+    </div>
+  </div>
+  <!--#include virtual="/include/footer.html"-->
+  <script>
+  $(function(){
+    $("#jurisdiction").select2({
+      placeholder: "テキストを入力"
+    });
+
+    $("#lawField").select2({
+      placeholder: "テキストを入力"
+    });
+
+    $(document).on('click','.lawyer-item',function(evt){
+      if(!$(this).parent().hasClass('scroll-box')){
+          $(this).toggleClass('selected');
+      }
+    }).on('click','#profile-tab li:not(.selected)',function(){
+        $('#profile-tab li').removeClass('selected');
+        $(this).addClass('selected');
+        $('#all').toggleClass('view');
+    });
+  });
+  </script>
+</body>
+</html>

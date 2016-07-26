@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Account | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/common/normalize.css">
+<link rel="stylesheet" href="../css/common/style.css">
+<link rel="stylesheet" href="../css/common/style02.css">
+<link rel="stylesheet" href="../css/common/invite.css">
+<link rel="stylesheet" href="../css/plugin/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<!--#include virtual="../include/header.html"-->
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray txt_14">SETTING</p>
+            <h1>Account</h1>
+        </div>
+    </div>
+    <div id="container" class="clear">
+        <main class="clear">
+            <div id="column-main-single">
+                <p class="txt_14 fw_b">Your Account</p>
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>Basic Information</h2>
+
+                        <dl class="normal_area">
+                            <dt>Name</dt>
+                            <dd><img src="../img/setting/setting_icon_circle.png" alt="">Kazushi Kondo</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                          <dt>Name</dt>
+                          <dd>
+                            <input type="text" name="性" placeholder="性" size="25" class="text_short"><input type="text" name="名" placeholder="名" size="25" class="text_short ml10">
+                            <input type="text" name="Middle Name" placeholder="Middle Name" size="50">
+                            <div class="change_img clear">
+                                <img src="../img/setting/setting_icon_circle.png" alt="">
+                                <div class="change_left">
+                                    <p>Chage your profile picture</p>
+                                    <div class="btn_upload">
+                                        Upload a file
+                                        <input type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
+                                        <input type="text" id="uv" class="uploadValue" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list_settingBtn">
+                                <li><input type="submit" name="" value="Save"></li>
+                                <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                            </ul>
+                          </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Name in your native language</dt>
+                            <dd>近藤　和志　（コンドウ　カズシ）</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Name in your native language</dt>
+                            <dd>
+                                <input type="text" name="Last Name" placeholder="Last Name" size="25" class="text_short"><input type="text" name="First Name" placeholder="First Name" size="25" class="text_short ml10">
+                                <input type="text" name="Middle Name" placeholder="Middle Name" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Gender</dt>
+                            <dd>Male</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Gender</dt>
+                            <dd>
+                                <input type="radio" name="gender" id="select1" value="1" checked=""><label for="select1">Male</label>
+                                <input type="radio" name="gender" id="select2" value="0"><label for="select2">Female</label>
+                                <input type="radio" name="gender" id="select3" value="0"><label for="select3">Custome</label>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Date of Birth</dt>
+                            <dd>September 8, 1988</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Date of Birth</dt>
+                            <dd>
+                                <select name="誕生日（年）" id="">
+                                    <option value="YYYY1">YYYY</option>
+                                    <option value="YYYY2">YYYY</option>
+                                    <option value="YYYY3">YYYY</option>
+                                    <option value="YYYY4">YYYY</option>
+                                    <option value="YYYY5">YYYY</option>
+                                </select>
+                                <select name="誕生日（月）" id="">
+                                    <option value="MM1">MM</option>
+                                    <option value="MM2">MM</option>
+                                    <option value="MM3">MM</option>
+                                    <option value="MM4">MM</option>
+                                    <option value="MM5">MM</option>
+                                </select>
+                                <select name="誕生日（日）" id="">
+                                    <option value="MM1">MM</option>
+                                    <option value="MM2">MM</option>
+                                    <option value="MM3">MM</option>
+                                    <option value="MM4">MM</option>
+                                    <option value="MM5">MM</option>
+                                </select>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>User ID</dt>
+                            <dd>ttps://www.juristerra.net/user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>User ID</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">User ID registered here will be shown in URL of your profile.</p>
+                                <input type="text" name="User ID" size="50">
+                                <p class="not_useID">Invalid User ID</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Email Address</dt>
+                            <dd>
+                                aaaa@aaaaaa.com   Set as a primary email address<br>
+                                aaaa@aaaaaa.com
+                            </dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <div class="edit_area">
+                            <dl class="mailAddress_content">
+                                <dt>Email Address <span class="mailAddress_no">01</span></dt>
+                                <dd>
+                                    <input type="text" name="Email Address01" class="text_medium">
+                                    <p><input type="radio" name="mainEmail" id="Email1" value="0" checked><label for="Email1">Set as a primary email address</label></p>
+                                    <ul class="list_settingBtn">
+                                        <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                        <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="mailAddress_content">
+                                <dt>Email Address <span class="mailAddress_no">02</span></dt>
+                                <dd>
+                                    <input type="text" name="Email Address02" class="text_medium">
+                                    <p class="btn_delete delete_address">Delete the address</p>
+                                    <p><input type="radio" name="mainEmail" id="Email2" value="1"><label for="Email2">Set as a primary email address</label></p>
+                                    <ul class="list_settingBtn">
+                                        <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                        <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <p class="btn_add add_mail" id="mailAddress_add">Add email address</p>
+                        </div>
+
+                        <dl class="normal_area">
+                            <dt>Password</dt>
+                            <dd>Last modified date and time of the password is more than a year ago.</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Password</dt>
+                            <dd>
+                                <input type="text" name="Current password" placeholder="Current password" size="50" class="mb10">
+                                <input type="text" name="reate a new password" placeholder="Create a new password" size="50" class="mb10">
+                                <input type="text" name="Confirm the new password" placeholder="Confirm the new password" size="50" class="mb10">
+                                <p class="txt_11"><a rel="leanModal" href="#forgot_pass" class="txt_gray">Forgot password</a></p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>Social Network Service Integration</h2>
+
+                        <dl class="normal_area">
+                            <dt>Facebook</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Facebook</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">Disconnect</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Twitter</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Twitter</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">Disconnect</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Google+</dt>
+                            <dd>&nbsp;</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Google+</dt>
+                            <dd class="auth_cell">&nbsp;</dd>
+                            <dd>
+                              <button type="submit" class="btn_auth">Disconnect</button>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Linkedin</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Twitter</dt>
+                            <dd class="auth_cell">user_id</dd>
+                            <dd>
+                              <button type="submit" class="btn_delete">Disconnect</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+
+                <div class="clear mt40">
+                    <p class="txt_14 fw_b fl">Account Administrator</p>
+                    <p class="pop_up">
+                        <img src="../img/setting/question_icon_circle.png" alt="？">
+                        <span class="pop_message">Account Administrator may fill out information on your account in lieu of you, but may not be able to access to communication function.</span>
+                    </p>
+                    <p class="btn_add fr" id="btn_add_acount">Account Administrator</p>
+                </div>
+                <form action="" id="add_acount_area">
+                    <div class="form_table dd_large">
+                        <h2>Account Administrator</h2>
+                        <dl>
+                            <dt>氏名</dt>
+                            <dd>
+                                <input type="text" name="Last Name" placeholder="Last Name" size="25" class="text_short"><input type="text" name="First Name" placeholder="First Name" size="25" class="text_short ml10">
+                                <input type="text" name="Middle Name" placeholder="Middle Name" size="50">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>User ID</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">User ID registered here will be shown in URL of your profile.</p>
+                                <input type="text" name="User ID" size="50" class="mb10">
+                                <p class="not_useID">Invalid User ID</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Email Address</dt>
+                            <dd>
+                                <input type="text" name="Email Address" size="50">
+                                ↓これ付いてる意味ありますか？↓
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="text" name="Password" placeholder="Create a new password" size="50" class="mb10">
+                                <input type="text" name="Confirm the new password" placeholder="Confirm the new password" size="50" class="mb10">
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2 class="clear">User01</h2>
+                        <p class="btn_delete delete_acount">Delete this Contact</p>
+
+                        <dl class="normal_area">
+                            <dt>Name</dt>
+                            <dd>INAMI ASANO</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Name</dt>
+                            <dd>
+                                <input type="text" name="Last Name" placeholder="Last Name" size="25" class="text_short"><input type="text" name="First Name" placeholder="First Name" size="25" class="text_short ml10">
+                                <input type="text" name="Middle Name" placeholder="Middle Name" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>User(ID)</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>User(ID)</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">User ID registered here will be shown in URL of your profile.</p>
+                                <input type="text" name="User ID" size="50" class="mb10">
+                                <p class="not_useID">Invalid User ID</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Email Address</dt>
+                            <dd>aaa@aaaa.com</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Email Address</dt>
+                            <dd>
+                                <input type="text" name="Email Address" size="50" class="text_medium">
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Password</dt>
+                            <dd>Last modified date and time of the password is more than a year ago.</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Password</dt>
+                            <dd>
+                                <input type="text" name="Current password" placeholder="Current password" size="50" class="mb10">
+                                <input type="text" name="New password" placeholder="Create a new password" size="50" class="mb10">
+                                <input type="text" name="Confirm the new password" placeholder="Confirm the new password" size="50" class="mb10">
+                                <p class="txt_11 txt_gray">Forgot password</p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+
+                <form action="" method="">
+                    <div class="form_table">
+                        <h2>User02</h2>
+                        <p class="btn_delete delete_acount">Delete this Contact</p>
+
+                        <dl class="normal_area">
+                            <dt>Name</dt>
+                            <dd>INAMI ASANO</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Name</dt>
+                            <dd>
+                                <input type="text" name="Last Name" placeholder="Last Name" size="25" class="text_short"><input type="text" name="First Name" placeholder="First Name" size="25" class="text_short ml10">
+                                <input type="text" name="Middle Name" placeholder="Middle Name" size="50">
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>User ID</dt>
+                            <dd>user_id</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>User ID</dt>
+                            <dd>
+                                <p class="txt_12 mt5 mb10">User ID registered here will be shown in URL of your profile.</p>
+                                <input type="text" name="User ID" size="50" class="mb10">
+                                <p class="not_useID">Invalid User ID</p>
+                                <ul class="list_settingBtn">
+                                    <li><input type="submit" name="" value="Save"></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Email Address</dt>
+                            <dd>aaa@aaaa.com</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Email Address</dt>
+                            <dd>
+                                <input type="text" name="Email Address" size="50" class="text_medium">
+                                <ul class="list_settingBtn settingBtn_long">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl class="normal_area">
+                            <dt>Password</dt>
+                            <dd>Last modified date and time of the password is more than a year ago.
+</dd>
+                            <dd class="btn_edit">Edit</dd>
+                        </dl>
+                        <dl class="edit_area">
+                            <dt>Password</dt>
+                            <dd>
+                                <input type="text" name="Current password" placeholder="Current password" size="50" class="mb10">
+                                <input type="text" name="Create a new password" placeholder="Create a new password" size="50" class="mb10">
+                                <input type="text" name="Confirm the new password" placeholder="Confirm the new password" size="50" class="mb10">
+                                <p class="txt_11 txt_gray">Forgot password</p>
+                                <ul class="list_settingBtn">
+                                    <li><a rel="leanModal" href="#confirm_email"><input type="button" name="" value="Send an email to save changes"></a></li>
+                                    <li><input type="reset" name="" value="Cancel" class="btn_cencel"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <div id="side-profile">
+                <div id="side-name" class="txt_12">
+                    <p class="pdl20 txt_gray">SETTING</p>
+                    <a href="" class="btn_gear gear_right"></a>
+                </div>
+                <div id="side-link" class="txt_11">
+                    <a href="/setting" class="selected">Account</a>
+                    <a href="/setting/language.html">Language</a>
+                    <a href="/setting/alert.html">Notification</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="modal_box" id="confirm_email">
+        <p class="fw_b mb10">Email Sent</p>
+        <p class="lh35">lesud.minna@gmail.com, find the email from Juristerra to confirm your new email address.</p>
+        <p class="modal_close">OK</p>
+    </div>
+    <div class="modal_box" id="forgot_pass">
+        <p class="fw_b mb10">New password Confirmation</p>
+        <p class="lh35">An email will be sent to your email address to confirm your new password</p>
+        <ul class="list_settingBtn">
+            <li><a rel="leanModal" href="#submit_pass"><input type="button" name="" value="Send"></a></li>
+            <li><input type="reset" name="" value="Cancel" class="modal_close"></li>
+        </ul>
+    </div>
+    <div class="modal_box" id="submit_pass">
+        <p class="fw_b mb10">Email Sent</p>
+        <p class="lh35">Confirmation email has been sent to your email address.</p>
+        <p class="modal_close">OK</p>
+    </div>
+</div>
+<!--#include virtual="../include/footer.html"-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../js/plugin/lean_modal.js"></script>
+<!-- <script src="../js/plugin/accordion.js"></script> -->
+<script>
+$(function(){
+    $("#btn_add_acount").on("click", function() {
+        $("#add_acount_area").slideToggle();
+    });
+
+    // アコーディオン
+    $('.btn_edit').on('click', function() {
+        var menu = $(this).closest(".normal_area")
+        menu.hide();
+        menu.next(".edit_area").fadeIn();
+    });
+    $('.btn_cencel').on('click', function() {
+        var content = $(this).closest(".edit_area")
+        content.hide();
+        content.prev(".normal_area").fadeIn();
+    });
+
+    // 新しいメールアドレス追加
+    $("#mailAddress_add").on("click", function() {
+        var target = $(this).prev(".mailAddress_content")
+        console.log(target);
+        var mailForm = target.clone();
+        target.after(mailForm);
+    });
+
+    // メールアドレス削除
+
+    $(document).on("click", ".delete_address", function() {
+        $(this).closest(".mailAddress_content").fadeOut(300, function() {
+          $(this).remove();
+        });
+    });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,937 @@
+@charset "UTF-8";
+
+@import "./mixin";
+
+//----------------------------------------------------
+// common
+//----------------------------------------------------
+
+body {
+  font-size: 12px;
+}
+
+#container {
+  padding-left: calc(50% - 220px);
+  padding-left: 160px + 160px;
+}
+
+#column-sub-profile {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 160px;
+  box-sizing: border-box;
+  // padding-top: 50px;
+  padding-top: 112px;
+  width: 160px;
+  height: 100%;
+  background-color: #212931;
+
+  a {
+    font-size: 11px;
+    display: block;
+    height: 40px;
+    padding-left: 12px;
+    color: #fff;
+    line-height: 40px;
+    &:hover, &.selected {
+      opacity: .7;
+    }
+  }
+}
+#column-sub-content-profile {
+  box-sizing: border-box;
+  padding: 35px 0 50px;
+
+  > p {
+    margin: 0 10px 10px;
+  }
+}
+#column-main-profile {
+  float: left;
+  padding-left: 400px;
+}
+
+footer {
+  padding-left: 320px;
+  box-sizing: border-box;
+}
+
+//----------------------------------------------------
+// 汎用クラス
+//----------------------------------------------------
+
+.ta-c {
+  text-align: center;
+}
+.ta-r {
+  text-align: right;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 15px 0;
+}
+.bd-n {
+  border: none;
+}
+
+
+// 基本のボックス
+.box {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e8eb;
+  background: #fff;
+
+  > div:last-child {
+    margin-bottom: 0;
+  }
+
+  // タイトル
+  &-title {
+    display: flex;
+    line-height: 40px;
+    padding: 0 0 10px;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #eee;
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a {
+      margin-left: auto;
+    }
+  }
+
+  // .box内で左右に分かれてるヤツ
+  &-columns {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    padding: 0 0 15px;
+    margin: 0 0 25px;
+    border-bottom: 1px solid #eee;
+    &-left {
+      width: 60%;
+      min-width: 370px;
+      line-height: 22px;
+      span {
+        color: #bbb;
+      }
+    }
+    &-right {
+      width: 30%;
+      min-width: 200px;
+      line-height: 14px;
+      margin-left: 20px;
+      span {
+        font-size: 8px;
+        color: #bbb;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+
+    }
+    &-hr {
+      content: "";
+      display: block;
+      border-width: 0;
+      border-right: 1px solid #e5e8eb;
+      margin: 0;
+      width: 0;
+      height: 80%;
+      min-height: 80px;
+    }
+  }
+
+  // .box内のcolumn
+  &-column {
+    line-height: 21px;
+    padding: 0 0 34px;
+    margin: 0 0 26px;
+    border-bottom: 1px solid #eee;
+    + .box-column {
+      border: none;
+    }
+
+    &-ranking {
+      margin-bottom: 53px;
+    }
+  }
+
+  // スクロールボックス
+  &-scrollbox {
+    width: 100%;
+    &.half {
+      width: 50%;
+      + .box-scrollbox {
+        margin-left: 21px;
+      }
+    }
+    > p {
+      margin: 0 0 10px;
+    }
+    &-inner {
+      border: 1px solid #e5e8eb;
+      box-sizing: border-box;
+      min-width: 280px;
+      height: 186px;
+      padding: 0 10px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+// 丸の中に右矢印のリンク
+.link_arrow-right {
+  padding-left: 20px;
+  color: #bbb;
+  background: url(/img/common/icon_circle_arrow_right.png) 0 center no-repeat;
+  display: inline-block;
+}
+
+.link_edit {
+  padding-left: 20px;
+  color: #bbb;
+  background: url(/img/common/icon_setting_edit.png) 0 center no-repeat;
+  display: inline-block;
+}
+
+// リスト パターン01
+.list-01 {
+  li {
+    line-height: 15px;
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border: none;
+    }
+    > a {
+      display: block;
+    }
+  }
+}
+
+
+//----------------------------------------------------
+// Title
+//----------------------------------------------------
+
+.profile-title {
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 130px;
+  padding: 35px 30px 0;
+  margin-bottom: 35px;
+  &_container {
+    p {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 18px;
+      line-height: 40px;
+      margin: 0;
+      border-bottom: 1px solid #e5e8eb;
+    }
+  }
+  .link_back {
+    display: inline-block;
+    color: #bbb;
+    margin-top: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+.profile-title-search {
+  padding: 32px 0 30px;
+  > div {
+    display: flex;
+    margin-bottom: 19px;
+    .btn-primary {
+      height: 34px;
+      line-height: 34px;
+      width: 70px;
+      min-width: 70px;
+      padding: 0 10px;
+      margin-left: 10px;
+    }
+  }
+  table {
+    width: 100%;
+    font-size: 12px;
+    th {
+      text-align: right;
+      width: 130px;
+      padding: 0 10px 10px 0;
+    }
+    td {
+      padding-bottom: 10px;
+    }
+  }
+  .df {
+    display: flex;
+    .input_text {
+      width: 50%;
+    }
+    .input_select {
+      width: 50%;
+      margin-left: 10px;
+    }
+  }
+
+  .select-input-box{
+    padding:4px 0;
+    border:1px solid #e5e8eb;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:9px;
+  }
+  .select2-container .select2-selection--multiple{
+    min-height:auto;
+    height:25px;
+    line-height: 25px;
+  }
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+    padding-left:0;
+  }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice{
+    margin-left:4px;
+  }
+  .select2-container .select2-search--inline .select2-search__field{
+    padding-left:10px;
+  }
+}
+
+//----------------------------------------------------
+// #column-main内
+//----------------------------------------------------
+
+.profile-wrap {
+  // margin: 0 10px 20px;
+  width: 620px;
+  margin: 0 auto 20px;
+}
+
+.profile-form-table {
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e5e8eb;
+  tr {
+    width: 95%;
+    margin: 0 auto;
+    display: table;
+    padding: 24px 0;
+    border-top: 1px solid #e5e8eb;
+  }
+  .none_border {
+    padding-bottom: 0;
+    + tr {
+      border: none;
+      padding-top: 8px;
+    }
+  }
+  thead {
+    tr {
+      text-align: left;
+      padding: 10px 0 20px;
+      border: none;
+    }
+    td {
+      width: 480px;
+      text-align: right;
+    }
+  }
+  tbody {
+    vertical-align: top;
+    // tr:last-child {
+    //   border-bottom: 1px solid #e5e8eb;
+    // }
+    th {
+      width: 113px;
+      text-align: right;
+      line-height: 35px;
+    }
+    td {
+      padding: 0 10px 0 20px;
+    }
+  }
+}
+
+.profile-submit-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9px;
+  > div {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  .pop_up {
+    padding-left: 0;
+    vertical-align: text-bottom;
+  }
+  .input_select {
+    width: 210px;
+    margin-right: 10px;
+  }
+  .btn-primary {
+    @include size(190px, 40px);
+    line-height: 40px;
+    margin-right: 13px;
+  }
+  .btn-default {
+    @include size(99px, 40px);
+    min-width: initial;
+    line-height: 40px;
+    padding: 0 10px;
+  }
+}
+
+// input[type="text"]のスタイル
+input.input_text {
+  border: 1px solid #e5e8eb;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  height: 35px;
+  @include placeholderColor(#bbb);
+  font-size: 13px;
+  line-height: 14px;
+  padding: 10px;
+
+  + .input_text {
+    margin-top: 8px;
+  }
+}
+
+// selectのスタイル
+.input_select {
+  width: 80px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #c4c4c4;
+  border: 1px solid #e5e8eb;
+  border-radius: 0;
+  background: #fff url("../../img/setting/arrow_select.png") right 10px center no-repeat;
+  + .input_select {
+    margin-left: 6px;
+  }
+  &.size_m {
+    width: 180px;
+  }
+  &.size_l {
+    width: 100%;
+  }
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+// 「？」ポップアップリンク
+.pop_up {
+  position: relative;
+  padding-left: 11px;
+  display: inline-block;
+  cursor: pointer;
+  .pop_message {
+    display: none;
+    width: 220px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    background: #66d7db;
+    padding: 16px 20px;
+    color: #fff;
+    position: absolute;
+    top: 32px;
+    left: -50px;
+    z-index: 2;
+    &:after {
+      bottom: 100%;
+      left: 22%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(102, 215, 219, 0);
+      border-bottom-color: #66d7db;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
+  &:hover .pop_message {
+    display: block;
+  }
+}
+
+.btn-default {
+  display: inline-block;
+  background: #bbb;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 120px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 30px;
+  &:hover {
+    background: darken(#bbb, 10%);
+  }
+}
+.btn-primary {
+  display: inline-block;
+  background-color: #44d095;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 120px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 30px;
+  &:hover {
+    background: darken(#44d095, 10%);
+  }
+}
+
+// スライドタブ
+.slide-tabs {
+  position: relative;
+  padding: 20px 20px 10px;
+  &-inner {
+    overflow: hidden;
+    overflow-x: scroll;
+    height: 48px;
+  }
+  ul {
+    @include clearfix;
+  }
+  li {
+    float: left;
+    position: relative;
+    width: 105px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: #bbb;
+    margin-right: 1px;
+    cursor: pointer;
+    &.selected {
+      background: #22313d;
+      cursor: auto;
+      &:after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        border: 6px solid transparent;
+        border-top-color: #22313d;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  .slide-arrow-left,
+  .slide-arrow-right {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    @include size(20px, 30px);
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .slide-arrow-left {
+    left: 0;
+    background: url(/img/profile/arrow_left.png) center center no-repeat;
+  }
+  .slide-arrow-right {
+    right: 0;
+    background: url(/img/profile/arrow_right.png) center center no-repeat;
+  }
+}
+.slide-tab-content {
+  display: none;
+  &.selected {
+    display: block;
+  }
+}
+
+//----------------------------------------------------
+// 基本情報
+// http://localhost:8001/profile/basic/
+//----------------------------------------------------
+
+// グラフ
+.graph-box {
+  width: 100%;
+  min-height: 180px;
+}
+
+// 棒グラフ
+.graph-box02 {
+  position: relative;
+  display: flex;
+  line-height: 20px;
+  padding: 0 0 22px;
+  margin: 0 0 32px;
+  border-bottom: 1px solid #eee;
+  > div {
+    width: 40%;
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .graph-box-center {
+    width: 140px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .graph-bar {
+    display: flex;
+    font-size: 10.89px;
+    color: #fff;
+    text-align: center;
+    height: 20px;
+    &.left {
+      justify-content: flex-end;
+    }
+    .bar-color1 {background: #406175;}
+    .bar-color2 {background: #73afc0;}
+    .bar-color3 {background: #7fd396;}
+    span {
+      font-size: 5.94px
+    }
+  }
+  .graph-box-specialty {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+// 職歴、学歴の部分
+// .list-01と併用
+.profile-scroll-list {
+  font-size: 11px;
+  li {
+    display: flex;
+  }
+  .list-icon_circle {
+    content: " ";
+    border-radius: 50%;
+    @include size(20px);
+    margin: 5px 7px 0 0;
+    &.color-01 {background: #7fd396;}
+    &.color-02 {background: #5e9574;}
+    &.color-03 {background: #1d3e37;}
+    &.color-04 {background: #000000;}
+    &.color-05 {background: #73afc0;}
+    &.color-06 {background: #406175;}
+    &.color-07 {background: #13253e;}
+    &.color-08 {background: #000000;}
+  }
+}
+
+.txt_locate {
+  background: url(/img/common/icon_locate.png) 0 0 no-repeat;
+  color: #bbb;
+  padding: 0 0 0 20px;
+  margin-left: auto;
+}
+
+
+//----------------------------------------------------
+// 弁護士リスト
+// http://localhost:8001/profile/connection/attony.html
+//----------------------------------------------------
+
+.profile-tab {
+  width: 210px;
+  float: left;
+  li {
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #bbb;
+    cursor: pointer;
+    &.selected {
+      background: #22313d;
+      // cursor: auto;
+      &:after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        border: 6px solid transparent;
+        border-top-color: #22313d;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  + .fr {
+    line-height: 30px;
+  }
+
+  &-content-group {
+  }
+  &-content {
+    display: none;
+    &.selected {
+      display: block;
+    }
+
+  }
+}
+
+// knowledge流用
+.txt_8 {
+  font-size: 8px;
+}
+#all{
+  display: block;
+  + #selected{
+    display: none;
+  }
+  &.view{
+    display: none;
+    + #selected{
+      display: block;
+    }
+  }
+}
+.lawyer-box{
+  font-size: 16px;
+  margin:9px 0 19px;
+  border:1px solid #e5e8eb;
+  background:#fff;
+  &+.clear{
+    margin-bottom:58px;
+  }
+  .lawyer-item{
+    position: relative;
+    padding:15px 33px;
+    cursor:pointer;
+    &:hover{
+      background:#eee;
+    }
+    &.selected{
+      background: #edfbfc !important;
+    }
+    +.lawyer-item:before{
+      background:#e5e8eb;
+      content:"";
+      display: block;
+      position: absolute;
+      left:20px;
+      top:0;
+      height:1px;
+      width:582px;
+    }
+    .icon_circle{
+      width:100px;
+      height:100px;
+      img{
+        min-width:100%;
+      }
+    }
+    .lawyer-content{
+      width:440px;
+      .lawyer-head{
+        border-bottom:1px solid #e5e8eb;
+        padding-bottom:8px;
+        .fr{
+          text-align: right;
+          span{
+            display: inline-block;
+            line-height:17px;
+          }
+          .icon-rec{
+            padding-left:17px;
+            background:url(/img/common/icon_medal.png) left center no-repeat;
+          }
+          .icon-credit{
+            padding-left:18px;
+            margin-left:17px;
+            background:url(/img/common/icon_exp.png) left center no-repeat;
+          }
+          .icon-com{
+            padding-left:22px;
+            margin-left:13px;
+            background:url(/img/common/icon_team2.png) left center no-repeat;
+          }
+        }
+      }
+      .lawyer-body{
+        position: relative;
+        &:before{
+          position: absolute;
+          content:"";
+          width:1px;
+          height:50px;
+          top:3px;
+          left:274px;
+          background:#e5e8eb;
+        }
+        .fl{
+          width:255px;
+          padding-right:20px;
+          p{
+            line-height:20px;
+            height:20px;
+            white-space: nowrap;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            &.txt_gray{
+              padding-left:15px;
+              background:url(/img/common/icon_locate.png) 1px center no-repeat;
+            }
+          }
+        }
+        .fr{
+          width:145px;
+          padding-left:20px;
+          .txt_11 + .txt_8.txt_gray{
+            margin-top:10px;
+          }
+        }
+      }
+    }
+  }
+}
+// タイムライン部分
+.profile-timeline {
+  position: relative;
+  box-sizing: border-box;
+  // width: 580px;
+  height: 260px;
+  overflow-x: scroll;
+  border: 1px solid #e5e8eb;
+  margin: 0 0 30px;
+  &-background {
+    display: flex;
+    width: 90px * 25;
+    height: 100%;
+    align-items: center;
+    background: linear-gradient(to right, rgba(221,221,221,0.3) 1%,rgba(221,221,221,0.3) 50%,rgba(221,221,221,0.3) 50%,rgba(238,238,238,0.3) 51%,rgba(238,238,238,0.3) 100%);
+    background-size: 180px 100%;
+    > div {
+      background: #ddd;
+      font-size: 11px;
+      text-align: center;
+      line-height: 20px;
+      width: 90px;
+      height: 20px;
+      &:nth-child(odd) {
+        background: #eee;
+      }
+    }
+  }
+  &-career {
+    > div {
+      position: absolute;
+      top: 50%;
+      font-size: 9px;
+      color: #fff;
+      text-align: center;
+      width: 90px;
+      height: 20px;
+      line-height: 20px;
+      // 長さ
+      // &.w05 {width: 45px;}
+      // &.w1 {width: 45px;}
+      // &.w05 {width: 45px;}
+      // &.w05 {width: 45px;}
+      // &.w05 {width: 45px;}
+      // &.w05 {width: 45px;}
+      // &.w05 {width: 45px;}
+      // &.color-01 {background: #7fd396;}
+      // &.color-02 {background: #5e9574;}
+      // &.color-03 {background: #1d3e37;}
+      // &.color-04 {background: #000000;}
+      // &.color-05 {background: #73afc0;}
+      // &.color-06 {background: #406175;}
+      // &.color-07 {background: #13253e;}
+      // &.color-08 {background: #000000;}
+    }
+  }
+}
+
+//----------------------------------------------------
+// 弁護士情報サマリー
+// http://localhost:8001/profile/connection/attony_summary.html
+//----------------------------------------------------
+.profile-title-checkbox-area {
+  padding: 15px 0 28px;
+  .input_checkbox + label {
+    padding: 10px 0 10px 20px;
+  }
+  .horizontal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+  }
+}
+
+
+//----------------------------------------------------
+// Edit
+//----------------------------------------------------
+.his{
+  position: relative;
+  .btn_delete{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    margin: auto;
+    width:11px;
+    height:11px;
+    background:url(/img/common/btn_delete.png) center center no-repeat;
+    cursor: pointer;
+  }
+}

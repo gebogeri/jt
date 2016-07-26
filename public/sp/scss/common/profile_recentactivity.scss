@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+@import "./mixin";
+
+//----------------------------------------------------
+// common
+//----------------------------------------------------
+
+#column-sub {
+  background-color: transparent;
+  margin-top: 37px + 1;
+}
+
+//----------------------------------------------------
+// Title
+//----------------------------------------------------
+.profile-title {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 130px;
+  padding: 35px 30px 44px 160px;
+  .icon_circle {
+    @include size(140px);
+    margin-left: 8px;
+  }
+  &_container {
+    margin-left: 22px;
+    min-width: 540px;
+    width: 70%;
+    > p {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 18px;
+      line-height: 23px;
+      padding: 8px 0;
+      margin: 0;
+      border-bottom: 1px solid #bbb;
+      a {
+        color:  #bbb;
+        font-size: 11px;
+        margin-left: 15px;
+        padding-left: 18px;
+      }
+    }
+  }
+}
+.link {
+  &_follow {
+    background: url(/img/common/icon_follow.png) 0 0 no-repeat;
+  }
+  &_connect {
+    background: url(/img/common/icon_follow.png) 0 0 no-repeat;
+  }
+  &_message {
+    background: url(/img/common/icon_mail.png) 0 0 no-repeat;
+  }
+}
+
+.profile-title-metadata {
+  padding: 14px 0;
+  display: flex;
+  &-box1 {
+    width: 330px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #e5e8eb;
+    .sns-area {
+      margin-top: 10px;
+      a {
+        margin-right: 2px;
+      }
+    }
+    .locale {
+      background: url(/img/common/icon_locate.png) 0 center no-repeat;
+      padding-left: 17px;
+      color: #bbb;
+    }
+  }
+  &-box2 {
+    width: 190px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    dt {
+      color: #bbb;
+      font-size: 8px;
+    }
+    dd {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 7px 0;
+      margin: 0;
+    }
+  }
+}
+
+//----------------------------------------------------
+// #column-sub内
+//----------------------------------------------------
+
+.sub-profile-box {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 10px;
+  h3 {
+    font-size: 14px;
+    border-bottom: 1px solid #bbb;
+    padding: 8px 0;
+    margin: 0 0 15px;
+    div {
+      font-size: 20px;
+      span {
+        color: #bbb;
+        font-size: 12px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+// 「？」ポップアップリンク
+.pop_up {
+  position: relative;
+  padding-left: 11px;
+  display: inline-block;
+  cursor: pointer;
+  .pop_message {
+    display: none;
+    width: 220px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    background: #66d7db;
+    padding: 16px 20px;
+    color: #fff;
+    position: absolute;
+    top: 32px;
+    left: -50px;
+    z-index: 2;
+    &:after {
+      bottom: 100%;
+      left: 22%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(102, 215, 219, 0);
+      border-bottom-color: #66d7db;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
+  &:hover .pop_message {
+    display: block;
+  }
+}
+
+// 横棒グラフみたいな部分
+.bar-graph-list {
+  line-height: 18px;
+  @include clearfix;
+  dt {
+    color: #444;
+    font-size: 12px;
+    float: left;
+  }
+  dd {
+    font-size: 14px;
+    padding: 0;
+    margin: 0 0 10px;
+    p {
+      font-weight: bold;
+    }
+  }
+  .progress {
+    height: 10px;
+    margin-top: 5px;
+    &.type01 {background: #73afc0;}
+    &.type02 {background: #406175;}
+    &.type03 {background: #13253e;}
+    &.type04 {background: #7fd396;}
+    &.type05 {background: #5e9574;}
+    &.type06 {background: #1d3e37;}
+  }
+}
+
+// 弁護士のコネクション数
+.sub-profile-connection {
+  display: flex;
+  font-size: 11px;
+  line-height: 18px;
+  > div {
+    min-width: 59px;
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #bbb;
+    &:last-child {
+      border: none;
+    }
+    > div {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+  .pop_up {
+    padding-left: 2px;
+    vertical-align: bottom;
+    img {
+      @include size(12px);
+    }
+    .pop_message {
+      left: -60px;
+    }
+  }
+}
+
+.sub-profile-fee {
+  display: flex;
+  font-size: 11px;
+  line-height: 18px;
+  border-bottom: 1px solid #bbb;
+  > div {
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #bbb;
+    margin-bottom: 16px;
+    &:last-child {
+      border: none;
+    }
+    > div {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+  .pop_up {
+    padding-left: 2px;
+    vertical-align: bottom;
+    img {
+      @include size(12px);
+    }
+    .pop_message {
+      left: -60px;
+    }
+  }
+}
+.sub-profile-box {
+  section {
+    font-size: 11px;
+    h4 {
+      span {
+        color: #bbb;
+      }
+    }
+  }
+}

@@ -1,0 +1,396 @@
+
+/******************
+  attony summary
+**********************/
+.country_list li{
+  width: 100%;
+  border-top: 1px solid #e5e8eb;
+  padding: 10px 0;
+}
+.country-summary{
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.country-summary > span{
+  position: absolute;
+  background: url(/sp/img/common/arrow_select.png) center center no-repeat;
+  background-size:8px;
+  top: 0;
+  bottom:0;
+  right: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+}
+.country-summary > span.icon_open{
+  background: url(/sp/img/common/arrow_select_op.png) center center no-repeat;
+  background-size:8px;
+}
+
+
+.country-summary .left{
+  text-align: left;
+  flex:1;
+  line-height:20px;
+  padding-left:32px;
+}
+.country-summary .right{
+  padding-right: 27px;
+  line-height:20px;
+}
+.country-summary .right .dots{
+  font-size: 9px;
+}
+
+.country-ico{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height:20px;
+  border-radius: 100%;
+}
+.country-europe{
+  background-color: #73afc0;
+  font-size: 21px;
+}
+.country-asia{
+  background-color: #406175;
+  font-size: 21px;
+}
+.country-africa{
+  background-color: #13253e;
+  font-size: 21px;
+}
+
+.country-northamerica{
+  background-color: #244574;
+  font-size: 21px;
+}
+.country-southamerica{
+  background-color: #5c92de;
+  font-size: 21px;
+}
+
+.country-australia{
+  background-color: #dddddd;
+  font-size: 21px;
+}
+
+.country-flag img{
+  vertical-align: bottom;
+}
+
+.dots{
+  font-size: 8px;
+  letter-spacing:-.3em;
+}
+.number{
+  font-size: 12px;
+}
+.arrow{
+  text-align: right;
+}
+
+.country-detail ul{
+  margin-left: 20px;
+}
+.country-detail ul li{
+  display: table;
+  border-top: none;
+  font-size:12px;
+}
+
+.expart_graph,
+.graph-box{
+  position: relative;
+}
+
+.graph_innner{
+  position: absolute;
+  top: 104px;
+  left: 57px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.profile-title{
+  position: relative;
+}
+.txt_gray.detail{
+  top: 100px;
+  position: absolute;
+}
+
+
+.lawyer-content .date{
+  padding-bottom: 3px;
+  display: block;
+  color: #dddddd;
+  font-size:  11px;
+  text-align: right;
+}
+
+
+/*search.css にも同様の記入あり*/
+.lawyer-footLink {
+    border-top: 1px solid #dddddd;
+    margin-top: 9px;
+    height: 16px;
+    text-align: right;
+}
+.lawyer-footLink a {
+    display: inline-block;
+    font-size: 8px;
+    height: 16px;
+    line-height: 16px;
+    color: #bbb;
+}
+.lawyer-footLink a.icon_connect.add {
+    padding-left: 16px;
+    background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+    margin-right: 41px;
+    color: #44d095;
+}
+.lawyer-footLink a.icon_connect {
+    padding-left: 16px;
+    background: url(/img/profile/icon_connect_off.png) left center no-repeat;
+    margin-right: 41px;
+    color: #dddddd;
+}
+
+.lawyer-footLink a.icon_follow.add {
+    padding-left: 16px;
+    background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+    margin-right: 41px;
+    color: #44d095;
+}
+.lawyer-footLink a.icon_follow {
+    padding-left: 16px;
+    background: url(/img/profile/icon_connect_off.png) left center no-repeat;
+    margin-right: 41px;
+    color: #dddddd;
+}
+
+.lawyer-footLink a.icon_profile {
+    padding-left: 16px;
+    background: url(/img/search/icon_profile.png) left center no-repeat;
+    margin-right: 41px;
+}
+.lawyer-footLink a.icon_message {
+    padding-left: 23px;
+    background: url(/img/common/icon_mail.png) left center no-repeat;
+    margin-right: 11px;
+}
+
+.lawyer-footLink a.icon_close {
+    padding-left: 23px;
+    background: url(/img/profile/icon_close.png) left center no-repeat;
+    margin-right: 11px;
+}
+
+.ttl_side {
+    background-image: url(/img/knowledge/ttl_side_knowledge.png);
+}
+
+
+
+/* message */
+
+.message-wrap{
+  font-size: 16px;
+  padding: 15px 15px;
+  border: 1px solid #e5e8eb;
+  background: #fff;
+  width: 620px;
+  margin: 0 auto 20px;
+}
+.message-wrap textarea{
+  width: 580px;
+  border: 1px solid #dddddd;
+  min-height: 290px;
+  height: auto;
+  padding: 20px;
+}
+
+.message-wrap p,
+.message-wrap textarea{
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.message-wrap .title{
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.message-wrap .title .icon_edit{
+  padding-left: 16px;
+    color: #dddddd;
+    font-size: 13px;
+    font-weight: normal;
+  background: url(/img/setting/btn_edit.png) left center no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.message-btn-area{
+  margin: 30px auto 0;
+  display: table;
+  width: 300px;
+}
+
+.message-btn-area div{
+  display: table-cell;
+  width: 50%;
+  padding-right: 20px;
+}
+.btn_cancel,
+.btn_register{
+  display: inline-block;
+  height: 40px;
+  line-height: 2.5;
+}
+
+.btn_cancel{
+  width: 100px;
+  text-align: center;
+  background: #dddddd;
+  color: #fff;
+}
+
+.btn_register{
+  width: 190px;
+  text-align: center;
+  background: #44d095;
+  color: #fff;
+}
+
+/* profile edit の使い方 */
+.input_select.medium{
+  width: 150px;
+}
+
+.table-input div.cell .left ul li{
+  display: block;
+  width: 100%;
+}
+.textarea{
+  box-sizing:border-box;
+  border: 1px solid #dddddd;
+  min-height: 200px;
+  padding: 10px;
+  width:100%;
+}
+
+
+
+
+.text{
+  display: inline-block;
+  width: 320px;
+  vertical-align: middle;
+}
+
+
+
+/******************
+inviteと重複 汎用パーツの radio button
+**********************/
+
+/*checkbox area*/
+
+.checkbox-area{
+  width: auto!important;
+  display: inline-block;
+}
+
+/*radio button*/
+.radiobutton-area{
+  display: inline-block;
+}
+.input_radiobutton{
+  display: none;
+}
+
+.input_radiobutton + label {
+    display: inline-block;
+    position: relative;
+    line-height: 15px;
+    cursor: pointer;
+    padding: 0 0 10px 20px;
+}
+
+.input_radiobutton + label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    display: block;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    margin-top: -11px;
+    border-radius: 90%;
+}
+
+.input_radiobutton + label:after {
+    transition: all .2s;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    background-color: #44d095;
+    width: 6px;
+    height: 6px;
+    margin-top: -8px;
+    border-radius: 87%;
+}
+.input_radiobutton:checked + label:after {
+  opacity: 1;
+}
+
+
+.input_text.medium{
+  width: 110px;
+}
+#careerForm .input_text.small{
+  margin-top:0;
+  width: 73px;
+}
+
+
+.input_select.big{
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input_select.medium{
+  width: 120px;
+}
+
+.profile-submit-area > div:first-child {
+    width: 74px;
+}
+/*****投稿タグ調整****/
+.specialty_border{
+	border: 1px solid #e5e8eb;
+	padding:4px 0;
+}
+.select2-container .select2-search--inline .select2-search__field{
+	font-size: 14px!important;
+  line-height:20px!important;
+  position:relative;
+  top:4px;
+}

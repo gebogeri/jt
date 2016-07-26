@@ -1,0 +1,638 @@
+@charset "UTF-8";
+@import url("/css/common/head_add.css");
+
+/******************
+invite 招待部分のCSS
+http://juristerra.viewerwarning.net/invite/
+**********************/
+
+#container > #modal_invite_parent {
+  margin: 40px auto!important;
+}
+#modal_invite_parent {
+  display: none;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 680px;
+  height: 600px;
+  transition: .2s;
+}
+
+#modal_invite_parent.complete {
+  width: 620px;
+  height: 320px;
+  padding: 60px 30px;
+}
+
+#modal_invite_parent > div > .txt_14:first-child {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#modal_invite_parent > div > .txt_14:first-child + .clear {
+  width: 100%;
+}
+
+#modal_invite_parent > div > .txt_14:first-child + .clear p {
+  height: 24px;
+  line-height: 24px;
+  float: left;
+}
+
+#modal_invite_parent > div > .txt_14:first-child + .clear input {
+  float: right;
+  width: 294px !important;
+  margin-top: 0 !important;
+}
+
+#modal_invite_parent a.btn_modalLawyer {
+  display: block;
+  float: right;
+  height: 23px;
+  padding: 0 10px;
+  margin-top: -3.5px;
+  background: #44d095;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 23px;
+}
+
+#modal_invite_parent #modal_detail .slimScrollDiv {
+  height: 420px;
+}
+
+#modal_invite_parent .slimScrollDiv {
+  height: 406px;
+  margin: 10px 0 25px;
+  border: 1px solid #e5e8eb;
+}
+
+#modal_invite_parent .slimScrollDiv .scroll-box {
+  height: 100%;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+#modal_invite_parent .btn_can {
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  background: #bbb;
+  cursor: pointer;
+}
+
+#modal_invite_parent .scroll-item {
+  cursor: pointer;
+}
+
+#modal_invite_parent .scroll-item.selected {
+  background: #edfbfc !important;
+}
+
+#modal_invite_parent .scroll-item.selected * {
+  background-color: transparent;
+}
+
+#modal_invite_parent .ta_c {
+  text-align: center;
+}
+
+#modal_invite_parent .ta_c .btn_import {
+  display: inline-block;
+  width: 212px;
+  height: 30px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  background: #44d095;
+  cursor: pointer;
+}
+
+#modal_invite_parent .ta_c .btn_can {
+  margin-left: 16px;
+}
+
+#modal_invite_parent #modal_detail .modal_back {
+  width: auto;
+  height: 14px;
+  padding: 0;
+  padding-left: 22px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #bbb;
+  font-weight: normal;
+  background: url(/img/common/icon_circle_arrow_left.png) 3px center no-repeat;
+}
+
+#modal_invite_parent #modal_detail .scroll-box > div {
+  background: #fff !important;
+  padding: 8px 10px;
+}
+
+#modal_invite_parent #modal_detail .scroll-box > div * {
+  background: #fff !important;
+}
+
+#modal_invite_parent #modal_detail .scroll-box > div > p.txt_14:first-child + p.txt_22 {
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e8eb;
+}
+
+#modal_invite_parent #modal_complete p.fw_b {
+  margin-bottom: 16px;
+}
+
+#modal_invite_parent #modal_complete p.fw_b + p.txt_14 {
+  height: 54px;
+  line-height: 27px;
+}
+
+#modal_invite_parent #modal_complete span {
+  width: 315px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+#modal_invite_parent #modal_complete span.btn_return {
+  margin: 27px auto 10px;
+  background: #44d095;
+}
+
+#modal_invite_parent #modal_complete span.modal_close {
+  background: #bbb;
+}
+
+
+#modal_invite_parent .icon_share{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+#modal_invite_parent #modal_complete span{
+  width: 200px;
+  padding: 9px 0;
+  height: 30px;
+  line-height: 2.5;
+}
+
+#modal_invite_parent .btn_return_link,
+#modal_invite_parent .btn_complete,
+#modal_invite_parent .complete_link,
+#modal_invite_parent .confirm_link,
+#modal_invite_parent .btn_top,
+#modal_invite_parent .btn_top_link,
+#modal_invite_parent .btn_return,
+#modal_invite_parent .btn_import,
+#modal_invite_parent .btn_invite {
+   text-align: center;
+    display: inline-block;
+    padding: 9px 0;
+    width: 260px;
+    height: 30px;
+    font-size: 12px;
+    color: #fff!important;
+    font-weight: bold;
+    line-height: 30px;
+    background: #44d095;
+    cursor: pointer;
+}
+
+#modal_invite_parent .btn_can {
+    margin-right: 13px;
+   text-align: center;
+    padding: 9px 0;
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+    background: #bbbbbb;
+    cursor: pointer;
+}
+
+
+
+#modal_invite_parent .title-modal{
+  margin: 20px auto;
+}
+#modal_invite_parent .txt-detail{
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+}
+#modal_invite_parent .title-signup{
+  text-align: center;
+  border-bottom: 4px solid #44d095;
+  padding-bottom: 8px;
+  width: 140px;
+  margin: 0 auto;
+}
+#modal_invite_parent .title-signup + h2{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+#modal_invite_parent .modal-invite{
+  margin: 0 auto;
+  padding: 40px;
+/*  max-width: 580px;*/
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.1);
+  background: #ffffff;
+}
+
+#modal_invite_parent .modal-detail{
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+#modal_invite_parent .info-txt{
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#modal_invite_parent .modal-explain + table,
+#modal_invite_parent .modal-explain + p{
+  margin-top: 15px;
+}
+#modal_invite_parent .modal-explain +.input {
+  display: block;
+  margin: 15px auto;
+}
+
+#modal_invite_parent .modal-detail + .ta_c,
+#modal_invite_parent .modal-explain + .ta_c,
+#modal_invite_parent .input + .ta_c{
+  margin: 20px auto 0;
+}
+
+#modal_invite_parent .btn_register{
+  text-align: center;
+  margin: 30px auto 0;
+  padding: 9px 0;
+  display: block;
+  width: 212px;
+  height: 30px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  background: #44d095;
+  cursor: pointer;
+}
+
+
+
+
+/******************
+invite 招待進捗部分のCSS
+http://juristerra.viewerwarning.net/invite/
+**********************/
+
+
+
+#modal_invite_parent .modal-progress{
+  margin: 0 auto;
+  width: 347px;
+  height: 48px;
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+  color: #bbb;
+}
+#modal_invite_parent .modal-progress .step1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 28px;
+  padding: 10px 0;
+  line-height: 12px;
+  background: url("../../img/invite/arrow_invitechart_firststep.png") no-repeat;
+}
+#modal_invite_parent .modal-progress .step1.current{
+  color: #fff;
+  background: url("../../img/invite/arrow_invitechart_current01.png") no-repeat;
+}
+#modal_invite_parent .modal-progress .step2{
+  position: absolute;
+  top: 0;
+  left: 116px;
+  width: 125px;
+  height: 28px;
+  padding: 10px 0;
+  line-height: 12px;
+  background: url("../../img/invite/arrow_invitechart_nextstep.png") no-repeat;
+}
+#modal_invite_parent .modal-progress .step2.current{
+  color: #fff;
+  background: url("../../img/invite/arrow_invitechart_current02.png") no-repeat;
+}
+#modal_invite_parent .modal-progress .step3{
+  position: absolute;
+  top: 0;
+  left: 232px;
+  width: 125px;
+  height: 28px;
+  padding: 10px 0;
+  line-height: 12px;
+  background: url("../../img/invite/arrow_invitechart_laststep.png") no-repeat;
+}
+#modal_invite_parent .modal-progress .step3.current{
+  color: #fff;
+  background: url("../../img/invite/arrow_invitechart_current03.png") no-repeat;
+}
+
+
+
+
+#modal_invite_parent,
+#modal_invite_parent.complete,
+#modal_invite_parent .modal-invite-progress{
+  display: none;
+  margin: 0 auto;
+  padding: 40px;
+/*  max-width: 580px;*/
+  height: auto!important;
+  background: #ffffff;
+}
+
+#modal_invite_parent .modal-checkboxarea .input_checkbox + label:before{
+  margin-top: -12px;
+}
+#modal_invite_parent .modal-checkboxarea .input_checkbox + label:after{
+  margin-top: -9px;
+}
+
+#modal_invite_parent .modal-checkboxarea input,
+#modal_invite_parent .modal-checkboxarea label{
+  vertical-align: middle;
+}
+
+#modal_invite_parent .table-modal,
+#modal_invite_parent .table-modal tbody{
+  display: block;
+  width: 100%;
+}
+#modal_invite_parent .table-modal.is-mail-top {
+  width: 495px;
+  margin: 15px auto 0;
+}
+#modal_invite_parent .table-modal .table-first tr{
+  display: table;
+  margin-top: 15px;
+}
+#modal_invite_parent .table-modal .table-first td{
+  display: table-cell;
+}
+#modal_invite_parent .table-modal tr{
+  width: 100%;
+}
+#modal_invite_parent .table-modal th{
+  margin-top: 30px;
+  display: block;
+  text-align: left;
+  font-size: 13px;
+}
+#modal_invite_parent .table-modal th.column2 span:first-child{
+  margin-right: 14px;
+  display: inline-block;
+  width: 47%;
+}
+#modal_invite_parent .table-modal td{
+  margin-top: 5px;
+  display: block;
+}
+
+#modal_invite_parent .table-modal .table-first{
+  display: table;
+}
+#modal_invite_parent .table-modal .table-first th{
+  display: table-cell;
+  width: 100px;
+  text-align: right;
+
+    padding-right: 20px;
+}
+
+
+
+#modal_invite_parent input.input{
+  padding: 10px 12px;
+  border: 1px solid #e5e8eb;
+  width: 490px;
+  box-sizing: border-box;
+}
+#modal_invite_parent textarea.textarea{
+  padding: 10px 12px!important;
+  border: 1px solid #e5e8eb!important;
+  width: 100%!important;
+  min-width: 490px!important;
+  height: auto!important;
+  min-height: 160px!important;
+  box-sizing: border-box!important;
+  margin-bottom: 9px!important;
+}
+
+#modal_invite_parent input.input.column2{
+  width: 48%;
+}
+#modal_invite_parent input.input.column2:first-child{
+  margin-right: 14px;
+}
+
+
+#modal_invite_parent .modal-explain{
+  margin-top: 30px;
+}
+#modal_invite_parent .modal-explain h2{
+  font-size: 14px;
+  text-align: center;
+}
+#modal_invite_parent .modal-explain h3{
+  font-size: 13px;
+  text-align: center;
+}
+#modal_invite_parent .modal-checkboxarea{
+  margin: 0 auto 10px;
+  display: block;
+  width: 495px;
+}
+#modal_invite_parent .modal-checkboxarea label {
+  font-weight: bold;
+}
+#modal_invite_parent .modal-checkboxarea label span{
+  margin-left: 10px;
+  font-weight: normal;
+}
+#modal_invite_parent .modal-checkboxarea label span a {
+  color: #44d095;
+  text-decoration: underline;
+}
+
+
+/******************
+invite 汎用パーツの radio button
+**********************/
+
+#modal_invite_parent .radiobutton-area{
+  display: inline-block;
+}
+#modal_invite_parent .input_radiobutton{
+  display: none;
+}
+
+#modal_invite_parent .input_radiobutton + label {
+    display: inline-block;
+    position: relative;
+    line-height: 15px;
+    cursor: pointer;
+    padding: 0 30px 10px 20px;
+}
+
+#modal_invite_parent .input_radiobutton + label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    display: block;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    margin-top: -11px;
+    border-radius: 90%;
+}
+
+#modal_invite_parent .input_radiobutton + label:after {
+    transition: all .2s;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    background-color: #44d095;
+    width: 6px;
+    height: 6px;
+    margin-top: -8px;
+    border-radius: 87%;
+}
+#modal_invite_parent .input_radiobutton:checked + label:after {
+  opacity: 1;
+}
+
+
+#modal_invite_parent #nav li.btn_block a.btn_modalOpen.invite{
+  padding-left: 0;
+  background: 0;
+}
+
+
+
+#modal_invite_parent .btn_modalEdit {
+  margin-bottom: 30px;
+}
+#modal_invite_parent .modal-confirm-area {
+  margin: 30px auto;
+  width: 500px;
+}
+#modal_invite_parent .modal-confirm-data {
+  margin-top: 15px;
+  color: #bbb;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+#modal_invite_parent body{
+  background: #ecf1f2!important;
+}
+#modal_invite_parent #wrapper{
+  min-height: 840px;
+}
+/*******アカウント登録画面******/
+.serves_section .serves_block p.invite_account{
+	margin-bottom:0;
+	color: #bbb;
+	font-weight: bold;
+}
+.serves_section .serves_block .person_name{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.serves_section .serves_block .fw_b{
+	font-weight:bold;
+}
+.serves_section .serves_block .info-txt {
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.serves_section .serves_block .button_entryacount{
+	text-align: center;
+    padding: 9px 0;
+    width: 260px;
+    height: 30px;
+    font-size: 12px;
+    color: #fff!important;
+    font-weight: bold;
+    line-height: 30px;
+    background: #44d095;
+    margin:50px auto 0;
+}
+.serves_section .serves_block .button_entryacount a{
+    color: #fff;
+    display:block;
+}
+.btn_block{
+	cursor: pointer;
+}
+#office_place{
+  height:35px;
+}
+#modal_search  #office_place .select2-selection{
+    width:203px;
+    height:35px;
+    border:1px solid #e5e8eb;
+  }
+  #office_place .select2-selection{
+    position: relative;
+  }
+  #office_place .select2-container--default .select2-selection--single .select2-selection__rendered span{
+    line-height:35px;
+  }
+  #office_place .select2-container--default .select2-selection--single .select2-selection__arrow{
+    height:32px;
+    right:0;
+  }
+  #office_place .select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height:35px;
+    height:35px;
+  }

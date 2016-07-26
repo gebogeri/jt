@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/common/normalize.css">
+<link rel="stylesheet" href="../css/common/style.css">
+<link rel="stylesheet" href="../css/common/setting.css">
+<link rel="stylesheet" href="../css/common/invite.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body class="whead">
+<!--#include virtual="../include/header.html"-->
+<div id="wrapper">
+    <div class="page_topTitle">
+        <div class="page_topTitle_container">
+            <p class="txt_gray txt_14">SETTING</p>
+            <h1>通知</h1>
+        </div>
+    </div>
+    <div id="container" class="clear">
+        <main class="clear">
+            <div id="column-main-single">
+                <p class="txt_14 fw_b">通知設定</p>
+                <form action="" method="">
+                <table class="alert_table">
+                    <thead>
+                        <th class="txt_14">Juristerra 内表示</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>通知音</th>
+                            <td>
+                                <div class="input_swichArea clear">
+                                    <div class="fl">新しいお知らせが届いたときにサウンドを鳴らす</div>
+                                    <div class="fr">
+                                        <input type="checkbox" name="" class="input_swich" id="switch1" checked>
+                                        <label for="switch1"></label>
+                                    </div>
+                                </div>
+
+                                <div class="input_swichArea clear mt20">
+                                    <div class="fl">メッセージを受信した時に音で知らせる</div>
+                                    <div class="fr">
+                                        <input type="checkbox" name="" class="input_swich" id="switch2">
+                                        <label for="switch2"></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>お知らせを受け取るアクティビティ</th>
+                            <td>
+                                <div class="input_swichArea clear">
+                                    <div class="fl">
+                                        自分に関連するアクティビティ<br>
+                                        <span class="annotation">
+                                            写真にタグ付けされたり、あなたの投稿にコメントが<br>
+                                            あった場合など、あなたのアクティビティに関する<br>
+                                            お知らせは常に届きます。
+                                        </span>
+                                    </div>
+                                    <div class="fr">
+                                        <input type="checkbox" name="" class="input_swich" id="switch3" checked>
+                                        <label for="switch3"></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>デスクトップ通知</th>
+                            <td>
+                                <div class="input_swichArea clear">
+                                    <div class="fl">
+                                        CHROMEデスクトップ通知を有効にする
+                                        <span class="annotation">
+                                            お知らせはコンピュータの画面隅に表示<br>
+                                            (Facebook を開いていない時も表示) されます。
+                                        </span>
+                                    </div>
+                                    <div class="fr">
+                                        <input type="checkbox" name="" class="input_swich" id="switch4" checked>
+                                        <label for="switch4"></label>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+						<th></th>
+						<td>
+							<ul class="list_settingBtn">
+							<li><input type="submit" name="" value="保存"></li>
+							<li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+							</ul>
+						</td>
+                    </tbody>
+                </table>
+                </form>
+
+                <form action="" method="">
+                <table class="alert_table">
+                    <thead>
+                        <th class="txt_14">メール送信</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>受信するお知らせ</th>
+                            <td class="input_radioArea">
+                                <input type="radio" name="oshirase" value="1" class="input_radio" id="radio1" checked>
+                                <label for="radio1">すべてのお知らせ( フォローをやめたものを除く)</label><br>
+
+                                <input type="radio" name="oshirase" value="2" class="input_radio" id="radio2">
+                                <label for="radio2">あなたに関する重要なお知らせや未読のアクティビティ</label><br>
+
+                                <input type="radio" name="oshirase" value="3" class="input_radio" id="radio3">
+                                <label for="radio3">アカウント、セキュリティ、プライバシーに関する<br>お知らせのみ</label>
+								 <ul class="list_settingBtn">
+									<li><input type="submit" name="" value="保存"></li>
+									<li><input type="reset" name="" value="キャンセル" class="btn_cencel"></li>
+								</ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <div id="side-profile">
+                <div id="side-name" class="txt_12">
+                    <p class="pdl20 txt_gray">SETTING</p>
+                    <a href="" class="btn_gear gear_right"></a>
+                </div>
+                <div id="side-link" class="txt_11">
+                    <a href="./index.html">アカウント</a>
+                    <a href="./language.html">言語</a>
+                    <a href="./alert.html" class="selected">通知</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+<!--#include virtual="../include/footer.html"-->
+
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+@import '../_mixin';
+
+.setting{
+    @include boxarea;
+    @include e(ttl){
+        @include flex($a:center, $j:space-between);
+        padding: 3rem 0 .7rem;
+        margin: 0;
+        @include e(delete){
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: $deleteurl center center no-repeat;
+            background-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+    @include e(item){
+        position: relative;
+        padding:1.2rem 0 1.4rem;
+        @include border(top);
+        margin:0;
+        @include e(ttl){
+            margin:0 0 .3rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }//ttl
+        @include e(display){
+            width: 89%;
+            margin: 0;
+            @include e(email){
+                margin:0 0 .3rem;
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+            @include e(nameBox){
+                @include flex($a:center, $j:space-between);
+            }
+            @include e(photo){
+                width: 15.7%;
+                padding-top: 15.7%;
+                border-radius: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+            @include e(name){
+                width: 78.9%;
+                margin: 0;
+            }
+            @include e(btn){
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                @include editBtn(5.5%);
+            }
+        }//display
+        @include e(edit){
+            position: relative;
+            display: none;
+            margin: 1rem 0 0;
+            @include m(alert){
+                display: block;
+                input[type="radio"] + label{
+                    display: inline-block;
+                    min-width: 50%;
+                    height: auto;
+                    line-height: 1.8rem;
+                    &:before{
+                        top: .2rem;
+                        bottom: auto;
+                    }
+                    &:after{
+                        top: .4rem;
+                        bottom: auto;
+                    }
+                    @include m(second){
+                        margin-top: .7rem;
+                    }
+
+                }
+            }
+            input[type="text"]{
+                width: 100%;
+                @include border;
+                +input[type="text"]{
+                    margin-top: .9rem;
+                }
+            }
+            p{
+                margin: 0 0 1rem;
+                font-weight: bold;
+            }
+            @include e(prof){
+                padding: 2.5rem 0 0;
+                margin-top: 3rem;
+                @include border(top);
+                @include e(file){
+                    @include flex($a:center, $j:flex-start);
+                    @include e(preview){
+                        width: 8rem;
+                        padding-top: 8rem;
+                        border-radius: 100%;
+                        margin-right: 2.5rem;
+                        background-size: cover;
+                        background-position: center center;
+                    }
+                    @include e(btn){
+                        position: relative;
+                        display: block;
+                        width: 15.3rem;
+                        height: 3.4rem;
+                        border-radius: .2rem;
+                        color:#fff;
+                        text-align: center;
+                        line-height: 3.4rem;
+                        background: #bbb;
+                        cursor: pointer;
+                        input[type="file"]{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                    }//btn
+                }//file
+            }//prof
+            @include e(birthY){
+                @include selectbox;
+                @include border;
+                width: 43.75%;
+            }
+            @include e(birthM){
+                @include selectbox;
+                @include border;
+                width: 25%;
+            }
+            @include e(idError){
+                display: block;
+                padding-left: 1.7rem;
+                margin-top: .5rem;
+                color: #bbb;
+                font-size: 1.1rem;
+                line-height: 1.4rem;
+                background: url(/sp/img/setting/icon_nouse.png) left 0 no-repeat;
+                background-size: 1.4rem;
+            }
+            @include e(emailBox){
+                + .setting_item_edit_emailBox{
+                    padding-top: 2.1rem;
+                    @include border(top);
+                    margin-top: 2.1rem;
+                }
+            }
+            @include e(emailTtl){
+                @include flex($a:center, $j:space-between);
+                margin:0 0 .3rem;
+                font-size: 1.4rem;
+                font-weight: bold;
+                @include e(btn){
+                    display: block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: $deleteurl center center no-repeat;
+                    background-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+            @include e(mainEmail){
+                display: block;
+                font-size: 1.2rem;
+                margin: 1rem 0 -1rem;
+            }
+            @include e(add){
+                padding-top: 1.3rem;
+                @include border(top);
+                margin-top: 2rem;
+                color: #bbb;
+                .btn_subAdd{
+                    @include addicon;
+                }
+            }
+            @include e(pass){
+                display: inline-block;
+                margin: 1rem 0 -1rem;
+                color: #bbb;
+                font-size: 1.2rem;
+                text-decoration: none;
+            }
+            @include e(sns){
+                position: absolute;
+                top: -1rem;
+                bottom: 1rem;
+                right: 0;
+                margin: auto;
+                @include m(link){
+                }
+                @include m(out){
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: $deleteurl center center no-repeat;
+                    background-size: 1.2rem;
+                }
+            }
+            @include e(language){
+                @include selectbox;
+                @include border;
+                width: 100%;
+                + .use{
+                    margin-top: 1.5rem;
+                }
+                @include m(level){
+                    margin-top: 1rem;
+                }
+            }
+            @include e(languageAdd){
+                padding-top: 1.5rem;
+                @include border(top);
+                margin: 1.8rem 0 -.5rem;
+                @include e(btn){
+                    @include addicon;
+                }
+            }
+            @include e(submit){
+                @include flex($a:center, $j:space-between);
+                margin-top: 2rem;
+                @include m(alert){
+                    margin-top:0;
+                }
+                input{
+                    width: 48.4%;
+                    height: 3.3rem;
+                    border-radius: .2rem;
+                    font-size: 1.32rem;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 3.3rem;
+                    color: #fff;
+                    &[type="submit"]{
+                        background: $green;
+                    }
+                    &[type="reset"]{
+                        background: #bbb;
+                    }
+                }
+            }//submit
+        }//edit
+        @include e(alert){
+            position: relative;
+            padding-right: 11.8rem;
+            margin-left:0;
+            min-height: 3rem;
+            font-size: 1.5rem;
+            @include m(second){
+                margin-top: 2.5rem;
+            }
+            @include e(cap){
+                margin-top: .5rem;
+                font-size: 1.1rem;
+            }
+            @include e(switch){
+                display: none;
+                +label{
+                    position: absolute;
+                    top: .1rem;
+                    right: 0;
+                    box-sizing: border-box;
+                    width: 7rem;
+                    height: 2.9rem;
+                    border: .1rem solid #9a9898;
+                    border-radius: .3rem;
+                    @include ff;
+                    color:#fff;
+                    background: #b3b1b1;
+                    &:before{
+                        content: "OFF";
+                        position: absolute;
+                        top: .1rem;
+                        left: 2.8rem;
+                        width: 4.2rem;
+                        height: 2.7rem;
+                        font-size: 1.5rem;
+                        line-height: 2.7rem;
+                        text-align: center;
+                    }
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: .2rem;
+                        margin: auto;
+                        width: 2.6rem;
+                        height: 2.5rem;
+                        border-radius: .3rem;
+                        background: #eee;
+                        transition: left .1s;
+                    }
+                }
+                &:checked + label{
+                    border: .1rem solid #3cbf88;
+                    background: $green;
+                    &:before{
+                        content: "ON";
+                        left: 0;
+                    }
+                    &:after{
+                        left: 4rem;
+                    }
+                }
+            }//switch
+        }// alert
+    }//item
+}

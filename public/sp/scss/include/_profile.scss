@@ -1,0 +1,178 @@
+@import '../_mixin';
+
+.profile{
+    @include e(edit){
+        position: relative;
+        @include boxarea;
+        margin-top: 1.2rem;
+        @include m(single){
+            padding-top: .7rem;
+            padding-bottom: 2rem;
+        }
+        @include e(delete){
+            position: absolute;
+            top: 2.4rem;
+            right: .1rem;
+            display: block;
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: 3%;
+            background: $deleteurl center center no-repeat;
+            background-size: cover;
+            cursor: pointer;
+        }
+        @include e(block){
+            padding-top: .5rem;
+            @include border(top);
+            margin-top: 2rem;
+            @include e(copyArea){
+                position: relative;
+                @include e(delete){
+                    position: absolute;
+                    top: .2rem;
+                    right: .1rem;
+                    display: block;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    background: $deleteurl center center no-repeat;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+            }
+            @include e(addBtn){
+                display: inline-block;
+                background: $addurl left center no-repeat;
+                background-size: 1.4rem;
+                line-height: 2rem;
+                padding-left: 2.2rem;
+                margin: 1.4rem 0 .7rem;
+                color: #bbb;
+                cursor: pointer;
+            }
+            textarea{
+                height: 20rem;
+                margin-top: .5rem;
+                @include border;
+            }
+        }
+        @include e(header){
+            @include flex($a:center, $j:space-between);
+            padding: 3rem 0 .7rem;
+            margin: 0;
+            @include border(bottom);
+        }
+        @include e(ttl){
+            margin:1.5rem 0 1rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }//ttl
+        @include e(flex){
+            @include flex($a:center);
+            margin: .8rem 0;
+            .profile_edit_inputTxt{
+                margin: 0;
+            }
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],{
+            display: block;
+            @include border;
+            width: 100%;
+        }
+        @include e(inputTxt){
+            margin: .8rem 0;
+            @include m(full){
+                flex: 1;
+            }
+            @include m(mid){
+                width: 53.125%!important;
+                margin: 0 3.6% 0 0;
+            }
+            @include m(short){
+                width: 24%!important;
+            }
+            @include m(part-3){
+                width: 40%!important;
+                margin: 0 .7rem 0 0;
+            }
+        }
+        @include e(select){
+            @include selectbox;
+            @include border;
+            padding-right: 3.4rem;
+            @include m(full){
+                flex: 1;
+            }
+            @include m(single){
+                margin: .8rem 0;
+            }
+            @include m(part-3){
+                width: 20%!important;
+                padding-right: 2rem;
+                margin: 0 .7rem 0 0;
+            }
+        }
+        @include e(comment){
+            font-size: 1.2rem;
+            margin-top: .8rem;
+        }
+        label{
+            display: block;
+            padding-left: 2rem!important;
+            font-size: 1.1rem!important;
+        }
+        @include e(select2){
+            @include select2($l: true, $m: .8rem);
+        }
+        @include e(full){
+            flex: 1;
+        }
+        @include e(caution){
+            margin: .3rem 0;
+            li{
+                position: relative;
+                padding-left: 1.4em;
+                color: #bbb;
+                &:before{
+                    content: "※ ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        @include e(textarea){
+            box-sizing: border-box;
+            @include border;
+            min-height: 27rem;
+            padding: .9rem .4rem;
+            margin: 1.4rem 0;
+        }
+        @include e(range){
+            box-sizing: border-box;
+            @include border;
+            height: 4.3rem;
+        }
+        @include e(btn){
+            @include flex($j:space-between);
+            margin-top: 2.6rem;
+            input{
+                height: 5rem;
+                line-height: 5rem;
+                text-align: center;
+                font-weight: bold;
+                border-radius: .4rem;
+                color: #fff;
+            }
+            input[type="reset"]{
+                background: #bbb;
+                width: 40%;
+            }
+            input[type="submit"]{
+                background: $green;
+                width: 57.14%;
+            }
+        }
+    }//edit
+}

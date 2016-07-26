@@ -1,0 +1,146 @@
+.setting_head-meta{
+	position: absolute;
+	right: 10px;
+	top: 15px;
+}
+.head-baloon{
+	width: 90px;
+	padding: 3px 5px;
+	top: 30px;
+}
+.head-baloon:before,.head-baloon:after{
+	left: 76px;
+}
+.head-baloon a:hover,#btn_profile a.head-meta_first:hover{
+	color: #44d095;
+}
+#btn_profile a.head-meta_first{
+	color: #333;
+	display: initial;
+	padding-left: 0;
+	width: auto;
+	height: auto;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: initial;
+}
+.menu_up.menu_tag{
+	display: block;
+	padding-top:105%;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.notice_area{
+	width: 914%;
+	margin-top:10px;
+	display: none;
+	position: absolute;
+	cursor: auto;
+	z-index: 1;
+	border: 1px solid #bbb;
+	top:100%;
+	left:0;
+	margin-left:-473.5%;
+}
+
+.notice_area:before{
+	content:"";
+	position: absolute;
+	bottom:100%;
+	left:54.9%;
+	border:6px solid transparent;
+	border-bottom-color:#bbb;
+}
+
+.notice_area .notice_fix{
+	height: 390px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #fff;
+}
+.active .notice_area{
+	display: block;
+}
+.notice_head {
+	padding:10px;
+	border-bottom:1px solid #dddddd;
+	height:15px;
+}
+.notice_head .notice_title{
+	font-size:11px;
+	float:left;
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting{
+	font-size:11px;
+	float:right;
+	/*width:100px;*/
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting a{
+	width:50px;
+	height:20px!important;
+	display:inline!important;
+	margin:0;
+	padding:0;
+}
+.notice_head .noteice_setting a:hover{
+	background:#eeeeee!important;
+}
+.notice_content li a > div:first-child{
+	width:14%;
+}
+.notice_content li a > div + div{
+	width:82%;
+	padding-left:4%;
+	vertical-align: middle;
+}
+.notice_content .notice_img{
+	margin:0;
+	width:100%;
+	padding-top:100%;
+	overflow: hidden;
+	border-radius: 100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.notice_list li{
+	width:100%;
+	font-size:11px;
+	border-bottom:1px solid #dddddd;
+}
+.notice_list .notice_text{
+	padding-top:10px;
+}
+
+.more_btn{
+	background:#22313d;
+	padding:0;
+	margin:0;
+	height:30px;
+}
+.more_btn a{
+	color:#ffffff;
+	font-size:12px;
+	display:block;
+	line-height:30px;
+}
+.notice_content .new-msg{
+	background:#edfbfc;
+}
+.notice_content li a{
+	display: table;
+	box-sizing:border-box;
+	width:100%;
+	padding:2.5% 2%;
+}
+
+.notice_content li a> div,
+.notice_content li a> p{
+	display:table-cell;
+}

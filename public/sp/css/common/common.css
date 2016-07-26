@@ -1,0 +1,78 @@
+@charset "UTF-8";
+html { width: 100%; height: 100%; font-size: 62.5%; }
+
+body { overflow-x: hidden; height: 100%; margin: 0; padding: 0; line-height: 1.4; color: #333; font-size: 1.4rem; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: #ecf1f2; }
+body.noscroll { position: fixed; overflow-y: scroll; }
+
+p { margin: 0; }
+
+#wrapper { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: stretch; align-items: stretch; -webkit-flex-direction: column; flex-direction: column; box-sizing: border-box; padding-top: 12.9%; min-height: 100%; }
+#wrapper.bg-white { background: #fff; }
+
+#content { width: 94%; margin: 0 auto; }
+
+#loading { margin: .8rem 0 .9rem; text-align: center; }
+
+.flex { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; }
+
+p { margin: 0; }
+
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder { color: #bbb; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered { color: #bbb; }
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered { vertical-align: bottom; }
+
+.select2-dropdown .select2-results .select2-results__options { max-height: 20rem; overflow-y: auto; font-size: 1.1rem; }
+.select2-dropdown .select2-results .select2-results__option--highlighted { background: #fff; color: #333; display: none; }
+.select2-dropdown .select2-results .select2-results__option--highlighted[aria-selected] { display: block; background: #eee; }
+
+.select2-dropdown { border: .1rem solid #e5e8eb; font-family: Gill Sans, Gill Sans MT, Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+
+.select2 li + li :placeholder-shown { color: #333; }
+.select2 li + li ::-webkit-input-placeholder { color: #333; }
+.select2 li + li :-moz-placeholder { color: #333; opacity: 1; }
+.select2 li + li ::-moz-placeholder { color: #333; opacity: 1; }
+.select2 li + li :-ms-input-placeholder { color: #333; }
+
+.select2-container input[type="search"] { -webkit-appearance: none; appearance: none; border-color: #e5e8eb !important; }
+
+.select2-selection__clear { display: none; }
+
+.header { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; }
+.header_nav { display: -webkit-flex; display: flex; margin: 0; padding: 0; background: #102430; }
+.header_nav_btn { width: 9.5%; padding: 1.5%; list-style-type: none; }
+.header_nav_btn.isOpen { background: #333f49; }
+.header_nav_target { position: relative; display: block; width: 100%; padding-top: 105%; text-align: center; cursor: pointer; }
+.header_nav_target img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 58%; margin: auto; vertical-align: bottom; }
+.header_nav_target_notification { position: absolute; display: block; width: 1.5rem; height: 1.5rem; border-radius: 100%; font-size: .8rem; line-height: 1.5rem; color: #fff; text-align: center; background: #44d095; bottom: .1rem; right: .1rem; }
+
+.footer { padding-top: 2rem; margin-top: 1.5rem; font-size: 1rem; font-family: Gill Sans, Gill Sans MT, Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: #bbb; }
+.footer_inner { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-flex-wrap: wrap; flex-wrap: wrap; width: 85.33%; margin: 0 auto; }
+.footer_inner_item { display: block; width: 29%; padding: .6rem 0 .6rem 2%; margin-bottom: .3rem; color: #fff; font-size: 1.2rem; text-decoration: none; }
+.footer_inner_item:nth-child(3n) { width: 34%; }
+.footer_copy { padding: 2.5%; border-top: .1rem solid #fff; margin-top: 1.3rem; color: #fff; font-size: 1rem; text-align: center; }
+
+.gNav { position: fixed; top: 0; left: 100%; z-index: 9998; box-sizing: border-box; width: 100%; height: 100%; padding-top: 12.94%; line-height: 1; background: #333f49; transition: left .25s; overflow-y: scroll; }
+.gNav.isOpen { left: 0; }
+.gNav_scroll { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: stretch; align-items: stretch; -webkit-flex-direction: column; flex-direction: column; min-height: 100%; }
+.gNav_inner { width: 94%; margin: 0 auto; padding-top: 4.2%; }
+.gNav_prof { margin-bottom: 4.2%; line-height: 1.4; text-decoration: none; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.gNav_prof_photo { width: 17%; padding-top: 17%; background-size: cover; background-position: center; }
+.gNav_prof_name { margin: 0 0 0 4.2%; color: #fff; }
+.gNav_prof_name_bold { display: block; font-weight: bold; }
+.gNav_menu { margin: 0; padding: 0; border-top: .1rem solid #22313d; }
+.gNav_menu_item { border-bottom: .1rem solid #22313d; font-family: Gill Sans, Gill Sans MT, Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; list-style: none; }
+.gNav_menu_item_listWrap { display: none; padding: 1% 0 6.8% 9.7%; }
+.gNav_menu_item_list { display: block; padding: 2.8% 0; color: #fff; font-size: 1.4rem; text-decoration: none; }
+.gNav_menu_item_list.sub { font-size: 1.2rem; }
+.gNav_menu_target { display: block; padding: 5.5% 0 5.1% 1.4%; color: #fff; text-decoration: none; cursor: pointer; }
+.gNav_menu_target.arrow { background: url(/sp/img/common/arrow_menu.png) right 3.3% center no-repeat; background-size: .85rem; }
+.gNav_menu_target.arrow.isOpen { background-image: url(/sp/img/common/arrow_menu_open.png); }
+.gNav_foot { background: #22313d; font-size: 1.2rem; font-family: Gill Sans, Gill Sans MT, Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.gNav_foot_inner { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+.gNav_foot_inner_item { display: block; box-sizing: border-box; width: 50%; padding: 3.33% 0; border-bottom: .1rem solid #333f49; color: #999; text-align: center; text-decoration: none; }
+.gNav_foot_inner_item:nth-child(even) { border-left: .1rem solid #333f49; }
+.gNav_foot_copy { padding: 3.33% 0; margin: 0; color: #999; text-align: center; }

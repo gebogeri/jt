@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.ttl_lang_btn.saved_icon{
+  width: 7.4rem;
+}
+.ttl_lang_btn.saved_icon .btn_donwload{
+  background: url("/sp/img/common/icon_download.png") no-repeat scroll center center / 1.3rem auto;
+  cursor: pointer;
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-right: 1.2rem;
+}
+.ttl_lang_btn.saved_icon .btn_share, .ttl_lang_btn.saved_icon .btn_gear {
+    cursor: pointer;
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 1.2rem;
+}
+.saved_icon .knowledge_item_main_setting{
+  right: 3rem;
+}
+.saved_icon .knowledge_item_main_share{
+  right: 6rem;
+}
+.knowledge_item_main_donwload{
+  background: url("/sp/img/common/icon_download.png") no-repeat scroll center center;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  height: 1.6rem;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.6rem;
+}
+.knowledge_item_data{
+  color: #bbb;
+  font-size: 1.4rem;
+  padding: 0.5rem 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #e5e8eb;
+  position: relative;
+}
+.knowledge_ditemContent.top_border{
+  border-top: 0.1rem solid #e5e8eb;
+}
+.knowledge_ditemContent.top_border li:last-child{
+  border-bottom: none;
+}
+.btn_relatedFile {
+  background: rgba(0, 0, 0, 0) url("/img/knowledge/icon_pdf.png") no-repeat scroll left center;
+  padding-left: 20px;
+}
+.knowledge_link_img{
+  padding-top: 1rem;
+  border-top: 0.1rem solid #e5e8eb;
+  margin: 1rem auto 0;
+  text-align: center;
+}
+.knowledge_link_img img{
+  max-width: 80%;
+  height: auto;
+}
+.semi_blog_mv{
+  margin: 3rem auto 3.7rem;
+  width: 80%;
+}
+.semi_blog_movie{
+  margin: 0 auto 3.7rem;
+  width: 80%;
+}
+.semi_blog_movie img,
+.semi_blog_mv img{
+  width: 100%;
+  height: auto;
+}
+#addsite{
+  padding-bottom: 0.8rem;
+}
+#addsite a {
+    background: rgba(0, 0, 0, 0) url("/img/common/icon_add.png") no-repeat scroll 4px center;
+    color: #bbb;
+    line-height: 17px;
+    padding-left: 27px;
+    cursor: pointer;
+}
+
+.fileInput {
+    background: #bbb none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 6px;
+    position: relative;
+    text-align: center;
+    width: 118px;
+}
+.fileInput input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+}
