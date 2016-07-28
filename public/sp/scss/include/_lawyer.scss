@@ -1,35 +1,26 @@
 @import '../mixin';
 
-.lawyer,
-.lawyerS{
+.lawyer{
+    max-height: 60rem;
     @include border;
     background: #fff;
     overflow-y: scroll;
     @include e(item){
-        padding: 1.5rem 3.71% 1.3rem;
+        padding: 2rem 3.71% .8rem;
+        cursor: pointer;
         @include m(isSelected){
             background: #edfbfc;
         }
         @include e(photo){
-            position: relative;
-            width: 21.5%;
-            padding-top: 21.5%;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 100%;
             margin-right: 1rem;
             overflow: hidden;
-            img{
-                position: absolute;
-                border-radius: 100%;
-                width: 100%;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
         }//photo
         @include e(head){
             flex: 1;
-            padding: 1rem 0 .7rem;
+            padding-top: 1rem;
             @include border(bottom);
             @include e(name){
                 margin: 0 0 .5rem;
@@ -66,7 +57,7 @@
         @include e(company){
             padding: 1rem 0;
             @include border(bottom);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.5;
             @include e(name){
                 font-weight: bold;
@@ -95,13 +86,6 @@
                 @include texthide;
             }
         }
-    }//item
-}
-
-.lawyer{
-    max-height: 60rem;
-    @include e(item){
-        cursor: pointer;
         @include e(btn){
             @include flex($j:space-between);
             margin-top: 1.3rem;
@@ -140,24 +124,4 @@
             }
         }//btn
     }//item
-}//lawyer
-.lawyerS{
-    max-height: 48rem;
-    margin-bottom: 3.5rem;
-    @include e(item){
-        @include border(bottom);
-        @include e(btn){
-            display: block;
-            width: 13rem;
-            height: 2.4rem;
-            border-radius: .4rem;
-            margin-top: .5rem;
-            color: #fff;
-            font-size: 1.2rem;
-            line-height: 2;
-            text-align: center;
-            background: $green;
-            cursor: pointer;
-        }//btn
-    }//item
-}//lawyerS
+}
