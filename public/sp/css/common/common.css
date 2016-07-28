@@ -41,6 +41,10 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 
 .select2-selection__clear { display: none; }
 
+.select2-container .select2-selection input { min-width: 14rem; }
+
+.select2-container .select2-search--inline .select2-search__field { margin-top: 0; }
+
 .header { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; }
 .header_nav { display: -webkit-flex; display: flex; margin: 0; padding: 0; background: #102430; }
 .header_nav_btn { width: 9.5%; padding: 1.5%; list-style-type: none; }
