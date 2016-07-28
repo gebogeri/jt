@@ -1,0 +1,45 @@
+@import '../_mixin';
+
+.projectS{
+    box-sizing: border-box;
+    max-height: 28.5rem;
+    @include border;
+    overflow-y: scroll;
+    @include e(item){
+        padding: .8rem 0 1.5rem;
+        @include border(top);
+        cursor: pointer;
+        &:first-child{
+            border-top: none;
+        }
+        @include m(isSelected){
+            background: #edfbfc;
+        }
+        @include e(inner){
+            padding: 0 .7rem;
+        }
+        @include e(meta){
+            color: #bbb;
+            font-size: 1.2rem;
+        }//meta
+        @include e(main){
+            position: relative;
+            padding-right: 7rem;
+            margin-top: .5rem;
+            font-weight: bold;
+            @include e(enter){
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: .5rem;
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                margin: auto;
+                cursor: pointer;
+                background: $nexturl center center no-repeat;
+                background-size: 1.5rem;
+            }
+        }//main
+    }//item
+}//.projectS
