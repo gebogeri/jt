@@ -99,7 +99,9 @@ var juris = 'ジュリスディクション',
     tags = '投稿タグ',
     area = '取扱地域を追加',
     strongPoint = '得意分野',
-    bizField = '事業領域を入力';
+    bizField = '事業領域を入力',
+    lang = '使用する言語',
+    countryArea = '国又は地域を入力';
 
 $(function(){
     var a = $('a[rel="leanModal"]');
@@ -136,6 +138,14 @@ $(function(){
 
     $('.select2_area').select2({
         placeholder: area,
+    });
+
+    $('.select2_lang').select2({
+        placeholder: lang,
+    });
+
+    $('.select2_countryArea').select2({
+        placeholder: countryArea,
     });
 
     $('.select2_strongPoint').select2({

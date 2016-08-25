@@ -194,9 +194,9 @@
                         <dd class="setting_item_display_btn btn_edit"></dd>
                         <dd class="setting_item_edit">
                             <form action="">
-                                <input type="text" placeholder="現在のパスワードを入力">
-                                <input type="text" placeholder="新しいパスワードを入力">
-                                <input type="text" placeholder="新しいパスワードを入力(確認用)">
+                                <input type="password" placeholder="現在のパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力(確認用)">
                                 <a href="" class="setting_item_edit_pass">パスワードを忘れた場合</a>
                                 <div class="setting_item_edit_submit">
                                     <input type="submit" value="確認メールを送信">
@@ -235,6 +235,10 @@
                         <dt class="setting_item_ttl">Google+</dt>
                         <dd class="setting_item_display">&nbsp;</dd><!-- [/ .setting_item_display] -->
                         <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            &nbsp;
+                            <button class="setting_item_edit_sns link">認証する</button>
+                        </dd>
                     </dl><!-- [/ .setting_item] -->
                     <dl class="setting_item">
                         <dt class="setting_item_ttl">Linkedin</dt>
@@ -254,12 +258,13 @@
                         <i class="subTtl_main_faq btn_faq"></i>
                         <div class="faqBox">アカウント管理者は、あなたに代わって、情報の入力などを行うことができます。ただし、メッセージを読むことはできません。</div>
                     </span><!-- [/ .subTtl_main] -->
-                    <span class="subTtl_add btn_add">管理者を追加</span>
+                    <span class="subTtl_add settingEditAdd">管理者を追加</span>
                 </h2><!-- [/ .subTtl] -->
 
-                <div id="userBox">
+                <div id="settingUserBox" data-select2="" data-num="2">
                     <div class="setting d_elem">
-                        <h3 class="setting_ttl">ユーザー01<i class="setting_ttl_delete btn_delete"></i></h3>
+                        <h3 class="setting_ttl"><span>ユーザー<span class="mainNum">01</span></span>
+                        <i class="setting_ttl_delete btn_delete"></i></h3>
                         <dl class="setting_item">
                             <dt class="setting_item_ttl">氏名</dt>
                             <dd class="setting_item_display">Kazutochi&nbsp;Kondo</dd><!-- [/ .setting_item_display] -->
@@ -305,7 +310,6 @@
                         <dl class="setting_item">
                             <dt class="setting_item_ttl">メールアドレス</dt>
                             <dd class="setting_item_display">
-                                <p>aaa@aaa.com&nbsp;&nbsp;メインで使用</p>
                                 <p>aaa@aaa.com</p>
                             </dd><!-- [/ .setting_item_display] -->
                             <dd class="setting_item_display_btn btn_edit"></dd>
@@ -320,14 +324,27 @@
                             </dd><!-- [/ .setting_item_edit] -->
                         </dl><!-- [/ .setting_item] -->
                         <dl class="setting_item">
-                            <dt class="setting_item_ttl">パスワード</dt>
-                            <dd class="setting_item_display">パスワードの最終変更日時は<br>1年以上前です。</dd><!-- [/ .setting_item_display] -->
-                            <dd class="setting_item_display_btn btn_edit"></dd>
-                        </dl><!-- [/ .setting_item] -->
+                        <dt class="setting_item_ttl">パスワード</dt>
+                        <dd class="setting_item_display">パスワードの最終変更日時は<br>1年以上前です。</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <input type="password" placeholder="現在のパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力(確認用)">
+                                <a href="" class="setting_item_edit_pass">パスワードを忘れた場合</a>
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="確認メールを送信">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
                     </div><!-- [/ .setting] -->
 
                     <div class="setting d_elem">
-                        <h3 class="setting_ttl">ユーザー02<i class="setting_ttl_delete btn_delete"></i></h3>
+                        <h3 class="setting_ttl"><span>ユーザー<span class="mainNum">02</span></span>
+                        <i class="setting_ttl_delete btn_delete"></i></h3>
                         <dl class="setting_item">
                             <dt class="setting_item_ttl">氏名</dt>
                             <dd class="setting_item_display">Kazutochi&nbsp;Kondo</dd><!-- [/ .setting_item_display] -->
@@ -373,7 +390,6 @@
                         <dl class="setting_item">
                             <dt class="setting_item_ttl">メールアドレス</dt>
                             <dd class="setting_item_display">
-                                <p>aaa@aaa.com&nbsp;&nbsp;メインで使用</p>
                                 <p>aaa@aaa.com</p>
                             </dd><!-- [/ .setting_item_display] -->
                             <dd class="setting_item_display_btn btn_edit"></dd>
@@ -388,10 +404,22 @@
                             </dd><!-- [/ .setting_item_edit] -->
                         </dl><!-- [/ .setting_item] -->
                         <dl class="setting_item">
-                            <dt class="setting_item_ttl">パスワード</dt>
-                            <dd class="setting_item_display">パスワードの最終変更日時は<br>1年以上前です。</dd><!-- [/ .setting_item_display] -->
-                            <dd class="setting_item_display_btn btn_edit"></dd>
-                        </dl><!-- [/ .setting_item] -->
+                        <dt class="setting_item_ttl">パスワード</dt>
+                        <dd class="setting_item_display">パスワードの最終変更日時は<br>1年以上前です。</dd><!-- [/ .setting_item_display] -->
+                        <dd class="setting_item_display_btn btn_edit"></dd>
+                        <dd class="setting_item_edit">
+                            <form action="">
+                                <input type="password" placeholder="現在のパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力">
+                                <input type="password" placeholder="新しいパスワードを入力(確認用)">
+                                <a href="" class="setting_item_edit_pass">パスワードを忘れた場合</a>
+                                <div class="setting_item_edit_submit">
+                                    <input type="submit" value="確認メールを送信">
+                                    <input type="reset" class="btn_reset" value="キャンセル">
+                                </div>
+                            </form>
+                        </dd><!-- [/ .setting_item_edit] -->
+                    </dl><!-- [/ .setting_item] -->
                     </div><!-- [/ .setting] -->
                 </div><!-- [/ #userBox] -->
             </div><!-- [/ #content] -->

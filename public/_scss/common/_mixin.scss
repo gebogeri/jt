@@ -1,0 +1,231 @@
+$green: #44d095;
+
+@mixin e($names...){
+    @each $name in $names{
+        @at-root &_#{$name} {
+            @content;
+        }
+    }
+}
+
+@mixin m($names...){
+    @each $name in $names{
+        @at-root &.#{$name} {
+            @content;
+        }
+    }
+}
+
+@mixin resize($min:96rem, $max:108rem, $c:1, $ttl:62rem){
+    min-width: $min;
+    #content{
+        padding-left: 16rem * $c;
+        max-width: $min;
+        min-width: $max;
+    }
+    .header{
+        min-width: $min;
+        @include e(inner){
+            min-width: $min;
+            max-width: $max;
+        }
+    }
+    .headline{
+        min-width: $min;
+        max-width: $max;
+        padding-left: 16rem * $c;
+        @include e(inner){
+            max-width: $max - 16rem * $c;
+        }
+        .ttl{
+            width: $ttl;
+        }
+    }
+    .footer{
+        padding-left: 16rem * $c;
+    }
+    .footer_inner{
+        min-width: $min - 16rem * $c;
+        max-width: $max - 16rem * $c;
+    }
+}
+
+@mixin ff{
+    font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif;
+}
+
+@mixin reset{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin texthide{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin flex($j:false, $a:false, $w:false){
+    display:-webkit-flex;
+    display:flex;
+    @if $j != false{
+        -webkit-justify-content: $j;
+        justify-content: $j;
+    }
+    @if $a != false{
+        -webkit-align-items: $a;
+        align-items: $a;
+    }
+    @if $w != false{
+        -webkit-flex-wrap: $w;
+        flex-wrap: $w;
+    }
+}
+
+@mixin border($b:false){
+    @if $b != false {
+        border-#{$b}: .1rem solid #e5e8eb;
+    }
+    @else{
+        border: .1rem solid #e5e8eb;
+    }
+}
+
+@mixin arrow{
+    position: relative;
+    @include m(isOpen){
+        &:after{
+            background-image: url(/img/common/arrow_select_open.png);
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top:0;
+        bottom:0;
+        right: .8rem;
+        width: .9rem;
+        height: .6rem;
+        margin: auto;
+        background: url(/img/common/arrow_select.png) center center no-repeat;
+    }
+}
+
+@mixin select2($w:100%,$m:false,$h:3.1rem,$tags:false,$t:true,$l:false,$box-sizing: content-box){
+    @at-root & + .select2-container {
+        box-sizing: $box-sizing;
+        min-width: $w;
+        max-width: $w;
+        @include border;
+        @if $l == false{
+            border-left: none;
+        }
+        @if $t == false{
+            border-top: none;
+        }
+        @if $tags == true {
+            border: none;
+        }
+        @if $m != false{
+            display: block;
+            margin: $m 0;
+        }
+        font-size: 1.3rem;
+        @include arrow;
+        &.select2-container--open{
+            position: relative;
+            &:after{
+                background: url(/img/common/arrow_select_open.png) center center no-repeat;
+            }
+        }
+        .select2-selection{
+            box-sizing:border-box;
+            width: 100%;
+            height: auto;
+            min-height: $h;
+            border: none!important;
+            border-radius:0;
+            border-left: none;
+            padding-right: 1.8rem;
+            vertical-align: bottom;
+            input{
+                margin-top: 0;
+                padding-left: .3rem;
+            }
+        }
+    }
+    @at-root & + .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: $h;
+    }
+    @at-root &.first + .select2-container {
+        @include border(left);
+    }
+}
+
+@mixin select{
+    position: relative;
+    @include border(top);
+    @include border(left);
+    select{
+        box-sizing: border-box;
+        width: 100%;
+        height: 3.3rem;
+        padding: 0 2.3rem 0 1rem;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 1.2rem;
+        width: .9rem;
+        height: .6rem;
+        margin: auto;
+        background: url(/sp/img/common/arrow_select.png) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@mixin balloon($top:2.3rem, $right:-1.9rem, $w: 12rem){
+    position: absolute;
+    top: $top;
+    right: $right;
+    display: none;
+    width: $w;
+    border: .1rem solid #bbb;
+    cursor: default;
+    background: #fff;
+    line-height: 2.3rem;
+    font-size: 1.2rem;
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    &:before,
+    &:after{
+        bottom: 100%;
+        left: 7.6rem;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:before{
+        border-color: transparent;
+        border-bottom-color: #bbb;
+        border-width: .7rem;
+        margin-left: -.7rem;
+    }
+    &:after{
+        border-color: transparent;
+        border-bottom-color: #fff;
+        border-width: .6rem;
+        margin-left: -.6rem;
+    }
+    @include m(isOpen){
+        display: block;
+    }
+}

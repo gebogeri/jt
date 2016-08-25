@@ -138,12 +138,12 @@ input.firstRow, button.firstRow, textarea.firstRow, select.firstRow { border-top
 
 button { background-color: transparent; border: none; cursor: pointer; outline: none; padding: 0; appearance: none; }
 
-input[type="radio"], input[type="checkbox"] { display: none; }
-input[type="radio"] + label, input[type="checkbox"] + label { position: relative; height: 3rem; padding-left: 2.5rem; line-height: 3rem; }
-input[type="radio"] + label:before, input[type="radio"] + label:after, input[type="checkbox"] + label:before, input[type="checkbox"] + label:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; margin: auto; transition: opacity .1s; }
-input[type="radio"] + label:before, input[type="checkbox"] + label:before { border: .1rem solid #bbb; width: 1.3rem; height: 1.3rem; }
-input[type="radio"] + label:after, input[type="checkbox"] + label:after { width: 1.1rem; height: 1.1rem; left: .2rem; background: #44d095; opacity: 0; }
-input[type="radio"]:checked + label:after, input[type="checkbox"]:checked + label:after { opacity: 1; }
+input[type="radio"], input[type="checkbox"]:not(.setting_item_alert_switch) { display: none; }
+input[type="radio"] + label, input[type="checkbox"]:not(.setting_item_alert_switch) + label { position: relative; height: 3rem; padding-left: 2.5rem; line-height: 3rem; }
+input[type="radio"] + label:before, input[type="radio"] + label:after, input[type="checkbox"]:not(.setting_item_alert_switch) + label:before, input[type="checkbox"]:not(.setting_item_alert_switch) + label:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; margin: auto; transition: opacity .1s; }
+input[type="radio"] + label:before, input[type="checkbox"]:not(.setting_item_alert_switch) + label:before { border: .1rem solid #bbb; width: 1.3rem; height: 1.3rem; }
+input[type="radio"] + label:after, input[type="checkbox"]:not(.setting_item_alert_switch) + label:after { width: 1.1rem; height: 1.1rem; left: .2rem; background: #44d095; opacity: 0; }
+input[type="radio"]:checked + label:after, input[type="checkbox"]:not(.setting_item_alert_switch):checked + label:after { opacity: 1; }
 
 input[type="radio"] + label:before, input[type="radio"] + label:after { border-radius: 100%; }
 
@@ -282,6 +282,15 @@ textarea { width: 100%; min-height: 7rem; resize: none; vertical-align: bottom; 
 .setting_item_display_name { width: 78.9%; margin: 0; }
 .setting_item_display_btn { position: absolute; top: 0; bottom: 0; right: 0; margin: auto; width: 5.5%; height: 0; padding-top: 5.5%; background: url(/sp/img/common/btn_edit.png) center center no-repeat; background-size: 1.5rem; cursor: pointer; }
 .setting_item_edit { position: relative; display: none; margin: 1rem 0 0; }
+.setting_item_edit_select2 + .select2-container { box-sizing: content-box; width: 100%; border: .1rem solid #e5e8eb; position: relative; background-size: cover; }
+.setting_item_edit_select2 + .select2-container.isOpen:after { background-image: url(/sp/img/common/arrow_select_op.png); }
+.setting_item_edit_select2 + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: .8rem; width: .9rem; height: .6rem; margin: auto; background: url(/sp/img/common/arrow_select.png) center center no-repeat; background-size: cover; }
+.setting_item_edit_select2 + .select2-container.select2-container--open { position: relative; }
+.setting_item_edit_select2 + .select2-container.select2-container--open:after { background: url(/sp/img/common/arrow_select_op.png) center center no-repeat; background-size: cover; }
+.setting_item_edit_select2 + .select2-container .select2-selection { box-sizing: border-box; height: auto; min-height: 3.1rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.setting_item_edit_select2 + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.setting_item_edit_select2 + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.1rem; }
+.setting_item_edit_select2.first + .select2-container { border-left: .1rem solid #e5e8eb; }
 .setting_item_edit.alert { display: block; }
 .setting_item_edit.alert input[type="radio"] + label { display: inline-block; min-width: 50%; height: auto; line-height: 1.8rem; }
 .setting_item_edit.alert input[type="radio"] + label:before { top: .2rem; bottom: auto; }
@@ -289,6 +298,8 @@ textarea { width: 100%; min-height: 7rem; resize: none; vertical-align: bottom; 
 .setting_item_edit.alert input[type="radio"] + label.second { margin-top: .7rem; }
 .setting_item_edit input[type="text"] { width: 100%; border: .1rem solid #e5e8eb; }
 .setting_item_edit input[type="text"] + input[type="text"] { margin-top: .9rem; }
+.setting_item_edit input[type="password"] { width: 100%; border: .1rem solid #e5e8eb; }
+.setting_item_edit input[type="password"] + input[type="password"] { margin-top: .9rem; }
 .setting_item_edit p { margin: 0 0 1rem; font-weight: bold; }
 .setting_item_edit_prof { padding: 2.5rem 0 0; margin-top: 3rem; border-top: .1rem solid #e5e8eb; }
 .setting_item_edit_prof_file { display: -webkit-flex; display: flex; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: center; align-items: center; }
@@ -311,8 +322,9 @@ textarea { width: 100%; min-height: 7rem; resize: none; vertical-align: bottom; 
 .setting_item_edit_add { padding-top: 1.3rem; border-top: .1rem solid #e5e8eb; margin-top: 2rem; color: #bbb; }
 .setting_item_edit_add .btn_subAdd { display: inline-block; height: 1.8rem; padding-left: 3rem; color: #bbb; line-height: 1.8rem; vertical-align: middle; background: url(/sp/img/common/btn_circle_plus.png) left center no-repeat; background-size: 1.6rem; cursor: pointer; }
 .setting_item_edit_pass { display: inline-block; margin: 1rem 0 -1rem; color: #bbb; font-size: 1.2rem; text-decoration: none; }
-.setting_item_edit_sns { position: absolute; top: -1rem; bottom: 1rem; right: 0; margin: auto; }
-.setting_item_edit_sns.out { width: 1.6rem; height: 1.6rem; background: url(/sp/img/common/btn_delete.png) center center no-repeat; background-size: 1.2rem; }
+.setting_item_edit_sns { position: absolute; right: 0; margin: auto; }
+.setting_item_edit_sns.link { top: -1.1rem; bottom: 1.1rem; width: 10rem; height: 3rem; border-radius: .1rem; color: #fff; text-align: center; line-height: 3rem; background: #44d095; }
+.setting_item_edit_sns.out { top: -1rem; bottom: 1rem; width: 1.6rem; height: 1.6rem; background: url(/sp/img/common/btn_delete.png) center center no-repeat; background-size: 1.2rem; }
 .setting_item_edit_language { position: relative; position: relative; border: .1rem solid #e5e8eb; width: 100%; }
 .setting_item_edit_language.isOpen:after { background-image: url(/sp/img/common/arrow_select_op.png); }
 .setting_item_edit_language:after { content: ""; position: absolute; top: 0; bottom: 0; right: .8rem; width: .9rem; height: .6rem; margin: auto; background: url(/sp/img/common/arrow_select.png) center center no-repeat; background-size: cover; }
@@ -372,12 +384,13 @@ textarea { width: 100%; min-height: 7rem; resize: none; vertical-align: bottom; 
 .knowledge_item_btn.isOpen span { background: url(/sp/img/common/arrow_select_op.png) right center no-repeat; background-size: .8rem; }
 .knowledge_ditemContent { width: 94%; margin: 0 auto; margin-top: .5rem; }
 .knowledge_ditemContent_detail { padding: 1rem 0; border-bottom: .1rem solid #e5e8eb; line-height: 1.5; }
+.knowledge_ditemContent_detail_line { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .knowledge_ditemContent_detail h4 { margin: 0; color: #bbb; }
 .knowledge_ditemContent_detail a { color: #333; text-decoration: underline; }
 .knowledge_ditemContent_detail span { color: #bbb; }
 .knowledge_ditemContent_btn a { display: block; text-align: center; }
 .knowledge_ditemContent_btn span { display: inline-block; padding: 2rem 0; padding-left: 2.5rem; color: #bbb; font-weight: bold; text-decoration: none; background: url(/sp/img/common/icon_next.png) left center no-repeat; background-size: 1.6rem; }
-.knowledge_detail_ttl { margin: 0 0 1.5rem; color: #bbb; font-weight: bold; }
+.knowledge_detail_ttl { margin: 0 0 1.5rem; color: #bbb; font-weight: bold; font-size: 1.4rem; }
 .knowledge_detail_content { width: 94%; margin: 3rem auto 3.7rem; }
 .knowledge_detail_related { width: 94%; margin: 0 auto; padding-top: 1.2rem; border-top: .1rem solid #e5e8eb; }
 .knowledge_detail_related_item { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; margin-top: 1.2rem; }

@@ -1,0 +1,13 @@
+@charset 'utf-8';
+@import '_mixin';
+
+.tabs{
+    @include e(content){
+        @include e(item){
+            display: none;
+            @include m(def){
+                display: block;
+            }
+        }
+    }
+}

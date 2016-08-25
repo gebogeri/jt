@@ -27,7 +27,7 @@
               <span class="ttl_lang btn">
                 タイトル
                 <div class="ttl_lang_btn">
-                  <span class="btn_share"></span>
+                  <a href="#modal" class="btn_share modalOpenBtn" rel="leanModal"></a>
                   <span class="btn_gear"></span>
                 </div>
               </span>
@@ -73,11 +73,11 @@
           <ul class="knowledge_ditemContent top_border">
             <li class="knowledge_ditemContent_detail icon_file">
               <h4>関連資料</h4>
-              <a class="btn_relatedFile" data-uri="/pdf/sample.pdf" href="#fileModal" rel="leanModal">××××××××.pdf</a>
+              <a class="btn_relatedFile" href="" target="_blank">××××××××.pdf</a>
             </li>
             <li class="knowledge_ditemContent_detail">
               <h4>関連サイト</h4>
-              <p><a href="">http://www.juristerra.net/link_url...</a></p>
+              <p class="knowledge_ditemContent_detail_line"><a href="" target="_blank">http://www.juristerra.net/link_url...</a></p>
             </li>
           </ul>
 
@@ -132,7 +132,7 @@
         </div><!-- [/ #container] -->
         <!--#include virtual="/sp/include/footer_under.html"-->
     </div><!-- [/ #wrapper] -->
+    <!--#include virtual="/sp/include/knowledge_share_modal.html"-->
     <!--#include virtual="/sp/include/footer.html"-->
-    <script src="/sp/js/_knowledge.js"></script>
 </body>
 </html>

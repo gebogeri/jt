@@ -1,0 +1,246 @@
+@charset 'utf-8';
+@import '_mixin';
+
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-width: 96rem;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    color: #333;
+    font-size: 1.4rem;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif;
+    background: #ecf1f2;
+    &.noscroll{
+        position: fixed;
+        overflow-y: scroll;
+    }
+}
+
+p{ margin: 0; }
+ul,li{
+    @include reset;
+    list-style:none;
+}
+img{
+    vertical-align: bottom;
+}
+
+#wrapper{
+    @include flex($j:space-between, $a:stretch);
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-top: 5rem;
+    @include m(bg-white){
+        background: #fff;
+    }
+}
+#content{
+    box-sizing: border-box;
+    min-width: 96rem;
+    max-width: 108rem;
+}
+
+
+.btn_balloon{
+    position: relative;
+}
+// Form Style Reset
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="email"],
+button,
+select{
+    height: 3.3rem;
+}
+
+input, button, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    padding: 0 .8rem;
+    border-top: none;
+    border-left: none;
+    @include border(right);
+    @include border(bottom);
+    border-radius: 0;
+    &.first{
+        @include border(left);
+    }
+    &.firstRow{
+        @include border(top);
+    }
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"]:not(.setting_item_alert_switch){
+    display: none;
+    +label {
+        position: relative;
+        height: 3rem;
+        padding-left: 2.5rem;
+        line-height: 3rem;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transition: opacity .1s;
+        }
+        &:before{
+            border: .1rem solid #bbb;
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+        &:after{
+            width: 1.1rem;
+            height: 1.1rem;
+            left: .2rem;
+            background: $green;
+            opacity: 0;
+        }
+    }
+    &:checked{
+        +label:after{
+            opacity: 1;
+        }
+    }
+}
+
+input[type="radio"]{
+    + label{
+        &:before,
+        &:after{
+            border-radius: 100%;
+        }
+    }
+}
+
+
+select{
+    background: #fff;
+    color: #bbb;
+    option{
+        color: #333;
+    }
+    option[disabled]{
+        color: #bbb;
+    }
+}
+
+textarea{
+    width: 100%;
+    border: none;
+    min-height: 7rem;
+    resize: none;
+    vertical-align: bottom;
+}
+
+
+:placeholder-shown {
+    color: #bbb; }
+::-webkit-input-placeholder {
+    color: #bbb; }
+:-moz-placeholder {
+    color: #bbb; opacity: 1; }
+::-moz-placeholder {
+    color: #bbb; opacity: 1; }
+:-ms-input-placeholder {
+    color: #bbb; }
+
+
+// Select2 Plugin
+body .select2-container--default .select2-selection--single .select2-selection__placeholder{
+    color: #bbb;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #bbb;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+    vertical-align: bottom;
+}
+
+.select2-dropdown{
+    .select2-results{
+        .select2-results__options{
+            max-height: 20rem;
+            overflow-y: auto;
+            font-size: 1.1rem;
+        }
+        .select2-results__option--highlighted {
+            background: #fff;
+            color:#333;
+            display: none;
+            &[aria-selected]{
+                display: block;
+                background: #eee;
+            }
+        }
+    }
+}
+.select2-dropdown{
+    @include border;
+    @include ff;
+}
+.select2 li + li{
+    :placeholder-shown {
+        color: #333; }
+    ::-webkit-input-placeholder {
+        color: #333; }
+    :-moz-placeholder {
+        color: #333; opacity: 1; }
+    ::-moz-placeholder {
+        color: #333; opacity: 1; }
+    :-ms-input-placeholder {
+        color: #333; }
+}
+.select2-container input[type="search"]{
+    -webkit-appearance: none;
+    appearance: none;
+    border-color: #e5e8eb!important;
+}
+.select2-selection__clear{ display: none; }
+.select2-container .select2-selection input{ min-width: 14rem; }
+
+.select2-container .select2-search--inline .select2-search__field{ margin-top: 0; }
+body > .select2-container{
+    z-index: 1200;
+}
+.select2-selection__arrow{
+    display: none;
+}
+
+@import '_header';
+@import '_alert';
+@import '_footer';
+@import '_sidebar';
+@import '_ttl';
+@import '_balloon';
+@import '_contact';
+@import '_modal';
+
+@import '_tabs';

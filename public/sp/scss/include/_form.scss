@@ -194,7 +194,7 @@ button{
 }
 
 input[type="radio"],
-input[type="checkbox"]{
+input[type="checkbox"]:not(.setting_item_alert_switch){
     display: none;
     +label {
         position: relative;

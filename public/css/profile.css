@@ -1,0 +1,222 @@
+@charset "UTF-8";
+.profile { min-width: 108rem; }
+.profile #content { padding-left: 32rem; max-width: 108rem; min-width: 108rem; }
+.profile .header { min-width: 108rem; }
+.profile .header_inner { min-width: 108rem; max-width: 108rem; }
+.profile .headline { min-width: 108rem; max-width: 108rem; padding-left: 32rem; }
+.profile .headline_inner { max-width: 76rem; }
+.profile .headline .ttl { width: 70rem; }
+.profile .footer { padding-left: 32rem; }
+.profile .footer_inner { min-width: 76rem; max-width: 76rem; }
+.profile_header { padding: 2rem 0; text-align: center; }
+.profile_header_cap { font-size: 1.6rem; font-weight: bold; }
+.profile_header_btn { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; margin-top: 1rem; font-weight: bold; }
+.profile_header_btn_save { display: block; height: 4rem; text-decoration: none; color: #fff; line-height: 4rem; }
+.profile_header_btn_back { display: block; height: 4rem; text-decoration: none; color: #fff; line-height: 4rem; }
+.profile_header_btn_save { width: 20rem; background: #44d095; }
+.profile_header_btn_back { width: 15rem; background: #bbb; margin-left: 1rem; }
+.profile_content { box-sizing: border-box; width: 75rem; padding: 2rem 2rem 1.5rem; margin-bottom: 1rem; border: .1rem solid #e5e8eb; margin: .5rem auto; background: #fff; }
+.profile_content_info { position: relative; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 2rem 0; border-bottom: .1rem solid #eee; }
+.profile_content_info:before { content: ""; position: absolute; top: 0; bottom: 0; right: 21rem; width: .1rem; height: 75%; margin: auto; background: #eee; }
+.profile_content_info_left { flex: 1; font-size: 1.2rem; }
+.profile_content_info_left_ttl { margin: 0 0 .8rem; font-weight: bold; color: #bbb; }
+.profile_content_info_left_data { margin-bottom: .6rem; font-weight: bold; text-decoration: underline; }
+.profile_content_info_left_meta { margin-bottom: .3rem; }
+.profile_content_info_left_link { padding-left: 2rem; line-height: 1.3rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; text-decoration: none; color: #bbb; background: url(/img/common/icon_circle_arrow_right.png) 0 center no-repeat; }
+.profile_content_info_right { width: 19rem; padding-left: 3rem; }
+.profile_content_info_right_ttl { margin-top: .5rem; font-size: 1rem; font-weight: bold; color: #bbb; }
+.profile_content_info_right_data { margin-bottom: .5rem; font-size: 1.1rem; }
+.profile_content_section { padding: 1.7rem 0 1.5rem; border-bottom: .1rem solid #eee; font-size: 1.2rem; line-height: 1.6; }
+.profile_content_section:last-child { padding-bottom: 0; border: none; }
+.profile_content_section .link { color: #333; }
+.profile_content_section_ttl { margin: .7rem 0 1rem; color: #bbb; }
+.profile_content_section_ttl.cent { text-align: center; }
+.profile_content_section_rate { margin-bottom: 2rem; }
+.profile_content_section_rate_main { margin-right: .7rem; font-weight: bold; }
+.profile_content_section_rate_sub { margin-right: 3rem; color: #bbb; }
+.profile_content_section_other span { font-weight: bold; }
+.profile_content_section_country { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin-bottom: .3rem; font-weight: bold; }
+.profile_content_section_country img { margin-left: .7rem; }
+.profile_content_section_scrollArea { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; margin-top: 2.5rem; }
+.profile_content_section_scrollArea_box { width: 32rem; }
+.profile_content_section_scrollArea_box .scrollArea { height: 21rem; padding: 0 1rem; border: .1rem solid #e5e8eb; overflow-y: scroll; }
+.profile_content_section_scrollArea_box .scrollArea_item { padding: .6rem 0; border-bottom: .1rem solid #eee; }
+.profile_content_section_scrollArea_box .scrollArea_item:last-child { border-bottom: none; }
+.profile_content_section_scrollArea_box .scrollArea_item_ttl { font-weight: bold; }
+.profile_slideTabs { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; margin-top: 1.5rem; }
+.profile_slideTabs_forward { display: block; width: 2rem; height: 3rem; cursor: pointer; }
+.profile_slideTabs_backward { display: block; width: 2rem; height: 3rem; cursor: pointer; }
+.profile_slideTabs_forward { background: url(/img/profile/arrow_left.png) center center no-repeat; }
+.profile_slideTabs_backward { background: url(/img/profile/arrow_right.png) center center no-repeat; }
+.profile_slideTabs_wrapper { flex: 1; height: 3.6rem; overflow: hidden; }
+.profile_slideTabs_container { display: -webkit-flex; display: flex; -webkit-flex-wrap: nowrap; flex-wrap: nowrap; width: 100%; height: 5.3rem; overflow-x: scroll; overflow-y: hidden; }
+.profile_slideTabs_container_item { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; flex: 0 0 9.5rem; height: 2rem; padding: .5rem; margin-left: .1rem; color: #fff; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1.1rem; font-weight: bold; background: #bbb; cursor: pointer; }
+.profile_slideTabs_container_item:first-child { margin-left: 0; }
+.profile_slideTabs_container_item.isSelected { position: relative; background: #22313d; cursor: default; }
+.profile_slideTabs_container_item.isSelected:before { content: ""; position: absolute; top: 100%; right: 0; left: 0; margin: auto; width: 0; height: 0; border: .6rem solid transparent; border-top-color: #22313d; }
+.profile_circleGraph { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.profile_circleGraph_caption { width: 17rem; padding-left: 2rem; line-height: 2; }
+.profile_circleGraph_caption_ttl { margin: 0; color: #bbb; font-weight: bold; font-size: 1.2rem; }
+.profile_circleGraph_caption_list li { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; height: 2.4rem; font-size: 1.2rem; line-height: 1.4; }
+.profile_circleGraph_caption_list li i { display: block; width: 1.5rem; height: 1.5rem; border-radius: 100%; margin-right: .5rem; }
+.profile_circleGraph_caption_list li span { font-weight: bold; }
+.profile_circleGraph_canvas canvas { margin-top: -1rem; }
+.profile_circleGraph_canvas_caption { margin-top: .8rem; line-height: 1.3; font-weight: bold; color: #bbb; text-align: center; }
+.profile_barGraph_caption { padding-left: 2rem; }
+.profile_barGraph_caption li { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; height: 2.1rem; font-size: 1.2rem; line-height: 1.4; }
+.profile_barGraph_caption li i { display: block; width: 1.5rem; height: 1.5rem; border-radius: 100%; margin-right: .5rem; }
+.profile_barGraph_caption li span { font-weight: bold; }
+.profile_barGraph_canvas { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; margin-top: 2rem; }
+.profile_barGraph_canvas_ttl { width: 13rem; padding: 0 1rem; text-align: center; font-weight: bold; font-size: 1.3rem; }
+.profile_barGraph_canvas_left { position: relative; display: -webkit-flex; display: flex; width: 27.9rem; height: 2rem; font-size: 1.1rem; }
+.profile_barGraph_canvas_left_rate { position: absolute; top: 100%; margin-top: .2rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; }
+.profile_barGraph_canvas_left_rate span { color: #bbb; }
+.profile_barGraph_canvas_left a { transition: opacity .2s; }
+.profile_barGraph_canvas_left a:hover { opacity: .85; }
+.profile_barGraph_canvas_right { position: relative; display: -webkit-flex; display: flex; width: 27.9rem; height: 2rem; font-size: 1.1rem; }
+.profile_barGraph_canvas_right_rate { position: absolute; top: 100%; margin-top: .2rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; }
+.profile_barGraph_canvas_right_rate span { color: #bbb; }
+.profile_barGraph_canvas_right a { transition: opacity .2s; }
+.profile_barGraph_canvas_right a:hover { opacity: .85; }
+.profile_barGraph_canvas_left { -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }
+.profile_barGraph_canvas_left_rate { left: 0; }
+.profile_barGraph_canvas_left_rate span { margin-left: .3rem; }
+.profile_barGraph_canvas_right_rate { right: 0; }
+.profile_barGraph_canvas_right_rate span { margin-right: .3rem; }
+.profile_barGraph_canvas_value { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; color: #fff; font-size: 1rem; min-width: 5%; max-width: 100%; transition: opacity .2s; }
+.profile_barGraph_canvas_value.right { background: #7fd396; }
+.profile_barGraph_comment { max-width: 40rem; margin: .8rem auto 0; font-size: 1.1rem; text-align: center; }
+.profile_barGraph_comment span { font-weight: bold; color: #bbb; }
+.profile_careerArea { border: .1rem solid #e5e8eb; overflow-x: scroll; }
+.profile_careerArea_content { background: url(/img/profile/bg_career.png) left top repeat; }
+.profile_careerArea_content_scale { display: -webkit-flex; display: flex; }
+.profile_careerArea_content_scale_label { flex: 0 0 9rem; font-size: 10px; text-align: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; line-height: 2rem; }
+.profile_careerArea_content_scale_label:nth-child(odd) { background: #ddd; }
+.profile_careerArea_content_scale_label:nth-child(even) { background: #eee; }
+.profile_careerArea_content_main { position: relative; height: 12rem; }
+.profile_careerArea_content_main span { position: absolute; left: 0; color: #fff; display: block; box-sizing: border-box; width: 9rem; padding: 0 1.2rem; text-align: center; font-size: 1rem; line-height: 2rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.profile_careerArea_content_main span.w1 { width: 9rem; }
+.profile_careerArea_content_main span.l1 { left: 0rem; }
+.profile_careerArea_content_main span.w2 { width: 18rem; }
+.profile_careerArea_content_main span.l2 { left: 9rem; }
+.profile_careerArea_content_main span.w3 { width: 27rem; }
+.profile_careerArea_content_main span.l3 { left: 18rem; }
+.profile_careerArea_content_main span.w4 { width: 36rem; }
+.profile_careerArea_content_main span.l4 { left: 27rem; }
+.profile_careerArea_content_main span.w5 { width: 45rem; }
+.profile_careerArea_content_main span.l5 { left: 36rem; }
+.profile_careerArea_content_main span.w6 { width: 54rem; }
+.profile_careerArea_content_main span.l6 { left: 45rem; }
+.profile_careerArea_content_main span.w7 { width: 63rem; }
+.profile_careerArea_content_main span.l7 { left: 54rem; }
+.profile_careerArea_content_main span.w8 { width: 72rem; }
+.profile_careerArea_content_main span.l8 { left: 63rem; }
+.profile_careerArea_content_main span.w9 { width: 81rem; }
+.profile_careerArea_content_main span.l9 { left: 72rem; }
+.profile_careerArea_content_main span.w10 { width: 90rem; }
+.profile_careerArea_content_main span.l10 { left: 81rem; }
+.profile_careerArea_content_main span.w11 { width: 99rem; }
+.profile_careerArea_content_main span.l11 { left: 90rem; }
+.profile_careerArea_content_main span.w12 { width: 108rem; }
+.profile_careerArea_content_main span.l12 { left: 99rem; }
+.profile_careerArea_content_main span.w13 { width: 117rem; }
+.profile_careerArea_content_main span.l13 { left: 108rem; }
+.profile_careerArea_content_main span.w14 { width: 126rem; }
+.profile_careerArea_content_main span.l14 { left: 117rem; }
+.profile_careerArea_content_main span.w15 { width: 135rem; }
+.profile_careerArea_content_main span.l15 { left: 126rem; }
+.profile_careerArea_content_main span.w16 { width: 144rem; }
+.profile_careerArea_content_main span.l16 { left: 135rem; }
+.profile_careerArea_content_main span.w17 { width: 153rem; }
+.profile_careerArea_content_main span.l17 { left: 144rem; }
+.profile_careerArea_content_main span.w18 { width: 162rem; }
+.profile_careerArea_content_main span.l18 { left: 153rem; }
+.profile_careerArea_content_main span.w19 { width: 171rem; }
+.profile_careerArea_content_main span.l19 { left: 162rem; }
+.profile_careerArea_content_main span.w20 { width: 180rem; }
+.profile_careerArea_content_main span.l20 { left: 171rem; }
+.profile_careerArea_content_main span.w21 { width: 189rem; }
+.profile_careerArea_content_main span.l21 { left: 180rem; }
+.profile_careerArea_content_main span.w22 { width: 198rem; }
+.profile_careerArea_content_main span.l22 { left: 189rem; }
+.profile_careerArea_content_main span.w23 { width: 207rem; }
+.profile_careerArea_content_main span.l23 { left: 198rem; }
+.profile_careerArea_content_main span.w24 { width: 216rem; }
+.profile_careerArea_content_main span.l24 { left: 207rem; }
+.profile_careerArea_content_main span.w25 { width: 225rem; }
+.profile_careerArea_content_main span.l25 { left: 216rem; }
+.profile_careerArea_content_main span.w26 { width: 234rem; }
+.profile_careerArea_content_main span.l26 { left: 225rem; }
+.profile_careerArea_content_main span.w27 { width: 243rem; }
+.profile_careerArea_content_main span.l27 { left: 234rem; }
+.profile_careerArea_content_main span.w28 { width: 252rem; }
+.profile_careerArea_content_main span.l28 { left: 243rem; }
+.profile_careerArea_content_main span.w29 { width: 261rem; }
+.profile_careerArea_content_main span.l29 { left: 252rem; }
+.profile_careerArea_content_main span.w30 { width: 270rem; }
+.profile_careerArea_content_main span.l30 { left: 261rem; }
+.profile_careerArea_content_main span.w31 { width: 279rem; }
+.profile_careerArea_content_main span.l31 { left: 270rem; }
+.profile_careerArea_content_main span.w32 { width: 288rem; }
+.profile_careerArea_content_main span.l32 { left: 279rem; }
+.profile_careerArea_content_main span.w33 { width: 297rem; }
+.profile_careerArea_content_main span.l33 { left: 288rem; }
+.profile_careerArea_content_main span.w34 { width: 306rem; }
+.profile_careerArea_content_main span.l34 { left: 297rem; }
+.profile_careerArea_content_main span.w35 { width: 315rem; }
+.profile_careerArea_content_main span.l35 { left: 306rem; }
+.profile_careerArea_content_main span.w36 { width: 324rem; }
+.profile_careerArea_content_main span.l36 { left: 315rem; }
+.profile_careerArea_content_main span.w37 { width: 333rem; }
+.profile_careerArea_content_main span.l37 { left: 324rem; }
+.profile_careerArea_content_main span.w38 { width: 342rem; }
+.profile_careerArea_content_main span.l38 { left: 333rem; }
+.profile_careerArea_content_main span.w39 { width: 351rem; }
+.profile_careerArea_content_main span.l39 { left: 342rem; }
+.profile_careerArea_content_main span.w40 { width: 360rem; }
+.profile_careerArea_content_main span.l40 { left: 351rem; }
+.profile_careerArea_content_main.up span { bottom: 0; }
+.profile_careerArea_content_main.up span.rank1 { bottom: 0rem; }
+.profile_careerArea_content_main.up span.rank2 { bottom: 2rem; }
+.profile_careerArea_content_main.up span.rank3 { bottom: 4rem; }
+.profile_careerArea_content_main.up span.rank4 { bottom: 6rem; }
+.profile_careerArea_content_main.up span.rank5 { bottom: 8rem; }
+.profile_careerArea_content_main.up span.rank6 { bottom: 10rem; }
+.profile_careerArea_content_main.under span { top: 0; }
+.profile_careerArea_content_main.under span.rank1 { top: 0rem; }
+.profile_careerArea_content_main.under span.rank2 { top: 2rem; }
+.profile_careerArea_content_main.under span.rank3 { top: 4rem; }
+.profile_careerArea_content_main.under span.rank4 { top: 6rem; }
+.profile_careerArea_content_main.under span.rank5 { top: 8rem; }
+.profile_careerArea_content_main.under span.rank6 { top: 10rem; }
+.profile_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: 1.5rem; border-bottom: .1rem solid #eee; margin: 0; font-size: 1.6rem; }
+.profile_ttl_editBtn { display: block; padding-left: 2rem; color: #bbb; font-size: 1.2rem; line-height: 1.8rem; font-weight: normal; text-decoration: none; background: url(/img/common/icon_setting_edit.png) left center no-repeat; }
+.profile_career_ttl { margin-top: 3rem; }
+.profile_career_scrl { max-height: 18.5rem; padding: 0 1rem; border: .1rem solid #e5e8eb; }
+.profile_career_scrl_item { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: .6rem 0; border-top: .1rem solid #e5e8eb; font-size: 1.1rem; }
+.profile_career_scrl_item_main { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; line-height: 1.5rem; }
+.profile_career_scrl_item_main i { display: block; width: 2rem; height: 2rem; border-radius: 100%; margin-right: 1rem; }
+.profile_career_scrl_item_main_wrap { width: 47rem; padding-right: 1.6rem; }
+.profile_career_scrl_item_main_wrap a { color: #333; font-weight: bold; text-decoration: underline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.profile_career_scrl_item_main_wrap p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.profile_career_scrl_item_area { max-width: 16rem; padding-left: 1rem; padding-bottom: 1.5rem; color: #bbb; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; background: url(/img/common/icon_locate.png) left 0.3rem no-repeat; background-size: .8rem; }
+
+.graph_color_blue1 { background: #072615; }
+.graph_color_blue2 { background: #104940; }
+.graph_color_blue3 { background: #186C6B; }
+.graph_color_blue4 { background: #218E95; }
+.graph_color_blue5 { background: #29B1C0; }
+.graph_color_blue6 { background: #42C4C2; }
+.graph_color_blue7 { background: #5BD8C3; }
+.graph_color_blue8 { background: #74ECC5; }
+.graph_color_blue9 { background: #74ECC5; }
+.graph_color_yellow1 { background: #102F20; }
+.graph_color_yellow2 { background: #1B5037; }
+.graph_color_yellow3 { background: #27724E; }
+.graph_color_yellow4 { background: #329364; }
+.graph_color_yellow5 { background: #3DB47B; }
+.graph_color_yellow6 { background: #6EC682; }
+.graph_color_yellow7 { background: #9ED889; }
+.graph_color_yellow8 { background: #CFEA90; }
+.graph_color_yellow9 { background: #FFFC97; }
+.graph_color_other { background: #ddd; }

@@ -1,0 +1,30 @@
+@import '_mixin';
+
+.footer{
+    padding: 1.4rem 0 1.4rem 16rem;
+    border-top: .1rem solid #bbb;
+    margin-top: 1.5rem;
+    font-size: 11px;
+    line-height: 19px;
+    text-align: center;
+    @include e(inner){
+        min-width: 80rem;
+        max-width: 92rem;
+    }
+    @include e(item){
+        display: inline-block;
+        color: #aeafaf;
+        text-decoration: none;
+        margin: 0 .8rem;
+    }
+    @include e(copy){
+        color: #c7c8c9;
+    }
+}
+
+body.wide .footer{
+    margin-left: 16rem;
+    @include e(inner){
+        max-width: 75rem;
+    }
+}

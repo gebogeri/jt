@@ -1,0 +1,65 @@
+@import '_mixin';
+
+.side{
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    left: 0;
+    @include flex;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 5rem;
+    font-size: 1.1rem;
+    @include ff;
+    @include e(ttl){
+        height: 4.2rem;
+        padding-left: 3.6rem;
+        margin: 0;
+        line-height: 4.2rem;
+        background-position: 1.2rem center;
+        background-repeat: no-repeat;
+        color: #bbb;
+        @include m(prof){
+            background-image: url(/img/knowledge/ttl_side_knowledge.png);
+        }
+    }
+    @include e(subTtl){
+        padding-left: .9rem;
+        margin: 3rem 0 1rem;
+        color: #5b6876;
+        line-height: 1em;
+    }
+    @include e(list){
+        @include e(item){
+            @include e(target){
+                position: relative;
+                display: block;
+                padding: 1.3rem 0 1.3rem 1.2rem;
+                color: #fff;
+                line-height: 1.4rem;
+                text-decoration: none;
+                @include ff;
+                transition: opacity .1s;
+                @include m(isSelected){
+                    border-left: .4rem solid $green;
+                    padding-left: .8rem;
+                }
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+.sideLeft, .sideRight{
+    width: 16rem;
+}
+.sideLeft{
+    padding-top: 2rem;
+    background: #333f49;
+}
+.sideRight{
+    padding-top: 6.2rem;
+    background: #212931;
+}

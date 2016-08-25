@@ -1,0 +1,92 @@
+@import '_mixin';
+
+.alert{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    display: none;
+    width: 34rem;
+    margin-top: 1rem;
+    cursor: auto;
+    border: .1rem solid #bbb;
+    background: #fff;
+    &:before{
+        content: "";
+        position: absolute;
+        left: 5rem;
+        bottom: 100%;
+        height: 0;
+        width: 0;
+        margin-top: 1rem;
+        margin-left: 26rem;
+        border: .7rem solid transparent;
+        border-bottom-color: #bbb;
+        pointer-events: none;
+    }
+    @include m(isOpen){
+        display: block;
+    }
+
+    @include e(head){
+        @include flex($a:cener, $j:space-between);
+        box-sizing: border-box;
+        width: 100%;
+        height: 3.6rem;
+        padding: 1rem;
+        border-bottom: .1rem solid #ddd;
+        font-size: 1.1rem;
+        @include e(ttl){
+            font-weight: bold;
+        }
+        @include e(setting){
+            a{
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }//head
+    @include e(content){
+        overflow-x: scroll;
+        height: 35.4rem;
+        @include e(item){
+            @include flex($a:center);
+            box-sizing: border-box;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            border-bottom: .1rem solid #ddd;
+            font-size: 1.1rem;
+            cursor: pointer;
+            @include m(isNew){
+                background: #edfbfc;
+            }
+            &:hover{
+                background: #eee;
+            }
+            @include e(thumb){
+                width: 4rem;
+                height: 4rem;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            @include e(msg){
+                margin-left: .7rem;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }//item
+    }//content
+    @include e(btn){
+        display: block;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        background: #22313d;
+    }
+}

@@ -1,0 +1,42 @@
+@import '_mixin';
+
+.headline{
+    position: relative;
+    box-sizing: border-box;
+    min-width: 96rem;
+    max-width: 108rem;
+    padding-top: 3.5rem;
+    padding-left: 16rem;
+    @include e(inner){
+        max-width: 92rem;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+    }
+    @include m(single){
+        padding-bottom: 4.5rem;
+    }
+}
+
+.ttl{
+    width: 62rem;
+    margin: 0 auto;
+    @include e(summary){
+        color: #bbb;
+        font-weight: bold;
+        @include ff;
+    }
+    @include e(main){
+        @include border(bottom);
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 3.6rem;
+    }
+}

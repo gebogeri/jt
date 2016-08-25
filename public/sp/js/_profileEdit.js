@@ -15,7 +15,7 @@ $(function(){
         // フォームのリセット
         $content.find("textarea, :text, select").val("").end().find(":checked").prop("checked", false);
         if(num === 2){
-            $content.append('<span class="profile_edit_copyArea_delete"></span>');
+            $content.append('<span class="profile_edit_block_copyArea_delete"></span>');
         }
 
         // ペースト
@@ -70,6 +70,7 @@ $(function(){
             }
         });
     })
+
     // 少項目の削除
     .on('touchend', '.profile_edit_block_copyArea_delete', function(){
         $(this).parent().remove();

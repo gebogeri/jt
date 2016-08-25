@@ -175,6 +175,9 @@
             padding: 1rem 0;
             @include border(bottom);
             line-height: 1.5;
+            @include e(line){
+                @include texthide;
+            }
             h4{
                 margin: 0;
                 color: #bbb;
@@ -207,6 +210,7 @@
             margin: 0 0 1.5rem;
             color: #bbb;
             font-weight: bold;
+            font-size: 1.4rem;
         }
         @include e(content){
             @include inner($top: 3rem, $bottom: 3.7rem);
