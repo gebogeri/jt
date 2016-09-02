@@ -90,8 +90,10 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/common.js"></script>
+<script src="/js/_slideToggle.js"></script>
 <script src="/js/_balloon.js"></script>
 <script src="/js/_tabs.js"></script>
+<script src="/js/_range.js"></script>
 <!--#include virtual="/include_new/select/country-city-js.html"-->
 <!-- Plugin -->
 <script src="/plugin/select2/js/select2.min.js"></script>
@@ -99,7 +101,16 @@
 <script src="/plugin/slimscroll/jquery.slimscroll.min.js"></script>
 <script>
 var text = 'テキストを入力',
-    country = 'COUNTRY';
+    juris = 'ジュリスディクション',
+    country = 'COUNTRY',
+    lawField = '法分野',
+    lawField2 = '法分野を入力'
+    businessField = '事業領域を入力',
+    strongPoint = '得意分野',
+    field = '分野',
+    countryLawField = '国、法域',
+    useLang = '使用する言語',
+    area = '取扱地域を入力';
 
 $(function(){
     $('a[rel="leanModal"]').leanModal({
@@ -112,8 +123,44 @@ $(function(){
         placeholder: text,
     });
 
+    $('.select2_juris').select2({
+        placeholder: juris,
+    });
+
     $('.select2_country').select2({
         placeholder: country,
+    });
+
+    $('.select2_useLang').select2({
+        placeholder: useLang,
+    });
+
+    $('.select2_strongPoint').select2({
+        placeholder: strongPoint,
+    });
+
+    $('.select2_businessField').select2({
+        placeholder: businessField,
+    });
+
+    $('.select2_lawField').select2({
+        placeholder: lawField,
+    });
+
+    $('.select2_lawField2').select2({
+        placeholder: lawField2,
+    });
+
+    $('.select2_area').select2({
+        placeholder: area,
+    });
+
+    $('.select2_countryLawField').select2({
+        placeholder: countryLawField,
+    });
+
+    $('.select2_field').select2({
+        placeholder: field,
     });
 
     $('.scrollArea').slimScroll({
@@ -124,3 +171,4 @@ $(function(){
 
 });
 </script>
+<script src="/js/_edit.js"></script>

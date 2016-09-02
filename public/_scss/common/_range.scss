@@ -1,0 +1,60 @@
+@import '_mixin';
+
+.range{
+    position: relative;
+    @include flex($a:center);
+    background: #fff;
+    @include arrow;
+    cursor: pointer;
+
+    span{
+        @include flex($a:center, $j:center);
+        padding: .4rem .6rem;
+        border-radius: .2rem;
+        margin-left: .7rem;
+        font-size: 1.3rem;
+        color: #fff;
+        background: #bbb;
+        line-height: 1;
+    }
+    @include m(isOpen){
+        .range_content{
+            display: block;
+        }
+    }
+    @include e(content){
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        @include m(up){
+            top: auto;
+            bottom: 100%;
+        }
+        display: none;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem .6rem;
+        background: #fff;
+        @include border;
+        font-size: 1.2rem;
+        input[type="checkbox"]{
+            @include checkbox($size: 1.1rem, $padding-left: 1.8rem, $height: 1.5rem, $font-size: 1.1rem);
+            + label{
+                margin-top: .6rem;
+                margin-left: 1.8rem;
+            }
+        }
+        input[type="radio"]{
+            @include radio($size: 1.1rem, $padding-left: 1.8rem, $height: 1.5rem, $font-size: 1.1rem);
+            + label{
+                margin-top: .6rem;
+            }
+            &:first-child{
+                +label{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

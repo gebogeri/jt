@@ -40,6 +40,9 @@ $green: #44d095;
         .ttl{
             width: $ttl;
         }
+        @include e(back){
+            width: $ttl
+        }
     }
     .footer{
         padding-left: 16rem * $c;
@@ -51,7 +54,7 @@ $green: #44d095;
 }
 
 @mixin ff{
-    font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif;
 }
 
 @mixin reset{
@@ -91,7 +94,7 @@ $green: #44d095;
     }
 }
 
-@mixin arrow{
+@mixin arrow($pos: .8rem){
     position: relative;
     @include m(isOpen){
         &:after{
@@ -103,7 +106,7 @@ $green: #44d095;
         position: absolute;
         top:0;
         bottom:0;
-        right: .8rem;
+        right: $pos;
         width: .9rem;
         height: .6rem;
         margin: auto;
@@ -111,7 +114,7 @@ $green: #44d095;
     }
 }
 
-@mixin select2($w:100%,$m:false,$h:3.1rem,$tags:false,$t:true,$l:false,$box-sizing: content-box){
+@mixin select2($w:100%,$m:false,$h:3.3rem,$tags:false,$t:true,$l:false,$mr:false,$box-sizing: content-box){
     @at-root & + .select2-container {
         box-sizing: $box-sizing;
         min-width: $w;
@@ -130,8 +133,11 @@ $green: #44d095;
             display: block;
             margin: $m 0;
         }
+        @if $mr != false{
+            margin-right: $mr;
+        }
         font-size: 1.3rem;
-        @include arrow;
+        @include arrow($pos:1.1rem);
         &.select2-container--open{
             position: relative;
             &:after{
@@ -169,7 +175,7 @@ $green: #44d095;
     select{
         box-sizing: border-box;
         width: 100%;
-        height: 3.3rem;
+        height: 3.4rem;
         padding: 0 2.3rem 0 1rem;
     }
     &:before{
@@ -187,45 +193,202 @@ $green: #44d095;
 }
 
 
-@mixin balloon($top:2.3rem, $right:-1.9rem, $w: 12rem){
-    position: absolute;
-    top: $top;
-    right: $right;
-    display: none;
-    width: $w;
-    border: .1rem solid #bbb;
-    cursor: default;
-    background: #fff;
-    line-height: 2.3rem;
-    font-size: 1.2rem;
-    a{
-        text-decoration: none;
-        color: #333;
-    }
-    &:before,
-    &:after{
-        bottom: 100%;
-        left: 7.6rem;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-    }
-    &:before{
-        border-color: transparent;
-        border-bottom-color: #bbb;
-        border-width: .7rem;
-        margin-left: -.7rem;
-    }
-    &:after{
-        border-color: transparent;
-        border-bottom-color: #fff;
-        border-width: .6rem;
-        margin-left: -.6rem;
-    }
-    @include m(isOpen){
+@mixin input($type: text, $w: 100%){
+    input[type="#{$type}"]{
         display: block;
+        width: $w;
+        height: 3.5rem;
+        @include border;
+    }
+}
+
+@mixin checkbox($font-size: 1.2rem, $size: 1.3rem, $height:3rem, $padding-left:2rem){
+    display: none;
+    +label{
+        position: relative;
+        display: block;
+        height: $height;
+        padding-left: $padding-left;
+        font-size: $font-size;
+        line-height: $height;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: opacity .1s;
+        }
+        &:before{
+            left: 0;
+            box-sizing: border-box;
+            border: .1rem solid #bbb;
+            width: $size;
+            height: $size;
+        }
+        &:after{
+            left: .2rem;
+            width: #{$size - .4rem};
+            height: #{$size - .4rem};
+            background: $green;
+            opacity: 0;
+        }
+    }
+    &:checked{
+        +label:after{
+            opacity: 1;
+        }
+    }
+}
+
+@mixin radio($font-size: 1.2rem, $size: 1.3rem, $height:3rem, $padding-left:2rem){
+    display: none;
+    +label{
+        position: relative;
+        display: block;
+        height: $height;
+        padding-left: $padding-left;
+        font-size: $font-size;
+        line-height: $height;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            border-radius: 100%;
+            margin: auto;
+            transition: opacity .1s;
+        }
+        &:before{
+            left: 0;
+            box-sizing: border-box;
+            border: .1rem solid #bbb;
+            width: $size;
+            height: $size;
+        }
+        &:after{
+            left: .2rem;
+            width: #{$size - .4rem};
+            height: #{$size - .4rem};
+            background: $green;
+            opacity: 0;
+        }
+    }
+    &:checked{
+        +label:after{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+@mixin balloon($top:2.3rem, $right:-1.9rem, $w: 12rem, $blue: false){
+    @if $blue == true{
+        &:not(.balloon):hover{
+            .balloon{
+                display: block;
+            }
+        }
+        .balloon{
+            $bb: #66d7db;
+            position: absolute;
+            top: $top;
+            right: $right;
+            z-index: 610;
+            display: none;
+            padding: 1.5rem 1rem;
+            width: $w;
+            line-height: 2.3rem;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: normal;
+            background: $bb;
+            &:before{
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                right: #{.1rem - $right};
+                height: 0;
+                width: 0;
+                border: .7rem solid transparent;
+                border-bottom-color: $bb;
+                margin-left: -.7rem;
+                pointer-events: none;
+            }
+        }
+    }
+    @else{
+        position: absolute;
+        top: $top;
+        right: $right;
+        display: none;
+        width: $w;
+        border: .1rem solid #bbb;
+        cursor: default;
+        background: #fff;
+        line-height: 2.3rem;
+        font-size: 1.2rem;
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        &:before,
+        &:after{
+            bottom: 100%;
+            left: 7.6rem;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &:before{
+            border-color: transparent;
+            border-bottom-color: #bbb;
+            border-width: .7rem;
+            margin-left: -.7rem;
+        }
+        &:after{
+            border-color: transparent;
+            border-bottom-color: #fff;
+            border-width: .6rem;
+            margin-left: -.6rem;
+        }
+        @include m(isOpen){
+            display: block;
+        }
+
+    }
+}
+
+
+@mixin question($name: btn, $width: 20.4rem, $space: -6.5rem, $margin:false){
+    @include e(#{$name}){
+        position: relative;
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+        @if $margin != false{
+            margin: $margin;
+        }
+        border-radius: 100%;
+        background: #66d7db;
+        &:before{
+            content: "?";
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding-right: .1rem;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+        @include balloon($top:2.5rem, $right: $space, $w: $width, $blue: true);
     }
 }

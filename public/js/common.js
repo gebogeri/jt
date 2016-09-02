@@ -82,6 +82,14 @@ $(function(){
         $(this).closest('.modal').toggleClass('isOpen');
     });
 
+
+    // フォーム表示色
+    /////////////////////////
+    $doc.on('change', 'select', function(){
+        if($(this).not(':first-child')){
+            $(this).css('color', '#333');
+        }
+    });
 });
 
 
