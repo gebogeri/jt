@@ -64,6 +64,48 @@
     }
 
     @include e(detail){
+        @include e(auth){
+            @include flex($a:center, $j:space-between);
+            width: 62rem;
+            padding: 1.1rem 0 1.4rem;
+            @include border(top);
+            margin: -1rem auto 1rem;
+            @include e(icon){
+                position: relative;
+                width: 5.5rem;
+                height: 5.5rem;
+                border-radius: 100%;
+                overflow: hidden;
+                background: #eee;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: auto;
+                }
+            }//icon
+            @include e(prof){
+                width: 55rem;
+                p{
+                    max-width: 100%;
+                    @include texthide;
+                }
+                @include e(name){
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+                @include e(company){
+                    font-size: 1.1rem;
+                    span{
+                        margin-right: 1.4rem;
+                        font-weight: bold;
+                    }
+                }//comapny
+            }//prof
+        }//auth
         @include e(info){
             @include flex($a:flex-start);
             width: 62rem;
@@ -95,6 +137,12 @@
                     }
                     @include m(link){
                         width: 36.5rem;
+                        dd{
+                            width: 29.7rem;
+                            a{
+                                width: 29.7rem;
+                            }
+                        }
                     }
                     dt{
                         width: 6.8rem;
@@ -107,8 +155,11 @@
                         font-size: 1.2rem;
                         @include texthide;
                         a{
+                            display: inline-block;
+                            vertical-align: bottom;
                             color:#333;
                             transition: color .1s;
+                            @include texthide;
                             &:hover{
                                 color: $green;
                             }
@@ -333,12 +384,23 @@
                 color: #bbb!important;
             }
         }
+        @include e(savedate){
+            display: block;
+            padding-left: 2rem;
+            @include border(bottom);
+            font-size: 1.1rem;
+            @include ff;
+            color: #bbb;
+            line-height: 1.8rem;
+            background: #eee;
+        }
         @include e(meta){
             padding: 1.6rem 1.8rem 0;
             @include flex($a:center, $j:space-between);
             @include e(info){
-                font-size: 1rem;
+                font-size: 1.1rem;
                 color:#bbb;
+                @include ff;
                 a{
                     display: inline-block;
                     max-width: 44rem;
@@ -347,7 +409,6 @@
                     color:#bbb;
                 }
                 @include m(link){
-                    font-size: 1.1rem;
                     a{
                         margin-left: 1.3rem;
                     }
@@ -390,13 +451,13 @@
             }//btn
         }//meta
         @include e(head){
-            @include flex($a:center, $j:space-between);
+            @include flex($a:center, $j:space-between, $w: wrap);
             padding: 0 0 1.3rem;
             @include border(bottom);
             margin: .2rem 1.8rem 0;
             @include e(ttl){
                 @include flex($a:center);
-                max-width: 43rem;
+                width: 43rem;
                 margin: 0;
                 font-size: 1.4rem;
                 @include texthide;
@@ -421,6 +482,68 @@
                 text-decoration: none;
                 background: url(/img/common/btn_detail.png) left center no-repeat;
             }
+            @include e(auth){
+                @include flex($a:center, $j:space-between);
+                width: 35.5rem;
+                @include e(icon){
+                    position: relative;
+                    width: 1.8rem;
+                    margin-left: .3rem;
+                    height: 1.8rem;
+                    border-radius: 100%;
+                    background: #eee;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        margin: auto;
+                    }
+                }
+                p{
+                    width: 33rem;
+                    color: #bbb;
+                    font-size: 1.1rem;
+                    @include texthide;
+                    span{
+                        margin-right: .3rem;
+                        color: #333;
+                        font-weight: bold;
+                    }
+                }
+            }//auth
+            @include e(btn){
+                @include flex($a:center, $j:space-between);
+                width: 10rem;
+                @include m(link){
+                    width: 7.4rem;
+                }
+                >a{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    cursor: pointer;
+                    width: 10rem;
+                    @include m(share){
+                        background-image: url(/img/common/btn_share_02.png);
+                    }
+                    @include m(link){
+                        background-image: url(/img/common/btn_detail.png);
+                    }
+                    @include m(save){
+                        background-image: url(/img/knowledge/icon_download.png);
+                    }
+                    @include m(rec){
+                        background-image: url(/img/common/icon_medal.png);
+                    }
+                }
+            }//btn
+
         }//head
         @include e(text){
             padding: 1.8rem 0 1.5rem;
@@ -484,9 +607,18 @@
                     @include m(part){
                         width: 18.5rem;
                         padding-right: 3rem;
+                        dd{
+                            max-width: 11.5rem;
+                        }
                     }
                     @include m(link){
                         width: 36.5rem;
+                        dd{
+                            max-width: 29rem;
+                            a{
+                                max-width: 29rem;
+                            }
+                        }
                     }
                     dt{
                         width: 7rem;
@@ -495,13 +627,14 @@
                         color: #bbb;
                     }
                     dd{
-                        max-width: 11.5rem;
                         margin: 0;
                         font-size: 1.2rem;
-                        @include texthide;
                         a{
+                            display: inline-block;
+                            vertical-align: bottom;
                             color:#333;
                             transition: color .1s;
+                            @include texthide;
                             &:hover{
                                 color: $green;
                             }
@@ -673,7 +806,6 @@
                     }
                 }//ttl
                 @include e(content){
-                    margin-top: .5rem;
                     @include e(ttl, desc){
                         max-width: 42rem;
                         @include texthide;
@@ -687,6 +819,9 @@
                     @include flex($a:center, $j:space-between);
                     width: 7rem;
                     margin-bottom: .8rem;
+                    @include m(saved){
+                        width: 10rem;
+                    }
                     >span,
                     >a{
                         width: 1.6rem;
@@ -713,6 +848,12 @@
                         @include m(link){
                             background-image: url(/img/common/btn_detail.png);
                         }
+                        @include m(save){
+                            background-image: url(/img/knowledge/icon_download.png);
+                        }
+                        @include m(rec){
+                            background-image: url(/img/common/icon_medal.png);
+                        }
                     }
                 }//icon
             }//main
@@ -726,7 +867,7 @@
             line-height: 3.5rem;
             background: #bbb;
         }
-    }
+    }//latest
     @include e(lawyer){
         @include e(container){
             width: 62rem;

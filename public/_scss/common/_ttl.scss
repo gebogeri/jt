@@ -140,6 +140,11 @@
                     height: 1.8rem;
                     background: url(/img/common/icon_medal.png) center center no-repeat;
                 }//post
+                @include m(save){
+                    display: block;
+                    height: 1.6rem;
+                    background: url(/img/knowledge/icon_download.png) center center no-repeat;
+                }
                 @include m(setting){
                     display: block;
                     background: url(/img/common/btn_gear.png) center center no-repeat;

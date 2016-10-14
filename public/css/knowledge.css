@@ -61,6 +61,14 @@
 .knowledge_content { width: 62rem; margin: 0 auto; }
 .knowledge_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: cenrer; align-items: cenrer; font-size: 1.4rem; margin: 3.6rem auto .7rem; }
 .knowledge_ttl_addBtn { display: block; padding-left: 2.4rem; color: #bbb; font-size: 1.2rem; line-height: 1.8rem; font-weight: normal; background: url(/img/setting/btn_circle_plus.png) 0 0 no-repeat; cursor: pointer; }
+.knowledge_detail_auth { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 62rem; padding: 1.1rem 0 1.4rem; border-top: .1rem solid #e5e8eb; margin: -1rem auto 1rem; }
+.knowledge_detail_auth_icon { position: relative; width: 5.5rem; height: 5.5rem; border-radius: 100%; overflow: hidden; background: #eee; }
+.knowledge_detail_auth_icon img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; margin: auto; }
+.knowledge_detail_auth_prof { width: 55rem; }
+.knowledge_detail_auth_prof p { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_auth_prof_name { font-size: 1.3rem; font-weight: bold; }
+.knowledge_detail_auth_prof_company { font-size: 1.1rem; }
+.knowledge_detail_auth_prof_company span { margin-right: 1.4rem; font-weight: bold; }
 .knowledge_detail_info { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; width: 62rem; padding: 2rem 0 3rem; border-top: .1rem solid #e5e8eb; border-bottom: .1rem solid #e5e8eb; margin: -1rem auto 2.4rem; }
 .knowledge_detail_info_link { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; border-bottom: .1rem solid #e5e8eb; }
 .knowledge_detail_info_link dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0 0 2rem; }
@@ -69,9 +77,11 @@
 .knowledge_detail_info_link dl.part.right dt { width: 11rem; padding-right: 1rem; text-align: right; }
 .knowledge_detail_info_link dl.part.right dd { max-width: 12rem; }
 .knowledge_detail_info_link dl.link { width: 36.5rem; }
+.knowledge_detail_info_link dl.link dd { width: 29.7rem; }
+.knowledge_detail_info_link dl.link dd a { width: 29.7rem; }
 .knowledge_detail_info_link dl dt { width: 6.8rem; font-size: 1.1rem; font-weight: bold; color: #bbb; }
 .knowledge_detail_info_link dl dd { margin: 0; font-size: 1.2rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.knowledge_detail_info_link dl dd a { color: #333; transition: color .1s; }
+.knowledge_detail_info_link dl dd a { display: inline-block; vertical-align: bottom; color: #333; transition: color .1s; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .knowledge_detail_info_link dl dd a:hover { color: #44d095; }
 .knowledge_detail_info_bottom { display: -webkit-flex; display: flex; }
 .knowledge_detail_info_bottom dl { width: 18.3rem; padding-right: 2.7rem; margin: 2rem 0 -1rem; }
@@ -118,10 +128,10 @@
 .knowledge_item { border: .1rem solid #e5e8eb; margin-bottom: .9rem; background: #fff; }
 .knowledge_item a:not(.knowledge_item_head_link):hover { color: #44d095 !important; }
 .knowledge_item.draft * { color: #bbb !important; }
+.knowledge_item_savedate { display: block; padding-left: 2rem; border-bottom: .1rem solid #e5e8eb; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; color: #bbb; line-height: 1.8rem; background: #eee; }
 .knowledge_item_meta { padding: 1.6rem 1.8rem 0; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
-.knowledge_item_meta_info { font-size: 1rem; color: #bbb; }
+.knowledge_item_meta_info { font-size: 1.1rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
 .knowledge_item_meta_info a { display: inline-block; max-width: 44rem; vertical-align: bottom; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #bbb; }
-.knowledge_item_meta_info.link { font-size: 1.1rem; }
 .knowledge_item_meta_info.link a { margin-left: 1.3rem; }
 .knowledge_item_meta_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 4.2rem; }
 .knowledge_item_meta_btn span.label { color: #333 !important; }
@@ -138,11 +148,23 @@
 .knowledge_item_meta_btn > span.setting .balloon a, .knowledge_item_meta_btn > a.setting .balloon a { color: #333 !important; }
 .knowledge_item_meta_btn > span.setting .balloon a:hover, .knowledge_item_meta_btn > a.setting .balloon a:hover { color: #44d095 !important; }
 .knowledge_item_meta_btn > span.share, .knowledge_item_meta_btn > a.share { background-image: url(/img/common/btn_share_02.png); }
-.knowledge_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 0 0 1.3rem; border-bottom: .1rem solid #e5e8eb; margin: .2rem 1.8rem 0; }
-.knowledge_item_head_ttl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; max-width: 43rem; margin: 0; font-size: 1.4rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; -webkit-flex-wrap: wrap; flex-wrap: wrap; padding: 0 0 1.3rem; border-bottom: .1rem solid #e5e8eb; margin: .2rem 1.8rem 0; }
+.knowledge_item_head_ttl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; width: 43rem; margin: 0; font-size: 1.4rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .knowledge_item_head_ttl span:not(.draft_label) { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .knowledge_item_head_ttl span.draft_label { padding: 0 .5rem; border-radius: .2rem; margin-right: 1rem; color: #fff !important; font-size: 1rem; line-height: 1.7rem; background: #bbb; }
 .knowledge_item_head_link { height: 1.6rem; padding-left: 1.9rem; font-size: 1.2rem; color: #bbb; text-decoration: none; background: url(/img/common/btn_detail.png) left center no-repeat; }
+.knowledge_item_head_auth { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 35.5rem; }
+.knowledge_item_head_auth_icon { position: relative; width: 1.8rem; margin-left: .3rem; height: 1.8rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.knowledge_item_head_auth_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.knowledge_item_head_auth p { width: 33rem; color: #bbb; font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_head_auth p span { margin-right: .3rem; color: #333; font-weight: bold; }
+.knowledge_item_head_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 10rem; }
+.knowledge_item_head_btn.link { width: 7.4rem; }
+.knowledge_item_head_btn > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; width: 10rem; }
+.knowledge_item_head_btn > a.share { background-image: url(/img/common/btn_share_02.png); }
+.knowledge_item_head_btn > a.link { background-image: url(/img/common/btn_detail.png); }
+.knowledge_item_head_btn > a.save { background-image: url(/img/knowledge/icon_download.png); }
+.knowledge_item_head_btn > a.rec { background-image: url(/img/common/icon_medal.png); }
 .knowledge_item_text { padding: 1.8rem 0 1.5rem; border-bottom: .1rem solid #e5e8eb; margin: 0 1.8rem; font-size: 1.3rem; line-height: 2.4rem; }
 .knowledge_item_text a { color: #333; margin-left: 1rem; }
 .knowledge_item_content { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; width: 58rem; padding: 1.5rem 0; margin: 0 auto; }
@@ -155,10 +177,13 @@
 .knowledge_item_info_link { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0 1.8rem; border-bottom: .1rem solid #e5e8eb; }
 .knowledge_item_info_link dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
 .knowledge_item_info_link dl.part { width: 18.5rem; padding-right: 3rem; }
+.knowledge_item_info_link dl.part dd { max-width: 11.5rem; }
 .knowledge_item_info_link dl.link { width: 36.5rem; }
+.knowledge_item_info_link dl.link dd { max-width: 29rem; }
+.knowledge_item_info_link dl.link dd a { max-width: 29rem; }
 .knowledge_item_info_link dl dt { width: 7rem; font-size: 1.1rem; font-weight: bold; color: #bbb; }
-.knowledge_item_info_link dl dd { max-width: 11.5rem; margin: 0; font-size: 1.2rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.knowledge_item_info_link dl dd a { color: #333; transition: color .1s; }
+.knowledge_item_info_link dl dd { margin: 0; font-size: 1.2rem; }
+.knowledge_item_info_link dl dd a { display: inline-block; vertical-align: bottom; color: #333; transition: color .1s; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .knowledge_item_info_link dl dd a:hover { color: #44d095; }
 .knowledge_item_info_detail { display: -webkit-flex; display: flex; margin: 0 1.8rem; border-bottom: .1rem solid #e5e8eb; }
 .knowledge_item_info_detail dl { width: 17.3rem; padding-right: 2.7rem; }
@@ -192,11 +217,11 @@
 .knowledge_latest_item_main_ttl.draft { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; color: #bbb; }
 .knowledge_latest_item_main_ttl.draft span.draft_label { height: 1.7rem; padding: 0 .5rem; border-radius: .2rem; margin-right: .7rem; color: #fff; font-size: 1rem; line-height: 1.7rem; background: #bbb; }
 .knowledge_latest_item_main_ttl.draft span.draft_label + span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.knowledge_latest_item_main_content { margin-top: .5rem; }
 .knowledge_latest_item_main_content_ttl { max-width: 42rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; }
 .knowledge_latest_item_main_content_desc { max-width: 42rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; }
 .knowledge_latest_item_main_content_ttl { font-weight: bold; }
 .knowledge_latest_item_main_icon { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 7rem; margin-bottom: .8rem; }
+.knowledge_latest_item_main_icon.saved { width: 10rem; }
 .knowledge_latest_item_main_icon > span, .knowledge_latest_item_main_icon > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
 .knowledge_latest_item_main_icon > span.setting, .knowledge_latest_item_main_icon > a.setting { background-image: url(/img/common/btn_gear.png); }
 .knowledge_latest_item_main_icon > span.setting:hover, .knowledge_latest_item_main_icon > a.setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
@@ -209,6 +234,8 @@
 .knowledge_latest_item_main_icon > span.setting .balloon.isOpen, .knowledge_latest_item_main_icon > a.setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
 .knowledge_latest_item_main_icon > span.share, .knowledge_latest_item_main_icon > a.share { background-image: url(/img/common/btn_share_02.png); }
 .knowledge_latest_item_main_icon > span.link, .knowledge_latest_item_main_icon > a.link { background-image: url(/img/common/btn_detail.png); }
+.knowledge_latest_item_main_icon > span.save, .knowledge_latest_item_main_icon > a.save { background-image: url(/img/knowledge/icon_download.png); }
+.knowledge_latest_item_main_icon > span.rec, .knowledge_latest_item_main_icon > a.rec { background-image: url(/img/common/icon_medal.png); }
 .knowledge_latest_btn { display: block; height: 3.5rem; font-size: 1.2rem; color: #fff; text-align: center; line-height: 3.5rem; background: #bbb; }
 .knowledge_lawyer { box-sizing: border-box; max-height: 70rem; border: .1rem solid #e5e8eb; margin: 0 auto; background: #fff; }
 .knowledge_lawyer_container { width: 62rem; margin: 0 auto; }
