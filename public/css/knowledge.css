@@ -1,0 +1,364 @@
+@charset "UTF-8";
+.pager { display: -webkit-flex; display: flex; width: 49rem; margin: 2rem auto 0; }
+.pager li a, .pager li span { display: block; width: 3.5rem; height: 3.5rem; font-size: 1.3rem; line-height: 3.5rem; text-align: center; text-decoration: none; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; color: #bbb; background: #fff; }
+.pager li a.isSelected, .pager li span.isSelected { color: #fff; background: #44d095; }
+.pager li a:hover { opacity: .8; }
+.pager li img { opacity: 1; }
+
+.knowledge.index { min-width: 96rem; }
+.knowledge.index #content { padding-left: 16rem; min-width: 96rem; max-width: 108rem; }
+.knowledge.index .header { min-width: 96rem; }
+.knowledge.index .header_inner { min-width: 96rem; max-width: 108rem; }
+.knowledge.index .headline { min-width: 96rem; max-width: 108rem; padding-left: 16rem; }
+.knowledge.index .headline_inner { max-width: 92rem; }
+.knowledge.index .headline .ttl { width: 62rem; }
+.knowledge.index .headline_back { width: 62rem; }
+.knowledge.index .footer { padding-left: 16rem; }
+.knowledge.index .footer_inner { min-width: 80rem; max-width: 92rem; }
+.knowledge.edit { min-width: 96rem; }
+.knowledge.edit #content { padding-left: 16rem; min-width: 96rem; max-width: 108rem; }
+.knowledge.edit .header { min-width: 96rem; }
+.knowledge.edit .header_inner { min-width: 96rem; max-width: 108rem; }
+.knowledge.edit .headline { min-width: 96rem; max-width: 108rem; padding-left: 16rem; }
+.knowledge.edit .headline_inner { max-width: 92rem; }
+.knowledge.edit .headline .ttl { width: 62rem; }
+.knowledge.edit .headline_back { width: 62rem; }
+.knowledge.edit .footer { padding-left: 16rem; }
+.knowledge.edit .footer_inner { min-width: 80rem; max-width: 92rem; }
+.knowledge.detail { min-width: 96rem; }
+.knowledge.detail #content { padding-left: 16rem; min-width: 96rem; max-width: 108rem; }
+.knowledge.detail .header { min-width: 96rem; }
+.knowledge.detail .header_inner { min-width: 96rem; max-width: 108rem; }
+.knowledge.detail .headline { min-width: 96rem; max-width: 108rem; padding-left: 16rem; }
+.knowledge.detail .headline_inner { max-width: 92rem; }
+.knowledge.detail .headline .ttl { width: 62rem; }
+.knowledge.detail .headline_back { width: 62rem; }
+.knowledge.detail .footer { padding-left: 16rem; }
+.knowledge.detail .footer_inner { min-width: 80rem; max-width: 92rem; }
+.knowledge.detail { background: #fff; }
+.knowledge.page { min-width: 96rem; }
+.knowledge.page #content { padding-left: 32rem; min-width: 96rem; max-width: 108rem; }
+.knowledge.page .header { min-width: 96rem; }
+.knowledge.page .header_inner { min-width: 96rem; max-width: 108rem; }
+.knowledge.page .headline { min-width: 96rem; max-width: 108rem; padding-left: 32rem; }
+.knowledge.page .headline_inner { max-width: 76rem; }
+.knowledge.page .headline .ttl { width: 58rem; }
+.knowledge.page .headline_back { width: 58rem; }
+.knowledge.page .footer { padding-left: 32rem; }
+.knowledge.page .footer_inner { min-width: 64rem; max-width: 76rem; }
+.knowledge_header { padding: 2rem 0; }
+.knowledge_header_search { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 58rem; padding: .5rem 0; margin: 0 auto; }
+.knowledge_header_search_submit { position: relative; width: 1.7rem; height: 1.7rem; background: url(/img/common/icon_search_contact.png) center center no-repeat; background-size: cover; }
+.knowledge_header_search_submit input[type="submit"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; opacity: 0; }
+.knowledge_header_search_field + .select2-container { box-sizing: border-box; min-width: 56.2rem; max-width: 56.2rem; font-size: 1.3rem; }
+.knowledge_header_search_field + .select2-container .select2-search__field { font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.knowledge_header_search_field + .select2-container.select2-container--open { position: relative; }
+.knowledge_header_search_field + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.knowledge_header_search_field + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.knowledge_header_search_field + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.knowledge_header_search_field + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.knowledge_header_search_field.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.knowledge_content { width: 62rem; margin: 0 auto; }
+.knowledge_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: cenrer; align-items: cenrer; font-size: 1.4rem; margin: 3.6rem auto .7rem; }
+.knowledge_ttl_addBtn { display: block; padding-left: 2.4rem; color: #bbb; font-size: 1.2rem; line-height: 1.8rem; font-weight: normal; background: url(/img/setting/btn_circle_plus.png) 0 0 no-repeat; cursor: pointer; }
+.knowledge_detail_info { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; width: 62rem; padding: 2rem 0 3rem; border-top: .1rem solid #e5e8eb; border-bottom: .1rem solid #e5e8eb; margin: -1rem auto 2.4rem; }
+.knowledge_detail_info_link { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; border-bottom: .1rem solid #e5e8eb; }
+.knowledge_detail_info_link dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0 0 2rem; }
+.knowledge_detail_info_link dl.part { width: 21rem; padding-right: 3rem; }
+.knowledge_detail_info_link dl.part.right { width: 24rem; padding: 0; }
+.knowledge_detail_info_link dl.part.right dt { width: 11rem; padding-right: 1rem; text-align: right; }
+.knowledge_detail_info_link dl.part.right dd { max-width: 12rem; }
+.knowledge_detail_info_link dl.link { width: 36.5rem; }
+.knowledge_detail_info_link dl dt { width: 6.8rem; font-size: 1.1rem; font-weight: bold; color: #bbb; }
+.knowledge_detail_info_link dl dd { margin: 0; font-size: 1.2rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_info_link dl dd a { color: #333; transition: color .1s; }
+.knowledge_detail_info_link dl dd a:hover { color: #44d095; }
+.knowledge_detail_info_bottom { display: -webkit-flex; display: flex; }
+.knowledge_detail_info_bottom dl { width: 18.3rem; padding-right: 2.7rem; margin: 2rem 0 -1rem; }
+.knowledge_detail_info_bottom dl:last-child { width: 20rem; padding: 0; }
+.knowledge_detail_info_bottom dl dt { color: #bbb; font-size: 1rem; line-height: 1.1em; }
+.knowledge_detail_info_bottom dl dd { font-size: 1.1rem; margin: 0; }
+.knowledge_detail_info_main { box-sizing: border-box; width: 38rem; padding-right: 2rem; }
+.knowledge_detail_info_main dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0; }
+.knowledge_detail_info_main dl + dl { margin-top: 1rem; }
+.knowledge_detail_info_main dl dt { width: 7rem; font-size: 1.1rem; color: #bbb; font-weight: bold; }
+.knowledge_detail_info_main dl dd { width: 29rem; margin: 0; font-size: 1.2rem; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_info_main dl dd a { color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_info_main dl dd a:hover { color: #44d095; }
+.knowledge_detail_info_main dl dd span { margin-left: .3rem; font-size: 1.1rem; color: #bbb; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_info_meta { box-sizing: border-box; width: 24rem; padding-left: 2rem; border-left: .1rem solid #e5e8eb; }
+.knowledge_detail_info_meta span { display: block; font-size: .8rem; line-height: 1.2; color: #bbb; }
+.knowledge_detail_info_meta p { font-size: 1.1rem; line-height: 1.5; }
+.knowledge_detail_info_meta p + span { margin-top: .8rem; }
+.knowledge_detail_content { width: 62rem; margin: 0 auto 2.7rem; }
+.knowledge_detail_content p { font-size: 1.3rem; line-height: 2.4rem; }
+.knowledge_detail_content p + p { margin-top: 2.4rem; }
+.knowledge_detail_content img { display: block; max-width: 57.5rem; margin: 2.4rem auto; }
+.knowledge_detail_content video { display: block; width: 57.5rem; height: 32.5rem; border: .1rem solid #e5e8eb; margin: 3.4rem auto; }
+.knowledge_detail_related { display: -webkit-flex; display: flex; width: 62rem; padding: 1.6rem 0; border-top: .1rem solid #e5e8eb; margin: 4.5rem auto 0; }
+.knowledge_detail_related_ttl { margin: 0 0 1.2rem; font-size: 1.3rem; color: #bbb; }
+.knowledge_detail_related_file { box-sizing: border-box; width: 50%; border-right: .1rem solid #e5e8eb; padding-right: 2rem; }
+.knowledge_detail_related_file a { padding-left: 2.2rem; background: url(/img/knowledge/icon_pdf.png) left center no-repeat; }
+.knowledge_detail_related_link { box-sizing: border-box; width: 50%; padding-left: 2rem; }
+.knowledge_detail_related li { margin-bottom: .8rem; font-size: 1.2rem; }
+.knowledge_detail_related li a { display: inline-block; color: #333; line-height: 1.6rem; }
+.knowledge_detail_related li a:hover { color: #44d095; }
+.knowledge_detail_lawyer { width: 62rem; padding-top: 2.5rem; border-top: .1rem solid #e5e8eb; margin: 0 auto; }
+.knowledge_detail_lawyer_ttl { margin: 0 0 1.5rem; color: #bbb; font-size: 1.3rem; }
+.knowledge_detail_lawyer_wrap { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+.knowledge_detail_lawyer_item { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; width: 30rem; margin-bottom: 1.4rem; }
+.knowledge_detail_lawyer_item_icon { position: relative; width: 8rem; height: 8rem; border-radius: 100%; overflow: hidden; }
+.knowledge_detail_lawyer_item_icon img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.knowledge_detail_lawyer_item_main { width: 20.5rem; padding-bottom: .8rem; border-bottom: .1rem solid #e5e8eb; }
+.knowledge_detail_lawyer_item_name { margin: 0 0 .3rem; font-size: 1.3rem; font-weight: bold; }
+.knowledge_detail_lawyer_item_company { font-size: 1.1rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_lawyer_item_pos { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_detail_lawyer_item_adm { margin-top: .4rem; font-size: 1rem; line-height: 1.2rem; color: #bbb; }
+.knowledge_detail_lawyer_item_meta { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item { border: .1rem solid #e5e8eb; margin-bottom: .9rem; background: #fff; }
+.knowledge_item a:not(.knowledge_item_head_link):hover { color: #44d095 !important; }
+.knowledge_item.draft * { color: #bbb !important; }
+.knowledge_item_meta { padding: 1.6rem 1.8rem 0; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.knowledge_item_meta_info { font-size: 1rem; color: #bbb; }
+.knowledge_item_meta_info a { display: inline-block; max-width: 44rem; vertical-align: bottom; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #bbb; }
+.knowledge_item_meta_info.link { font-size: 1.1rem; }
+.knowledge_item_meta_info.link a { margin-left: 1.3rem; }
+.knowledge_item_meta_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 4.2rem; }
+.knowledge_item_meta_btn span.label { color: #333 !important; }
+.knowledge_item_meta_btn > span, .knowledge_item_meta_btn > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
+.knowledge_item_meta_btn > span.setting, .knowledge_item_meta_btn > a.setting { background-image: url(/img/common/btn_gear.png); }
+.knowledge_item_meta_btn > span.setting:hover, .knowledge_item_meta_btn > a.setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.knowledge_item_meta_btn > span.setting .balloon, .knowledge_item_meta_btn > a.setting .balloon { position: absolute; top: 2.6rem; right: -1.9rem; display: none; width: 12rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; z-index: 10; box-sizing: border-box; padding: 2rem 1.2rem 1.3rem; }
+.knowledge_item_meta_btn > span.setting .balloon a, .knowledge_item_meta_btn > a.setting .balloon a { text-decoration: none; color: #333; }
+.knowledge_item_meta_btn > span.setting .balloon a:hover, .knowledge_item_meta_btn > a.setting .balloon a:hover { color: #44d095; }
+.knowledge_item_meta_btn > span.setting .balloon:before, .knowledge_item_meta_btn > span.setting .balloon:after, .knowledge_item_meta_btn > a.setting .balloon:before, .knowledge_item_meta_btn > a.setting .balloon:after { bottom: 100%; left: 9.2rem; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.knowledge_item_meta_btn > span.setting .balloon:before, .knowledge_item_meta_btn > a.setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.knowledge_item_meta_btn > span.setting .balloon:after, .knowledge_item_meta_btn > a.setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.knowledge_item_meta_btn > span.setting .balloon.isOpen, .knowledge_item_meta_btn > a.setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.knowledge_item_meta_btn > span.setting .balloon a, .knowledge_item_meta_btn > a.setting .balloon a { color: #333 !important; }
+.knowledge_item_meta_btn > span.setting .balloon a:hover, .knowledge_item_meta_btn > a.setting .balloon a:hover { color: #44d095 !important; }
+.knowledge_item_meta_btn > span.share, .knowledge_item_meta_btn > a.share { background-image: url(/img/common/btn_share_02.png); }
+.knowledge_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 0 0 1.3rem; border-bottom: .1rem solid #e5e8eb; margin: .2rem 1.8rem 0; }
+.knowledge_item_head_ttl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; max-width: 43rem; margin: 0; font-size: 1.4rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_head_ttl span:not(.draft_label) { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_head_ttl span.draft_label { padding: 0 .5rem; border-radius: .2rem; margin-right: 1rem; color: #fff !important; font-size: 1rem; line-height: 1.7rem; background: #bbb; }
+.knowledge_item_head_link { height: 1.6rem; padding-left: 1.9rem; font-size: 1.2rem; color: #bbb; text-decoration: none; background: url(/img/common/btn_detail.png) left center no-repeat; }
+.knowledge_item_text { padding: 1.8rem 0 1.5rem; border-bottom: .1rem solid #e5e8eb; margin: 0 1.8rem; font-size: 1.3rem; line-height: 2.4rem; }
+.knowledge_item_text a { color: #333; margin-left: 1rem; }
+.knowledge_item_content { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; width: 58rem; padding: 1.5rem 0; margin: 0 auto; }
+.knowledge_item_content_img { position: relative; width: 14rem; height: 9rem; background: #eee; overflow: hidden; }
+.knowledge_item_content_img img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; max-width: 100%; margin: auto; }
+.knowledge_item_content_text { width: 43rem; padding-top: .5rem; font-size: 1.3rem; line-height: 2.4rem; }
+.knowledge_item_content a { color: #333; margin-left: 1rem; }
+.knowledge_item_info { display: none; }
+.knowledge_item_info_wrapper { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding: 1.5rem 0 1.3rem; border-bottom: .1rem solid #e5e8eb; margin: 0 1.8rem; }
+.knowledge_item_info_link { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0 1.8rem; border-bottom: .1rem solid #e5e8eb; }
+.knowledge_item_info_link dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.knowledge_item_info_link dl.part { width: 18.5rem; padding-right: 3rem; }
+.knowledge_item_info_link dl.link { width: 36.5rem; }
+.knowledge_item_info_link dl dt { width: 7rem; font-size: 1.1rem; font-weight: bold; color: #bbb; }
+.knowledge_item_info_link dl dd { max-width: 11.5rem; margin: 0; font-size: 1.2rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_info_link dl dd a { color: #333; transition: color .1s; }
+.knowledge_item_info_link dl dd a:hover { color: #44d095; }
+.knowledge_item_info_detail { display: -webkit-flex; display: flex; margin: 0 1.8rem; border-bottom: .1rem solid #e5e8eb; }
+.knowledge_item_info_detail dl { width: 17.3rem; padding-right: 2.7rem; }
+.knowledge_item_info_detail dl:last-child { width: 16.2rem; padding: 0; }
+.knowledge_item_info_detail dl dt { color: #bbb; font-size: 1rem; line-height: 1.1em; }
+.knowledge_item_info_detail dl dd { font-size: 1.1rem; margin: 0; }
+.knowledge_item_info_main { box-sizing: border-box; width: 38rem; padding-right: 2rem; }
+.knowledge_item_info_main dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0; }
+.knowledge_item_info_main dl + dl { margin-top: 1rem; }
+.knowledge_item_info_main dl dt { width: 7rem; font-size: 1.1rem; color: #bbb; font-weight: bold; }
+.knowledge_item_info_main dl dd { width: 29rem; margin: 0; font-size: 1.2rem; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_info_main dl dd a { color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_info_main dl dd a:hover { color: #44d095; }
+.knowledge_item_info_main dl dd span { margin-left: .3rem; font-size: 1.1rem; color: #bbb; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_item_info_meta { box-sizing: border-box; width: 20.2rem; padding-left: 1.9rem; border-left: .1rem solid #e5e8eb; }
+.knowledge_item_info_meta span { display: block; font-size: .8rem; line-height: 1.2; color: #bbb; }
+.knowledge_item_info_meta p { font-size: 1.1rem; line-height: 1.5; }
+.knowledge_item_info_meta p + span { margin-top: .8rem; }
+.knowledge_item_toggleBtn { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; height: 3.7rem; cursor: pointer; }
+.knowledge_item_toggleBtn:before { content: "DETAIL"; padding-left: .6rem; padding-right: 2.8rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1.3rem; font-weight: bold; color: #bbb; background: url(/img/common/arrow_select.png) right center no-repeat; }
+.knowledge_item_toggleBtn.isOpen:before { content: "CLOSE"; padding-right: 3.4rem; background-image: url(/img/common/arrow_select_open.png); }
+.knowledge_latest ul { max-height: 29rem; border: .1rem solid #e5e8eb; border-bottom: none; background: #fff; }
+.knowledge_latest_item { padding: 1.5rem 2rem 0; }
+.knowledge_latest_item:first-child { margin-top: .8rem; }
+.knowledge_latest_item_container { padding-bottom: 1.5rem; border-bottom: .1rem solid #e5e8eb; }
+.knowledge_latest_item_meta { display: block; margin-bottom: .3rem; font-size: 1.1rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.knowledge_latest_item_meta a { position: relative; margin-left: 1.8rem; color: #bbb; }
+.knowledge_latest_item_meta a:before { content: "-"; position: absolute; top: 0; bottom: 0; right: 100%; margin: auto .5rem auto 0; }
+.knowledge_latest_item_main { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.knowledge_latest_item_main_ttl { max-width: 44rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_latest_item_main_ttl.draft { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; color: #bbb; }
+.knowledge_latest_item_main_ttl.draft span.draft_label { height: 1.7rem; padding: 0 .5rem; border-radius: .2rem; margin-right: .7rem; color: #fff; font-size: 1rem; line-height: 1.7rem; background: #bbb; }
+.knowledge_latest_item_main_ttl.draft span.draft_label + span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_latest_item_main_content { margin-top: .5rem; }
+.knowledge_latest_item_main_content_ttl { max-width: 42rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; }
+.knowledge_latest_item_main_content_desc { max-width: 42rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; }
+.knowledge_latest_item_main_content_ttl { font-weight: bold; }
+.knowledge_latest_item_main_icon { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 7rem; margin-bottom: .8rem; }
+.knowledge_latest_item_main_icon > span, .knowledge_latest_item_main_icon > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
+.knowledge_latest_item_main_icon > span.setting, .knowledge_latest_item_main_icon > a.setting { background-image: url(/img/common/btn_gear.png); }
+.knowledge_latest_item_main_icon > span.setting:hover, .knowledge_latest_item_main_icon > a.setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.knowledge_latest_item_main_icon > span.setting .balloon, .knowledge_latest_item_main_icon > a.setting .balloon { position: absolute; top: 2.6rem; right: -1.9rem; display: none; width: 12rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; z-index: 10; box-sizing: border-box; padding: 2rem 1.2rem 1.3rem; }
+.knowledge_latest_item_main_icon > span.setting .balloon a, .knowledge_latest_item_main_icon > a.setting .balloon a { text-decoration: none; color: #333; }
+.knowledge_latest_item_main_icon > span.setting .balloon a:hover, .knowledge_latest_item_main_icon > a.setting .balloon a:hover { color: #44d095; }
+.knowledge_latest_item_main_icon > span.setting .balloon:before, .knowledge_latest_item_main_icon > span.setting .balloon:after, .knowledge_latest_item_main_icon > a.setting .balloon:before, .knowledge_latest_item_main_icon > a.setting .balloon:after { bottom: 100%; left: 9.2rem; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.knowledge_latest_item_main_icon > span.setting .balloon:before, .knowledge_latest_item_main_icon > a.setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.knowledge_latest_item_main_icon > span.setting .balloon:after, .knowledge_latest_item_main_icon > a.setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.knowledge_latest_item_main_icon > span.setting .balloon.isOpen, .knowledge_latest_item_main_icon > a.setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.knowledge_latest_item_main_icon > span.share, .knowledge_latest_item_main_icon > a.share { background-image: url(/img/common/btn_share_02.png); }
+.knowledge_latest_item_main_icon > span.link, .knowledge_latest_item_main_icon > a.link { background-image: url(/img/common/btn_detail.png); }
+.knowledge_latest_btn { display: block; height: 3.5rem; font-size: 1.2rem; color: #fff; text-align: center; line-height: 3.5rem; background: #bbb; }
+.knowledge_lawyer { box-sizing: border-box; max-height: 70rem; border: .1rem solid #e5e8eb; margin: 0 auto; background: #fff; }
+.knowledge_lawyer_container { width: 62rem; margin: 0 auto; }
+.knowledge_lawyer_item { padding: 1.5rem 1.8rem 0; cursor: pointer; }
+.knowledge_lawyer_item:hover { background: #eee; }
+.knowledge_lawyer_item.link { padding: 0; }
+.knowledge_lawyer_item.link a { display: block; padding: 1.5rem 1.8rem 0; color: #333; text-decoration: none; }
+.knowledge_lawyer_item.isSelected { background: #edfbfc; }
+.knowledge_lawyer_item_container { box-sizing: border-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; padding: 0 1.4rem 1.3rem; border-bottom: .1rem solid #e3e3e3; }
+.knowledge_lawyer_item_photo { width: 10rem; height: 10rem; border-radius: 100%; overflow: hidden; }
+.knowledge_lawyer_item_main { width: 43.5rem; margin-top: .6rem; }
+.knowledge_lawyer_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: .3rem; border-bottom: .1rem solid #ddd; }
+.knowledge_lawyer_item_head p:first-child { max-width: 45rem; font-size: 1.6rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_lawyer_item_head_icon { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.knowledge_lawyer_item_head_icon span { line-height: 2rem; text-decoration: none; color: #bbb; }
+.knowledge_lawyer_item_head_icon span.recommend { padding-left: 1.7rem; background: url(/img/common/icon_medal.png) left center no-repeat; }
+.knowledge_lawyer_item_head_icon span.credit { padding-left: 18px; margin-left: 1.5rem; background: url(/img/common/icon_exp.png) left center no-repeat; }
+.knowledge_lawyer_item_head_icon span.community { padding-left: 22px; margin-left: 13px; background: url(/img/common/icon_team2.png) left center no-repeat; }
+.knowledge_lawyer_item_head_icon span.accept { padding-left: 1.9rem; color: #44d095; background: url(/img/profile/icon_connect_on.png) left center no-repeat; }
+.knowledge_lawyer_item_head_icon span.delete { padding-left: 1.8rem; margin-left: 1.5rem; margin-right: 1rem; background: url(/img/common/btn_delete.png) left center no-repeat; }
+.knowledge_lawyer_item_head_btn { height: 2.3rem; padding: 0 1rem; color: #fff; font-size: 1.1rem; line-height: 2.3rem; text-align: center; background: #44d095; }
+.knowledge_lawyer_item_info { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding-top: 1rem; }
+.knowledge_lawyer_item_info_company { box-sizing: border-box; width: 26.5rem; padding-right: 2rem; }
+.knowledge_lawyer_item_info_company p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; height: 2rem; }
+.knowledge_lawyer_item_info_company_head { font-weight: bold; }
+.knowledge_lawyer_item_info_company_locate { color: #bbb; padding-left: 1.5rem; background: url(/img/common/icon_locate.png) 0.1rem center no-repeat; }
+.knowledge_lawyer_item_info_meta { box-sizing: border-box; width: 16rem; padding-left: 2rem; border-left: .1rem solid #ddd; line-height: 1.2; }
+.knowledge_lawyer_item_info_meta span { display: block; font-size: .8rem; color: #bbb; }
+.knowledge_lawyer_item_info_meta p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.1rem; }
+.knowledge_lawyer_item_info_meta p + span { margin-top: .8rem; }
+.knowledge_lawyer_item_btns { display: -webkit-flex; display: flex; border-top: .1rem solid #ddd; }
+.knowledge_lawyer_item_btns.right { -webkit-justify-content: flex-end; justify-content: flex-end; }
+.knowledge_lawyer_item_btns.right a { width: auto; padding: 0 1.2rem; }
+.knowledge_lawyer_item_btns a { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 33.3333%; height: 3.6rem; text-decoration: none; transition: opacity .1s; }
+.knowledge_lawyer_item_btns a:hover { opacity: .7; }
+.knowledge_lawyer_item_btns a span { font-size: 1.1rem; line-height: 2rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.knowledge_lawyer_item_btns a span.connection { padding-left: 2rem; background: url(/img/profile/icon_connect_off.png) left center no-repeat; }
+.knowledge_lawyer_item_btns a span.connection.on { background-image: url(/img/profile/icon_connect_on.png); color: #44d095; }
+.knowledge_lawyer_item_btns a span.view { padding-left: 1.6rem; background: url(/img/search/icon_profile.png) left center no-repeat; }
+.knowledge_lawyer_item_btns a span.msg { padding-left: 2.2rem; background: url(/img/common/icon_mail.png) left center no-repeat; }
+.knowledge_lawyer_item_btns a span.request { padding-left: 2rem; background: url(/img/profile/icon_connect_on.png) left center no-repeat; color: #44d095; }
+.knowledge_lawyer_item_btns a span.cancel { padding-left: 1.7rem; background: url(/img/common/btn_delete.png) left center no-repeat; }
+.knowledge_areaTtl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 62rem; margin: 2.8rem auto .8rem; font-size: 1.4rem; }
+.knowledge_areaTtl .edit_addBtn { display: block; padding-left: 2.4rem; color: #bbb; font-size: 1.2rem; text-decoration: none; line-height: 1.8rem; font-weight: normal; background: url("/img/setting/btn_circle_plus.png") 0 0 no-repeat; cursor: pointer; }
+.knowledge_upload { width: 62rem; margin: 3rem auto 0; }
+.knowledge_upload_row { display: -webkit-flex; display: flex; }
+.knowledge_upload_row_head { width: 16rem; margin: 0; line-height: 2.5rem; font-size: 1.2rem; }
+.knowledge_upload_imgAdd { position: relative; width: 12rem; height: 2.5rem; border-radius: .2rem; color: #fff; text-align: center; line-height: 2.5rem; font-size: 1.2rem; background: #bbb; }
+.knowledge_upload_imgAdd input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
+.knowledge_upload_imgAlert { font-size: 1.2rem; margin: 1.1rem 0 -.9rem; }
+.knowledge_upload_imgAlert_row { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.knowledge_upload_imgAlert_row_head { width: 11.7rem; height: 7.5rem; background-size: contain; background-position: center center; background-repeat: no-repeat; }
+.knowledge_upload_imgAlert_row .file { position: relative; width: 31rem; padding-left: 1.7rem; text-decoration: underline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.knowledge_upload_imgAlert_row .fileDelBtn { display: block; width: 1rem; height: 1rem; position: absolute; top: 0; left: 0; bottom: 0; margin: auto 0; background: url(/img/common/btn_delete.png) center center no-repeat; cursor: pointer; }
+.knowledge_edit { position: relative; box-sizing: border-box; width: 62rem; padding: 1.9rem; border: .1rem solid #e5e8eb; margin: 0 auto 1.3rem; background: #fff; }
+.knowledge_edit .edit_removeParBtn { position: absolute; top: 1.7rem; right: 2rem; display: block; width: 2rem; height: 2rem; background: url(/img/common/btn_delete.png) center center no-repeat; cursor: pointer; }
+.knowledge_edit_ttl { padding-bottom: .5rem; border-bottom: .1rem solid #e5e8eb; margin: 1rem 0 2rem; font-size: 1.4rem; }
+.knowledge_edit_part { padding-top: 2.3rem; border-top: .1rem solid #e5e8eb; margin-top: 1.3rem; }
+.knowledge_edit_part + .multi { padding-top: 0; border: none; }
+.knowledge_edit_addBtn { display: -webkit-flex; display: flex; padding-left: 14rem; padding-bottom: .8rem; margin-top: .5rem; color: #bbb; }
+.knowledge_edit_addBtn .edit_addBtn { display: block; padding-left: 2.3rem; font-size: 1.2rem; line-height: 1.8rem; background: url(/img/setting/btn_circle_plus.png) 0 center no-repeat; cursor: pointer; }
+.knowledge_edit input[type="text"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.knowledge_edit input[type="url"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.knowledge_edit input[type="number"] { display: block; width: 14rem; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.knowledge_edit_select { position: relative; border-top: .1rem solid #e5e8eb; border-left: .1rem solid #e5e8eb; margin: 1rem 0; }
+.knowledge_edit_select select { box-sizing: border-box; width: 100%; height: 3.4rem; padding: 0 2.3rem 0 1rem; }
+.knowledge_edit_select:before { content: ""; position: absolute; top: 0; bottom: 0; right: 1.2rem; width: .9rem; height: .6rem; margin: auto; background: url(/sp/img/common/arrow_select.png) center center no-repeat; background-size: cover; }
+.knowledge_edit_select.mini { width: 8rem; }
+.knowledge_edit_select.user { width: 13rem; margin-left: 1rem; }
+.knowledge_edit_select.short { width: 22rem; }
+.knowledge_edit_select.mid { width: 32rem; }
+.knowledge_edit_select.currency { width: 9rem; margin-left: 1rem; }
+.knowledge_edit_select.sort { width: 19rem; margin-left: 1rem; }
+.knowledge_edit_select.sort.single { margin-left: 0; }
+.knowledge_edit_select2 + .select2-container { box-sizing: border-box; min-width: 100%; max-width: 100%; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; position: relative; font-size: 1.3rem; }
+.knowledge_edit_select2 + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
+.knowledge_edit_select2 + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
+.knowledge_edit_select2 + .select2-container.select2-container--open { position: relative; }
+.knowledge_edit_select2 + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.knowledge_edit_select2 + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.knowledge_edit_select2 + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.knowledge_edit_select2 + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.knowledge_edit_select2.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.knowledge_edit_radio { display: none; }
+.knowledge_edit_radio + label { position: relative; display: block; height: 2rem; padding-left: 2rem; font-size: 1.1rem; line-height: 2rem; }
+.knowledge_edit_radio + label:before, .knowledge_edit_radio + label:after { content: ""; position: absolute; top: 0; bottom: 0; border-radius: 100%; margin: auto; transition: opacity .1s; }
+.knowledge_edit_radio + label:before { left: 0; box-sizing: border-box; border: .1rem solid #bbb; width: 1.2rem; height: 1.2rem; }
+.knowledge_edit_radio + label:after { left: .2rem; width: 0.8rem; height: 0.8rem; background: #44d095; opacity: 0; }
+.knowledge_edit_radio:checked + label:after { opacity: 1; }
+.knowledge_edit_textarea { display: block; box-sizing: border-box; width: 62rem; height: 43rem; border: .1rem solid #e5e8eb; margin: 0 auto; resize: none; }
+.knowledge_edit_text { font-size: 1.1rem; }
+.knowledge_edit_row { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; margin-top: -1rem; }
+.knowledge_edit_row_head { position: relative; width: 12rem; padding-top: 1.9rem; margin: 0; font-size: 1.2rem; line-height: 1.7rem; text-align: right; }
+.knowledge_edit_row_head .edit_removeBtn { position: absolute; top: 1.6rem; left: -.5rem; display: block; width: 2rem; height: 2rem; background: url(/img/common/btn_delete.png) center center no-repeat; cursor: pointer; }
+.knowledge_edit_row_flex { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin-left: 9rem; font-size: 1.2rem; margin-top: .5rem; }
+.knowledge_edit_row_flex_text { width: 31rem; }
+.knowledge_edit_row_flex input[type="number"] { width: 9rem; margin: .8rem 0; }
+.knowledge_edit_row_body { width: 44rem; }
+.knowledge_edit_row_body input[type="text"], .knowledge_edit_row_body input[type="url"], .knowledge_edit_row_body input[type="number"] { margin: 1rem 0; }
+.knowledge_edit_row_body input[type="text"].reset, .knowledge_edit_row_body input[type="url"].reset, .knowledge_edit_row_body input[type="number"].reset { margin: 0; }
+.knowledge_edit_row_body input[type="text"].resetBottom, .knowledge_edit_row_body input[type="url"].resetBottom, .knowledge_edit_row_body input[type="number"].resetBottom { margin-bottom: 0; }
+.knowledge_edit_row_body input[type="text"].short, .knowledge_edit_row_body input[type="url"].short, .knowledge_edit_row_body input[type="number"].short { width: 13rem; }
+.knowledge_edit_row_body input[type="text"].mini, .knowledge_edit_row_body input[type="url"].mini, .knowledge_edit_row_body input[type="number"].mini { width: 9rem; }
+.knowledge_edit_row_body input[type="text"].currency, .knowledge_edit_row_body input[type="url"].currency, .knowledge_edit_row_body input[type="number"].currency { width: 14rem; margin-right: 1rem; }
+.knowledge_edit_row_body input[type="text"].barassociation, .knowledge_edit_row_body input[type="url"].barassociation, .knowledge_edit_row_body input[type="number"].barassociation { width: 24rem; margin-right: 2rem; }
+.knowledge_edit_row_body_flex { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.knowledge_edit_row_body_flex.up { -webkit-align-items: flex-start; align-items: flex-start; margin: 1.9rem 0; }
+.knowledge_edit_row_body_flex_text { width: 31rem; }
+.knowledge_edit_row_body_flex input[type="text"] { display: block; width: 30rem; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.knowledge_edit_row_body_flex + input[type] { margin-top: 0; }
+.knowledge_edit_row_body_head { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 8.5rem; margin-right: 1rem; font-size: 1.2rem; }
+.knowledge_edit_row_body_head_btn { position: relative; display: block; width: 1.6rem; height: 1.6rem; margin: 0 0 0 0.5rem; border-radius: 100%; background: #66d7db; }
+.knowledge_edit_row_body_head_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.knowledge_edit_row_body_head_btn:not(.balloon):hover .balloon { display: block; }
+.knowledge_edit_row_body_head_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; width: 20.4rem; padding: 1.5rem 1rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
+.knowledge_edit_row_body_head_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 6.6rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.knowledge_edit_row_body_radio { margin-top: -.2rem; }
+.knowledge_edit_fileAdd { position: relative; width: 12rem; height: 2.5rem; border-radius: .2rem; margin: 1.5rem 0; color: #fff; text-align: center; line-height: 2.5rem; font-size: 1.2rem; background: #bbb; }
+.knowledge_edit_fileAdd input[type="file"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
+.knowledge_edit_fileAlert p.msg { margin: .5rem 0 1.2rem; font-size: 1.2rem; }
+.knowledge_edit_fileAlert p.file { position: relative; padding-left: 1.7rem; margin-bottom: .8rem; font-size: 1.2rem; text-decoration: underline; }
+.knowledge_edit_fileAlert p.file .fileDelBtn { display: block; width: 1rem; height: 1rem; position: absolute; top: 0; left: 0; bottom: 0; margin: auto 0; background: url(/img/common/btn_delete.png) center center no-repeat; cursor: pointer; }
+.knowledge_edit_fileAlert p:last-child { margin-bottom: 2rem; }
+.knowledge_edit_submit { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 63rem; margin: 3.2rem auto 0; }
+.knowledge_edit_submit_ttl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; font-size: 1.2rem; font-weight: bold; }
+.knowledge_edit_submit_ttl_btn { position: relative; display: block; width: 1.6rem; height: 1.6rem; margin: 0 0 0 0.5rem; border-radius: 100%; background: #66d7db; }
+.knowledge_edit_submit_ttl_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.knowledge_edit_submit_ttl_btn:not(.balloon):hover .balloon { display: block; }
+.knowledge_edit_submit_ttl_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; width: 20.4rem; padding: 1.5rem 1rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
+.knowledge_edit_submit_ttl_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 6.6rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.knowledge_edit_submit_range { box-sizing: border-box; border: .1rem solid #e5e8eb; width: 24rem; height: 3.5rem; padding-right: 2rem; }
+.knowledge_edit_submit_range .range_placeholder { width: 13rem; margin-left: 1rem; color: #bbb; font-size: 1.2rem; line-height: 1.3; }
+.knowledge_edit_submit_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 31rem; font-size: 1.3rem; font-weight: bold; }
+.knowledge_edit_submit_btn input[type="submit"] { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 20rem; height: 4rem; padding: 0 1rem; color: #fff; background: #44d095; }
+.knowledge_edit_submit_btn_cancel { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 8rem; height: 4rem; padding: 0 1rem; color: #fff; text-decoration: none; background: #bbb; }
+.knowledge_tabs { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 62rem; margin: 0 auto .6rem; }
+.knowledge_tabs_container { display: -webkit-flex; display: flex; width: 21rem; height: 3rem; }
+.knowledge_tabs_item { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 10.5rem; color: #fff; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; background: #bbb; cursor: pointer; }
+.knowledge_tabs_item.isSelected { position: relative; background: #22313d; cursor: default; }
+.knowledge_tabs_item.isSelected:before { content: ""; position: absolute; top: 100%; right: 0; left: 0; margin: auto; width: 0; height: 0; border: .6rem solid transparent; border-top-color: #22313d; }
+.knowledge_tabs_search { box-sizing: border-box; width: 31rem; height: 2.6rem !important; padding-left: 1.6rem; border: none; border-bottom: .1rem solid #ddd; margin-top: .4rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1.2rem; background-color: transparent; background: url(/img/common/icon_search_contact.png) left center no-repeat; }
+.knowledge_side_cale { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; padding: 0 1.2rem; }
+.knowledge_side_cale_item { margin-right: .7rem; margin-bottom: 1.8rem; }
+.knowledge_side_cale_item a { color: #fff; font-weight: bold; transition: .1s opacity; }
+.knowledge_side_cale_item a:hover { opacity: .8; }
+
+.knowledgeCale { background: url(/img/common/arrow_open.png) 5.5rem center no-repeat; }
+.knowledgeCale.isOpen { background-image: url(/img/common/arrow_close.png); }
+
+#modalImportArea { position: relative; }
+
+#modalImportDetail { position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; }
+#modalImportDetail.display { z-index: 1; background: #fff; }

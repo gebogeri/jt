@@ -1,982 +1,719 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>Welcome to Middleman</title>
+<meta charset="UTF-8">
+<title>LEATEST FILE | MYFILE</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
 <!-- stylesheet -->
-<link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-<link href="/css/common/knowledge.css" rel="stylesheet" />
-<link href="/css/common/knowledge_add.css" rel="stylesheet" />
-<link href="/css/common/invite.css" rel="stylesheet" />
-<link rel="stylesheet" href="/css/plugin/select2.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/knowledge.css">
+<link rel="stylesheet" href="/plugin/select2/css/select2.min.css">
 <!-- cache -->
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="0">
-
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body class="knowledge knowledge_myfile knowledge_myfile_index whead">
-<!--#include virtual="/include/header.html"-->
-<div id="wrapper">
-    <div class="page_topTitle">
-        <div class="page_topTitle_container">
-            <p class="txt_gray txt_14 fw_b">MY FILE</p>
-            <h1>LATEST FILE</h1>
-        </div>
-    </div>
-    <div id="container" class="clear">
-        <main class="clear">
-            <div id="column-main-single">
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">取扱案件</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
+<body class="knowledge index">
+<!--#include virtual="/include_new/header.html" -->
+    <div id="container">
+        <div class="headline">
+            <div class="headline_inner">
+                <div class="ttl">
+                    <p class="ttl_summary">MYFILE</p>
+                    <h1 class="ttl_main">LATEST FILE</h1>
+                </div><!-- [/ .ttl] -->
+            </div><!-- [/ .headline_inner] -->
+            <div class="headline_inner knowledge_header"></div>
+        </div><!-- [/.headline] -->
+
+        <div id="content">
+            <section class="knowledge_content">
+                <h2 class="knowledge_ttl">
+                    取扱案件
+                    <a href="" class="knowledge_ttl_addBtn">追加</a>
+                </h2>
+                <div class="knowledge_latest">
+                    <ul class="scrollArea">
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015-2016, 日本郵便株式会社</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">日本郵便株式会社における、買収実行契約</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015-2016, 日本郵便株式会社</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl draft"><span class="draft_label">下書き</span><span>日本郵便株式会社における、買収実行契約</span></p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015-2016, 日本郵便株式会社</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">日本郵便株式会社における、買収実行契約</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015-2016, 日本郵便株式会社</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">日本郵便株式会社における、買収実行契約</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015-2016, 日本郵便株式会社</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">日本郵便株式会社における、買収実行契約</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                    </ul>
+                    <a class="knowledge_latest_btn">一覧を表示</a>
+                </div><!-- [/ .knowledge_latest] -->
+            </section>
+            <section class="knowledge_content">
+                <h2 class="knowledge_ttl">
+                    論文/書籍
+                    <a href="" class="knowledge_ttl_addBtn">追加</a>
+                </h2>
+                <div class="knowledge_latest">
+                    <ul class="scrollArea">
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">書籍名をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">書籍名をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">書籍名をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">書籍名をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">書籍名をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                    </ul>
+                    <a class="knowledge_latest_btn">一覧を表示</a>
+                </div><!-- [/ .knowledge_latest] -->
+            </section>
+            <section class="knowledge_content">
+                <h2 class="knowledge_ttl">
+                    セミナー/講演
+                    <a href="" class="knowledge_ttl_addBtn">追加</a>
+                </h2>
+                <div class="knowledge_latest">
+                    <ul class="scrollArea">
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">セミナー、講演名をここに表示します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl draft"><span>下書き</span>日本郵便株式会社における、買収実行契約</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">セミナー、講演名をここに表示します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">セミナー、講演名をここに表示します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015</span>
+                                <div class="knowledge_latest_item_main">
+                                    <p class="knowledge_latest_item_main_ttl">セミナー、講演名をここに表示します。</p>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                    </ul>
+                    <a class="knowledge_latest_btn">一覧を表示</a>
+                </div><!-- [/ .knowledge_latest] -->
+            </section>
+            <section class="knowledge_content">
+                <h2 class="knowledge_ttl">
+                    セミナー/講演
+                    <a href="" class="knowledge_ttl_addBtn">追加</a>
+                </h2>
+                <div class="knowledge_latest">
+                    <ul class="scrollArea">
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03</span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">タイトル名をここに表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03</span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">タイトル名をここに表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03</span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">タイトル名をここに表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03</span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">タイトル名をここに表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03</span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">タイトル名をここに表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                    </ul>
+                    <a class="knowledge_latest_btn">一覧を表示</a>
+                </div><!-- [/ .knowledge_latest] -->
+            </section>
+            <section class="knowledge_content">
+                <h2 class="knowledge_ttl">
+                    リンク
+                    <a href="" class="knowledge_ttl_addBtn">追加</a>
+                </h2>
+                <div class="knowledge_latest">
+                    <ul class="scrollArea">
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03<a href="">sitedomain.com</a></span>
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">記事のタイトル名を表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03<a href="">sitedomain.com</a></span>
+
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">記事のタイトル名を表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03<a href="">sitedomain.com</a></span>
+
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">記事のタイトル名を表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03<a href="">sitedomain.com</a></span>
+
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">記事のタイトル名を表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                        <li class="knowledge_latest_item">
+                            <div class="knowledge_latest_item_container">
+                                <span class="knowledge_latest_item_meta">2015.02.03<a href="">sitedomain.com</a></span>
+
+                                <div class="knowledge_latest_item_main">
+                                    <div class="knowledge_latest_item_main_content">
+                                        <p class="knowledge_latest_item_main_content_ttl">記事のタイトル名を表示</p>
+                                        <p class="knowledge_latest_item_main_content_desc">テキストが入ります。本件は、日本郵便株式会社（「日本郵便」）がああああああああああああああああああ</p>
+                                    </div>
+                                    <div class="knowledge_latest_item_main_icon">
+                                        <a href="" class="link labelPar">
+                                            <span class="label">詳細を表示する</span>
+                                        </a>
+                                        <a rel="leanModal jump" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/share.html" href="#modalKnowledge" class="share labelPar">
+                                            <span class="label">シェアする</span>
+                                        </a>
+                                        <span class="setting btn_balloon">
+                                            <div class="balloon">
+                                                <a href="">編集する</a>
+                                                <a rel="leanModal jump" href="#modalKnowledge" data-target="#modalKnowledge .modal" data-get="/knowledge/modal/delete.html">削除する</a>
+                                            </div>
+                                        </span>
+                                    </div><!-- [/ .knowledge_latest_item_main] -->
+                                </div><!-- [/ .knowledge_latest_item_main] -->
+                            </div><!-- [/ .knowledge_latest_container] -->
+                        </li><!-- [/ .knowledge_latest_item] -->
+                    </ul>
+                    <a class="knowledge_latest_btn">一覧を表示</a>
+                </div><!-- [/ .knowledge_latest] -->
+            </section>
+        </div><!-- [/ #content] -->
+        <aside class="side" id="sideBar">
+            <div class="sideLeft">
+                <div class="side_profile">
+                    <div class="side_profile_icon">
+                        <img src="/img/common/icon_profile.jpg" alt="近藤 和志" width="100%">
                     </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
+                    <div class="side_profile_name">
+                        <p>
+                            近藤 和志<br>
+                            Kazushi Kondo
+                        </p>
                     </div>
-                  </div>
-                  <div class="scroll-item clear st_draft">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b"><span>下書き</span>日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015-2016, 日本郵便株式会社 </span>
-                      <p class="txt_14 fw_b">日本郵便株式会社における、買収実行契約</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
                 </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">論文/書籍</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍をここに表示します。テキストが多い場合は省略します。テキストが多い場合は省略します。</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">書籍名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">セミナー,講演</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">セミナー,講演名をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">受賞</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015</span>
-                      <p class="txt_14 fw_b">受賞した賞の名前をここに表示します</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">コラム、ブログ</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03</span>
-                      <p class="txt_12 fw_b">タイトルをここに表示します</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-              <div class="clear head">
-                <p class="txt_14 fw_b fl">リンク</p>
-                <a class="btn_add fr" href="">新規追加</a>
-              </div>
-              <div class="mt10 mb40">
-                <div class="scroll-box">
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                  <div class="scroll-item clear">
-                    <div class="fl">
-                      <span class="txt_11 txt_gray">2015.02.03<span>-<a href="" class="txt_gray">sitedomain.com</a></span></span>
-                      <p class="txt_12 fw_b">記事のタイトル名を表示</p>
-                      <p class="txt_12">テキストが入ります。本件は日本郵便株式会社（「日本郵便」）がテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="post-meta">
-                      <span class="post-setting">
-                          <div class="post-setting_baloon txt_12">
-                              <a href="">編集する</a><br>
-                              <a rel="leanModal" href="#modal_delete" class="modal_del_reload">削除する</a>
-                          </div>
-                      </span>
-                      <a rel="leanModal" href="#modal_share" class="post-share txt_10 modal_share_load"><span>シェアする</span></a>
-                      <a href="" class="post-rec txt_10"><span>推薦する</span></a>
-                      <a href="" class="post-detail txt_10"><span>詳細を表示する</span></a>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn_full">一覧を表示</a>
-              </div>
-            </div>
-        </main>
-        <aside>
-          <h2 class="ttl_side">KNOWLEDGE</h2>
-          <div id="side-link" class="txt_11">
-            <h3 class="ttl_sub_side">MY FILE</h3>
-            <a href="/knowledge/myfile/" class="selected">- LATEST</a>
-            <a href="/knowledge/myfile/projects/">- 取り扱い案件</a>
-            <a href="/knowledge/myfile/monograph">- 論文/書籍</a>
-            <a href="/knowledge/myfile/seminar">- セミナー,講演</a>
-            <a href="/knowledge/myfile/winning">- 受賞</a>
-            <a href="/knowledge/myfile/blog">- コラム/ブログ</a>
-            <a href="/knowledge/myfile/link">- リンク</a>
-            <h3 class="ttl_sub_side">SAVED FILE</h3>
-            <a href="/knowledge/savefile">- LATEST</a>
-            <a href="/knowledge/savefile/projects">- 案件</a>
-            <a href="/knowledge/savefile/monograph">- 論文/書籍</a>
-            <a href="/knowledge/savefile/seminar">- セミナー,講演</a>
-            <a href="/knowledge/savefile/winning">- 受賞</a>
-            <a href="/knowledge/savefile/blog">- コラム/ブログ</a>
-            <a href="/knowledge/savefile/link">- リンク</a>
-          </div>
+                <h3 class="side_ttl knowledge">KNOWLEDGE</h3>
+                <h4 class="side_subTtl">MY FILE</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="/knowledge/myfile" class="side_list_item_target isSelected">- LATEST</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/projects" class="side_list_item_target">- 取扱案件</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/monograph" class="side_list_item_target">- 論文/書籍</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/seminar" class="side_list_item_target">- セミナー/講演</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/winning" class="side_list_item_target">- 受賞</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/blog" class="side_list_item_target">- コラム/ブログ</a></li>
+                    <li class="side_list_item"><a href="/knowledge/myfile/link" class="side_list_item_target">- リンク</a></li>
+                </ul><!-- [/ .side_list] -->
+                <h4 class="side_subTtl">SAVED FILE</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="/knowledge/savefile" class="side_list_item_target">- LATEST</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/projects" class="side_list_item_target">- 案件</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/monograph" class="side_list_item_target">- 論文/書籍</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/seminar" class="side_list_item_target">- セミナー/講演</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/winning" class="side_list_item_target">- 受賞</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/blog" class="side_list_item_target">- コラム/ブログ</a></li>
+                    <li class="side_list_item"><a href="/knowledge/savefile/link" class="side_list_item_target">- リンク</a></li>
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideLeft] -->
         </aside>
+    </div><!-- [/ #container] -->
+<!--#include virtual="/include_new/footer_under.html"-->
+<div id="modalKnowledge">
+    <div class="modal modal_knowledge">
     </div>
 </div>
-<div id="modal_delete" class="modal_win">
-</div>
-<div id="modal_share" class="modal_win">
-</div>
-<!--#include virtual="/include/footer.html"-->
+<!--#include virtual="/include_new/footer.html"-->
 </body>
 </html>

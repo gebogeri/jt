@@ -20,8 +20,8 @@ $green: #44d095;
     min-width: $min;
     #content{
         padding-left: 16rem * $c;
-        max-width: $min;
-        min-width: $max;
+        min-width: $min;
+        max-width: $max;
     }
     .header{
         min-width: $min;
@@ -68,7 +68,7 @@ $green: #44d095;
     text-overflow: ellipsis;
 }
 
-@mixin flex($j:false, $a:false, $w:false){
+@mixin flex($j:false, $a:false, $w:false, $d:false){
     display:-webkit-flex;
     display:flex;
     @if $j != false{
@@ -82,6 +82,10 @@ $green: #44d095;
     @if $w != false{
         -webkit-flex-wrap: $w;
         flex-wrap: $w;
+    }
+    @if $d != false{
+        -webkit-flex-direction: $d;
+        flex-direction: $d;
     }
 }
 
@@ -114,30 +118,37 @@ $green: #44d095;
     }
 }
 
-@mixin select2($w:100%,$m:false,$h:3.3rem,$tags:false,$t:true,$l:false,$mr:false,$box-sizing: content-box){
+@mixin select2($w:100%,$m:false,$h:3.3rem,$tags:false,$t:true,$l:false,$mr:false,$box-sizing: content-box, $clear: false, $ff:false){
     @at-root & + .select2-container {
         box-sizing: $box-sizing;
         min-width: $w;
         max-width: $w;
-        @include border;
-        @if $l == false{
-            border-left: none;
-        }
-        @if $t == false{
-            border-top: none;
-        }
-        @if $tags == true {
-            border: none;
-        }
-        @if $m != false{
-            display: block;
-            margin: $m 0;
-        }
-        @if $mr != false{
-            margin-right: $mr;
+        @if $clear == false{
+            @include border;
+            @if $l == false{
+                border-left: none;
+            }
+            @if $t == false{
+                border-top: none;
+            }
+            @if $tags == true {
+                border: none;
+            }
+            @if $m != false{
+                display: block;
+                margin: $m 0;
+            }
+            @if $mr != false{
+                margin-right: $mr;
+            }
+            @include arrow($pos:1.1rem);
         }
         font-size: 1.3rem;
-        @include arrow($pos:1.1rem);
+        @if $ff != false{
+            .select2-search__field{
+                @include ff;
+            }
+        }
         &.select2-container--open{
             position: relative;
             &:after{
@@ -283,7 +294,7 @@ $green: #44d095;
 
 
 
-@mixin balloon($top:2.3rem, $right:-1.9rem, $w: 12rem, $blue: false){
+@mixin balloon($top:2.3rem, $right:-1.9rem, $w: 12rem, $blue: false, $left:7.6rem, $p: 1.5rem 1rem, $fz: 1.2rem, $lh: 2.3rem, $s: false){
     @if $blue == true{
         &:not(.balloon):hover{
             .balloon{
@@ -294,13 +305,18 @@ $green: #44d095;
             $bb: #66d7db;
             position: absolute;
             top: $top;
-            right: $right;
+            @if $s == false{
+                right: $right;
+            }
+            @else{
+                right: #{$right - .8rem + $s/2};
+            }
             z-index: 610;
             display: none;
-            padding: 1.5rem 1rem;
             width: $w;
-            line-height: 2.3rem;
-            font-size: 1.2rem;
+            padding: $p;
+            line-height: $lh;
+            font-size: $fz;
             color: #fff;
             font-weight: normal;
             background: $bb;
@@ -332,11 +348,14 @@ $green: #44d095;
         a{
             text-decoration: none;
             color: #333;
+            &:hover{
+                color: $green;
+            }
         }
         &:before,
         &:after{
             bottom: 100%;
-            left: 7.6rem;
+            left: $left;
             border: solid transparent;
             content: " ";
             height: 0;
@@ -357,38 +376,36 @@ $green: #44d095;
             margin-left: -.6rem;
         }
         @include m(isOpen){
-            display: block;
+            @include flex($d:column,$a:flex-start);
         }
 
     }
 }
 
 
-@mixin question($name: btn, $width: 20.4rem, $space: -6.5rem, $margin:false){
+@mixin question($name: btn, $size: 1.6rem, $width: 20.4rem, $space: -6.5rem, $margin:false, $font-size: 1.2rem, $padding: 1.5rem 1rem, $line-height: 2.3rem){
     @include e(#{$name}){
         position: relative;
         display: block;
-        width: 1.6rem;
-        height: 1.6rem;
+        width: $size;
+        height: $size;
         @if $margin != false{
             margin: $margin;
         }
         border-radius: 100%;
         background: #66d7db;
         &:before{
-            content: "?";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            box-sizing: border-box;
             width: 100%;
             height: 100%;
-            padding-right: .1rem;
             color: #fff;
-            font-size: 1rem;
-            line-height: 1.5rem;
             text-align: center;
+            background: url(/img/setting/question_icon_circle.png) center center no-repeat;
+            background-size: cover;
         }
-        @include balloon($top:2.5rem, $right: $space, $w: $width, $blue: true);
+        @include balloon($top:2.5rem, $right: $space, $w: $width, $blue: true, $fz: $font-size, $p: $padding, $lh: $line-height, $s: $size);
     }
 }

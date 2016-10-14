@@ -1,0 +1,29 @@
+        <ul class="modal_invite_arrow">
+            <li class="modal_invite_arrow_item isSelected"><span>必須事項を入力</span></li>
+            <li class="modal_invite_arrow_item"><span>入力確認</span></li>
+            <li class="modal_invite_arrow_item"><span>送信完了</span></li>
+        </ul>
+        <p class="modal_invite_subTtl">招待メールの送信</p>
+        <p class="modal_invite_description">必要事項を記入の上、確認ボタンをクリックしてください。</p>
+        <form action="" class="modal_invite_form">
+            <div class="modal_invite_form_sepArea">
+                <div>
+                    <div class="modal_invite_form_head">氏名</div>
+                    <input type="text">
+                </div>
+                <div>
+                    <div class="modal_invite_form_head">メールアドレス</div>
+                    <input type="email">
+                </div>
+            </div>
+            <div class="modal_invite_form_head">タイトル</div>
+            <input type="text">
+            <div class="modal_invite_form_head">メッセージ</div>
+            <textarea name="" id=""></textarea>
+            <input type="checkbox" name="" id="accept">
+            <label for="accept"><span>個人情報の取り扱いに同意する</span>プライバシーポリシーのご確認は<a href="">こちら</a></label>
+            <div class="modal_invite_btn">
+                <a class="modal_invite_btn_submit" rel="jump" data-target="#modalInvite .modal" data-get="/invite_new/mail02.html">入力内容確認</a>
+                <a rel="jump" data-get="/invite_new/main.html" data-target="#modalInvite .modal" class="modal_invite_btn_cancel modal_close">閉じる</a>
+            </div><!-- [/ .modal_invite_btn] -->
+        </form>

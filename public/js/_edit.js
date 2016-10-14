@@ -3,9 +3,17 @@ $(function(){
 
     $doc.on('click', '.js_copyBtn .edit_addBtn', function(){
         var $this = $(this).closest('.js_copyBtn'),
-            $paste = $this.prev('.js_copyArea'),
-            $content = $paste.find('.js_copyContent:last-child').clone(),
-            num = Number( $content.data('num') ) + 1;
+            $paste = $this.prev('.js_copyArea');
+
+        if($paste.length == 0){
+            $paste = $this.prev().find('.js_copyArea');
+            var $content = $paste.find('.js_copyContent:last-child').clone();
+        }else{
+            var $content = $paste.find('.js_copyContent:last-child').clone();
+        }
+
+        var num = Number( $content.data('num') ) + 1;
+
 
         $content.attr('data-num', num).addClass('multi').find('.num').html(num);
         $content.find('span.select2').remove();

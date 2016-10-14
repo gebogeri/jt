@@ -1,11 +1,66 @@
 @charset 'utf-8';
 @import 'common/_mixin';
-
 .profile{
     @include resize($min:108rem,$max:108rem,$c:2,$ttl:70rem);
+    @include m(index){
+        @include resize($min:96rem,$max:108rem,$c:1, $ttl:54rem);
+    }
+    @include m(message){
+        @include resize($min:96rem,$max:108rem,$c:1, $ttl:62rem);
+        .ttl_main{ width: 58rem; }
+    }
     @include e(header){
         padding: 2rem 0;
         text-align: center;
+        @include e(info){
+            @include flex($a:center);
+            text-align: left;
+            @include e(company){
+                box-sizing: border-box;
+                width: 64%;
+                padding-right: 2rem;
+                p{
+                    @include texthide;
+                    font-size: 1.2rem;
+                    height: 1.8rem;
+                }
+                @include e(head){
+                    font-weight: bold;
+                }
+                @include e(locate){
+                    color: #bbb;
+                    line-height: 2rem;
+                    padding-left: 1.5rem;
+                    background: url(/img/common/icon_locate.png) .1rem center no-repeat;
+                }
+                @include e(iconBtn){
+                    @include flex;
+                    margin-top: .5rem;
+                    a{
+                        + a{
+                            margin-left: .5rem;
+                        }
+                    }
+                }
+            }
+            @include e(meta){
+                box-sizing: border-box;
+                width: 36%;
+                padding-left: 2rem;
+                border-left: .1rem solid #ddd;
+                line-height: 1.2;
+                span{
+                    display: block;
+                    font-size: .8rem;
+                    color: #bbb;
+                }
+                p{
+                    @include texthide;
+                    font-size: 1.1rem;
+                    +span{margin-top: .8rem;}
+                }
+            }//meta
+        }//info
         @include e(cap){
             font-size: 1.6rem;
             font-weight: bold;
@@ -59,7 +114,412 @@
                 margin-left: 1rem;
             }
         }//btn
+        @include e(search){
+            width: 70rem;
+            margin: 1.2rem auto 0;
+            text-align: left;
+            @include e(text){
+                width: 70rem;
+                margin: -1.2rem auto -.4rem;
+                color: #bbb;
+                font-size: 1.1rem;
+                text-align: left;
+            }
+            @include e(input){
+                @include flex($j:space-between);
+                margin-bottom: 2rem;
+                @include input($w:62rem);
+                input[type="submit"]{
+                    @include flex($a:center, $j:center);
+                    width: 7rem;
+                    color: #fff;
+                    font-weight: bold;
+                    background: $green;
+                }
+            }
+            @include e(row){
+                @include flex;
+                margin: 0;
+                margin-top: -1rem;
+                @include e(head){
+                    width: 13rem;
+                    @media screen and (-webkit-min-device-pixel-ratio:0) {
+                        width: 14rem;
+                    }
+                    padding-top: 1.9rem;
+                    padding-right: 1.2rem;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    line-height: 1.7rem;
+                    text-align: right;
+                }
+                @include e(body){
+                    width: 55.8rem;
+                    @media screen and (-webkit-min-device-pixel-ratio:0) {
+                        width: 54.8rem;
+                    }
+                    margin: 0;
+                    @include e(flex){
+                        @include flex($a:center);
+                        .profile_edit_select.right{
+                            width: 21rem;
+                            margin-left: 1rem;
+                        }
+                        .select2_country,
+                        .select2_lang{
+                            @include select2($box-sizing:border-box,$l: true,$w:21rem);
+                        }
+                    }
+                }
+            }
+        }
     }//header
+
+    @include e(timeline, aside){
+        margin-top: 2.2rem;
+        @include e(ttl){
+            margin:0 0 .5rem;
+            color: #bbb;
+            font-size: 1.1rem;
+            @include ff;
+            font-weight: bold;
+        }
+    }
+    @include e(aside){
+        @include e(info){
+            padding: 1.5rem 1.9rem;
+            border: .1rem solid #ecf1f2;
+            margin-bottom: 1rem;
+            background: #fff;
+            @include e(head){
+                @include flex($a:center, $j:space-between);
+                padding-bottom: .5rem;
+                border-bottom: .1rem solid #f1f1f1;
+                margin-bottom: 1.4rem;
+                h3{
+                    @include flex($a:center);
+                    margin: 0;
+                    font-size: 1.4rem;
+                }
+                @include question($name:question,$width:21.6rem, $space: -9.8rem, $margin:0 0 0 .6rem, $padding: 1rem 1.4rem, $font-size: 1.1rem, $line-height: 1.8rem);
+                @include e(count){
+                    @include flex($a:flex-end);
+                    font-size: 2rem;
+                    line-height: 1;
+                    @include ff;
+                    span{
+                        margin-right: .3rem;
+                        font-size: 1.2rem;
+                        color: #bbb;
+                    }
+                }
+            }//head
+            @include e(graph){
+                @include flex($a: flex-end);
+                margin-bottom: .6rem;
+                font-size: 1.4rem;
+                line-height: 1;
+                @include ff;
+                span{
+                    margin-right: .3rem;
+                    font-size: 1.2rem;
+                }
+                +div{
+                    height: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }//graph
+            @include e(rate, connection){
+                @include flex;
+                > div{
+                    box-sizing: border-box;
+                    padding: 0 .2rem;
+                    + div{
+                        border-left: .1rem solid #f1f1f1;
+                    }
+                }
+                @include e(head){
+                    @include flex($a:center, $j:center);
+                    font-size: 1rem;
+                }
+                @include e(num){
+                    font-size: 2rem;
+                    text-align: center;
+                    @include ff;
+                }
+            }//rate, connection
+            @include e(connection){
+                >div{ width: 33.3333%;}
+                @include e(head){
+                    @include question($padding: 1rem,$size: 1.2rem, $line-height: 1.8rem,$font-size: 1.1rem, $width: 13.4rem, $space: -1.6rem, $margin: 0 0 0 .3rem);
+                }
+            }//connection
+            @include e(rate){
+                >div{ width: 50%;}
+                @include e(head){
+                    @include question($padding: 1rem,$size: 1.2rem, $line-height: 1.8rem,$font-size: 1.1rem, $width: 13.4rem, $space: -1.6rem,$margin: 0 0 0 .3rem);
+                }
+            }//rate
+            @include e(text){
+                font-size: 1.1rem;
+                line-height: 1.8rem;
+                @include e(head){
+                    padding-top: 1.5rem;
+                    border-top: .1rem solid #f1f1f1;
+                    margin: 1.5rem 0 .5rem;
+                    @include ff;
+                    font-weight: bold;
+                    span{
+                        margin-right: 1rem;
+                        color: #bbb;
+                    }
+                }
+            }
+        }//info
+    }//aside
+
+    @include e(message){
+        box-sizing: border-box;
+        width: 62rem;
+        padding: 2.1rem 1.9rem 2.7rem;
+        @include border;
+        margin: 4rem auto 0;
+        background: #fff;
+        @include e(ttl){
+            @include flex($a:center, $j: space-between);
+            padding-bottom: 1.7rem;
+            border-bottom: .1rem solid #eee;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            @include e(edit){
+                padding-left: 2rem;
+                color: #bbb;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: normal;
+                text-decoration: none;
+                background: url(/img/common/icon_setting_edit.png) left center no-repeat;
+            }
+        }
+        @include e(content){
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        @include e(textarea){
+            box-sizing: border-box;
+            height: 34rem;
+            padding: .8rem 1rem;
+            @include border;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        @include e(btn){
+            @include flex($j:center);
+            font-size: 1.2rem;
+            font-weight: bold;
+            line-height: 4rem;
+            margin-top: 3rem;
+            @include e(submit){
+                display: block;
+                width: 18rem;
+                height: 4rem;
+                padding: 0;
+                margin-right: 1.1rem;
+                color: #fff;
+                background: $green;
+            }
+            @include e(cancel){
+                display: block;
+                width: 10rem;
+                height: 4rem;
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+                background: #bbb;
+            }
+        }
+    }//message
+
+    @include e(post){
+        @include border;
+        margin-bottom: 1rem;
+        background: #fff;
+        @include e(info){
+            @include flex($a:center, $j:space-between);
+            padding: 1.5rem 0;
+            margin: 0 1.9rem;
+            @include border(bottom);
+            @include e(icon){
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                margin-right: 1rem;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            @include e(right){
+                flex: 1;
+            }
+            @include e(head){
+                @include flex($a:flex-end, $j:space-between);
+                @include e(author){
+                    -webkit-flex: 1;
+                    flex: 1;
+                    a{
+                        color: #333;
+                        text-decoration: none;
+                        font-weight: bold;
+                        &:hover{
+                            color:$green;
+                        }
+                    }
+                }
+                @include e(btn){
+                    @include flex($a:center);
+                    padding-bottom: .2rem;
+                    .setting{
+                        position: relative;
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        margin-left: .7rem;
+                        background: url(/img/common/btn_gear.png) no-repeat;
+                        background-size: cover;
+                        cursor: pointer;
+                        &:hover{
+                            background-image: url(/img/common/btn_gear-selected.png);
+                        }
+                        .balloon{
+                            @include balloon($w:12rem,$right:-4.8rem, $left:9.6rem);
+                            padding:2rem 1.5rem;
+                        }
+                    }
+                    .save{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        margin-left: 1.3rem;
+                        background: url(/img/common/btn_share.png) no-repeat;
+                        background-size: cover;
+                        &:hover{
+                            background-image: url(/img/common/btn_share-selected.png);
+                        }
+                    }
+                    .time{
+                        @include ff;
+                        font-size: 1rem;
+                        color: #bbb;
+                    }
+                }//btn
+            }//head
+            @include e(tag){
+                padding-left: 1.7rem;
+                font-size: 1.1rem;
+                background: url(/img/common/icon_tag.png) left .1rem no-repeat;
+                a{
+                    display: inline-block;
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+            @include e(redo){
+                font-size: 1rem;
+                margin-top: .4rem;
+                a{
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }//info
+        @include e(content){
+            margin: 2rem 2.1rem;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+        @include e(link){
+            display: block;
+            color: #333;
+            text-decoration: none;
+            @include e(thumb){
+                position: relative;
+                height: 24rem;
+                overflow: hidden;
+                cursor: pointer;
+                background: #ccc;
+                img,video{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                }
+                .player{
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 6rem;
+                    height: 6rem;
+                    margin: auto;
+                    background: url(/img/top/btn_player.png);
+                }
+            }
+            @include e(content){
+                padding: 2rem;
+                @include e(caption){
+                    margin: 0;
+                    font-size: 1.6rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    margin: .6rem 0;
+                }
+                @include e(url){
+                    display: block;
+                    margin-top: .8rem;
+                    font-size: 1.1rm;
+                    color: #bbb;
+                }
+            }
+        }
+        @include e(btn){
+            @include flex;
+            height: 4rem;
+            a{
+                @include flex($a:center, $j:center);
+                width: 50%;
+                background: #bbb;
+                color: #fff;
+                @include ff;
+                text-decoration: none;
+                transition: background-color .15s;
+                +a{border-left: .1rem solid #fff;}
+                &:hover{
+                    background: $green;
+                }
+                span{
+                    font-weight: bold;
+                }
+                .num{
+                    font-weight: normal;
+                    margin-left: 3rem;
+                }
+                .recommend{
+                    padding-left: 2.2rem;
+                    background: url(/img/common/icon_recommend.png) left center no-repeat;
+                }
+                .share{
+                    padding-left: 2.2rem;
+                    background: url(/img/common/icon_share_02.png) left center no-repeat;
+                }
+            }
+        }//btn
+    }//post
     @include e(content){
         box-sizing: border-box;
         width: 75rem;
@@ -248,7 +708,7 @@
 
         @include e(select){
             @include select;
-            margin: .9rem 0;
+            margin: 1rem 0;
             @include m(reset){
                 margin: 0;
             }
@@ -274,19 +734,19 @@
             }
         }
         @include e(select2){
-            @include select2($box-sizing:border-box,$l: true, $m:.9rem);
+            @include select2($box-sizing:border-box,$l: true, $m:1rem);
         }
         @include e(select2long){
-            @include select2($box-sizing:border-box,$l: true, $m:.9rem, $mr:2rem, $w: 20rem);
+            @include select2($box-sizing:border-box,$l: true, $m:1rem, $mr:2rem, $w: 20rem);
         }
         @include e(select2short){
-            @include select2($box-sizing:border-box,$l: true, $m:.9rem, $mr:1rem, $w: 18rem);
+            @include select2($box-sizing:border-box,$l: true, $m:1rem, $mr:1rem, $w: 18rem);
         }
         @include e(select2juris){
-            @include select2($box-sizing:border-box,$l: true, $m:.9rem, $mr:2rem, $w: 24rem);
+            @include select2($box-sizing:border-box,$l: true, $m:1rem, $mr:2rem, $w: 24rem);
         }
         @include e(select2lang){
-            @include select2($box-sizing:border-box,$l: true, $m:.9rem, $mr:1rem, $w: 24rem);
+            @include select2($box-sizing:border-box,$l: true, $m:1rem, $mr:1rem, $w: 24rem);
         }
         @include e(checkbox){
             @include checkbox($height: 1.2rem, $size: 1.2rem);
@@ -306,14 +766,14 @@
         }
         @include e(row){
             @include flex($a:flex-start, $j:space-between);
-            margin-top: -.9rem;
+            margin-top: -1rem;
             @include e(head){
                 position: relative;
                 width: 11.5rem;
                 padding-top: 1.9rem;
                 margin:0;
                 font-size: 1.2rem;
-                line-height: 1.5rem;
+                line-height: 1.7rem;
                 text-align: right;
                 .edit_removeBtn{
                     position: absolute;
@@ -345,7 +805,7 @@
                 input[type="text"],
                 input[type="url"],
                 input[type="number"]{
-                    margin: .9rem 0;
+                    margin: 1rem 0;
                     @include m(reset){
                         margin: 0;
                     }
@@ -441,6 +901,54 @@
         }//submit
     }//edit
 
+    @include e(tabs){
+        @include flex($a:center, $j:space-between);
+        width: 75rem;
+        margin: 1.5rem auto .6rem;
+        @include e(container){
+            @include flex;
+            width: 21rem;
+            height: 3rem;
+        }
+        @include e(item){
+            @include flex($a:center, $j:center);
+            width: 10.5rem;
+            color: #fff;
+            font-size: 1.1rem;
+            @include ff;
+            font-weight: bold;
+            background: #bbb;
+            cursor: pointer;
+            @include m(isSelected){
+                position: relative;
+                background: #22313d;
+                cursor: default;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    width: 0;
+                    height: 0;
+                    border: .6rem solid transparent;
+                    border-top-color: #22313d;
+                }
+            }
+        }
+        @include e(text){
+            font-size: 1.2rem;
+            span{
+                font-weight: bold;
+            }
+            a{
+                margin: 0 .3rem;
+                color: #333;
+                text-decoration: underline;
+            }
+        }
+    }
     @include e(slideTabs){
         @include flex($a: flex-start);
         margin-top: 1.5rem;
@@ -475,6 +983,7 @@
                 margin-left: .1rem;
                 color: #fff;
                 @include ff;
+                font-weight: bold;
                 font-size: 1.1rem;
                 font-weight: bold;
                 background: #bbb;
@@ -541,7 +1050,7 @@
         @include e(area){
             width: 30rem;
             margin-top: .5rem;
-            margin-right: 1rem;
+            margin-right: 2.6rem;
             @include ff;
             @include e(list){
                 @include border(bottom);
@@ -600,6 +1109,9 @@
             }
         }//area
         @include e(canvas){
+            @include m(area){
+                margin-left: 2.6rem;
+            }
             canvas{
                 margin-top: -1rem;
             }
@@ -686,14 +1198,56 @@
             }
             @include e(value){
                 @include flex($a:center, $j:center);
-                @include ff;
                 color: #fff;
-                font-size: 1rem;
                 min-width: 5%;
                 max-width: 100%;
-                transition: opacity .2s;
+                opacity: 1!important;
+                &:hover{
+                    .profile_barGraph_canvas_value_num_balloon{
+                        display: block;
+                    }
+                }
                 @include m(right){
+                    @include ff;
+                    font-size: 1rem;
                     background: #7fd396;
+                }
+                @include e(num){
+                    position: relative;
+                    @include e(balloon){
+                        position: absolute;
+                        z-index: 10;
+                        top: 100%;
+                        left: -3rem;
+                        display: none;
+                        width: 12.5rem;
+                        padding: .4rem .8rem;
+                        border: .1rem solid #bbb;
+                        margin-top: .7rem;
+                        margin-left: 50%;
+                        color: #333;
+                        background: #fff;
+                        &:before,
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            bottom: 100%;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            margin-top: .1rem;
+                        }
+                        &:before{
+                            border: .7rem solid transparent;
+                            border-bottom-color: #bbb;
+                            margin-left: 2.3rem;
+                        }
+                        &:after{
+                            border: .6rem solid transparent;
+                            border-bottom-color: #fff;
+                            margin-left: 2.4rem;
+                        }
+                    }
                 }
             }
         }//canvas
@@ -776,6 +1330,200 @@
             }//main
         }//content
     }//careerArea
+
+    @include e(lawyer){
+        @include e(container){
+            width: 75rem;
+            margin: 0 auto;
+            @include m(space){
+                margin-top: 2.2rem;
+            }
+        }
+        box-sizing: border-box;
+        width: 75rem;
+        max-height: 70rem;
+        @include border;
+        margin: 0 auto;
+        background: #fff;
+        @include e(item){
+            padding: 2rem 3.5rem 0;
+            cursor: pointer;
+            &:hover{
+                background: #eee;
+            }
+            @include m(isSelected){
+                background: #edfbfc;
+            }
+            @include m(other){
+                background: transparent;
+                cursor: default;
+                @include m(upper){
+                    padding-top: 1.3rem;
+                }
+            }
+            @include e(container){
+                @include flex($a:flex-start, $j:space-between);
+                border-bottom: .1rem solid #e3e3e3;
+            }
+            @include e(photo){
+                width: 10rem;
+                height: 10rem;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            @include e(main){
+                width: 56.6rem;
+                margin-top: .6rem;
+            }//main
+            @include e(time){
+                color: #bbb;
+                font-size: 1rem;
+                @include ff;
+                text-align: right;
+                margin-right: -1rem;
+            }
+            @include e(head){
+                @include flex($a:center, $j:space-between);
+                padding-bottom: .3rem;
+                border-bottom: .1rem solid #ddd;
+                p{
+                    max-width: 45rem;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    @include texthide;
+                }
+                @include e(icon){
+                    @include flex($a:center);
+                    font-size: 1.1rem;
+                    @include ff;
+                    span, a{
+                        line-height: 2rem;
+                        text-decoration: none;
+                        color: #bbb;
+                        @include m(recommend){
+                            padding-left: 1.7rem;
+                            background: url(/img/common/icon_medal.png) left center no-repeat;
+                        }
+                        @include m(credit){
+                            padding-left: 18px;
+                            margin-left: 1.5rem;
+                            background: url(/img/common/icon_exp.png) left center no-repeat;
+                        }
+                        @include m(community){
+                            padding-left: 22px;
+                            margin-left: 13px;
+                            background: url(/img/common/icon_team2.png) left center no-repeat;
+                        }
+
+                        @include m(accept){
+                            padding-left: 1.9rem;
+                            color: #44d095;
+                            background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+                        }
+                        @include m(delete){
+                            padding-left: 1.8rem;
+                            margin-left: 1.5rem;
+                            margin-right: 1rem;
+                            background: url(/img/common/btn_delete.png) left center no-repeat;
+                        }
+                    }
+                }//icon
+            }//head
+            @include e(info){
+                @include flex($a:center);
+                padding: .9rem 0 1rem;
+                @include e(company){
+                    box-sizing: border-box;
+                    width: 64%;
+                    padding-right: 2rem;
+                    p{
+                        @include texthide;
+                        font-size: 1.2rem;
+                        height: 2rem;
+                    }
+                    @include e(head){
+                        font-weight: bold;
+                    }
+                    @include e(locate){
+                        color: #bbb;
+                        padding-left: 1.5rem;
+                        background: url(/img/common/icon_locate.png) .1rem center no-repeat;
+                    }
+                }
+                @include e(meta){
+                    box-sizing: border-box;
+                    width: 36%;
+                    padding-left: 2rem;
+                    border-left: .1rem solid #ddd;
+                    line-height: 1.2;
+                    span{
+                        display: block;
+                        font-size: .8rem;
+                        color: #bbb;
+                    }
+                    p{
+                        @include texthide;
+                        font-size: 1.1rem;
+                        +span{margin-top: .8rem;}
+                    }
+                }//meta
+            }//info
+            @include e(btns){
+                @include flex;
+                border-top: .1rem solid #ddd;
+                @include m(right){
+                    -webkit-justify-content: flex-end;
+                    justify-content: flex-end;
+                    a{
+                        width: auto;
+                        padding: 0 1.2rem;
+                    }
+                }
+                a{
+                    @include flex($a:center, $j:center);
+                    width: 33.3333%;
+                    height: 3.6rem;
+                    text-decoration: none;
+                    transition: opacity .1s;
+                    &:hover{
+                        opacity:.7;
+                    }
+                    span{
+                        font-size: 1.1rem;
+                        line-height: 2rem;
+                        color: #bbb;
+                        @include ff;
+                        @include m(connection){
+                            padding-left:2rem;
+                            background: url(/img/profile/icon_connect_off.png) left center no-repeat;
+                            @include m(on){
+                                background-image: url(/img/profile/icon_connect_on.png);
+                                color: $green;
+                            }
+                        }
+                        @include m(view){
+                            padding-left: 1.6rem;
+                            background: url(/img/search/icon_profile.png) left center no-repeat;
+                        }
+                        @include m(msg){
+                            padding-left: 2.2rem;
+                            background: url(/img/common/icon_mail.png) left center no-repeat;
+                        }
+                        @include m(request){
+                            padding-left: 2rem;
+                            background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+                            color: $green;
+                        }
+                        @include m(cancel){
+                            padding-left: 1.7rem;
+                            background: url(/img/common/btn_delete.png) left center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @include e(ttl){
         @include flex($a:center, $j:space-between);
         padding-bottom: 1.5rem;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .profile { min-width: 108rem; }
-.profile #content { padding-left: 32rem; max-width: 108rem; min-width: 108rem; }
+.profile #content { padding-left: 32rem; min-width: 108rem; max-width: 108rem; }
 .profile .header { min-width: 108rem; }
 .profile .header_inner { min-width: 108rem; max-width: 108rem; }
 .profile .headline { min-width: 108rem; max-width: 108rem; padding-left: 32rem; }
@@ -9,7 +9,39 @@
 .profile .headline_back { width: 70rem; }
 .profile .footer { padding-left: 32rem; }
 .profile .footer_inner { min-width: 76rem; max-width: 76rem; }
+.profile.index { min-width: 96rem; }
+.profile.index #content { padding-left: 16rem; min-width: 96rem; max-width: 108rem; }
+.profile.index .header { min-width: 96rem; }
+.profile.index .header_inner { min-width: 96rem; max-width: 108rem; }
+.profile.index .headline { min-width: 96rem; max-width: 108rem; padding-left: 16rem; }
+.profile.index .headline_inner { max-width: 92rem; }
+.profile.index .headline .ttl { width: 54rem; }
+.profile.index .headline_back { width: 54rem; }
+.profile.index .footer { padding-left: 16rem; }
+.profile.index .footer_inner { min-width: 80rem; max-width: 92rem; }
+.profile.message { min-width: 96rem; }
+.profile.message #content { padding-left: 16rem; min-width: 96rem; max-width: 108rem; }
+.profile.message .header { min-width: 96rem; }
+.profile.message .header_inner { min-width: 96rem; max-width: 108rem; }
+.profile.message .headline { min-width: 96rem; max-width: 108rem; padding-left: 16rem; }
+.profile.message .headline_inner { max-width: 92rem; }
+.profile.message .headline .ttl { width: 62rem; }
+.profile.message .headline_back { width: 62rem; }
+.profile.message .footer { padding-left: 16rem; }
+.profile.message .footer_inner { min-width: 80rem; max-width: 92rem; }
+.profile.message .ttl_main { width: 58rem; }
 .profile_header { padding: 2rem 0; text-align: center; }
+.profile_header_info { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; text-align: left; }
+.profile_header_info_company { box-sizing: border-box; width: 64%; padding-right: 2rem; }
+.profile_header_info_company p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; height: 1.8rem; }
+.profile_header_info_company_head { font-weight: bold; }
+.profile_header_info_company_locate { color: #bbb; line-height: 2rem; padding-left: 1.5rem; background: url(/img/common/icon_locate.png) 0.1rem center no-repeat; }
+.profile_header_info_company_iconBtn { display: -webkit-flex; display: flex; margin-top: .5rem; }
+.profile_header_info_company_iconBtn a + a { margin-left: .5rem; }
+.profile_header_info_meta { box-sizing: border-box; width: 36%; padding-left: 2rem; border-left: .1rem solid #ddd; line-height: 1.2; }
+.profile_header_info_meta span { display: block; font-size: .8rem; color: #bbb; }
+.profile_header_info_meta p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.1rem; }
+.profile_header_info_meta p + span { margin-top: .8rem; }
 .profile_header_cap { font-size: 1.6rem; font-weight: bold; }
 .profile_header_text { width: 70rem; margin: 0 auto; font-size: 1.3rem; text-align: left; }
 .profile_header_checkBox { display: -webkit-flex; display: flex; width: 70rem; margin: 2rem auto; text-align: left; }
@@ -26,6 +58,121 @@
 .profile_header_btn_back { display: block; height: 4rem; text-decoration: none; color: #fff; line-height: 4rem; }
 .profile_header_btn_save { width: 20rem; background: #44d095; }
 .profile_header_btn_back { width: 15rem; background: #bbb; margin-left: 1rem; }
+.profile_header_search { width: 70rem; margin: 1.2rem auto 0; text-align: left; }
+.profile_header_search_text { width: 70rem; margin: -1.2rem auto -.4rem; color: #bbb; font-size: 1.1rem; text-align: left; }
+.profile_header_search_input { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; margin-bottom: 2rem; }
+.profile_header_search_input input[type="text"] { display: block; width: 62rem; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.profile_header_search_input input[type="submit"] { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 7rem; color: #fff; font-weight: bold; background: #44d095; }
+.profile_header_search_row { display: -webkit-flex; display: flex; margin: 0; margin-top: -1rem; }
+.profile_header_search_row_head { width: 13rem; padding-top: 1.9rem; padding-right: 1.2rem; font-weight: bold; font-size: 1.2rem; line-height: 1.7rem; text-align: right; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) { .profile_header_search_row_head { width: 14rem; } }
+.profile_header_search_row_body { width: 55.8rem; margin: 0; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) { .profile_header_search_row_body { width: 54.8rem; } }
+.profile_header_search_row_body_flex { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.profile_header_search_row_body_flex .profile_edit_select.right { width: 21rem; margin-left: 1rem; }
+.profile_header_search_row_body_flex .select2_country + .select2-container, .profile_header_search_row_body_flex .select2_lang + .select2-container { box-sizing: border-box; min-width: 21rem; max-width: 21rem; border: .1rem solid #e5e8eb; position: relative; font-size: 1.3rem; }
+.profile_header_search_row_body_flex .select2_country + .select2-container.isOpen:after, .profile_header_search_row_body_flex .select2_lang + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
+.profile_header_search_row_body_flex .select2_country + .select2-container:after, .profile_header_search_row_body_flex .select2_lang + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
+.profile_header_search_row_body_flex .select2_country + .select2-container.select2-container--open, .profile_header_search_row_body_flex .select2_lang + .select2-container.select2-container--open { position: relative; }
+.profile_header_search_row_body_flex .select2_country + .select2-container.select2-container--open:after, .profile_header_search_row_body_flex .select2_lang + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.profile_header_search_row_body_flex .select2_country + .select2-container .select2-selection, .profile_header_search_row_body_flex .select2_lang + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.profile_header_search_row_body_flex .select2_country + .select2-container .select2-selection input, .profile_header_search_row_body_flex .select2_lang + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.profile_header_search_row_body_flex .select2_country + .select2-container--default .select2-selection--single .select2-selection__rendered, .profile_header_search_row_body_flex .select2_lang + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.profile_header_search_row_body_flex .select2_country.first + .select2-container, .profile_header_search_row_body_flex .select2_lang.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.profile_timeline { margin-top: 2.2rem; }
+.profile_timeline_ttl { margin: 0 0 .5rem; color: #bbb; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; }
+.profile_aside { margin-top: 2.2rem; }
+.profile_aside_ttl { margin: 0 0 .5rem; color: #bbb; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; }
+.profile_aside_info { padding: 1.5rem 1.9rem; border: .1rem solid #ecf1f2; margin-bottom: 1rem; background: #fff; }
+.profile_aside_info_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: .5rem; border-bottom: .1rem solid #f1f1f1; margin-bottom: 1.4rem; }
+.profile_aside_info_head h3 { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0; font-size: 1.4rem; }
+.profile_aside_info_head_question { position: relative; display: block; width: 1.6rem; height: 1.6rem; margin: 0 0 0 0.6rem; border-radius: 100%; background: #66d7db; }
+.profile_aside_info_head_question:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.profile_aside_info_head_question:not(.balloon):hover .balloon { display: block; }
+.profile_aside_info_head_question .balloon { position: absolute; top: 2.5rem; right: -9.8rem; z-index: 610; display: none; width: 21.6rem; padding: 1rem 1.4rem; line-height: 1.8rem; font-size: 1.1rem; color: #fff; font-weight: normal; background: #66d7db; }
+.profile_aside_info_head_question .balloon:before { content: ""; position: absolute; bottom: 100%; right: 9.9rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.profile_aside_info_head_count { display: -webkit-flex; display: flex; -webkit-align-items: flex-end; align-items: flex-end; font-size: 2rem; line-height: 1; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_aside_info_head_count span { margin-right: .3rem; font-size: 1.2rem; color: #bbb; }
+.profile_aside_info_graph { display: -webkit-flex; display: flex; -webkit-align-items: flex-end; align-items: flex-end; margin-bottom: .6rem; font-size: 1.4rem; line-height: 1; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_aside_info_graph span { margin-right: .3rem; font-size: 1.2rem; }
+.profile_aside_info_graph + div { height: 1rem; margin-bottom: 1rem; }
+.profile_aside_info_rate { display: -webkit-flex; display: flex; }
+.profile_aside_info_rate > div { box-sizing: border-box; padding: 0 .2rem; }
+.profile_aside_info_rate > div + div { border-left: .1rem solid #f1f1f1; }
+.profile_aside_info_rate_head { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; font-size: 1rem; }
+.profile_aside_info_rate_num { font-size: 2rem; text-align: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_aside_info_connection { display: -webkit-flex; display: flex; }
+.profile_aside_info_connection > div { box-sizing: border-box; padding: 0 .2rem; }
+.profile_aside_info_connection > div + div { border-left: .1rem solid #f1f1f1; }
+.profile_aside_info_connection_head { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; font-size: 1rem; }
+.profile_aside_info_connection_num { font-size: 2rem; text-align: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_aside_info_connection > div { width: 33.3333%; }
+.profile_aside_info_connection_head_btn { position: relative; display: block; width: 1.2rem; height: 1.2rem; margin: 0 0 0 0.3rem; border-radius: 100%; background: #66d7db; }
+.profile_aside_info_connection_head_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.profile_aside_info_connection_head_btn:not(.balloon):hover .balloon { display: block; }
+.profile_aside_info_connection_head_btn .balloon { position: absolute; top: 2.5rem; right: -1.8rem; z-index: 610; display: none; width: 13.4rem; padding: 1rem; line-height: 1.8rem; font-size: 1.1rem; color: #fff; font-weight: normal; background: #66d7db; }
+.profile_aside_info_connection_head_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 1.7rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.profile_aside_info_rate > div { width: 50%; }
+.profile_aside_info_rate_head_btn { position: relative; display: block; width: 1.2rem; height: 1.2rem; margin: 0 0 0 0.3rem; border-radius: 100%; background: #66d7db; }
+.profile_aside_info_rate_head_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.profile_aside_info_rate_head_btn:not(.balloon):hover .balloon { display: block; }
+.profile_aside_info_rate_head_btn .balloon { position: absolute; top: 2.5rem; right: -1.8rem; z-index: 610; display: none; width: 13.4rem; padding: 1rem; line-height: 1.8rem; font-size: 1.1rem; color: #fff; font-weight: normal; background: #66d7db; }
+.profile_aside_info_rate_head_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 1.7rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.profile_aside_info_text { font-size: 1.1rem; line-height: 1.8rem; }
+.profile_aside_info_text_head { padding-top: 1.5rem; border-top: .1rem solid #f1f1f1; margin: 1.5rem 0 .5rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; }
+.profile_aside_info_text_head span { margin-right: 1rem; color: #bbb; }
+.profile_message { box-sizing: border-box; width: 62rem; padding: 2.1rem 1.9rem 2.7rem; border: .1rem solid #e5e8eb; margin: 4rem auto 0; background: #fff; }
+.profile_message_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: 1.7rem; border-bottom: .1rem solid #eee; margin-bottom: 2rem; font-size: 1.6rem; }
+.profile_message_ttl_edit { padding-left: 2rem; color: #bbb; font-size: 1.2rem; line-height: 2rem; font-weight: normal; text-decoration: none; background: url(/img/common/icon_setting_edit.png) left center no-repeat; }
+.profile_message_content { font-size: 1.2rem; line-height: 1.5; }
+.profile_message_textarea { box-sizing: border-box; height: 34rem; padding: .8rem 1rem; border: .1rem solid #e5e8eb; font-size: 1.2rem; line-height: 1.5; }
+.profile_message_btn { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; font-size: 1.2rem; font-weight: bold; line-height: 4rem; margin-top: 3rem; }
+.profile_message_btn_submit { display: block; width: 18rem; height: 4rem; padding: 0; margin-right: 1.1rem; color: #fff; background: #44d095; }
+.profile_message_btn_cancel { display: block; width: 10rem; height: 4rem; color: #fff; text-decoration: none; text-align: center; background: #bbb; }
+.profile_post { border: .1rem solid #e5e8eb; margin-bottom: 1rem; background: #fff; }
+.profile_post_info { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 1.5rem 0; margin: 0 1.9rem; border-bottom: .1rem solid #e5e8eb; }
+.profile_post_info_icon { display: block; width: 4rem; height: 4rem; margin-right: 1rem; border-radius: 100%; overflow: hidden; }
+.profile_post_info_right { flex: 1; }
+.profile_post_info_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-end; align-items: flex-end; }
+.profile_post_info_head_author { -webkit-flex: 1; flex: 1; }
+.profile_post_info_head_author a { color: #333; text-decoration: none; font-weight: bold; }
+.profile_post_info_head_author a:hover { color: #44d095; }
+.profile_post_info_head_btn { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding-bottom: .2rem; }
+.profile_post_info_head_btn .setting { position: relative; width: 1.4rem; height: 1.4rem; margin-left: .7rem; background: url(/img/common/btn_gear.png) no-repeat; background-size: cover; cursor: pointer; }
+.profile_post_info_head_btn .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.profile_post_info_head_btn .setting .balloon { position: absolute; top: 2.3rem; right: -4.8rem; display: none; width: 12rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; padding: 2rem 1.5rem; }
+.profile_post_info_head_btn .setting .balloon a { text-decoration: none; color: #333; }
+.profile_post_info_head_btn .setting .balloon a:hover { color: #44d095; }
+.profile_post_info_head_btn .setting .balloon:before, .profile_post_info_head_btn .setting .balloon:after { bottom: 100%; left: 9.6rem; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.profile_post_info_head_btn .setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.profile_post_info_head_btn .setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.profile_post_info_head_btn .setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.profile_post_info_head_btn .save { width: 1.4rem; height: 1.4rem; margin-left: 1.3rem; background: url(/img/common/btn_share.png) no-repeat; background-size: cover; }
+.profile_post_info_head_btn .save:hover { background-image: url(/img/common/btn_share-selected.png); }
+.profile_post_info_head_btn .time { font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1rem; color: #bbb; }
+.profile_post_info_tag { padding-left: 1.7rem; font-size: 1.1rem; background: url(/img/common/icon_tag.png) left 0.1rem no-repeat; }
+.profile_post_info_tag a { display: inline-block; color: #333; }
+.profile_post_info_tag a:hover { color: #44d095; }
+.profile_post_info_redo { font-size: 1rem; margin-top: .4rem; }
+.profile_post_info_redo a { color: #333; }
+.profile_post_info_redo a:hover { color: #44d095; }
+.profile_post_content { margin: 2rem 2.1rem; font-size: 1.3rem; line-height: 2rem; }
+.profile_post_link { display: block; color: #333; text-decoration: none; }
+.profile_post_link_thumb { position: relative; height: 24rem; overflow: hidden; cursor: pointer; background: #ccc; }
+.profile_post_link_thumb img, .profile_post_link_thumb video { position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
+.profile_post_link_thumb .player { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; width: 6rem; height: 6rem; margin: auto; background: url(/img/top/btn_player.png); }
+.profile_post_link_content { padding: 2rem; }
+.profile_post_link_content_caption { margin: 0; font-size: 1.6rem; }
+.profile_post_link_content p { font-size: 1.2rem; margin: .6rem 0; }
+.profile_post_link_content_url { display: block; margin-top: .8rem; font-size: 1.1rm; color: #bbb; }
+.profile_post_btn { display: -webkit-flex; display: flex; height: 4rem; }
+.profile_post_btn a { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 50%; background: #bbb; color: #fff; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; text-decoration: none; transition: background-color .15s; }
+.profile_post_btn a + a { border-left: .1rem solid #fff; }
+.profile_post_btn a:hover { background: #44d095; }
+.profile_post_btn a span { font-weight: bold; }
+.profile_post_btn a .num { font-weight: normal; margin-left: 3rem; }
+.profile_post_btn a .recommend { padding-left: 2.2rem; background: url(/img/common/icon_recommend.png) left center no-repeat; }
+.profile_post_btn a .share { padding-left: 2.2rem; background: url(/img/common/icon_share_02.png) left center no-repeat; }
 .profile_content { box-sizing: border-box; width: 75rem; padding: 2rem 2rem 1.5rem; margin-bottom: 1rem; border: .1rem solid #e5e8eb; margin: .5rem auto; background: #fff; }
 .profile_content_info { position: relative; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 2rem 0; border-bottom: .1rem solid #eee; }
 .profile_content_info:before { content: ""; position: absolute; top: 0; bottom: 0; right: 21rem; width: .1rem; height: 75%; margin: auto; background: #eee; }
@@ -64,7 +211,7 @@
 .profile_edit input[type="text"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
 .profile_edit input[type="url"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
 .profile_edit input[type="number"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
-.profile_edit_select { position: relative; border-top: .1rem solid #e5e8eb; border-left: .1rem solid #e5e8eb; margin: .9rem 0; }
+.profile_edit_select { position: relative; border-top: .1rem solid #e5e8eb; border-left: .1rem solid #e5e8eb; margin: 1rem 0; }
 .profile_edit_select select { box-sizing: border-box; width: 100%; height: 3.4rem; padding: 0 2.3rem 0 1rem; }
 .profile_edit_select:before { content: ""; position: absolute; top: 0; bottom: 0; right: 1.2rem; width: .9rem; height: .6rem; margin: auto; background: url(/sp/img/common/arrow_select.png) center center no-repeat; background-size: cover; }
 .profile_edit_select.reset { margin: 0; }
@@ -74,7 +221,7 @@
 .profile_edit_select.year { width: 8rem; }
 .profile_edit_select.currency { width: 9rem; margin-right: 1rem; }
 .profile_edit_select.lang { width: 24rem; }
-.profile_edit_select2 + .select2-container { box-sizing: border-box; min-width: 100%; max-width: 100%; border: .1rem solid #e5e8eb; display: block; margin: 0.9rem 0; font-size: 1.3rem; position: relative; }
+.profile_edit_select2 + .select2-container { box-sizing: border-box; min-width: 100%; max-width: 100%; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; position: relative; font-size: 1.3rem; }
 .profile_edit_select2 + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
 .profile_edit_select2 + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
 .profile_edit_select2 + .select2-container.select2-container--open { position: relative; }
@@ -83,7 +230,7 @@
 .profile_edit_select2 + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
 .profile_edit_select2 + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
 .profile_edit_select2.first + .select2-container { border-left: .1rem solid #e5e8eb; }
-.profile_edit_select2long + .select2-container { box-sizing: border-box; min-width: 20rem; max-width: 20rem; border: .1rem solid #e5e8eb; display: block; margin: 0.9rem 0; margin-right: 2rem; font-size: 1.3rem; position: relative; }
+.profile_edit_select2long + .select2-container { box-sizing: border-box; min-width: 20rem; max-width: 20rem; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; margin-right: 2rem; position: relative; font-size: 1.3rem; }
 .profile_edit_select2long + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
 .profile_edit_select2long + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
 .profile_edit_select2long + .select2-container.select2-container--open { position: relative; }
@@ -92,7 +239,7 @@
 .profile_edit_select2long + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
 .profile_edit_select2long + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
 .profile_edit_select2long.first + .select2-container { border-left: .1rem solid #e5e8eb; }
-.profile_edit_select2short + .select2-container { box-sizing: border-box; min-width: 18rem; max-width: 18rem; border: .1rem solid #e5e8eb; display: block; margin: 0.9rem 0; margin-right: 1rem; font-size: 1.3rem; position: relative; }
+.profile_edit_select2short + .select2-container { box-sizing: border-box; min-width: 18rem; max-width: 18rem; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; margin-right: 1rem; position: relative; font-size: 1.3rem; }
 .profile_edit_select2short + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
 .profile_edit_select2short + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
 .profile_edit_select2short + .select2-container.select2-container--open { position: relative; }
@@ -101,7 +248,7 @@
 .profile_edit_select2short + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
 .profile_edit_select2short + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
 .profile_edit_select2short.first + .select2-container { border-left: .1rem solid #e5e8eb; }
-.profile_edit_select2juris + .select2-container { box-sizing: border-box; min-width: 24rem; max-width: 24rem; border: .1rem solid #e5e8eb; display: block; margin: 0.9rem 0; margin-right: 2rem; font-size: 1.3rem; position: relative; }
+.profile_edit_select2juris + .select2-container { box-sizing: border-box; min-width: 24rem; max-width: 24rem; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; margin-right: 2rem; position: relative; font-size: 1.3rem; }
 .profile_edit_select2juris + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
 .profile_edit_select2juris + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
 .profile_edit_select2juris + .select2-container.select2-container--open { position: relative; }
@@ -110,7 +257,7 @@
 .profile_edit_select2juris + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
 .profile_edit_select2juris + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
 .profile_edit_select2juris.first + .select2-container { border-left: .1rem solid #e5e8eb; }
-.profile_edit_select2lang + .select2-container { box-sizing: border-box; min-width: 24rem; max-width: 24rem; border: .1rem solid #e5e8eb; display: block; margin: 0.9rem 0; margin-right: 1rem; font-size: 1.3rem; position: relative; }
+.profile_edit_select2lang + .select2-container { box-sizing: border-box; min-width: 24rem; max-width: 24rem; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; margin-right: 1rem; position: relative; font-size: 1.3rem; }
 .profile_edit_select2lang + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
 .profile_edit_select2lang + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
 .profile_edit_select2lang + .select2-container.select2-container--open { position: relative; }
@@ -133,14 +280,14 @@
 .profile_edit_radio:checked + label:after { opacity: 1; }
 .profile_edit_textarea { box-sizing: border-box; width: 48.8rem; height: 15rem; border: .1rem solid #e5e8eb; resize: none; }
 .profile_edit_text { font-size: 1.1rem; }
-.profile_edit_row { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; margin-top: -.9rem; }
-.profile_edit_row_head { position: relative; width: 11.5rem; padding-top: 1.9rem; margin: 0; font-size: 1.2rem; line-height: 1.5rem; text-align: right; }
+.profile_edit_row { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; margin-top: -1rem; }
+.profile_edit_row_head { position: relative; width: 11.5rem; padding-top: 1.9rem; margin: 0; font-size: 1.2rem; line-height: 1.7rem; text-align: right; }
 .profile_edit_row_head .edit_removeBtn { position: absolute; top: 1.6rem; left: -.5rem; display: block; width: 2rem; height: 2rem; background: url(/img/common/btn_delete.png) center center no-repeat; cursor: pointer; }
 .profile_edit_row_flex { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin-left: 9rem; font-size: 1.2rem; margin-top: .5rem; }
 .profile_edit_row_flex_text { width: 31rem; }
 .profile_edit_row_flex input[type="number"] { width: 9rem; margin: .8rem 0; }
 .profile_edit_row_body { width: 58.3rem; padding-left: 1rem; }
-.profile_edit_row_body input[type="text"], .profile_edit_row_body input[type="url"], .profile_edit_row_body input[type="number"] { margin: .9rem 0; }
+.profile_edit_row_body input[type="text"], .profile_edit_row_body input[type="url"], .profile_edit_row_body input[type="number"] { margin: 1rem 0; }
 .profile_edit_row_body input[type="text"].reset, .profile_edit_row_body input[type="url"].reset, .profile_edit_row_body input[type="number"].reset { margin: 0; }
 .profile_edit_row_body input[type="text"].resetBottom, .profile_edit_row_body input[type="url"].resetBottom, .profile_edit_row_body input[type="number"].resetBottom { margin-bottom: 0; }
 .profile_edit_row_body input[type="text"].short, .profile_edit_row_body input[type="url"].short, .profile_edit_row_body input[type="number"].short { width: 13rem; }
@@ -152,23 +299,31 @@
 .profile_edit_row_body_flex_text { width: 31rem; }
 .profile_edit_row_body_head { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 8.5rem; margin-right: 1rem; font-size: 1.2rem; }
 .profile_edit_row_body_head_btn { position: relative; display: block; width: 1.6rem; height: 1.6rem; margin: 0 0 0 0.5rem; border-radius: 100%; background: #66d7db; }
-.profile_edit_row_body_head_btn:before { content: "?"; position: absolute; top: 0; left: 0; box-sizing: border-box; width: 100%; height: 100%; padding-right: .1rem; color: #fff; font-size: 1rem; line-height: 1.5rem; text-align: center; }
+.profile_edit_row_body_head_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
 .profile_edit_row_body_head_btn:not(.balloon):hover .balloon { display: block; }
-.profile_edit_row_body_head_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; padding: 1.5rem 1rem; width: 20.4rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
+.profile_edit_row_body_head_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; width: 20.4rem; padding: 1.5rem 1rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
 .profile_edit_row_body_head_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 6.6rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
 .profile_edit_row_body_radio { margin-top: -.2rem; }
 .profile_edit_submit { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 63rem; margin: 3.2rem auto 0; }
 .profile_edit_submit_ttl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; font-size: 1.2rem; font-weight: bold; }
 .profile_edit_submit_ttl_btn { position: relative; display: block; width: 1.6rem; height: 1.6rem; margin: 0 0 0 0.5rem; border-radius: 100%; background: #66d7db; }
-.profile_edit_submit_ttl_btn:before { content: "?"; position: absolute; top: 0; left: 0; box-sizing: border-box; width: 100%; height: 100%; padding-right: .1rem; color: #fff; font-size: 1rem; line-height: 1.5rem; text-align: center; }
+.profile_edit_submit_ttl_btn:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #fff; text-align: center; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
 .profile_edit_submit_ttl_btn:not(.balloon):hover .balloon { display: block; }
-.profile_edit_submit_ttl_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; padding: 1.5rem 1rem; width: 20.4rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
+.profile_edit_submit_ttl_btn .balloon { position: absolute; top: 2.5rem; right: -6.5rem; z-index: 610; display: none; width: 20.4rem; padding: 1.5rem 1rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
 .profile_edit_submit_ttl_btn .balloon:before { content: ""; position: absolute; bottom: 100%; right: 6.6rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
 .profile_edit_submit_range { box-sizing: border-box; border: .1rem solid #e5e8eb; width: 22.8rem; height: 3.5rem; padding-right: 2rem; }
 .profile_edit_submit_range .range_placeholder { width: 13rem; margin-left: 1rem; color: #bbb; font-size: 1.2rem; line-height: 1.3; }
 .profile_edit_submit_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 31rem; font-size: 1.3rem; font-weight: bold; }
 .profile_edit_submit_btn input[type="submit"] { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 20rem; height: 4rem; padding: 0 1rem; color: #fff; background: #44d095; }
 .profile_edit_submit_btn_cancel { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 8rem; height: 4rem; padding: 0 1rem; color: #fff; text-decoration: none; background: #bbb; }
+.profile_tabs { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 75rem; margin: 1.5rem auto .6rem; }
+.profile_tabs_container { display: -webkit-flex; display: flex; width: 21rem; height: 3rem; }
+.profile_tabs_item { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 10.5rem; color: #fff; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; background: #bbb; cursor: pointer; }
+.profile_tabs_item.isSelected { position: relative; background: #22313d; cursor: default; }
+.profile_tabs_item.isSelected:before { content: ""; position: absolute; top: 100%; right: 0; left: 0; margin: auto; width: 0; height: 0; border: .6rem solid transparent; border-top-color: #22313d; }
+.profile_tabs_text { font-size: 1.2rem; }
+.profile_tabs_text span { font-weight: bold; }
+.profile_tabs_text a { margin: 0 .3rem; color: #333; text-decoration: underline; }
 .profile_slideTabs { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; margin-top: 1.5rem; }
 .profile_slideTabs_forward { display: block; width: 2rem; height: 3rem; cursor: pointer; }
 .profile_slideTabs_backward { display: block; width: 2rem; height: 3rem; cursor: pointer; }
@@ -176,7 +331,7 @@
 .profile_slideTabs_backward { background: url(/img/profile/arrow_right.png) center center no-repeat; }
 .profile_slideTabs_wrapper { flex: 1; height: 3.6rem; overflow: hidden; }
 .profile_slideTabs_container { display: -webkit-flex; display: flex; -webkit-flex-wrap: nowrap; flex-wrap: nowrap; width: 100%; height: 5.3rem; overflow-x: scroll; overflow-y: hidden; }
-.profile_slideTabs_container_item { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; flex: 0 0 9.5rem; height: 2rem; padding: .5rem; margin-left: .1rem; color: #fff; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1.1rem; font-weight: bold; background: #bbb; cursor: pointer; }
+.profile_slideTabs_container_item { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; flex: 0 0 9.5rem; height: 2rem; padding: .5rem; margin-left: .1rem; color: #fff; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-weight: bold; font-size: 1.1rem; font-weight: bold; background: #bbb; cursor: pointer; }
 .profile_slideTabs_container_item:first-child { margin-left: 0; }
 .profile_slideTabs_container_item.isSelected { position: relative; background: #22313d; cursor: default; }
 .profile_slideTabs_container_item.isSelected:before { content: ""; position: absolute; top: 100%; right: 0; left: 0; margin: auto; width: 0; height: 0; border: .6rem solid transparent; border-top-color: #22313d; }
@@ -187,7 +342,7 @@
 .profile_circleGraph_caption_list li { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; height: 2.4rem; font-size: 1.2rem; line-height: 1.4; }
 .profile_circleGraph_caption_list li i { display: block; width: 1.5rem; height: 1.5rem; border-radius: 100%; margin-right: .5rem; }
 .profile_circleGraph_caption_list li span { font-weight: bold; }
-.profile_circleGraph_area { width: 30rem; margin-top: .5rem; margin-right: 1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_circleGraph_area { width: 30rem; margin-top: .5rem; margin-right: 2.6rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
 .profile_circleGraph_area_list { border-bottom: .1rem solid #e5e8eb; }
 .profile_circleGraph_area_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; height: 4.2rem; font-weight: bold; font-size: 1.3rem; cursor: pointer; }
 .profile_circleGraph_area_ttl span { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
@@ -198,6 +353,7 @@
 .profile_circleGraph_area_country_item { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; height: 2.9rem; }
 .profile_circleGraph_area_country_item img { display: block; margin-right: 1.3rem; vertical-align: bottom; }
 .profile_circleGraph_area_country_item span { margin-left: 1rem; }
+.profile_circleGraph_canvas.area { margin-left: 2.6rem; }
 .profile_circleGraph_canvas canvas { margin-top: -1rem; }
 .profile_circleGraph_canvas_caption { margin-top: 1rem; line-height: 1.3; font-weight: bold; color: #bbb; font-size: 1.3rem; text-align: center; }
 .profile_barGraph_caption { padding-left: 2rem; }
@@ -221,8 +377,14 @@
 .profile_barGraph_canvas_left_rate span { margin-left: .3rem; }
 .profile_barGraph_canvas_right_rate { right: 0; }
 .profile_barGraph_canvas_right_rate span { margin-right: .3rem; }
-.profile_barGraph_canvas_value { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; color: #fff; font-size: 1rem; min-width: 5%; max-width: 100%; transition: opacity .2s; }
-.profile_barGraph_canvas_value.right { background: #7fd396; }
+.profile_barGraph_canvas_value { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; color: #fff; min-width: 5%; max-width: 100%; opacity: 1 !important; }
+.profile_barGraph_canvas_value:hover .profile_barGraph_canvas_value_num_balloon { display: block; }
+.profile_barGraph_canvas_value.right { font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; font-size: 1rem; background: #7fd396; }
+.profile_barGraph_canvas_value_num { position: relative; }
+.profile_barGraph_canvas_value_num_balloon { position: absolute; z-index: 10; top: 100%; left: -3rem; display: none; width: 12.5rem; padding: .4rem .8rem; border: .1rem solid #bbb; margin-top: .7rem; margin-left: 50%; color: #333; background: #fff; }
+.profile_barGraph_canvas_value_num_balloon:before, .profile_barGraph_canvas_value_num_balloon:after { content: ""; position: absolute; bottom: 100%; left: 0; width: 0; height: 0; margin-top: .1rem; }
+.profile_barGraph_canvas_value_num_balloon:before { border: .7rem solid transparent; border-bottom-color: #bbb; margin-left: 2.3rem; }
+.profile_barGraph_canvas_value_num_balloon:after { border: .6rem solid transparent; border-bottom-color: #fff; margin-left: 2.4rem; }
 .profile_barGraph_comment { max-width: 40rem; margin: .8rem auto 0; font-size: 1.1rem; text-align: center; }
 .profile_barGraph_comment span { font-weight: bold; color: #bbb; }
 .profile_careerArea { border: .1rem solid #e5e8eb; overflow-x: scroll; }
@@ -327,6 +489,48 @@
 .profile_careerArea_content_main.under span.rank4 { top: 6rem; }
 .profile_careerArea_content_main.under span.rank5 { top: 8rem; }
 .profile_careerArea_content_main.under span.rank6 { top: 10rem; }
+.profile_lawyer { box-sizing: border-box; width: 75rem; max-height: 70rem; border: .1rem solid #e5e8eb; margin: 0 auto; background: #fff; }
+.profile_lawyer_container { width: 75rem; margin: 0 auto; }
+.profile_lawyer_container.space { margin-top: 2.2rem; }
+.profile_lawyer_item { padding: 2rem 3.5rem 0; cursor: pointer; }
+.profile_lawyer_item:hover { background: #eee; }
+.profile_lawyer_item.isSelected { background: #edfbfc; }
+.profile_lawyer_item.other { background: transparent; cursor: default; }
+.profile_lawyer_item.other.upper { padding-top: 1.3rem; }
+.profile_lawyer_item_container { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; border-bottom: .1rem solid #e3e3e3; }
+.profile_lawyer_item_photo { width: 10rem; height: 10rem; border-radius: 100%; overflow: hidden; }
+.profile_lawyer_item_main { width: 56.6rem; margin-top: .6rem; }
+.profile_lawyer_item_time { color: #bbb; font-size: 1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; text-align: right; margin-right: -1rem; }
+.profile_lawyer_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: .3rem; border-bottom: .1rem solid #ddd; }
+.profile_lawyer_item_head p { max-width: 45rem; font-size: 1.6rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.profile_lawyer_item_head_icon { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_lawyer_item_head_icon span, .profile_lawyer_item_head_icon a { line-height: 2rem; text-decoration: none; color: #bbb; }
+.profile_lawyer_item_head_icon span.recommend, .profile_lawyer_item_head_icon a.recommend { padding-left: 1.7rem; background: url(/img/common/icon_medal.png) left center no-repeat; }
+.profile_lawyer_item_head_icon span.credit, .profile_lawyer_item_head_icon a.credit { padding-left: 18px; margin-left: 1.5rem; background: url(/img/common/icon_exp.png) left center no-repeat; }
+.profile_lawyer_item_head_icon span.community, .profile_lawyer_item_head_icon a.community { padding-left: 22px; margin-left: 13px; background: url(/img/common/icon_team2.png) left center no-repeat; }
+.profile_lawyer_item_head_icon span.accept, .profile_lawyer_item_head_icon a.accept { padding-left: 1.9rem; color: #44d095; background: url(/img/profile/icon_connect_on.png) left center no-repeat; }
+.profile_lawyer_item_head_icon span.delete, .profile_lawyer_item_head_icon a.delete { padding-left: 1.8rem; margin-left: 1.5rem; margin-right: 1rem; background: url(/img/common/btn_delete.png) left center no-repeat; }
+.profile_lawyer_item_info { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding: .9rem 0 1rem; }
+.profile_lawyer_item_info_company { box-sizing: border-box; width: 64%; padding-right: 2rem; }
+.profile_lawyer_item_info_company p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.2rem; height: 2rem; }
+.profile_lawyer_item_info_company_head { font-weight: bold; }
+.profile_lawyer_item_info_company_locate { color: #bbb; padding-left: 1.5rem; background: url(/img/common/icon_locate.png) 0.1rem center no-repeat; }
+.profile_lawyer_item_info_meta { box-sizing: border-box; width: 36%; padding-left: 2rem; border-left: .1rem solid #ddd; line-height: 1.2; }
+.profile_lawyer_item_info_meta span { display: block; font-size: .8rem; color: #bbb; }
+.profile_lawyer_item_info_meta p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.1rem; }
+.profile_lawyer_item_info_meta p + span { margin-top: .8rem; }
+.profile_lawyer_item_btns { display: -webkit-flex; display: flex; border-top: .1rem solid #ddd; }
+.profile_lawyer_item_btns.right { -webkit-justify-content: flex-end; justify-content: flex-end; }
+.profile_lawyer_item_btns.right a { width: auto; padding: 0 1.2rem; }
+.profile_lawyer_item_btns a { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 33.3333%; height: 3.6rem; text-decoration: none; transition: opacity .1s; }
+.profile_lawyer_item_btns a:hover { opacity: .7; }
+.profile_lawyer_item_btns a span { font-size: 1.1rem; line-height: 2rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.profile_lawyer_item_btns a span.connection { padding-left: 2rem; background: url(/img/profile/icon_connect_off.png) left center no-repeat; }
+.profile_lawyer_item_btns a span.connection.on { background-image: url(/img/profile/icon_connect_on.png); color: #44d095; }
+.profile_lawyer_item_btns a span.view { padding-left: 1.6rem; background: url(/img/search/icon_profile.png) left center no-repeat; }
+.profile_lawyer_item_btns a span.msg { padding-left: 2.2rem; background: url(/img/common/icon_mail.png) left center no-repeat; }
+.profile_lawyer_item_btns a span.request { padding-left: 2rem; background: url(/img/profile/icon_connect_on.png) left center no-repeat; color: #44d095; }
+.profile_lawyer_item_btns a span.cancel { padding-left: 1.7rem; background: url(/img/common/btn_delete.png) left center no-repeat; }
 .profile_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-bottom: 1.5rem; border-bottom: .1rem solid #eee; margin: 0; font-size: 1.6rem; }
 .profile_ttl_editBtn { display: block; padding-left: 2rem; color: #bbb; font-size: 1.2rem; line-height: 1.8rem; font-weight: normal; text-decoration: none; background: url(/img/common/icon_setting_edit.png) left center no-repeat; }
 .profile_areaTtl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 75rem; margin: 2.8rem auto .6rem; font-size: 1.4rem; }

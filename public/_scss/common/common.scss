@@ -25,12 +25,25 @@ body{
 }
 
 p{ margin: 0; }
-ul,li{
+ul,ol,li{
     @include reset;
+}
+ul,ol{
     list-style:none;
+}
+li{
+    list-style: inherit;
 }
 img{
     vertical-align: bottom;
+}
+
+a{
+    transition: color .1s, background .14s;
+    cursor: pointer;
+    &:hover img{
+        opacity: .8;
+    }
 }
 
 #wrapper{
@@ -48,8 +61,22 @@ img{
     box-sizing: border-box;
     min-width: 96rem;
     max-width: 108rem;
+    @include m(col){
+        @include flex($a:flex-start);
+        main{
+            flex:1;
+            margin: 0 1rem;
+        }
+        aside{
+            width: 32rem;
+        }
+    }
 }
 
+#loadingImg{
+    width: 4.6rem;
+    margin: 2.6rem auto;
+}
 
 .btn_balloon{
     position: relative;
@@ -72,6 +99,7 @@ input, button, textarea, select {
     padding: 0 .8rem;
     border-top: none;
     border-left: none;
+    font-size: 1.3rem;
     @include border(right);
     @include border(bottom);
     border-radius: 0;
@@ -81,6 +109,14 @@ input, button, textarea, select {
     &.firstRow{
         @include border(top);
     }
+    &:focus{
+        outline: none;
+    }
+}
+
+input[type="submit"]{
+    border: none;
+    cursor: pointer;
 }
 
 option[disabled]{
@@ -128,6 +164,9 @@ textarea{
     color: #bbb; }
 
 
+.checkArea{display: none;}
+
+
 // Select2 Plugin
 body .select2-container--default .select2-selection--single .select2-selection__placeholder{
     color: #bbb;
@@ -141,7 +180,9 @@ body .select2-container--default .select2-selection--single .select2-selection__
     vertical-align: bottom;
 }
 
-.select2-dropdown{
+.select2-container .select2-dropdown{
+    border-color: #e5e8eb;
+    border-radius: 0;
     .select2-results{
         .select2-results__options{
             max-height: 20rem;
@@ -194,6 +235,42 @@ body > .select2-container{
 .select2-dropdown .select2-results .select2-results__option--highlighted[aria-selected]{
     background: #ddd;
 }
+[aria-selected="true"]{
+    display: none!important;
+}
+.select2-container--default .select2-selection--multiple li.select2-selection__choice {
+    height: 2.5rem;
+    border: none;
+    border-radius: .1rem;
+    margin: .4rem .3rem .4rem 0;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    background: #bbb;
+    color: #fff;
+}
+.select2-container--default .select2-selection--multiple span.select2-selection__choice__remove {
+    color: #fff;
+    margin-right: .6rem;
+}
+
+.labelPar{
+    opacity: 1!important;
+    .label{
+        position: fixed;
+        display: none;
+        background: #e5e8eb;
+        font-size: 1rem;
+        padding: .4rem .8rem;
+        color: #333;
+        text-decoration: none;
+    }
+    &:hover{
+        .label{
+            display: block;
+        }
+    }
+}
+
 
 @import '_header';
 @import '_alert';

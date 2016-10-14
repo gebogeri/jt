@@ -11,6 +11,34 @@
     padding-top: 5rem;
     font-size: 1.1rem;
     @include ff;
+    @include e(profile){
+        color: #fff;
+        width: 14rem;
+        margin: 0 auto 3rem;
+        @include e(icon){
+            position: relative;
+            width: 11rem;
+            height: 11rem;
+            border-radius: 100%;
+            margin: 0 auto .8rem;
+            overflow: hidden;
+            img{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+        @include e(name){
+            @include flex($a:center, $j:space-between);
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
     @include e(ttl){
         height: 3rem;
         padding-left: 3.6rem;
@@ -21,6 +49,9 @@
         background-repeat: no-repeat;
         color: #bbb;
         @include m(prof){
+            background-image: url(/img/knowledge/ttl_side_knowledge.png);
+        }
+        @include m(knowledge){
             background-image: url(/img/knowledge/ttl_side_knowledge.png);
         }
     }
@@ -38,20 +69,23 @@
         @include e(item){
             @include e(target){
                 position: relative;
-                display: block;
+                box-sizing: border-box;
+                @include flex($a:center);
+                padding: .8rem .4rem .8rem 1.2rem;
                 color: #fff;
-                line-height: 1.4rem;
                 text-decoration: none;
                 @include ff;
+                cursor: pointer;
+                transition: opacity .1s;
+                &:hover{
+                    opacity: .7;
+                }
             }
-        }
-    }
-    a{
-        transition: opacity .1s;
-        &:hover{
-            opacity: .7;
-        }
-    }
+            @include e(cale){
+                display: none;
+            }
+        }//item
+    }//list
 }
 
 .sideLeft, .sideRight{
@@ -64,7 +98,8 @@
         @include e(list){
             @include e(item){
                 @include e(target){
-                    padding: 1.3rem 0 1.3rem 1.2rem;
+                    padding-left: 1.2rem;
+                    min-height: 4rem;
                     @include m(isSelected){
                         border-left: .4rem solid $green;
                         padding-left: .8rem;
@@ -85,7 +120,8 @@
         @include e(list){
             @include e(item){
                 @include e(target){
-                    padding: 1.1rem 0 1.1rem 1.2rem;
+                    min-height: 3.6rem;
+                    padding-left: 1.2rem;
                     @include m(isSelected){
                         background: #262f38;
                     }

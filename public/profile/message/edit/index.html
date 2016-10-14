@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ログイン前TOP | </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="/css/common/normalize.css">
-  <link rel="stylesheet" href="/css/common/style.css">
-  <link rel="stylesheet" href="/css/plugin/select2.min.css">
-  <link rel="stylesheet" href="/css/common/profile.css">
-  <link rel="stylesheet" href="/css/common/profile_add.css">
-  <link rel="stylesheet" href="/css/common/invite.css">
-  <!-- cache -->
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <!-- viewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/plugin/select2/css/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body>
-  <!--#include virtual="/include/header.html" -->
-  <div id="wrapper">
-    <div id="container" class="clear">
-      <main class="clear">
+<body class="profile message">
+<!--#include virtual="/include_new/header.html" -->
+    <div id="container">
+        <div class="headline">
+            <div class="headline_inner">
+                <div class="ttl">
+                    <p class="ttl_summary">MESSAGE/INTERVIEW</p>
+                    <h1 class="ttl_main">メッセージ/インタビュー</h1>
+                </div><!-- [/ .ttl] -->
+            </div><!-- [/ .headline_inner] -->
+            <div class="headline_inner profile_header"></div>
+        </div><!-- [/.headline] -->
 
-        <div class="column-main-profile">
-          <div class="profile-title">
-            <div class="profile-title_container">
-              <p class="txt_gray">MESSAGE/INTERVIEW</p>
-              <h1>メッセージ / インタビュー</h1>
+        <div id="content">
+            <div class="profile_message">
+                <h2 class="profile_message_ttl">
+                    MESSAGE
+                    <a href="" class="profile_message_ttl_edit">編集</a>
+                </h2>
+                <textarea name="" id="" class="profile_message_textarea">
+訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓ
+ampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるて
+きすと訪問者へのメッセージを表示します。ｓampletext
+サンプルテキストさんぷるてきすと訪問者へのメッセージを表示し ます。ｓampletext
+サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさ
+んぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージ
+を表示します。ｓampletext
+サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテ キストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者への
+メッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext
+サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪
+問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓ
+ampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletサンプルテキストさんぷるて
+きすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示し
+ます。ｓampletext サンプルテキストさんぷるてきすと訪問者へのメッセージを表示します。ｓampletext サンプルテキストさ
+んぷるてきすと
+                </textarea>
+            </div><!-- [/ .profile_message] -->
+            <div class="profile_message_btn">
+                <input type="submit" class="profile_message_btn_submit" value="登録">
+                <a href="" class="profile_message_btn_cancel">キャンセル</a>
             </div>
-          </div><!-- /.profile-title -->
-
-          <div class="message-wrap">
-            <div class="title txt_16 fw_b">
-             MESSAGE
-           </div>
-           <div>
-            <textarea class="textarea">
-              寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝え
-              寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝える。                寄せ書きに使える文例、メッセージサンプル集について. 卒業、送別、退職などの寄せ書きメッセー文例からお世話になった先生、恩師へのお礼の言葉、卒業する先輩に贈る感謝の言葉、応援メッセージをご紹介しています。 感謝の気持ちを寄せ書きで伝える。
-            </textarea>
-          </div>
-          <div class="message-btn-area">
-            <div>
-             <span class="btn_register">登録</span>
-           </div>
-           <div>
-             <span class="btn_cancel">キャンセル</span>
-           </div>
-         </div>
-       </div>
-
-
-     </main>
-     <aside>
-      <h2 class="ttl_side">PROFILE</h2>
-      <div id="side-link" class="txt_11">
-        <a href="/profile/recent_activity.html" class="selected"> RECENT ACTIVITY</a>
-        <a href=""> ABOUT</a>
-        <a href=""> MESSAGE / INTERVIEW</a>
-        <a href=""> CONNECTION</a>
-        <h3 class="ttl_sub_side">MY FILE</h3>
-        <a href="/profile/myfile">- LATEST</a>
-        <a href="/profile/myfile/projects">- 取り扱い案件</a>
-        <a href="/profile/myfile/monograph">- 論文/書籍</a>
-        <a href="/profile/myfile/seminar">- セミナー,講演</a>
-        <a href="/profile/myfile/award">- 受賞</a>
-        <a href="/profile/myfile/blog">- コラム/ブログ</a>
-        <a href="/profile/myfile/link">- リンク</a>
-      </div>
-      <div class="sub-aside">
-       <div id="side-link" class="txt_11">
-        <h3 class="ttl_sub_side">MESSAGE / INTERVIEW</h3>
-        <a href=""> - MESSAGE</a>
-      </div>
-    </div>
-  </aside>
-</div>
-</div>
-<!--#include virtual="/include/footer.html"-->
+        </div><!-- [/ #content] -->
+        <aside class="side" id="sideBar">
+            <div class="sideLeft">
+                <h3 class="side_ttl prof">PROFILE</h3>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">RECENT ACTIVITY</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">BASIC INFORMATION</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target isSelected">MESSAGE / INTERVIEW</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">CONNECTION</a></li>
+                </ul><!-- [/ .side_list] -->
+                <h4 class="side_subTtl">MY FILE</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- LATEST</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 取り扱い案件</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 論文/書籍</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- セミナー,講演</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 受賞</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- コラム/ブログ</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- リンク</a></li>
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideLeft] -->
+        </aside>
+    </div><!-- [/ #container] -->
+<!--#include virtual="/include_new/footer_under.html"-->
+<!--#include virtual="/include_new/footer.html"-->
 </body>
 </html>

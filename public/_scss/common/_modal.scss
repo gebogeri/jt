@@ -1,369 +1,1217 @@
 @import '_mixin';
-
-.modal{
-  width: 50rem;
-  background: #fff;
-  cursor: default;
-  font-size: 1.4rem;
-  @include m(modalSearch){
-    padding: 3.5rem 6rem 0;
-  }
-  @include e(ttl){
-    margin-top: 0;
-    margin-bottom: 2rem;
+.modal {
+    width: 50rem;
+    background: #fff;
+    cursor: default;
     font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  @include e(toggleBtn){
-    @include flex($a:center, $j:center);
-    width: 100%;
-    height: 4.5rem;
-    @include border(top);
-    cursor: pointer;
-    &:before{
-      content: "DETAIL";
-      padding-right: 3rem;
-      @include ff;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #bbb;
-      background: url(/img/common/arrow_select.png) right center no-repeat;
-    }
-  }
-  @include m(isOpen){
-    .modal_toggleBtn:before{
-      content: "CLOSE";
-      background-image: url(/img/common/arrow_select_open.png);
-    }
-  }
-
-  @include e(search){
-    @include flex($j:space-between);
-    height: 3.4rem;
-    margin-bottom: 2rem;
-    line-height: 3.4rem;
-    input[type="text"]{
-      width: 42rem;
-      padding: 0 .8rem;
-      @include border;
-    }
-    input[type="submit"]{
-      width: 7rem;
-      background: $green;
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-    }
-    @include e(content){
-      display: none;
-      margin-bottom: 4rem;
-      @include e(subTtl){
-        @include flex($a:center, $j:space-between);
-        height: 3.2rem;
-        margin-bottom: 2.2rem;
-        font-weight: bold;
-        @include border(bottom);
-        @include e(addBtn){
-          display: block;
-          padding-left: 2.3rem;
-          font-weight: normal;
-          font-size: 1.2rem;
-          color: #bbb;
-          text-decoration: none;
-          line-height: 1.8rem;
-          background: url(/img/common/icon_add.png) left center no-repeat;
-        }
-      }//subTtl
-      @include e(row){
-        @include flex($a:center);
-        margin-bottom: .9rem;
-        @include e(head){
-          width: 12rem;
-          padding-right: 1.5rem;
-          font-size: 1.2rem;
-          font-weight: bold;
-          text-align: right;
-        }
-        @include e(select2){
-          @include select2($l:true,$w:36.1rem);
-          @include m(short){
-            @include select2($l:true,$w:20.1rem);
-          }
-        }
-        @include e(select){
-          width: 20.3rem;
-          @include select;
-          @include m(short){
-            width: 15rem;
-            margin-left: 1rem;
-          }
-          @include m(mini){
-            @include select;
-            width: 7rem;
-          }
-        }
-      }//row
-      @include e(submit){
-        display: block;
-        width: 20rem;
-        height: 3rem;
-        margin: 3rem auto 0;
-        line-height: 3rem;
-        color: #fff;
-        text-align: center;
-        background: $green;
-      }
-    }//content
-  }//search
-
-  @include e(subTtl){
-  }
-  @include e(input){
-  }
-  @include e(select){
-    @include select2($l:true,$box-sizing: border-box);
-    @include m(second){
-      @include select2($l:true,$box-sizing: border-box,$t:false);
-    }
-  }// select
-  @include e(fileAdd){
-    position: relative;
-    @include flex($a:center);
-    height: 3.3rem;
     @include border;
-    border-top: none;
-    color: #bbb;
-    &:before{
-      content: "";
-      width: 1.5rem;
-      height: 1.1rem;
-      margin-right: .5rem;
-      background: url(/sp/img/common/icon_picture.png) center no-repeat;
-      background-size: cover;
+    @include m(modalSearch) {
+        padding: 3.5rem 6rem 0;
     }
-    input[type="file"]{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
+    @include e(ttl) {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
     }
-  }//fileAdd
-/*
-  @include e(search){
-    position: relative;
-    padding-left: 1.8rem;
-    margin-bottom: .8rem;
-    input[type="text"]{
-      width: 100%;
-      height: 1.7rem;
-      padding-left: .6rem;
-      border: none;
-      font-size: 1.2rem;
-      @include ff;
+    @include e(center){
+        text-align: center;
+        line-height: 2.5rem;
     }
-    @include e(btn){
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1.7rem;
-      height: 1.7rem;
-      background: url(/sp/img/common/icon_search.png) center center no-repeat;
-      background-size: 1.5rem;
-      input[type="submit"]{
-        position: absolute;
-        width:100%;
-        height: 100%;
-        border: none;
-        top: .1rem;
-        left: 0;
-        opacity: 0;
-      }
-    }//btn
-  }//search
-*/
-  @include e(submit, cancel){
-    display: block;
-    width: 100%;
-    height: 4.4rem;
-    border-radius: .3rem;
-    font-size: 1.2rem;
-    line-height: 4.4rem;
-    color: #fff;
-    text-align: center;
-  }// submit, cancel
-  @include e(submit){
-    margin-top: 2.4rem;
-    background: $green;
-  }//submit
-  @include e(cancel){
-    margin-top: 1.2rem;
-    background: #bbb;
-    @include m(small){
-      width: 46%;
-      height: 3.3rem;
-      border-radius: .2rem;
-      margin: 0 auto;
-      line-height: 3.3rem;
-    }// small
-    @include m(block){
-      width: 15.5rem;
-      height: 4.3rem;
-      margin: 2.8rem auto 0;
-      line-height: 4.3rem;
-    }//block
-  }// cancel
-
-  @include e(center){
-    position: relative;
-    text-align: center;
-  }
-
-  @include e(snsLogin){
-    padding-top: 1.6rem;
-    @include border(top);
-    margin-top: 2.7rem;
-    font-size: 1.2rem;
-    text-align: center;
-    @include e(ttl){
-      margin-bottom: .5rem;
-      font-weight: bold;
-      font-size: 1.4rem;
-    }
-    @include e(btn){
-      @include flex($j:space-between);
-      margin-top: 2.8rem;
-      a{
-        display: block;
-        width: 32%;
-      }
-    }//btn
-    @include e(faq){
-      position: relative;
-      display: inline-block;
-      margin-top: 1.2rem;
-      line-height: 1.4rem;
-      cursor: pointer;
-      + .faqBox{
-        display: none;
-      }
-      @include m(isOpen){
-        &:after{
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: 100%;
-            left:50%;
-            margin-top: -1.5rem;
-            margin-left: -1.5rem;
-            border: 1.5rem solid transparent;
-            border-bottom-color: #66d7db;
+    @include e(toggleBtn) {
+        @include flex($a: center, $j: center);
+        width: 100%;
+        height: 4.5rem;
+        @include border(top);
+        cursor: pointer;
+        &:before {
+            content: "DETAIL";
+            padding-right: 3rem;
+            @include ff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #bbb;
+            background: url(/img/common/arrow_select.png) right center no-repeat;
         }
-        + .faqBox{
-            position: absolute;
-            z-index: 1;
-            top: 100%;
-            left: -3.19%;
+    }
+    @include m(isOpen) {
+        .modal_toggleBtn:before {
+            content: "CLOSE";
+            background-image: url(/img/common/arrow_select_open.png);
+        }
+    }
+    // knowledgeシェア
+    @include e(knowledge){
+        box-sizing: border-box;
+        width: 62rem;
+        padding: 7.5rem 0;
+        text-align: center;
+        @include e(ttl){
+            margin: 0 0 1.8rem;
+        }
+        @include e(btn){
+            @include flex($j:center);
+            margin-top: 2.5rem;
+            font-weight: bold;
+            @include e(submit,cancel){
+                display: block;
+                width: 12rem;
+                height: 3rem;
+                font-size: 1.2rem;
+                color: #fff;
+                line-height: 3rem;
+                text-decoration: none;
+                cursor: pointer;
+                +*{margin-left: .5rem;}
+            }
+            @include e(submit){
+                background: $green;
+            }
+            @include e(cancel){
+                background: #bbb;
+            }
+        }
+    }
+    // knowledge link 追加
+    @include e(linkAdd){
+        width: auto;
+        padding: 0;
+        .modal_close{
+            display: block;
+            width: 120px;
+            height: 3rem;
+            line-height: 3rem;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            background: #bbb;
+            cursor: pointer;
+        }
+        @include e(form){
+            width: 50rem;
+            padding: 5.5rem 6rem;
+        }
+        @include e(wrap){
+            @include flex($a:center, $j:center, $d:column);
+            width: 62rem;
+            height: 27rem;
+        }
+
+        @include e(ttl){
+            margin-bottom: 1.7rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        @include e(comp){
+            margin-bottom: 2.7rem;
+        }
+        @include e(flex){
+            @include flex($a:center, $j:space-between);
+            width: 49rem;
+            margin-bottom: 3.5rem;
+            span{
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            @include input($type:url, $w:44rem);
+        }//flex
+        @include e(meta){
+            padding-left: 4.4rem;
+            color: #bbb;
+            font-size: 1.1rem;
+            span{
+                display: inline-block;
+                width: 36.5rem;
+                margin-left: 1.3rem;
+                vertical-align: bottom;
+                text-decoration: underline;
+                @include texthide;
+            }
+        }//meta
+        @include e(box){
+            box-sizing: border-box;
+            width: 46rem;
+            padding: 0 .7rem;
+            @include border;
+            margin-left: 4rem;
+            margin-bottom: 1.7rem;
+            @include e(head){
+                @include border(bottom);
+                line-height: 3.3rem;
+                font-weight: bold;
+            }//head
+            @include e(content){
+                @include flex($j:space-between);
+                padding: 1rem 0;
+                @include e(img){
+                    position: relative;
+                    width: 14rem;
+                    height: 9rem;
+                    overflow: hidden;
+                    background: #eee;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        max-width: 100%;
+                        margin: auto;
+                    }
+                }//img
+                @include e(text){
+                    width: 28.5rem;
+                    font-size: 1.1rem;
+                    line-height: 2.1rem;
+                    span{
+                        text-decoration: underline;
+                    }
+                }//text
+            }//content
+        }//box
+        @include e(btn){
+            @include flex($j:space-between);
+            width: 24.5rem;
+            margin: 0 auto;
+            input[type="submit"]{
+                width: 12rem;
+                height: 3rem;
+                line-height: 3rem;
+                font-size: 1.2rem;
+                color: #fff;
+                font-weight: bold;
+                text-align: center;
+                background: $green;
+            }
+        }
+    }//linkAdd
+    // knowledgeインポート
+    @include e(import){
+        box-sizing: border-box;
+        width: 68rem;
+        padding: 2.9rem;
+        @include e(ttl){
+            margin-bottom: 3.2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        @include e(search){
+            @include flex($j:space-between, $a:center);
+            margin-bottom: 1rem;
+            p{font-weight: bold;}
+            input[type="text"]{
+                box-sizing: border-box;
+                width: 31rem;
+                height: 2.6rem;
+                border: none;
+                padding-left: 1.6rem;
+                border-bottom: .1rem solid #ddd;
+                @include ff;
+                font-size: 1.2rem;
+                background: url(/img/common/icon_search_contact.png) left center no-repeat;
+            }
+        }//search
+        @include e(back){
+            display: inline-block;
+            padding-left: 2.2rem;
+            margin-bottom: .8rem;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            @include ff;
+            color: #bbb;
+            background: url(/img/common/icon_circle_arrow_left.png) .3rem center no-repeat;
+            cursor: pointer;
+        }
+        @include e(lawyer, prj){
+            max-height: 40.5rem;
+            @include border;
+            li:last-child .mItem{border: none;}
+        }
+
+        @include e(prj){
+            @include e(container){
+                padding-bottom: 1.5rem;
+                @include border(bottom);
+            }
+            @include e(item){
+                padding: 1.7rem 1.9rem 0;
+                cursor: pointer;
+                &:hover{
+                    background: #eee;
+                }
+                @include m(isSelected){
+                    background: #edfbfc;
+                }
+
+                @include e(meta){
+                    display: block;
+                    margin-bottom: .3rem;
+                    font-size: 1.1rem;
+                    color: #bbb;
+                }
+                @include e(main){
+                    @include flex($a:center, $j:space-between);
+                    @include e(ttl){
+                        max-width: 44rem;
+                        font-weight: bold;
+                        @include texthide;
+                        @include m(draft){
+                            @include flex($a:center);
+                            color: #bbb;
+                            span.draft_label{
+                                height: 1.7rem;
+                                padding: 0 .5rem;
+                                border-radius: .2rem;
+                                margin-right: .7rem;
+                                color: #fff;
+                                font-size: 1rem;
+                                line-height: 1.7rem;
+                                background: #bbb;
+                                +span{
+                                    @include texthide;
+                                }
+                            }
+                        }//draft
+                    }//ttl
+                    @include e(btn){
+                        display: block;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-bottom: .8rem;
+                        background: url(/img/common/btn_detail.png) center center no-repeat;
+                        cursor: pointer;
+                    }
+                }//main
+            }//item
+        }//prj
+
+        @include e(btn){
+            @include flex($a:center, $j:center);
+            height: 3rem;
+            margin-top: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 3rem;
+            @include e(submit){
+                width: 21.2rem;
+                margin-right: 1rem;
+                color: #fff;
+                text-decoration: none;
+                background: $green;
+                cursor: pointer;
+            }
+            @include e(cancel){
+                width: 12rem;
+                color: #fff;
+                background: #bbb;
+                cursor: pointer;
+            }
+        }
+        @include e(detail){
+            box-sizing: border-box;
+            height: 45rem;
+            padding: .5rem 1rem;
+            @include border;
+            @include e(date){
+                font-size: 1.2rem;
+                color: #bbb;
+                @include ff;
+            }
+            @include e(ttl){
+                @include border(bottom);
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+            @include e(info){
+                @include flex($a:flex-start);
+                width: 60rem;
+                padding: 2rem 0 3rem;
+                @include border(bottom);
+                margin-bottom: 2.3rem;
+                @include e(main){
+                    box-sizing: border-box;
+                    width: 37rem;
+                    padding-right: 1.9rem;
+                    dl{
+                        @include flex($a:center);
+                        margin: 0;
+                        +dl{
+                            margin-top: .9rem;
+                        }
+                        dt{
+                            width: 7rem;
+                            font-size: 1.1rem;
+                            color: #bbb;
+                            font-weight: bold;
+                        }
+                        dd{
+                            width: 29rem;
+                            margin: 0;
+                            font-size: 1.2rem;
+                            @include flex($a:center);
+                            @include texthide;
+                            a{
+                                color: #333;
+                                @include texthide;
+                                &:hover{
+                                    color: $green;
+                                }
+                            }
+                            span{
+                                margin-left: .3rem;
+                                font-size: 1.1rem;
+                                color: #bbb;
+                                @include texthide;
+                            }
+                        }
+                    }
+                }//main
+                @include e(meta){
+                    box-sizing: border-box;
+                    width: 23rem;
+                    padding-left: 1.9rem;
+                    @include border(left);
+                    span{
+                        display: block;
+                        font-size: .8rem;
+                        line-height: 1.2;
+                        color: #bbb;
+                    }
+                    p{
+                        font-size: 1.1rem;
+                        line-height: 1.5;
+                        +span{margin-top: .8rem;}
+                    }
+                }//meta
+            }//info
+            @include e(content){
+                margin-bottom: 2.5rem;
+                p{
+                    font-size: 1.3rem;
+                    line-height: 2.3rem;
+                    +p{
+                        margin-top: 2.3rem;
+                    }
+                }
+            }//content
+            @include e(lawyer){
+                padding-top: 2.3rem;
+                @include border(top);
+                @include e(ttl){
+                    margin: 0 0 1.5rem;
+                    color: #bbb;
+                    font-size: 1.3rem;
+                }//ttl
+                @include e(wrap){
+                    @include flex($w:wrap, $j:space-between);
+                }
+                @include e(item){
+                    @include flex($a:flex-start, $j:space-between);
+                    width: 29rem;
+                    margin-bottom: 1.4rem;
+                    @include e(icon){
+                        position: relative;
+                        width: 7.7rem;
+                        height: 7.7rem;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }//icon
+                    @include e(main){
+                        width: 20rem;
+                        padding-bottom: .8rem;
+                        @include border(bottom);
+                    }
+                    @include e(name){
+                        margin: 0 0 .3rem;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                    @include e(company){
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        @include texthide;
+                    }
+                    @include e(pos){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+                    @include e(adm){
+                        margin-top: .4rem;
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                        color: #bbb;
+                    }
+                    @include e(meta){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+                }//item
+            }//lawyer
+        }//detail
+        @include e(comp){
+            margin-top: 2.5rem;
+            a{
+                display: block;
+                width: 31.5rem;
+                height: 4rem;
+                margin: 1rem auto 0;
+                font-size: 1.2rem;
+                line-height: 4rem;
+                color: #fff;
+                text-align: center;
+                font-weight: bold;
+                text-decoration: none;
+                @include m(submit){
+                    background: $green;
+                }
+                @include m(modal_close){
+                    background: #bbb;
+                }
+            }
+        }//comp
+    }//import
+
+    @include e(file){
+        box-sizing: border-box;
+        width: 65rem;
+        padding: 1.5rem;
+        @include e(content){
+            position: relative;
+            width: 62rem;
+            height: 60rem;
+            @include e(data){
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            object{
+                width: 100%;
+                height: 100%;
+            }
+            img{
+                max-width: 100%;
+            }
+        }
+        @include e(btn){
+            display: block;
+            width: 12rem;
+            height: 3rem;
+            margin: 1rem auto 0;
+            color: #fff;
+            text-align: center;
+            line-height: 3rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background: #bbb;
+            cursor: pointer;
+        }
+    }
+    @include e(profile){
+        box-sizing: border-box;
+        width: 63rem;
+        padding: 4.5rem;
+        @include e(ttl){
+            font-size: 1.4rem;
+            margin: 0 0 1rem;
+        }
+        @include e(lawyer){
+            max-height: 30rem;
+            @include border;
+            @include e(item){
+                @include e(link){
+                    display: block;
+                    padding:1.5rem 3rem 0;
+                    text-decoration: none;
+                    color: #333;
+                }
+                @include e(container){
+                    @include flex($a:flex-start, $j:space-between);
+                    padding-bottom: 1.5rem;
+                    border-bottom: .1rem solid #e3e3e3;
+                }//container
+                @include e(photo){
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+                }
+                @include e(main){
+                    width: 45rem;
+                }//main
+                @include e(head){
+                    @include flex($a:center, $j:space-between);
+                    padding-bottom: .3rem;
+                    border-bottom: .1rem solid #ddd;
+                    p{
+                        max-width: 30rem;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        @include texthide;
+                    }
+                    @include e(icon){
+                        @include flex($a:center);
+                        font-size: 1.1rem;
+                        @include ff;
+                        span{
+                            line-height: 2rem;
+                            text-decoration: none;
+                            color: #bbb;
+                            @include m(recommend){
+                                padding-left: 1.7rem;
+                                background: url(/img/common/icon_medal.png) left center no-repeat;
+                            }
+                            @include m(credit){
+                                padding-left: 18px;
+                                margin-left: 1.5rem;
+                                background: url(/img/common/icon_exp.png) left center no-repeat;
+                            }
+                            @include m(community){
+                                padding-left: 22px;
+                                margin-left: 13px;
+                                background: url(/img/common/icon_team2.png) left center no-repeat;
+                            }
+                        }
+                    }//icon
+                }//head
+                @include e(info){
+                    @include flex($a:center);
+                    margin-top: .9rem;
+                    @include e(company){
+                        box-sizing: border-box;
+                        width: 64%;
+                        padding-right: 2rem;
+                        p{
+                            @include texthide;
+                            font-size: 1.2rem;
+                            height: 2rem;
+                        }
+                        @include e(head){
+                            font-weight: bold;
+                        }
+                        @include e(locate){
+                            color: #bbb;
+                            padding-left: 1.5rem;
+                            background: url(/img/common/icon_locate.png) .1rem center no-repeat;
+                        }
+                    }
+                    @include e(meta){
+                        box-sizing: border-box;
+                        width: 36%;
+                        padding-left: 2rem;
+                        border-left: .1rem solid #ddd;
+                        line-height: 1.2;
+                        span{
+                            display: block;
+                            font-size: .8rem;
+                            color: #bbb;
+                        }
+                        p{
+                            @include texthide;
+                            font-size: 1.1rem;
+                            +span{margin-top: .8rem;}
+                        }
+                    }//meta
+                }//info
+            }//item
+        }//lawyer
+        @include e(close){
+            display: block;
+            width: 12rem;
+            height: 3rem;
+            margin: 2rem auto 0;
+            color: #fff;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            line-height: 3rem;
+            text-decoration: none;
+            background: #bbb;
+        }
+    }// profile
+    @include e(invite){
+        box-sizing: border-box;
+        width: 62rem;
+        padding: 5rem 5.9rem;
+        @include border;
+        background: #fff;
+        cursor: default;
+        font-size: 1.4rem;
+        @include m(main){
+            padding: 6rem 5.9rem;
+        }
+        @include e(ttl){
+            margin-bottom: .8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        @include e(subTtl){
+            font-weight: bold;
+            text-align: center;
+        }
+        @include e(description){
+            line-height: 2.7rem;
+            text-align: center;
+        }
+        @include e(anno){
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            text-align: center;
+        }
+        @include e(url){
             display: block;
             box-sizing: border-box;
-            width: 100vw;
-            padding: 2rem 1.5rem;
-            margin-top: 1.3rem;
-            margin-left: -1.6rem;
+            @include border;
+            width: 44rem;
+            height: 3.5rem;
+            margin: 2rem auto 2.3rem;
+            line-height: 3.3rem;
+            font-size: 1.2rem;
+        }
+        @include e(form){
+            @include m(confirm){
+
+            }
+            @include e(confirm){
+                @include m(name){
+                    font-size: 1.8rem;
+                }
+                @include m(email){
+                    font-size: 1.6rem;
+                }
+                @include m(msgTtl){
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+                @include m(msgContent){
+                    margin-bottom: 5rem;
+                }
+            }
+            input[type="text"],
+            input[type="email"]{
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                height: 3.3rem;
+                @include border;
+                font-size: 1.2rem;
+            }
+            input[type="checkbox"]{
+                @include checkbox;
+                + label{
+                    font-size: 1.1rem;
+                    span{
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+                    a{
+                        color: $green;
+                    }
+                }
+            }
+            textarea{
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                height: 22rem;
+                @include border;
+            }
+            @include e(sepArea){
+                @include flex($j:space-between);
+                > div{
+                    width: 24rem;
+                }
+            }
+            @include e(head){
+                margin: 1.7rem 0 .5rem;
+                font-size: 1.2rem;
+                font-weight: bold;
+                @include m(confirm){
+                    color: #bbb;
+                }
+            }
+        }
+        @include e(cancel){
+            display: block;
+            width: 13.4rem;
+            height: 4rem;
+            margin: 1.5rem auto 0;
+            line-height: 4rem;
+            font-size: 1.2rem;
             color: #fff;
-            font-weight: normal;
-            font-size: 1.4rem;
-            line-height: 1.9rem;
-            background: #66d7db;
-            box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .59);
+            text-align: center;
+            text-decoration: none;
+            background: #bbb;
         }
-      }
-      img{
-        vertical-align: bottom;
-        margin-left: .3rem;
-      }
-    }
-    @include e(new){
-      @include flex($j:space-between, $a:center);
-      padding-top: 1.5rem;
-      @include border(top);
-      margin-top: 1.5rem;
-      a{
-        font-size: 1.1rem;
-        color: $green;
-      }
-    }
-  }//snsLogin
-
-
-  @include e(checkBox){
-    margin-top: 1.2rem;
-    input[type="checkbox"]{
-      + label{
+        @include e(btn){
+            @include flex($a: center, $j:center);
+            margin-top: 1.5rem;
+            @include e(cancel, submit){
+                height: 4rem;
+                color: #fff;
+                font-size: 1.2rem;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                line-height: 4rem;
+            }
+            @include e(cancel){
+                width: 11.8rem;
+                background: #bbb;
+                &:first-child{
+                    width: 13.5rem;
+                    margin-right: 1rem;
+                }
+            }
+            @include e(submit){
+                width: 18rem;
+                background: $green;
+                &:first-child{
+                    margin-right: 1rem;
+                }
+                @include m(mail){
+                    span{
+                        padding-left: 2.1rem;
+                        background: url(/img/invite/icon_share_link.png) left center no-repeat;
+                    }
+                }
+                @include m(link){
+                    span{
+                        padding-left: 2rem;
+                        background: url(/img/invite/icon_share_mail.png) left center no-repeat;
+                    }
+                }
+            }
+        }
+        @include e(arrow){
+            @include flex($j:space-between);
+            width: 34.7rem;
+            height: 4.4rem;
+            margin:0 auto 3rem;
+            @include e(item){
+                position: relative;
+                @include flex($j:center, $a:center);
+                box-sizing:border-box;
+                width: 11.1rem;
+                color: #bbb;
+                font-size: 1.2rem;
+                background: #ddd;
+                span{padding: 0 .6rem;}
+                &:first-child{
+                    z-index: 3;
+                    padding-left: 1.2rem;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -2.4rem;
+                        width: 0;
+                        height: 0;
+                        border: solid transparent;
+                        border-top-width: 2.2rem;
+                        border-bottom-width: 2.2rem;
+                        border-left: 1.2rem solid #ddd;
+                        border-right-width: 1.2rem;
+                    }
+                }
+                &:nth-child(2){
+                    z-index: 2;
+                    padding-left: 1.2rem;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left:0;
+                        width: 0;
+                        height: 0;
+                        border: solid transparent;
+                        border-top-width: 2.2rem;
+                        border-bottom-width: 2.2rem;
+                        border-left: 1.2rem solid #fff;
+                        border-right-width: 1.2rem;
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -2.4rem;
+                        width: 0;
+                        height: 0;
+                        border: solid transparent;
+                        border-top-width: 2.2rem;
+                        border-bottom-width: 2.2rem;
+                        border-left: 1.2rem solid #ddd;
+                        border-right-width: 1.2rem;
+                    }
+                }
+                &:last-child{
+                    z-index: 1;
+                    width: 11.5rem;
+                    padding-left: 1.2rem;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left:0;
+                        width: 0;
+                        height: 0;
+                        border: solid transparent;
+                        border-top-width: 2.2rem;
+                        border-bottom-width: 2.2rem;
+                        border-left: 1.2rem solid #fff;
+                        border-right-width: 1.2rem;
+                    }
+                }
+                @include m(isSelected){
+                    color: #fff;
+                    background: $green;
+                    &:before{
+                        border-left-color: $green;
+                    }
+                }
+            }//item
+        }//arrow
+    }//invite
+    @include e(search) {
+        @include flex($j: space-between);
+        height: 3.4rem;
+        margin-bottom: 2rem;
+        line-height: 3.4rem;
+        input[type="text"] {
+            width: 42rem;
+            padding: 0 .8rem;
+            @include border;
+        }
+        input[type="submit"] {
+            width: 7rem;
+            background: $green;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        @include e(content) {
+            display: none;
+            margin-bottom: 4rem;
+            @include e(subTtl) {
+                @include flex($a: center, $j: space-between);
+                height: 3.2rem;
+                margin-bottom: 2.2rem;
+                font-weight: bold;
+                @include border(bottom);
+                @include e(addBtn) {
+                    display: block;
+                    padding-left: 2.3rem;
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    color: #bbb;
+                    text-decoration: none;
+                    line-height: 1.8rem;
+                    background: url(/img/common/icon_add.png) left center no-repeat;
+                }
+            } //subTtl
+            @include e(row) {
+                @include flex($a: center);
+                margin-bottom: .9rem;
+                @include e(head) {
+                    width: 12rem;
+                    padding-right: 1.5rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-align: right;
+                }
+                @include e(select2) {
+                    @include select2($l: true, $w: 36.1rem);
+                    @include m(short) {
+                        @include select2($l: true, $w: 20.1rem);
+                    }
+                }
+                @include e(select) {
+                    width: 20.3rem;
+                    @include select;
+                    @include m(short) {
+                        width: 15rem;
+                        margin-left: 1rem;
+                    }
+                    @include m(mini) {
+                        @include select;
+                        width: 7rem;
+                    }
+                }
+            } //row
+            @include e(submit) {
+                display: block;
+                width: 20rem;
+                height: 3rem;
+                margin: 3rem auto 0;
+                line-height: 3rem;
+                color: #fff;
+                text-align: center;
+                background: $green;
+            }
+        } //content
+    } //search
+    @include e(subTtl) {}
+    @include e(input) {}
+    @include e(select) {
+        @include select2($l: true, $box-sizing: border-box);
+        @include m(second) {
+            @include select2($l: true, $box-sizing: border-box, $t: false);
+        }
+    } // select
+    @include e(fileAdd) {
         position: relative;
-        padding-left: 29px;
-        &:before,
-        &:after{
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
+        @include flex($a: center);
+        height: 3.3rem;
+        @include border;
+        border-top: none;
+        color: #bbb;
+        &:before {
+            content: "";
+            width: 1.5rem;
+            height: 1.1rem;
+            margin-right: .5rem;
+            background: url(/sp/img/common/icon_picture.png) center no-repeat;
+            background-size: cover;
         }
-        &:before{
-          left: 0;
-          width: 1.4rem;
-          height: 1.4rem;
-          @include border;
+        input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
         }
-      }// + label
-      &:checked + label:after{
-        left: .3rem;
-        width: 1rem;
-        height: 1rem;
+    } //fileAdd
+    /*
+@include e(search){
+position: relative;
+padding-left: 1.8rem;
+margin-bottom: .8rem;
+input[type="text"]{
+width: 100%;
+height: 1.7rem;
+padding-left: .6rem;
+border: none;
+font-size: 1.2rem;
+@include ff;
+}
+@include e(btn){
+position: absolute;
+top: 0;
+left: 0;
+width: 1.7rem;
+height: 1.7rem;
+background: url(/sp/img/common/icon_search.png) center center no-repeat;
+background-size: 1.5rem;
+input[type="submit"]{
+position: absolute;
+width:100%;
+height: 100%;
+border: none;
+top: .1rem;
+left: 0;
+opacity: 0;
+}
+}//btn
+}//search
+*/
+    @include e(submit, cancel) {
+        display: block;
+        width: 100%;
+        height: 4.4rem;
+        border-radius: .3rem;
+        font-size: 1.2rem;
+        line-height: 4.4rem;
+        color: #fff;
+        text-align: center;
+    } // submit, cancel
+    @include e(submit) {
+        margin-top: 2.4rem;
         background: $green;
-      }
-    }//input[type="checkbox"]
-  }//checkBox
-}// modal
-
+    } //submit
+    @include e(cancel) {
+        margin-top: 1.2rem;
+        background: #bbb;
+        @include m(small) {
+            width: 46%;
+            height: 3.3rem;
+            border-radius: .2rem;
+            margin: 0 auto;
+            line-height: 3.3rem;
+        } // small
+        @include m(block) {
+            width: 15.5rem;
+            height: 4.3rem;
+            margin: 2.8rem auto 0;
+            line-height: 4.3rem;
+        } //block
+    } // cancel
+    @include e(center) {
+        position: relative;
+        text-align: center;
+    }
+    @include e(snsLogin) {
+        padding-top: 1.6rem;
+        @include border(top);
+        margin-top: 2.7rem;
+        font-size: 1.2rem;
+        text-align: center;
+        @include e(ttl) {
+            margin-bottom: .5rem;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        @include e(btn) {
+            @include flex($j: space-between);
+            margin-top: 2.8rem;
+            a {
+                display: block;
+                width: 32%;
+            }
+        } //btn
+        @include e(faq) {
+            position: relative;
+            display: inline-block;
+            margin-top: 1.2rem;
+            line-height: 1.4rem;
+            cursor: pointer;
+            + .faqBox {
+                display: none;
+            }
+            @include m(isOpen) {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: 100%;
+                    left: 50%;
+                    margin-top: -1.5rem;
+                    margin-left: -1.5rem;
+                    border: 1.5rem solid transparent;
+                    border-bottom-color: #66d7db;
+                }
+                + .faqBox {
+                    position: absolute;
+                    z-index: 1;
+                    top: 100%;
+                    left: -3.19%;
+                    display: block;
+                    box-sizing: border-box;
+                    width: 100vw;
+                    padding: 2rem 1.5rem;
+                    margin-top: 1.3rem;
+                    margin-left: -1.6rem;
+                    color: #fff;
+                    font-weight: normal;
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                    background: #66d7db;
+                    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .59);
+                }
+            }
+            img {
+                vertical-align: bottom;
+                margin-left: .3rem;
+            }
+        }
+        @include e(new) {
+            @include flex($j: space-between, $a: center);
+            padding-top: 1.5rem;
+            @include border(top);
+            margin-top: 1.5rem;
+            a {
+                font-size: 1.1rem;
+                color: $green;
+            }
+        }
+    } //snsLogin
+    @include e(checkBox) {
+        margin-top: 1.2rem;
+        input[type="checkbox"] {
+            + label {
+                position: relative;
+                padding-left: 29px;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                &:before {
+                    left: 0;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    @include border;
+                }
+            } // + label
+            &:checked + label:after {
+                left: .3rem;
+                width: 1rem;
+                height: 1rem;
+                background: $green;
+            }
+        } //input[type="checkbox"]
+    } //checkBox
+} // modal
 #lean_overlay {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: #ecf1f2;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #ecf1f2;
 }
 
-#modalSearch{
-  display: none;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 1100;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  cursor: pointer;
-/*
-  .select2-selection.select2-selection--multiple{
-    padding-right: 0;
-  }
-  .select2-search--inline .select2-search__field{
-    min-width: 60vw;
-  }
-  .form_sep2_50 + .select2-container .select2-selection input{
-    min-width: 100%!important;
-  }
+#modalSearch,
+#modalInvite,
+#modalLikeList,
+#modalKnowledge,
+#modalImport,
+#modalFile,
+#modalLinkAdd{
+    display: none;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1100;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    /*
+.select2-selection.select2-selection--multiple{
+padding-right: 0;
+}
+.select2-search--inline .select2-search__field{
+min-width: 60vw;
+}
+.form_sep2_50 + .select2-container .select2-selection input{
+min-width: 100%!important;
+}
 */
 }
 

@@ -20,13 +20,15 @@
                 <select name="" id="" class="modal_search_content_row_select2 select2_text" multiple>
                     <!--#include virtual="/include_new/select/juris.html"-->
                 </select>
-            </div><!-- [/ .modal_search_content_row] -->
+            </div>
+            <!-- [/ .modal_search_content_row] -->
             <div class="modal_search_content_row">
                 <p class="modal_search_content_row_head">取扱法分野</p>
                 <select name="" id="" class="modal_search_content_row_select2 select2_text" multiple>
                     <!--#include virtual="/include_new/select/lawField.html"-->
                 </select>
-            </div><!-- [/ .modal_search_content_row] -->
+            </div>
+            <!-- [/ .modal_search_content_row] -->
             <div class="modal_search_content_row">
                 <p class="modal_search_content_row_head">言語</p>
                 <div class="modal_search_content_row_select">
@@ -35,7 +37,8 @@
                         <option value="">英語</option>
                         <option value="">日本語</option>
                     </select>
-                </div><!-- [/ .modal_search_content_row_select] -->
+                </div>
+                <!-- [/ .modal_search_content_row_select] -->
                 <div class="modal_search_content_row_select short">
                     <select name="" id="">
                         <option value="" disabled="" selected="">LEVEL</option>
@@ -44,8 +47,10 @@
                         <option value="">LEVEL 3</option>
                         <option value="">LEVEL 4</option>
                     </select>
-                </div><!-- [/ .modal_search_content_row_select] -->
-            </div><!-- [/ .modal_search_content_row] -->
+                </div>
+                <!-- [/ .modal_search_content_row_select] -->
+            </div>
+            <!-- [/ .modal_search_content_row] -->
             <div class="modal_search_content_row">
                 <p class="modal_search_content_row_head">オフィス所在地</p>
                 <select name="" id="" class="modal_search_content_row_select2 select2_country short">
@@ -55,8 +60,10 @@
                     <select name="" id="">
                         <option disabled selected>CITY</option>
                     </select>
-                </div><!-- [/ .modal_search_content_row_select] -->
-            </div><!-- [/ .modal_search_content_row] -->
+                </div>
+                <!-- [/ .modal_search_content_row_select] -->
+            </div>
+            <!-- [/ .modal_search_content_row] -->
             <div class="modal_search_content_row">
                 <p class="modal_search_content_row_head">弁護士経験年数</p>
                 <div class="modal_search_content_row_select mini">
@@ -81,18 +88,35 @@
                     </select>
                 </div>
                 &nbsp;年未満
-            </div><!-- [/ .modal_search_content_row] -->
-
+            </div>
+            <!-- [/ .modal_search_content_row] -->
             <input type="submit" value="送信する" class="modal_search_content_submit">
-        </div><!-- [/ .modal_search_content] -->
+        </div>
+        <!-- [/ .modal_search_content] -->
         <div class="modal_toggleBtn"></div>
-    </form><!-- [/ .modalSearch] -->
+    </form>
+    <!-- [/ .modalSearch] -->
 </div>
+<!-- [/ #modalSearch] -->
+<div id="modalInvite">
+    <div class="modal modal_invite">
+        <p class="modal_invite_ttl">JURISTERRAに知人を招待</p>
+        <p class="modal_invite_description">メールまたは招待リンクから、<br>知人をJURISTERRAに招待することが出来ます。</p>
+        <div class="modal_invite_btn">
+            <a rel="jump" data-get="/invite_new/mail01.html" data-target="#modalInvite .modal" class="modal_invite_btn_submit mail"><span>招待メールを送る</span></a>
+            <a rel="jump" data-get="/invite_new/link.html" data-target="#modalInvite .modal" class="modal_invite_btn_submit link"><span>招待リンクを発行する</span></a>
+        </div><!-- [/ .modal_invite_btn] -->
+    </div><!-- [/ .modal_invite] -->
+</div><!-- [/ #modalinvite] -->
+<!-- [/ #modalInvite] -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/_slideToggle.js"></script>
+<script src="/js/_ajax.js"></script>
+<script src="/js/_label.js"></script>
 <script src="/js/_balloon.js"></script>
 <script src="/js/_tabs.js"></script>
+<script src="/js/_lawyerSelect.js"></script>
 <script src="/js/_range.js"></script>
 <!--#include virtual="/include_new/select/country-city-js.html"-->
 <!-- Plugin -->
@@ -102,20 +126,24 @@
 <script>
 var text = 'テキストを入力',
     juris = 'ジュリスディクション',
+    juris2 = 'ジュリスディクションを入力',
     country = 'COUNTRY',
     lawField = '法分野',
-    lawField2 = '法分野を入力'
+    lawField2 = '法分野を入力',
     businessField = '事業領域を入力',
     strongPoint = '得意分野',
     field = '分野',
     countryLawField = '国、法域',
     useLang = '使用する言語',
-    area = '取扱地域を入力';
+    lang = '言語',
+    area = '取扱地域を入力',
+    tag = '投稿タグ',
+    search = 'SEARCH';
 
-$(function(){
-    $('a[rel="leanModal"]').leanModal({
-        top:0,
-        opacity:.9,
+$(function() {
+    $('a[rel*="leanModal"]').leanModal({
+        top: 0,
+        opacity: .9,
         closeButton: ".modal_close"
     });
 
@@ -123,8 +151,16 @@ $(function(){
         placeholder: text,
     });
 
+    $('.select2_search').select2({
+        placeholder: search,
+    });
+
     $('.select2_juris').select2({
         placeholder: juris,
+    });
+
+    $('.select2_juris2').select2({
+        placeholder: juris2,
     });
 
     $('.select2_country').select2({
@@ -133,6 +169,10 @@ $(function(){
 
     $('.select2_useLang').select2({
         placeholder: useLang,
+    });
+
+    $('.select2_lang').select2({
+        placeholder: lang,
     });
 
     $('.select2_strongPoint').select2({
@@ -159,6 +199,10 @@ $(function(){
         placeholder: countryLawField,
     });
 
+    $('.select2_tag').select2({
+        placeholder: tag,
+    });
+
     $('.select2_field').select2({
         placeholder: field,
     });
@@ -172,3 +216,4 @@ $(function(){
 });
 </script>
 <script src="/js/_edit.js"></script>
+<!--#include virtual="/include_new/select/country-city-js.html"-->

@@ -1,145 +1,473 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ログイン前TOP | </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="/css/common/normalize.css">
-  <link rel="stylesheet" href="/css/common/style.css">
-  <link rel="stylesheet" href="/css/plugin/select2.min.css">
-  <link rel="stylesheet" href="/css/common/profile.css">
-  <link rel="stylesheet" href="/css/common/profile_add.css">
-  <link rel="stylesheet" href="/css/common/invite.css">
-  <!-- cache -->
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <!-- viewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>ログイン前TOP | </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/plugin/select2/css/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body>
-  <!--#include virtual="/include/header.html" -->
-  <div id="wrapper">
-    <div id="container" class="clear">
-      <main class="clear">
-        <div class="column-main-profile">
-          <div class="profile-title">
-            <div class="profile-title_container">
-              <p class="txt_gray">CONNECTION - OTHER</p>
-              <h1>REQUESTS SENT</h1>
-            </div>
-          </div><!-- /.profile-title -->
-
-          <div class="profile-wrap">
-            <div id="all" class="lawyer-box">
-              <div class="lawyer-item clear">
-                <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
-                <div class="lawyer-content fr">
-                  <div class="date">2016.02.01 1:30</div>
-                  <div class="lawyer-head mb10">
-                   <div class="fr txt_11 txt_gray">
-                    <span class="icon-rec">100</span>
-                    <span class="icon-credit">200</span>
-                    <span class="icon-com">50</span>
-                  </div>
-                  <p class="txt_16 fw_b">近藤和志</p>
+<body class="profile">
+<!--#include virtual="/include_new/header.html" -->
+    <div id="container">
+        <div class="headline">
+            <div class="headline_inner">
+                <div class="ttl">
+                    <p class="ttl_summary">CONNECTION - OTHER</p>
+                    <h1 class="ttl_main">SENT REQUEST</h1>
                 </div>
-                <div class="lawyer-body clear">
-                  <div class="fl">
-                    <p class="txt_12 fw_b">C&amp;R リーガルエージェンシー社</p>
-                    <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
-                    <p class="txt_12 txt_gray">Tokyo, JAPAN</p>
-                  </div>
-                  <div class="fr">
-                    <p class="txt_8 txt_gray">アドミッション</p>
-                    <p class="txt_11">Japan / Newyork,US</p>
-                    <p class="txt_8 txt_gray">事業領域</p>
-                    <p class="txt_11">会社法、M&amp;A、金融法…</p>
-                  </div>
-                </div>
-                <div class="lawyer-footLink">
-                  <a rel="" class="icon_profile">VIEW PROFILE</a>
-                  <a rel="" class="icon_close">CANCEL</a>
-                </div>
-              </div>
-            </div>
-            <div class="lawyer-item clear">
-              <div class="icon_circle fl"><img src="/img/common/icon_profile.jpg" alt=""></div>
-              <div class="lawyer-content fr">
-                <div class="date">2016.02.01 1:30</div>
-                <div class="lawyer-head mb10">
-
-                 <div class="fr txt_11 txt_gray">
-                  <span class="icon-rec">100</span>
-                  <span class="icon-credit">200</span>
-                  <span class="icon-com">50</span>
-                </div>
-
-                <p class="txt_16 fw_b">近藤和志</p>
-              </div>
-              <div class="lawyer-body clear">
-                <div class="fl">
-                  <p class="txt_12 fw_b">C&amp;R リーガルエージェンシー社</p>
-                  <p class="txt_12">Senior Vice President. General Couuuuuuuuuuuuuu</p>
-                  <p class="txt_12 txt_gray">Tokyo, JAPAN</p>
-                </div>
-                <div class="fr">
-                  <p class="txt_8 txt_gray">アドミッション</p>
-                  <p class="txt_11">Japan / Newyork,US</p>
-                  <p class="txt_8 txt_gray">事業領域</p>
-                  <p class="txt_11">会社法、M&amp;A、金融法…</p>
-                </div>
-              </div>
-              <div class="lawyer-footLink">
-                <a rel="" class="icon_profile">VIEW PROFILE</a>
-                <a rel="" class="icon_close">CANCEL</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div><!-- /.column-main-profile -->
-  </main>
-  <aside>
-
-    <h2 class="ttl_side">PROFILE</h2>
-    <div id="side-link" class="txt_11">
-      <a href="/profile/recent_activity.html" class="selected"> RECENT ACTIVITY</a>
-      <a href=""> ABOUT</a>
-      <a href=""> MESSAGE / INTERVIEW</a>
-      <a href=""> CONNECTION</a>
-      <h3 class="ttl_sub_side">MY FILE</h3>
-      <a href="/profile/myfile">- LATEST</a>
-      <a href="/profile/myfile/projects">- 取り扱い案件</a>
-      <a href="/profile/myfile/monograph">- 論文/書籍</a>
-      <a href="/profile/myfile/seminar">- セミナー,講演</a>
-      <a href="/profile/myfile/award">- 受賞</a>
-      <a href="/profile/myfile/blog">- コラム/ブログ</a>
-      <a href="/profile/myfile/link">- リンク</a>
-    </div>
-    <div class="sub-aside">
-     <div id="side-link" class="txt_11">
-      <div id="column-sub-profile">
-       <h3 class="ttl_sub_side">ATTORNEY</h3>
-       <a href=""> - SUMMERY</a>
-       <a href=""> - LIST</a>
-       <a href=""> - FOLLOWING</a>
-       <h3 class="ttl_sub_side">CLIENT</h3>
-       <a href=""> - LIST</a>
-       <a href=""> - FOLLOWING</a>
-       <h3 class="ttl_sub_side">OTHER</h3>
-       <a href="">-CONNECTION SUGGESTION</a>
-       <a href=""> - REQUESTS RECEIVED</a>
-       <a href="" class="selected"> - REQUESTS SENT</a>
-     </div><!-- /.column-sub-profile -->
-   </div>
- </div>
-</aside>
-</div>
-</div>
-<!--#include virtual="/include/footer.html"-->
+            </div><!-- [/ .headline_inner] -->
+            <div class="headline_inner profile_header"></div><!-- [/ .headline_inner] -->
+        </div><!-- [/ .headline] -->
+        <div id="content">
+            <div class="profile_lawyer_container space">
+                <ul class="profile_lawyer scrollArea">
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                    <li class="profile_lawyer_item other upper">
+                        <p class="profile_lawyer_item_time">2016.02.01 13:30</p>
+                        <div class="profile_lawyer_item_container">
+                            <div class="profile_lawyer_item_photo">
+                                <img src="/img/common/icon_profile.jpg" width="100%" alt="">
+                            </div>
+                            <div class="profile_lawyer_item_main">
+                                <div class="profile_lawyer_item_head">
+                                    <p>近藤和志</p>
+                                    <div class="profile_lawyer_item_head_icon">
+                                        <span class="recommend">100</span>
+                                        <span class="credit">200</span>
+                                        <span class="community">50</span>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_main_head] -->
+                                <div class="profile_lawyer_item_info">
+                                    <div class="profile_lawyer_item_info_company">
+                                        <p class="profile_lawyer_item_info_company_head">C&Rリーガルエージェンシー社</p>
+                                        <p>Senior Vice President, General Couuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuaaaaaaaaaaaaaaauuuu</p>
+                                        <p class="profile_lawyer_item_info_company_locate">Tokyo, Japan</p>
+                                    </div><!-- [/.profile_lawyer_item_info_company] -->
+                                    <div class="profile_lawyer_item_info_meta">
+                                        <span>アドミッション</span>
+                                        <p>Japan / Newyork, US</p>
+                                        <span>事業領域</span>
+                                        <p>会社法、M&A、金融法</p>
+                                    </div>
+                                </div><!-- [/ .profile_lawyer_item_info] -->
+                                <div class="profile_lawyer_item_btns right">
+                                    <a href="">
+                                        <span class="view">VIEW PROFILE</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="cancel">CANCEL</span>
+                                    </a>
+                                </div>
+                            </div><!-- [/ .profile_lawyer_item_main] -->
+                        </div><!-- [/ .profile_lawyer_item_container] -->
+                    </li>
+                </ul><!-- [/ .choiceArea] -->
+            </div><!-- [/ .profile_lawyer_container] -->
+        </div><!-- [/ #content] -->
+        <aside class="side" id="sideBar">
+            <div class="sideLeft">
+                <h3 class="side_ttl prof">PROFILE</h3>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">RECENT ACTIVITY</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">BASIC INFORMATION</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">MESSAGE / INTERVIEW</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target isSelected">CONNECTION</a></li>
+                </ul><!-- [/ .side_list] -->
+                <h4 class="side_subTtl">MY FILE</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- LATEST</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 取り扱い案件</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 論文/書籍</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- セミナー,講演</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 受賞</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- コラム/ブログ</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- リンク</a></li>
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideLeft] -->
+            <div class="sideRight">
+                <h4 class="side_subTtl first">ATTORNEY</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- SUMMARY</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- LIST</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- FOLLOW</a></li>
+                </ul><!-- [/ .side_list] -->
+                <h4 class="side_subTtl">CLIENT</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- LIST</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- FOLLOW</a></li>
+                </ul><!-- [/ .side_list] -->
+                <h4 class="side_subTtl">OTHER</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- YOU MAY KNOW</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- FOLLOW REQUEST</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target isSelected">- SENT REQUEST</a></li>
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideRight] -->
+        </aside>
+    </div><!-- [/ #container] -->
+<!--#include virtual="/include_new/footer_under.html"-->
+<!--#include virtual="/include_new/footer.html"-->
 </body>
 </html>

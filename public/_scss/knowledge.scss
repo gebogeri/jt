@@ -1,0 +1,1389 @@
+@charset 'utf-8';
+@import 'common/_mixin';
+@import 'include/_pager';
+
+.knowledge{
+    @include m(index, edit,detail){
+        @include resize($min:96rem,$max:108rem,$c:1, $ttl:62rem);
+    }
+    @include m(detail){
+        background: #fff;
+    }
+    @include m(page){
+        @include resize($min:96rem,$max:108rem,$c:2, $ttl:58rem);
+    }
+
+    @include e(header){
+        padding: 2rem 0;
+        @include e(search){
+            @include flex($j:space-between, $a:center);
+            width: 58rem;
+            padding:.5rem 0;
+            margin: 0 auto;
+            @include e(submit){
+                position: relative;
+                width: 1.7rem;
+                height: 1.7rem;
+                background: url(/img/common/icon_search_contact.png) center center no-repeat;
+                background-size: cover;
+                input[type="submit"]{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    opacity: 0;
+                }
+            }
+            @include e(field){
+                @include select2($box-sizing:border-box,$w:56.2rem, $clear: true, $ff:true);
+            }
+        }
+    }
+
+    @include e(content){
+        width: 62rem;
+        margin: 0 auto;
+    }
+
+    @include e(ttl){
+        @include flex($a:cenrer, $j:space-between);
+        font-size: 1.4rem;
+        margin: 3.6rem auto .7rem;
+        @include e(addBtn){
+            display: block;
+            padding-left: 2.4rem;
+            color: #bbb;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            font-weight: normal;
+            background: url(/img/setting/btn_circle_plus.png) 0 0 no-repeat;
+            cursor: pointer;
+        }
+    }
+
+    @include e(detail){
+        @include e(info){
+            @include flex($a:flex-start);
+            width: 62rem;
+            padding: 2rem 0 3rem;
+            @include border(top);
+            @include border(bottom);
+            margin: -1rem auto 2.4rem;
+            @include e(link){
+                @include flex($a:center);
+                @include border(bottom);
+                dl{
+                    @include flex($a:center);
+                    margin: 0 0 2rem;
+                    @include m(part){
+                        width: 21rem;
+                        padding-right: 3rem;
+                        @include m(right){
+                            width: 24rem;
+                            padding: 0;
+                            dt{
+                                width: 11rem;
+                                padding-right: 1rem;
+                                text-align: right;
+                            }
+                            dd{
+                                max-width: 12rem;
+                            }
+                        }
+                    }
+                    @include m(link){
+                        width: 36.5rem;
+                    }
+                    dt{
+                        width: 6.8rem;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        color: #bbb;
+                    }
+                    dd{
+                        margin: 0;
+                        font-size: 1.2rem;
+                        @include texthide;
+                        a{
+                            color:#333;
+                            transition: color .1s;
+                            &:hover{
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }//link
+            @include e(bottom){
+                @include flex;
+                dl{
+                    width: 18.3rem;
+                    padding-right: 2.7rem;
+                    margin: 2rem 0 -1rem;
+                    &:last-child{
+                        width: 20rem;
+                        padding: 0;
+                    }
+                    dt{
+                        color: #bbb;
+                        font-size: 1rem;
+                        line-height: 1.1em;
+                    }
+                    dd{
+                        font-size: 1.1rem;
+                        margin: 0;
+                    }
+                }
+            }//bottom
+            @include e(main){
+                box-sizing: border-box;
+                width: 38rem;
+                padding-right: 2rem;
+                dl{
+                    @include flex($a:center);
+                    margin: 0;
+                    +dl{
+                        margin-top: 1rem;
+                    }
+                    dt{
+                        width: 7rem;
+                        font-size: 1.1rem;
+                        color: #bbb;
+                        font-weight: bold;
+                    }
+                    dd{
+                        width: 29rem;
+                        margin: 0;
+                        font-size: 1.2rem;
+                        @include flex($a:center);
+                        @include texthide;
+                        a{
+                            color: #333;
+                            @include texthide;
+                            &:hover{
+                                color: $green;
+                            }
+                        }
+                        span{
+                            margin-left: .3rem;
+                            font-size: 1.1rem;
+                            color: #bbb;
+                            @include texthide;
+                        }
+                    }
+                }
+            }//main
+            @include e(meta){
+                box-sizing: border-box;
+                width: 24rem;
+                padding-left: 2rem;
+                @include border(left);
+                span{
+                    display: block;
+                    font-size: .8rem;
+                    line-height: 1.2;
+                    color: #bbb;
+                }
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    +span{margin-top: .8rem;}
+                }
+            }//meta
+        }//info
+        @include e(content){
+            width: 62rem;
+            margin: 0 auto 2.7rem;
+            p{
+                font-size: 1.3rem;
+                line-height: 2.4rem;
+                + p{
+                    margin-top: 2.4rem;
+                }
+            }
+            img{
+                display: block;
+                max-width: 57.5rem;
+                margin: 2.4rem auto;
+            }
+            video{
+                display: block;
+                width: 57.5rem;
+                height: 32.5rem;
+                @include border;
+                margin: 3.4rem auto;
+            }
+        }//content
+        @include e(related){
+            @include flex;
+            width: 62rem;
+            padding: 1.6rem 0;
+            @include border(top);
+            margin: 4.5rem auto 0;
+            @include e(ttl){
+                margin: 0 0 1.2rem;
+                font-size: 1.3rem;
+                color: #bbb;
+            }
+            @include e(file){
+                box-sizing: border-box;
+                width: 50%;
+                @include border(right);
+                padding-right: 2rem;
+                a{
+                    padding-left: 2.2rem;
+                    background: url(/img/knowledge/icon_pdf.png) left center no-repeat;
+                }
+            }
+            @include e(link){
+                box-sizing: border-box;
+                width: 50%;
+                padding-left: 2rem;
+            }
+            li{
+                margin-bottom: .8rem;
+                font-size: 1.2rem;
+                a{
+                    display: inline-block;
+                    color: #333;
+                    line-height: 1.6rem;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }
+        @include e(lawyer){
+            width: 62rem;
+            padding-top: 2.5rem;
+            @include border(top);
+            margin: 0 auto;
+            @include e(ttl){
+                margin: 0 0 1.5rem;
+                color: #bbb;
+                font-size: 1.3rem;
+            }//ttl
+            @include e(wrap){
+                @include flex($w:wrap, $j:space-between);
+            }
+            @include e(item){
+                @include flex($a:flex-start, $j:space-between);
+                width: 30rem;
+                margin-bottom: 1.4rem;
+                @include e(icon){
+                    position: relative;
+                    width: 8rem;
+                    height: 8rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }//icon
+                @include e(main){
+                    width: 20.5rem;
+                    padding-bottom: .8rem;
+                    @include border(bottom);
+                }
+                @include e(name){
+                    margin: 0 0 .3rem;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+                @include e(company){
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    @include texthide;
+                }
+                @include e(pos){
+                    font-size: 1.1rem;
+                    @include texthide;
+                }
+                @include e(adm){
+                    margin-top: .4rem;
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                    color: #bbb;
+                }
+                @include e(meta){
+                    font-size: 1.1rem;
+                    @include texthide;
+                }
+            }//item
+        }//lawyer
+    }
+
+    @include e(item){
+        @include border;
+        margin-bottom: .9rem;
+        background: #fff;
+        a:not(.knowledge_item_head_link):hover{
+            color: $green!important;
+        }
+        @include m(draft){
+            *{
+                color: #bbb!important;
+            }
+        }
+        @include e(meta){
+            padding: 1.6rem 1.8rem 0;
+            @include flex($a:center, $j:space-between);
+            @include e(info){
+                font-size: 1rem;
+                color:#bbb;
+                a{
+                    display: inline-block;
+                    max-width: 44rem;
+                    vertical-align: bottom;
+                    @include texthide;
+                    color:#bbb;
+                }
+                @include m(link){
+                    font-size: 1.1rem;
+                    a{
+                        margin-left: 1.3rem;
+                    }
+                }
+            }
+            @include e(btn){
+                @include flex($a:center, $j:space-between);
+                width: 4.2rem;
+                span.label{color: #333!important}
+                >span,
+                >a{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    cursor: pointer;
+                    @include m(setting){
+                        background-image: url(/img/common/btn_gear.png);
+                        &:hover{
+                            background-image: url(/img/common/btn_gear-selected.png);
+                        }
+                        .balloon{
+                            @include balloon($top:2.6rem, $left:9.2rem);
+                            z-index: 10;
+                            box-sizing: border-box;
+                            padding: 2rem 1.2rem 1.3rem;
+                            a{
+                                color: #333!important;
+                                &:hover{
+                                    color: $green!important;
+                                }
+                            }
+                        }
+                    }
+                    @include m(share){
+                        background-image: url(/img/common/btn_share_02.png);
+                    }
+                }
+            }//btn
+        }//meta
+        @include e(head){
+            @include flex($a:center, $j:space-between);
+            padding: 0 0 1.3rem;
+            @include border(bottom);
+            margin: .2rem 1.8rem 0;
+            @include e(ttl){
+                @include flex($a:center);
+                max-width: 43rem;
+                margin: 0;
+                font-size: 1.4rem;
+                @include texthide;
+                span:not(.draft_label){
+                    @include texthide;
+                }
+                span.draft_label{
+                    padding: 0 .5rem;
+                    border-radius: .2rem;
+                    margin-right: 1rem;
+                    color: #fff!important;
+                    font-size: 1rem;
+                    line-height: 1.7rem;
+                    background: #bbb;
+                }
+            }
+            @include e(link){
+                height: 1.6rem;
+                padding-left: 1.9rem;
+                font-size: 1.2rem;
+                color: #bbb;
+                text-decoration: none;
+                background: url(/img/common/btn_detail.png) left center no-repeat;
+            }
+        }//head
+        @include e(text){
+            padding: 1.8rem 0 1.5rem;
+            @include border(bottom);
+            margin: 0 1.8rem;
+            font-size: 1.3rem;
+            line-height: 2.4rem;
+            a{
+                color: #333;
+                margin-left: 1rem;
+            }
+        }
+
+        @include e(content){
+            @include flex($j:space-between);
+            width: 58rem;
+            padding: 1.5rem 0;
+            margin: 0 auto;
+            @include e(img){
+                position: relative;
+                width: 14rem;
+                height: 9rem;
+                background: #eee;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 100%;
+                    margin: auto;
+                }
+            }//img
+            @include e(text){
+                width: 43rem;
+                padding-top: .5rem;
+                font-size: 1.3rem;
+                line-height: 2.4rem;
+            }
+            a{
+                color: #333;
+                margin-left: 1rem;
+            }
+        }
+
+        @include e(info){
+            display: none;
+            @include e(wrapper){
+                @include flex($a:center);
+                padding: 1.5rem 0 1.3rem;
+                @include border(bottom);
+                margin: 0 1.8rem;
+            }
+            @include e(link){
+                @include flex($a:center);
+                margin: 0 1.8rem;
+                @include border(bottom);
+                dl{
+                    @include flex($a:center);
+                    @include m(part){
+                        width: 18.5rem;
+                        padding-right: 3rem;
+                    }
+                    @include m(link){
+                        width: 36.5rem;
+                    }
+                    dt{
+                        width: 7rem;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        color: #bbb;
+                    }
+                    dd{
+                        max-width: 11.5rem;
+                        margin: 0;
+                        font-size: 1.2rem;
+                        @include texthide;
+                        a{
+                            color:#333;
+                            transition: color .1s;
+                            &:hover{
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }//link
+            @include e(detail){
+                @include flex;
+                margin: 0 1.8rem;
+                @include border(bottom);
+                dl{
+                    width: 17.3rem;
+                    padding-right: 2.7rem;
+                    &:last-child{
+                        width: 16.2rem;
+                        padding: 0;
+                    }
+                    dt{
+                        color: #bbb;
+                        font-size: 1rem;
+                        line-height: 1.1em;
+                    }
+                    dd{
+                        font-size: 1.1rem;
+                        margin: 0;
+                    }
+                }
+            }//detail
+            @include e(main){
+                box-sizing: border-box;
+                width: 38rem;
+                padding-right: 2rem;
+                dl{
+                    @include flex($a:center);
+                    margin: 0;
+                    +dl{
+                        margin-top: 1rem;
+                    }
+                    dt{
+                        width: 7rem;
+                        font-size: 1.1rem;
+                        color: #bbb;
+                        font-weight: bold;
+                    }
+                    dd{
+                        width: 29rem;
+                        margin: 0;
+                        font-size: 1.2rem;
+                        @include flex($a:center);
+                        @include texthide;
+                        a{
+                            color: #333;
+                            @include texthide;
+                            &:hover{
+                                color: $green;
+                            }
+                        }
+                        span{
+                            margin-left: .3rem;
+                            font-size: 1.1rem;
+                            color: #bbb;
+                            @include texthide;
+                        }
+                    }
+                }
+            }//main
+            @include e(meta){
+                box-sizing: border-box;
+                width: 20.2rem;
+                padding-left: 1.9rem;
+                @include border(left);
+                span{
+                    display: block;
+                    font-size: .8rem;
+                    line-height: 1.2;
+                    color: #bbb;
+                }
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    +span{margin-top: .8rem;}
+                }
+            }//meta
+        }//info
+
+        @include e(toggleBtn){
+            @include flex($a:center, $j:center);
+            height: 3.7rem;
+            cursor: pointer;
+            &:before{
+                content: "DETAIL";
+                padding-left: .6rem;
+                padding-right: 2.8rem;
+                @include ff;
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #bbb;
+                background: url(/img/common/arrow_select.png) right center no-repeat;
+            }
+            @include m(isOpen){
+                &:before{
+                    content: "CLOSE";
+                    padding-right: 3.4rem;
+                    background-image: url(/img/common/arrow_select_open.png);
+                }
+            }
+        }//toggleBtn
+    }//item
+
+    @include e(latest){
+        ul{
+            max-height: 29rem;
+            @include border;
+            border-bottom: none;
+            background: #fff;
+        }
+        @include e(item){
+            padding: 1.5rem 2rem 0;
+            &:first-child{
+                margin-top: .8rem;
+            }
+            @include e(container){
+                padding-bottom: 1.5rem;
+                @include border(bottom);
+            }
+            @include e(meta){
+                display: block;
+                margin-bottom: .3rem;
+                font-size: 1.1rem;
+                color: #bbb;
+                @include ff;
+                a{
+                    position: relative;
+                    margin-left: 1.8rem;
+                    color: #bbb;
+                    &:before{
+                        content: "-";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 100%;
+                        margin: auto .5rem auto 0;
+                    }
+                }
+            }
+            @include e(main){
+                @include flex($a:center, $j:space-between);
+                @include e(ttl){
+                    max-width: 44rem;
+                    font-weight: bold;
+                    @include texthide;
+                    @include m(draft){
+                        @include flex($a:center);
+                        color: #bbb;
+                        span.draft_label{
+                            height: 1.7rem;
+                            padding: 0 .5rem;
+                            border-radius: .2rem;
+                            margin-right: .7rem;
+                            color: #fff;
+                            font-size: 1rem;
+                            line-height: 1.7rem;
+                            background: #bbb;
+                            +span{
+                                @include texthide;
+                            }
+                        }
+                    }
+                }//ttl
+                @include e(content){
+                    margin-top: .5rem;
+                    @include e(ttl, desc){
+                        max-width: 42rem;
+                        @include texthide;
+                        font-size: 1.2rem;
+                    }
+                    @include e(ttl){
+                        font-weight: bold;
+                    }
+                }//content
+                @include e(icon){
+                    @include flex($a:center, $j:space-between);
+                    width: 7rem;
+                    margin-bottom: .8rem;
+                    >span,
+                    >a{
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        cursor: pointer;
+                        @include m(setting){
+                            background-image: url(/img/common/btn_gear.png);
+                            &:hover{
+                                background-image: url(/img/common/btn_gear-selected.png);
+                            }
+                            .balloon{
+                                @include balloon($top:2.6rem, $left:9.2rem);
+                                z-index: 10;
+                                box-sizing: border-box;
+                                padding: 2rem 1.2rem 1.3rem;
+                            }
+                        }
+                        @include m(share){
+                            background-image: url(/img/common/btn_share_02.png);
+                        }
+                        @include m(link){
+                            background-image: url(/img/common/btn_detail.png);
+                        }
+                    }
+                }//icon
+            }//main
+        }//item
+        @include e(btn){
+            display: block;
+            height: 3.5rem;
+            font-size: 1.2rem;
+            color: #fff;
+            text-align: center;
+            line-height: 3.5rem;
+            background: #bbb;
+        }
+    }
+    @include e(lawyer){
+        @include e(container){
+            width: 62rem;
+            margin: 0 auto;
+        }
+        box-sizing: border-box;
+        max-height: 70rem;
+        @include border;
+        margin: 0 auto;
+        background: #fff;
+        @include e(item){
+            padding: 1.5rem 1.8rem 0;
+            cursor: pointer;
+            &:hover{
+                background: #eee;
+            }
+            @include m(link){
+                padding: 0;
+                a{
+                    display: block;
+                    padding: 1.5rem 1.8rem 0;
+                    color: #333;
+                    text-decoration: none;
+                }
+            }
+            @include m(isSelected){
+                background: #edfbfc;
+            }
+            @include e(container){
+                box-sizing: border-box;
+                @include flex($a:flex-start, $j:space-between);
+                padding: 0 1.4rem 1.3rem;
+                border-bottom: .1rem solid #e3e3e3;
+            }
+            @include e(photo){
+                width: 10rem;
+                height: 10rem;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            @include e(main){
+                width: 43.5rem;
+                margin-top: .6rem;
+            }//main
+            @include e(head){
+                @include flex($a:center, $j:space-between);
+                padding-bottom: .3rem;
+                border-bottom: .1rem solid #ddd;
+                p:first-child{
+                    max-width: 45rem;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    @include texthide;
+                }
+                @include e(icon){
+                    @include flex($a:center);
+                    font-size: 1.1rem;
+                    @include ff;
+                    span{
+                        line-height: 2rem;
+                        text-decoration: none;
+                        color: #bbb;
+                        @include m(recommend){
+                            padding-left: 1.7rem;
+                            background: url(/img/common/icon_medal.png) left center no-repeat;
+                        }
+                        @include m(credit){
+                            padding-left: 18px;
+                            margin-left: 1.5rem;
+                            background: url(/img/common/icon_exp.png) left center no-repeat;
+                        }
+                        @include m(community){
+                            padding-left: 22px;
+                            margin-left: 13px;
+                            background: url(/img/common/icon_team2.png) left center no-repeat;
+                        }
+
+                        @include m(accept){
+                            padding-left: 1.9rem;
+                            color: #44d095;
+                            background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+                        }
+                        @include m(delete){
+                            padding-left: 1.8rem;
+                            margin-left: 1.5rem;
+                            margin-right: 1rem;
+                            background: url(/img/common/btn_delete.png) left center no-repeat;
+                        }
+
+                    }
+                }//icon
+                @include e(btn){
+                    height: 2.3rem;
+                    padding: 0 1rem;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    line-height: 2.3rem;
+                    text-align: center;
+                    background: $green;
+                }
+            }//head
+            @include e(info){
+                @include flex($a:center);
+                padding-top: 1rem;
+                @include e(company){
+                    box-sizing: border-box;
+                    width: 26.5rem;
+                    padding-right: 2rem;
+                    p{
+                        @include texthide;
+                        font-size: 1.2rem;
+                        height: 2rem;
+                    }
+                    @include e(head){
+                        font-weight: bold;
+                    }
+                    @include e(locate){
+                        color: #bbb;
+                        padding-left: 1.5rem;
+                        background: url(/img/common/icon_locate.png) .1rem center no-repeat;
+                    }
+                }
+                @include e(meta){
+                    box-sizing: border-box;
+                    width: 16rem;
+                    padding-left: 2rem;
+                    border-left: .1rem solid #ddd;
+                    line-height: 1.2;
+                    span{
+                        display: block;
+                        font-size: .8rem;
+                        color: #bbb;
+                    }
+                    p{
+                        @include texthide;
+                        font-size: 1.1rem;
+                        +span{margin-top: .8rem;}
+                    }
+                }//meta
+            }//info
+            @include e(btns){
+                @include flex;
+                border-top: .1rem solid #ddd;
+                @include m(right){
+                    -webkit-justify-content: flex-end;
+                    justify-content: flex-end;
+                    a{
+                        width: auto;
+                        padding: 0 1.2rem;
+                    }
+                }
+                a{
+                    @include flex($a:center, $j:center);
+                    width: 33.3333%;
+                    height: 3.6rem;
+                    text-decoration: none;
+                    transition: opacity .1s;
+                    &:hover{
+                        opacity:.7;
+                    }
+                    span{
+                        font-size: 1.1rem;
+                        line-height: 2rem;
+                        color: #bbb;
+                        @include ff;
+                        @include m(connection){
+                            padding-left:2rem;
+                            background: url(/img/profile/icon_connect_off.png) left center no-repeat;
+                            @include m(on){
+                                background-image: url(/img/profile/icon_connect_on.png);
+                                color: $green;
+                            }
+                        }
+                        @include m(view){
+                            padding-left: 1.6rem;
+                            background: url(/img/search/icon_profile.png) left center no-repeat;
+                        }
+                        @include m(msg){
+                            padding-left: 2.2rem;
+                            background: url(/img/common/icon_mail.png) left center no-repeat;
+                        }
+                        @include m(request){
+                            padding-left: 2rem;
+                            background: url(/img/profile/icon_connect_on.png) left center no-repeat;
+                            color: $green;
+                        }
+                        @include m(cancel){
+                            padding-left: 1.7rem;
+                            background: url(/img/common/btn_delete.png) left center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include e(areaTtl){
+        @include flex($j:space-between, $a:center);
+        width: 62rem;
+        margin: 2.8rem auto .8rem;
+        font-size: 1.4rem;
+        .edit_addBtn{
+            display: block;
+            padding-left: 2.4rem;
+            color: #bbb;
+            font-size: 1.2rem;
+            text-decoration: none;
+            line-height: 1.8rem;
+            font-weight: normal;
+            background: url("/img/setting/btn_circle_plus.png") 0 0 no-repeat;
+            cursor: pointer;
+        }
+    }
+    @include e(upload){
+        width: 62rem;
+        margin: 3rem auto 0;
+        @include e(row){
+            @include flex;
+            @include e(head){
+                width: 16rem;
+                margin: 0;
+                line-height: 2.5rem;
+                font-size: 1.2rem;
+            }
+        }
+        @include e(imgAdd){
+            position: relative;
+            width: 12rem;
+            height: 2.5rem;
+            border-radius: .2rem;
+            color: #fff;
+            text-align: center;
+            line-height: 2.5rem;
+            font-size: 1.2rem;
+            background: #bbb;
+            input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }//imgAdd
+        @include e(imgAlert){
+            font-size: 1.2rem;
+            margin: 1.1rem 0 -.9rem;
+            @include e(row){
+                @include flex($a:center, $j:space-between);
+                @include e(head){
+                    width: 11.7rem;
+                    height: 7.5rem;
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                .file{
+                    position: relative;
+                    width: 31rem;
+                    padding-left: 1.7rem;
+                    text-decoration: underline;
+                    @include texthide;
+                }
+                .fileDelBtn{
+                    display: block;
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    background: url(/img/common/btn_delete.png) center center no-repeat;
+                    cursor: pointer;
+                }
+            }
+        }
+    }//upload
+    @include e(edit){
+        position: relative;
+        box-sizing: border-box;
+        width: 62rem;
+        padding: 1.9rem;
+        @include border;
+        margin: 0 auto 1.3rem;
+        background: #fff;
+        .edit_removeParBtn{
+            position: absolute;
+            top: 1.7rem;
+            right:2rem;
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            background: url(/img/common/btn_delete.png) center center no-repeat;
+            cursor: pointer;
+        }
+        @include e(ttl){
+            padding-bottom: .5rem;
+            @include border(bottom);
+            margin: 1rem 0 2rem;
+            font-size: 1.4rem;
+        }
+        @include e(part){
+            padding-top: 2.3rem;
+            @include border(top);
+            margin-top: 1.3rem;
+            + .multi{
+                padding-top: 0;
+                border: none;
+            }
+        }//part
+        @include e(addBtn){
+            @include flex;
+            padding-left: 14rem;
+            padding-bottom: .8rem;
+            margin-top: .5rem;
+            color: #bbb;
+            .edit_addBtn{
+                display: block;
+                padding-left: 2.3rem;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                background: url(/img/setting/btn_circle_plus.png) 0 center no-repeat;
+                cursor: pointer;
+            }
+        }//addBtn
+
+        @include input;
+        @include input($type: url);
+        @include input($type: number, $w:14rem);
+
+        @include e(select){
+            @include select;
+            margin: 1rem 0;
+            @include m(mini){
+                width: 8rem;
+            }
+            @include m(user){
+                width: 13rem;
+                margin-left: 1rem;
+            }
+            @include m(short){
+                width: 22rem;
+            }
+            @include m(mid){
+                width: 32rem;
+            }
+            @include m(currency){
+                width: 9rem;
+                margin-left: 1rem;
+            }
+            @include m(sort){
+                width: 19rem;
+                margin-left: 1rem;
+                @include m(single){
+                    margin-left: 0;
+                }
+            }
+        }//select
+        @include e(select2){
+            @include select2($box-sizing:border-box,$l: true, $m:1rem);
+        }
+        @include e(radio){
+            @include radio($size:1.2rem,$height: 2rem, $font-size:1.1rem);
+        }
+        @include e(textarea){
+            display: block;
+            box-sizing: border-box;
+            width: 62rem;
+            height: 43rem;
+            @include border;
+            margin: 0 auto;
+            resize: none;
+        }
+        @include e(text){
+            font-size: 1.1rem;
+        }
+        @include e(row){
+            @include flex($a:flex-start, $j:space-between);
+            margin-top: -1rem;
+            @include e(head){
+                position: relative;
+                width: 12rem;
+                padding-top: 1.9rem;
+                margin:0;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+                text-align: right;
+                .edit_removeBtn{
+                    position: absolute;
+                    top: 1.6rem;
+                    left: -.5rem;
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    background: url(/img/common/btn_delete.png) center center no-repeat;
+                    cursor: pointer;
+                }
+            }
+            @include e(flex){
+                @include flex($a:center);
+                margin-left: 9rem;
+                font-size: 1.2rem;
+                margin-top: .5rem;
+                @include e(text){
+                    width: 31rem;
+                }
+                input[type="number"]{
+                    width: 9rem;
+                    margin: .8rem 0;
+                }
+            }
+            @include e(body){
+                width: 44rem;
+                input[type="text"],
+                input[type="url"],
+                input[type="number"]{
+                    margin: 1rem 0;
+                    @include m(reset){
+                        margin: 0;
+                    }
+                    @include m(resetBottom){
+                        margin-bottom: 0;
+                    }
+                    @include m(short){
+                        width: 13rem;
+                    }
+                    @include m(mini){
+                        width: 9rem;
+                    }
+                    @include m(currency){
+                        width: 14rem;
+                        margin-right: 1rem;
+                    }
+                    @include m(barassociation){
+                        width: 24rem;
+                        margin-right: 2rem;
+                    }
+                }
+                @include e(flex){
+                    @include flex($a:center);
+                    @include m(up){
+                        -webkit-align-items: flex-start;
+                        align-items: flex-start;
+                        margin: 1.9rem 0;
+                    }
+                    @include e(text){
+                        width: 31rem;
+                    }
+                    @include input($w:30rem);
+                    + input[type]{
+                        margin-top: 0;
+                    }
+                }
+                @include e(head){
+                    @include flex($a:center,$j:flex-end);
+                    width: 8.5rem;
+                    margin-right: 1rem;
+                    font-size: 1.2rem;
+                    @include question($margin: 0 0 0 .5rem);
+                }
+                @include e(radio){
+                    margin-top: -.2rem;
+                }
+            }//body
+        }//row
+        @include e(fileAdd){
+            position: relative;
+            width: 12rem;
+            height: 2.5rem;
+            border-radius: .2rem;
+            margin: 1.5rem 0;
+            color: #fff;
+            text-align: center;
+            line-height: 2.5rem;
+            font-size: 1.2rem;
+            background: #bbb;
+            input[type="file"]{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }//fileAdd
+        @include e(fileAlert){
+            p{
+                @include m(msg){
+                    margin: .5rem 0 1.2rem;
+                    font-size: 1.2rem;
+                }
+                @include m(file){
+                    position: relative;
+                    padding-left: 1.7rem;
+                    margin-bottom: .8rem;
+                    font-size: 1.2rem;
+                    text-decoration: underline;
+                    .fileDelBtn{
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                        background: url(/img/common/btn_delete.png) center center no-repeat;
+                        cursor: pointer;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 2rem;
+                }
+            }
+        }//fileAlert
+        @include e(submit){
+            @include flex($a:center, $j:space-between);
+            width: 63rem;
+            margin: 3.2rem auto 0;
+            @include e(ttl){
+                @include flex($a:center);
+                font-size: 1.2rem;
+                font-weight: bold;
+                @include question($margin: 0 0 0 .5rem);
+            }
+            @include e(range){
+                box-sizing: border-box;
+                @include border;
+                width: 24rem;
+                height: 3.5rem;
+                padding-right: 2rem;
+                .range_placeholder{
+                    width: 13rem;
+                    margin-left: 1rem;
+                    color: #bbb;
+                    font-size: 1.2rem;
+                    line-height: 1.3;
+                }
+            }//range
+            @include e(btn){
+                @include flex($a:center, $j:space-between);
+                width: 31rem;
+                font-size: 1.3rem;
+                font-weight: bold;
+                input[type="submit"]{
+                    @include flex($a:center, $j:center);
+                    width: 20rem;
+                    height: 4rem;
+                    padding: 0 1rem;
+                    color: #fff;
+                    background: $green;
+                }
+                @include e(cancel){
+                    @include flex($a:center, $j:center);
+                    width: 8rem;
+                    height: 4rem;
+                    padding: 0 1rem;
+                    color: #fff;
+                    text-decoration: none;
+                    background: #bbb;
+                }
+            }//btn
+        }//submit
+    }//edit
+    @include e(tabs){
+        @include flex($a:center, $j:space-between);
+        width: 62rem;
+        margin: 0 auto .6rem;
+        @include e(container){
+            @include flex;
+            width: 21rem;
+            height: 3rem;
+        }
+        @include e(item){
+            @include flex($a:center, $j:center);
+            width: 10.5rem;
+            color: #fff;
+            font-size: 1.1rem;
+            @include ff;
+            font-weight: bold;
+            background: #bbb;
+            cursor: pointer;
+            @include m(isSelected){
+                position: relative;
+                background: #22313d;
+                cursor: default;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    width: 0;
+                    height: 0;
+                    border: .6rem solid transparent;
+                    border-top-color: #22313d;
+                }
+            }//isSelected
+        }//item
+        @include e(search){
+            box-sizing: border-box;
+            width: 31rem;
+            height: 2.6rem!important;
+            padding-left: 1.6rem;
+            border: none;
+            border-bottom: .1rem solid #ddd;
+            margin-top: .4rem;
+            @include ff;
+            font-size: 1.2rem;
+            background-color: transparent;
+            background: url(/img/common/icon_search_contact.png) left center no-repeat;
+        }
+    }//tabs
+
+    @include e(side){
+        @include e(cale){
+            @include flex($w:wrap);
+            padding: 0 1.2rem;
+            @include e(item){
+                margin-right: .7rem;
+                margin-bottom: 1.8rem;
+                a{
+                    color: #fff;
+                    font-weight: bold;
+                    transition: .1s opacity;
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+            }//item
+        }//cale
+    }//side
+
+}
+
+.knowledgeCale{
+    background: url(/img/common/arrow_open.png) 5.5rem center no-repeat;
+    @include m(isOpen){
+        background-image: url(/img/common/arrow_close.png);
+    }
+}
+
+
+#modalImportArea{
+    position: relative;
+}
+#modalImportDetail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    @include m(display){
+        z-index: 1;
+        background: #fff;
+    }
+}

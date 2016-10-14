@@ -1,0 +1,32 @@
+@charset 'utf-8';
+@import 'common/_mixin';
+
+.pager{
+    @include flex;
+    width: 49rem;
+    margin: 2rem auto 0;
+    li{
+        a, span{
+            display: block;
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.3rem;
+            line-height: 3.5rem;
+            text-align: center;
+            text-decoration: none;
+            @include ff;
+            color: #bbb;
+            background: #fff;
+            @include m(isSelected){
+                color: #fff;
+                background: $green;
+            }
+        }
+        a:hover{
+            opacity: .8;
+        }
+        img{
+            opacity: 1;
+        }
+    }
+}
