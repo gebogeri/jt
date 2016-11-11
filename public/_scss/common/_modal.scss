@@ -1170,6 +1170,497 @@ opacity: 0;
             }
         } //input[type="checkbox"]
     } //checkBox
+
+    // COMMUNICATION MYFILEインポート
+    @include e(comPrj){
+        padding: 4rem 6rem;
+        @include e(ttl){
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        @include e(tab){
+            height: 3.6rem;
+            overflow: hidden;
+            @include e(container){
+                @include flex($w:nowrap);
+                width: 100%;
+                height: 5.3rem;
+                overflow-x: scroll;
+                overflow-y: hidden;
+            }
+            @include e(item){
+                @include flex($a:center, $j:center);
+                flex: 0 0 9.8rem;
+                height: 2rem;
+                padding: .5rem;
+                margin-left: .1rem;
+                @include ff;
+                color: #fff;
+                font-size: 1.1rem;
+                background: #bbb;
+                cursor: pointer;
+                &:first-child{
+                    margin-left: 0;
+                }
+                @include m(isSelected){
+                    position: relative;
+                    background: #22313d;
+                    cursor: default;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        border: .6rem solid transparent;
+                        border-top-color: #22313d;
+                    }
+                }//isSelected
+            }//item
+        }//tab
+        @include e(selectArea){
+            height: 29rem;
+            @include border;
+        }
+
+        @include e(area){
+            height: 29rem;
+            @include e(item){
+                padding: 1.6rem 1.8rem 0;
+                cursor: pointer;
+                &:hover{
+                    background: #eee;
+                }
+                @include m(isSelected){
+                    background: #edfbfc;
+                }
+                @include e(container){
+                    padding-bottom: 1.5rem;
+                    @include border(bottom);
+                }
+                @include e(meta){
+                    color: #bbb;
+                    font-size: 1.1rem;
+                }
+                @include e(main){
+                    font-weight: bold;
+                }
+            }//item
+        }//area
+        @include e(btn){
+            @include flex($j:center);
+            height: 3rem;
+            margin-top: 1.5rem;
+            line-height: 3rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            input[type="submit"]{
+                padding: 0 2rem;
+                background: $green;
+                font-size: 1.2rem;
+            }
+            .modal_close{
+                width: 12rem;
+                margin-left: .5rem;
+                font-size: 1.2rem;
+                background: #bbb;
+                cursor: pointer;
+            }
+        }
+    }//commPrj
+
+
+    // COMMUNICATION 送信先選択
+    @include e(comTo){
+        padding: 4rem 6rem;
+        @include e(ttl){
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        @include e(area){
+            max-height: 50rem;
+            @include border;
+            @include e(item){
+                @include flex($a:center,$j:space-between);
+                padding: 1.2rem 2rem 1rem;
+                cursor: pointer;
+                &:hover{
+                    background: #eee;
+                }
+                @include m(isSelected){
+                    background:#edfbfc;
+                }
+                @include e(thumb){
+                    position: relative;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        margin: auto;
+                    }
+                }//thumb
+                @include e(content){
+                    width: 40rem;
+                    @include texthide;
+                    span{
+                        margin-right: .6rem;
+                        font-weight: bold;
+                    }
+                }//content
+            }//item
+        }//area
+        @include e(btn){
+            @include flex($j:center);
+            height: 3rem;
+            margin-top: 1.5rem;
+            line-height: 3rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            input[type="submit"]{
+                padding: 0 2rem;
+                background: $green;
+                font-size: 1.2rem;
+            }
+            .modal_close{
+                width: 12rem;
+                margin-left: .5rem;
+                font-size: 1.2rem;
+                background: #bbb;
+                cursor: pointer;
+            }
+        }//btn
+    }//comTo
+
+
+    // COMMUNICATION コネクション参照
+    @include e(conn){
+        padding: 4rem 6rem;
+        @include e(ttl){
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        @include e(tab){
+            @include flex($a:center, $j:space-between);
+            height: 3.6rem;
+            @include e(container){
+                @include flex;
+                width: 21rem;
+            }
+            @include e(item){
+                @include flex($a:center, $j:center);
+                width: 9.5rem;
+                height: 2rem;
+                padding: .5rem;
+                margin-bottom: .6rem;
+                @include ff;
+                color: #fff;
+                font-size: 1.1rem;
+                background: #bbb;
+                cursor: pointer;
+                @include m(isSelected){
+                    position: relative;
+                    background: #22313d;
+                    cursor: default;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        border: .6rem solid transparent;
+                        border-top-color: #22313d;
+                    }
+                }//isSelected
+            }//item
+            input[type="text"]{
+                width: 24rem;
+                height: 2.4rem;
+                padding-left: 1.6rem;
+                border-right: none;
+                @include ff;
+                font-size: 1.2rem;
+                background: url(/img/common/icon_search_contact.png) left center no-repeat;
+            }
+        }//tab
+        @include e(selectArea){
+            height: 37rem;
+            @include border;
+        }
+
+        @include e(area){
+            height: 37rem;
+            @include e(item){
+                @include flex($a:flex-start, $j:space-between);
+                padding: 1.4rem .9rem 1.2rem;
+                border-bottom: .1rem solid #e3e3e3;
+                cursor: pointer;
+                &:hover{
+                    background: #eee;
+                }
+                @include m(link){
+                    padding: 0;
+                    a{
+                        display: block;
+                        padding: 1.5rem 1.8rem 0;
+                        color: #333;
+                        text-decoration: none;
+                    }
+                }
+                @include m(isSelected){
+                    background: #edfbfc;
+                }
+                @include e(photo){
+                    position: relative;
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        max-width: 100%;
+                        margin: auto;
+                    }
+                }
+                @include e(main){
+                    width: 37rem;
+                    margin-top: .6rem;
+                }//main
+                @include e(head){
+                    @include flex($a:center, $j:space-between);
+                    padding-bottom: .3rem;
+                    border-bottom: .1rem solid #ddd;
+                    p:first-child{
+                        flex: 1;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        @include texthide;
+                    }
+                    @include e(icon){
+                        @include flex($a:center);
+                        font-size: 1.1rem;
+                        @include ff;
+                        span{
+                            line-height: 2rem;
+                            text-decoration: none;
+                            color: #bbb;
+                            @include m(recommend){
+                                padding-left: 1.7rem;
+                                background: url(/img/common/icon_medal.png) left center no-repeat;
+                            }
+                            @include m(credit){
+                                padding-left: 18px;
+                                margin-left: 1.5rem;
+                                background: url(/img/common/icon_exp.png) left center no-repeat;
+                            }
+                            @include m(community){
+                                padding-left: 22px;
+                                margin-left: 13px;
+                                background: url(/img/common/icon_team2.png) left center no-repeat;
+                            }
+
+                        }
+                    }//icon
+                }//head
+                @include e(info){
+                    @include flex($a:center);
+                    padding-top: 1rem;
+                    @include e(company){
+                        box-sizing: border-box;
+                        width: 21rem;
+                        padding-right: 2rem;
+                        p{
+                            @include texthide;
+                            font-size: 1.2rem;
+                            height: 2rem;
+                        }
+                        @include e(head){
+                            font-weight: bold;
+                        }
+                        @include e(locate){
+                            color: #bbb;
+                            padding-left: 1.5rem;
+                            background: url(/img/common/icon_locate.png) .1rem center no-repeat;
+                        }
+                    }
+                    @include e(meta){
+                        box-sizing: border-box;
+                        width: 16rem;
+                        padding-left: 2rem;
+                        border-left: .1rem solid #ddd;
+                        line-height: 1.2;
+                        span{
+                            display: block;
+                            font-size: .8rem;
+                            color: #bbb;
+                        }
+                        p{
+                            @include texthide;
+                            font-size: 1.1rem;
+                            +span{margin-top: .8rem;}
+                        }
+                    }//meta
+                }//info
+            }//item
+        }//area
+        @include e(btn){
+            @include flex($j:center);
+            height: 3rem;
+            margin-top: 1.5rem;
+            line-height: 3rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            input[type="submit"]{
+                padding: 0 2rem;
+                background: $green;
+                font-size: 1.2rem;
+            }
+            .modal_close{
+                width: 12rem;
+                margin-left: .5rem;
+                font-size: 1.2rem;
+                background: #bbb;
+                cursor: pointer;
+            }
+        }//btn
+    }//conn
+
+    // COMMUNICATION メッセージ検索
+    @include e(msgSrch){
+        width: 56rem;
+        padding: 4rem 3rem;
+        @include e(ttl){
+            margin-bottom: 2.7rem;
+            font-weight: bold;
+            text-align: center;
+        }//ttl
+        @include e(tab){
+            @include flex($a:center, $j:space-between);
+            height: 3.6rem;
+            @include e(container){
+                @include flex($j:space-between);
+                width: 31.7rem;
+            }
+            @include e(item){
+                @include flex($a:center, $j:center);
+                width: 9.5rem;
+                height: 2rem;
+                padding: .5rem;
+                margin-bottom: .6rem;
+                @include ff;
+                color: #fff;
+                font-size: 1.1rem;
+                background: #bbb;
+                cursor: pointer;
+                @include m(isSelected){
+                    position: relative;
+                    background: #22313d;
+                    cursor: default;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        border: .6rem solid transparent;
+                        border-top-color: #22313d;
+                    }
+                }//isSelected
+            }//item
+            @include e(result){
+                padding-bottom: .6rem;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }//tab
+        @include e(search){
+            width: 44rem;
+            padding-left: 2rem;
+            @include border(bottom);
+            margin: 0 auto 2.5rem;
+            background: url(/img/common/icon_search_contact.png) left center no-repeat;
+            select{
+                @include select2($h:2.5rem, $tags:true, $fz:1.2rem);
+            }
+        }//search
+
+        @include e(area){
+            height: 32rem;
+            @include border;
+            @include e(item){
+                padding: 2rem 1rem 0;
+                @include border(bottom);
+            }//item
+
+            @include e(folder){
+                @include border(bottom);
+                &:hover{
+                    background:#eee;
+                }
+                @include e(wrap){
+                    @include flex($a:center, $j:space-between);
+                    height: 4.4rem;
+                    padding: 0 1.5rem;
+                    text-decoration: none;
+                }//wrap
+                @include e(ttl){
+                    max-width: 35rem;
+                    padding-left: 2rem;
+                    color: #333;
+                    background: url(/img/common/icon_folder.png) left center no-repeat;
+                    font-size: 1.1rem;
+                }
+                @include e(detail){
+                    display: block;
+                    padding-left: 2rem;
+                    color: #bbb;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    background: url(/img/common/icon_circle_arrow_right.png) left center no-repeat;
+                }
+            }//folder
+        }//area
+
+
+        .modal_close{
+            display: block;
+            width: 12rem;
+            height: 3rem;
+            margin: 1.6rem auto 0;
+            line-height: 3rem;
+            font-size: 1.2rem;
+            color: #fff;
+            text-align: center;
+            background: #bbb;
+            cursor: pointer;
+        }
+    }//msgSrch
+
 } // modal
 #lean_overlay {
     position: fixed;
@@ -1188,7 +1679,11 @@ opacity: 0;
 #modalKnowledge,
 #modalImport,
 #modalFile,
-#modalLinkAdd{
+#modalLinkAdd,
+#modalComPrj,
+#modalComTo,
+#modalConn,
+#modalMsgSrch{
     display: none;
     -webkit-align-items: center;
     align-items: center;

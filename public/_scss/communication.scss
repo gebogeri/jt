@@ -1,0 +1,1211 @@
+@charset 'utf-8';
+@import 'common/_mixin';
+@import 'include/_sidebarCom';
+
+.com{
+    @include m(msg){
+        @include resize($min:96rem, $max:100%, $c:2.5, $ttl:100%);
+    }
+    @include m(bookmark){
+        @include resize($min:96rem, $max:100%, $c:2, $ttl:100%);
+    }
+
+    .ttl{
+        padding: 0 2.9rem;
+    }
+
+    // サイドバー
+    .sideRight{
+        .side_list_item_target{
+            min-height: 2.9rem;
+        }
+    }
+
+    @include e(header){
+        padding: 0 2.9rem;
+        @include e(search){
+            @include flex($j:space-between, $a:center);
+            padding-left: 1.7rem;
+            margin: 0 auto;
+            select{
+                @include select2($box-sizing:border-box,$w:100%, $clear: true, $ff:true);
+            }
+            @include e(submit){
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: 0;
+                width: 1.7rem;
+                height: 1.7rem;
+                background: url(/img/common/icon_search_contact.png) center center no-repeat;
+                background-size: cover;
+                input[type="submit"]{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    opacity: 0;
+                }
+            }
+            @include e(field){
+                @include select2($box-sizing:border-box,$w:56.2rem, $clear: true, $ff:true);
+            }
+        }
+        @include m(search){
+            padding: .6rem 2.9rem;
+            select{
+                @include select2($clear: true);
+            }
+        }
+        @include e(info){
+            @include flex;
+            padding-bottom: 1.5rem;
+            @include border(bottom);
+            margin: 1.5rem 2.9rem 0;
+            @include e(main){
+                box-sizing: border-box;
+                width: 38rem;
+                padding-right: 1.9rem;
+                @include border(right);
+                dl{
+                    @include flex($a:center);
+                    margin: 0;
+                    +dl{
+                        margin-top: 1rem;
+                    }
+                    dt{
+                        width: 7rem;
+                        font-size: 1.1rem;
+                        color: #bbb;
+                        font-weight: bold;
+                    }
+                    dd{
+                        width: 29rem;
+                        margin: 0;
+                        font-size: 1.2rem;
+                        @include flex($a:center);
+                        @include texthide;
+                        a{
+                            color: #333;
+                            @include texthide;
+                            &:hover{
+                                color: $green;
+                            }
+                        }
+                        span{
+                            margin-left: .3rem;
+                            font-size: 1.1rem;
+                            color: #bbb;
+                            @include texthide;
+                        }
+                    }
+                }
+            }//main
+            @include e(meta){
+                box-sizing: border-box;
+                width: 24rem;
+                padding-left: 2rem;
+                span{
+                    display: block;
+                    font-size: .8rem;
+                    line-height: 1.2;
+                    color: #bbb;
+                }
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    +span{margin-top: .8rem;}
+                }
+            }//meta
+
+        }//info
+
+        @include e(toggleWrap){
+            display: none;
+            padding: 1.4rem 0;
+            @include border(bottom);
+            margin: 0 2.9rem;
+            line-height: 2.3rem;
+            font-size: 1.3rem;
+            @include m(myquery){
+                padding: 0;
+                border: none;
+                margin: 0;
+            }
+        }
+
+        @include e(toggleTxt){
+            padding: 2rem 0;
+            margin: 0 2.9rem;
+            + .com_header_toggleTxt{
+                @include border(top);
+            }
+            @include e(quote){
+                padding-left: 1.8rem;
+                border-left: .4rem solid #bbb;
+                margin-top: 1.2rem;
+                line-height: 1.4;
+                >p{
+                    font-size: 1.3rem;
+                    line-height: 2.3rem;
+                }
+                @include e(lawyer){
+                    @include flex($a:flex-start, $j:space-between);
+                    width: 30rem;
+                    padding-top: 1rem;
+                    text-decoration: none;
+                    color: #333;
+                    &:last-child{
+                        margin-bottom: .5rem;
+                    }
+                    @include e(icon){
+                        position: relative;
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }//icon
+                    @include e(main){
+                        width: 20.5rem;
+                        padding-bottom: .8rem;
+                    }
+                    @include e(name){
+                        margin: 0 0 .3rem;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                    @include e(company){
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        @include texthide;
+                    }
+                    @include e(pos){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+                    @include e(adm){
+                        margin-top: .4rem;
+                        font-size: 1rem;
+                        line-height: 1rem;
+                        color: #bbb;
+                    }
+                    @include e(meta){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+
+                }//lawyer
+
+                @include e(myfile){
+                    padding: 1.5rem 0;
+                    @include border(bottom);
+                    &:first-child{
+                        @include border(top);
+                    }
+                    @include e(meta){
+                        display: block;
+                        font-size: 1.1rem;
+                        color: #bbb;
+                        @include ff;
+                    }
+                    @include e(main){
+                        @include flex($a:center, $j:space-between);
+                        @include e(ttl){
+                            flex: 1;
+                            font-weight: bold;
+                            a{
+                                text-decoration: none;
+                                @include texthide;
+                                color: #333;
+                                &:hover{
+                                    color: $green;
+                                }
+                            }
+                        }//ttl
+                        @include e(icon){
+                            @include flex($a:center, $j:flex-end);
+                            width: 6rem;
+                            margin-bottom: .8rem;
+                            >a{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                cursor: pointer;
+                                @include m(share){
+                                    margin-left: 1.5rem;
+                                    background-image: url(/img/common/btn_share.png);
+                                }
+                                @include m(link){
+                                    background-image: url(/img/common/btn_detail.png);
+                                }
+                            }
+                        }//icon
+                    }//main
+
+                }//myfile
+            }//quote
+        }
+
+        @include e(addTxt){
+            @include flex($a:center, $j:space-between);
+            margin-bottom: 1rem;
+            .label{
+                border-radius: .2rem;
+                padding: 0 .4rem;
+                line-height: 1.7rem;
+                font-size: 1rem;
+                color: #fff;
+                background: $green;
+            }
+            .meta{
+                @include flex($a:center);
+            }
+            .time{
+                color: #bbb;
+                font-size: 1.2rem;
+                @include ff;
+            }
+            .setting{
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-left: 1rem;
+                background: url(/img/common/btn_gear.png) center center no-repeat;
+                cursor: pointer;
+                &:hover{
+                    background-image: url(/img/common/btn_gear-selected.png);
+                }
+            }
+        }
+
+        @include e(toggleBtn){
+            display: block;
+            @include border(bottom);
+            margin: 0 2.9rem;
+            text-align: center;
+            cursor: pointer;
+            @include m(myquery){
+                border: none;
+                &:before{
+                    line-height: 4.2rem;
+                }
+            }
+            &:before{
+                content: "DETAIL";
+                display: inline-block;
+                padding-left: .6rem;
+                padding-right: 2.8rem;
+                color: #bbb;
+                font-size: 1.3rem;
+                line-height: 3.5rem;
+                @include ff;
+                background: url(/img/common/arrow_select.png) right center no-repeat;
+            }
+            @include m(isOpen){
+                &:before{
+                    content: "CLOSE";
+                    background-image: url(/img/common/arrow_select_open.png);
+                }
+            }
+        }
+        @include e(auth){
+            @include flex($a:center, $j:space-between);
+            padding: .7rem 0;
+            @include e(icon){
+                position: relative;
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                margin-right: .5rem;
+                border-radius: 100%;
+                background: #eee;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: auto;
+                }
+            }//icon
+            @include e(name){
+                flex: 1;
+                margin-left: .5rem;
+                font-size: 1.1rem;
+                @include texthide;
+                a{
+                    margin-right: .7rem;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }//name
+        }//auth
+    }//header
+
+    @include e(date){
+        margin-bottom: .7rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #bbb;
+        @include ff;
+        text-align: center;
+    }
+
+    @include e(edit){
+        padding: 0 1.9rem 1.6rem;
+        @include border;
+        margin: 0 1rem;
+        background: #fff;
+        @include e(ttl){
+            padding: 3.5rem 0 .5rem;
+            @include border(bottom);
+            margin: 0 0 2rem;
+            font-size: 1.4rem;
+        }
+
+        @include e(select){
+            @include select;
+            margin: 1rem 0;
+            @include m(classify){
+                width: 13rem;
+                select{
+                    color: #333;
+                }
+            }
+            @include m(mini){
+                width: 9rem;
+            }
+            @include m(short){
+                width: 11rem;
+            }
+        }//select
+
+        @include e(select2){
+            @include select2($box-sizing:border-box, $l:true, $m:1rem);
+        }
+
+        @include e(toggleArea){
+            display: none;
+            margin-bottom: 1rem;
+        }
+
+        @include e(row){
+            @include flex($a:flex-start);
+            margin-top: -1rem;
+            @include e(head){
+                width: 12.2rem;
+                padding-top: 1.9rem;
+                margin:0;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+                text-align: right;
+            }
+            @include e(body){
+
+                @include input;
+                @include input($type: url);
+                @include input($type: number, $w:14rem);
+
+                input[type="text"],
+                input[type="number"],
+                input[type="url"]{
+                    margin: 1rem 0;
+                    @include m(short){
+                        width: 22rem;
+                    }
+                }
+
+                width: 36.1rem;
+                padding-left: 1.7rem;
+                @include e(flex){
+                    @include flex($a:center, $j:space-between);
+                    @include input($type:number, $w:14rem);
+                }
+            }//body
+        }//row
+    }
+
+    @include e(sec){
+        padding: 3.2rem 1.9rem 1.3rem;
+        @include border;
+        margin: 0 1rem .7rem;
+        background: #fff;
+        @include m(archive){
+            color: #bbb;
+            .com_sec_myhead:before{
+                background: #bbb;
+            }
+            a{
+                color: #bbb;
+                &:hover{
+                    color: $green;
+                }
+            }
+        }//arhicve
+        @include e(head){
+            @include flex($a:center);
+            @include e(icon){
+                position: relative;
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                margin: -1rem .5rem -1rem .6rem;
+                border-radius: 100%;
+                background: #eee;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: auto;
+                }
+            }//icon
+            @include e(name){
+                flex: 1;
+                margin-left: .5rem;
+                font-size: 1.1rem;
+                line-height: 1;
+                @include texthide;
+                a{
+                    margin-right: .7rem;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }//name
+            @include e(blank){
+                flex: 1;
+            }
+            @include e(meta){
+                @include flex($a:center, $j:flex-end);
+                width: 17rem;
+                @include e(detail){
+                    display: block;
+                    padding-left: 2rem;
+                    color: #bbb;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    background: url(/img/common/icon_circle_arrow_right.png) left center no-repeat;
+                }
+                .time{
+                    margin-right: .9rem;
+                    color: #bbb;
+                    font-size: 1.2rem;
+                    @include ff;
+                }
+                .bookmark{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: url(/img/common/icon_bookmark.png) center center no-repeat;
+                    &:hover{
+                        background-image: url(/img/common/icon_bookmark-selected.png);
+                    }
+                    @include m(isActive){
+                        background-image: url(/img/common/icon_bookmark-selected.png);
+                    }
+                }
+                .setting{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-right: .3rem;
+                    margin-left: .5rem;
+                    background: url(/img/common/btn_gear.png) center center no-repeat;
+                    cursor: pointer;
+                    &:hover{
+                        background-image: url(/img/common/btn_gear-selected.png);
+                    }
+                    .balloon{
+                        @include balloon($top:2.6rem, $left:9.3rem , $right: -3rem, $w:10rem);
+                        padding: 1.5rem;
+                    }
+                }
+                .quote{
+                    margin-left: .9rem;
+                    color: #bbb;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                }
+            }
+        }//head
+
+
+        @include e(myhead){
+            position: relative;
+            @include flex($a:center);
+            padding-bottom: 1rem;
+            @include border(bottom);
+            margin-top: -1.5rem;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 1rem;
+                left: -1.9rem;
+                width: .6rem;
+                height: 5rem;
+                margin: auto;
+                background: $green;
+            }
+            @include e(icon){
+                position: relative;
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                margin-right: .6rem;
+                border-radius: 100%;
+                background: #eee;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: auto;
+                }
+            }//icon
+            @include e(name){
+                flex: 1;
+                margin-right: .7rem;
+                font-size: 1.1rem;
+                @include texthide;
+                a{
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+                .company{
+                    font-weight: bold;
+                }
+            }//name
+            @include e(blank){
+                flex: 1;
+            }
+            @include e(meta){
+                width: 17rem;
+                @include e(box){
+                    @include flex($a:center, $j:flex-end);
+                    margin-bottom: .3rem;
+                    &:first-child{
+                        margin-bottom: 1.1rem;
+                    }
+                }
+                @include e(detail){
+                    display: block;
+                    padding-left: 2rem;
+                    color: #bbb;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    background: url(/img/common/icon_circle_arrow_right.png) left center no-repeat;
+                }
+                .time{
+                    margin-right: .9rem;
+                    color: #bbb;
+                    font-size: 1.2rem;
+                    @include ff;
+                }
+                .bookmark{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: url(/img/common/icon_bookmark.png) center center no-repeat;
+                    &:hover{
+                        background-image: url(/img/common/icon_bookmark-selected.png);
+                    }
+                }
+                .setting{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-right: .3rem;
+                    margin-left: .5rem;
+                    background: url(/img/common/btn_gear.png) center center no-repeat;
+                    cursor: pointer;
+                    &:hover{
+                        background-image: url(/img/common/btn_gear-selected.png);
+                    }
+                    .balloon{
+                        @include balloon($top:2.6rem, $left:9.3rem , $right: -3rem, $w:10rem);
+                        padding: 1.5rem;
+                    }
+                }
+                .quote{
+                    margin-left: .9rem;
+                    color: #bbb;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                }
+                @include e(archive){
+                    padding-left: 1.5rem;
+                    color: #bbb;
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                    @include ff;
+                    text-decoration: none;
+                    background: url(/img/common/icon_archive.png) left center no-repeat;
+                    &:hover{
+                        color: $green;
+                        background-image: url(/img/common/icon_archive-selected.png);
+                    }
+                }//archives
+                @include e(question){
+                    display: block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-left: .4rem;
+                    background: url(/img/setting/question_icon_circle.png) center center no-repeat;
+                    background-size: cover;
+                    @include balloon($blue:true, $w:15rem);
+                }
+            }//meta
+        }//hmyead
+
+        @include e(info){
+            @include flex;
+            padding: 1.3rem 0;
+            @include border(bottom);
+            @include e(meta){
+                box-sizing: border-box;
+                width: 18.8rem;
+                padding-right: 4rem;
+                @include border(right);
+                span{
+                    display: block;
+                    font-size: .8rem;
+                    line-height: 1.2;
+                    color: #bbb;
+                }
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    @include texthide;
+                    +span{margin-top: .8rem;}
+                }
+            }//meta
+            @include e(field){
+                box-sizing: border-box;
+                width: 31.2rem;
+                padding-left: 1.3rem;
+                font-size: 1.1rem;
+                @include e(ttl){
+                    display: block;
+                    font-size: .8rem;
+                    line-height: 1.2;
+                }
+                dl{
+                    @include flex($a:center);
+                    dt{
+                        width: 12.8rem;
+                    }
+                    dd{
+                        @include flex($a:center);
+                        flex: 1;
+                        margin: 0;
+                        span{
+                            @include m(rec,data){
+                                display: block;
+                                padding-left: 1.5rem;
+                                font-size: 1rem;
+                                color: #bbb;
+                                line-height: 1.6rem;
+                                @include ff;
+                            }
+                            @include m(rec){
+                                width: 3.1rem;
+                                background: url(/img/common/icon_medal.png) left center no-repeat;
+                                background-size: 1.1rem;
+                            }
+                            @include m(data){
+                                width: 2.5rem;
+                                background: url(/img/common/icon_exp.png) left center no-repeat;
+                                background-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+                @include e(span){
+                    width: 8.7rem;
+                    span{
+                        margin-right: .4rem;
+                        font-size: .8rem;
+                        color: #bbb;
+                    }
+                }//span
+            }//field
+        }//info
+
+        @include e(myquery){
+            padding: 1.5rem 0 2.8rem;
+            @include border(bottom);
+        }
+
+        @include e(toggle){
+            display: none;
+        }
+
+        @include e(toggleBtn){
+            display: block;
+            margin-bottom: -1.3rem;
+            text-align: center;
+            cursor: pointer;
+            @include m(myquery){
+                border: none;
+                &:before{
+                    line-height: 4.2rem;
+                }
+            }
+            &:before{
+                content: "DETAIL";
+                display: inline-block;
+                padding-left: .6rem;
+                padding-right: 2.8rem;
+                color: #bbb;
+                font-size: 1.3rem;
+                line-height: 3.4rem;
+                @include ff;
+                background: url(/img/common/arrow_select.png) right center no-repeat;
+            }
+            @include m(isOpen){
+                &:before{
+                    content: "CLOSE";
+                    background-image: url(/img/common/arrow_select_open.png);
+                }
+            }
+        }
+
+        @include e(reply){
+            @include flex($a:center);
+            margin: 2.7rem 0 1.3rem;
+            &:first-child{
+                margin-top: 0;
+            }
+            @include e(label){
+                width: 3rem;
+                height: 1.8rem;
+                border-radius: .2rem;
+                margin-right: 1.1rem;
+                font-size: 1.1rem;
+                color: #fff;
+                line-height: 1.8rem;
+                text-align: center;
+                background: $green;
+                &:before{
+                    content: "TO:";
+                }
+            }
+            @include e(icon){
+                position: relative;
+                display: block;
+                width: 1.8rem;
+                height: 1.8rem;
+                margin-right: .5rem;
+                border-radius: 100%;
+                background: #eee;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: auto;
+                }
+            }//icon
+            @include e(name){
+                flex: 1;
+                font-size: 1.1rem;
+                line-height: 1;
+                @include texthide;
+                a{
+                    margin-right: .7rem;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #333;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }//name
+        }//reply
+
+        @include e(msg){
+            padding-bottom: 1.9rem;
+            border-bottom: .1rem solid #eee;
+            margin: .7rem 0 1.6rem;
+            &:last-child{
+                border: none;
+                margin-bottom: 0;
+            }
+            @include m(myquery){
+                margin: 0 0 .3rem;
+                padding: 1.6rem 0;
+                border-top: .1rem solid #eee;
+                border-bottom: none;
+                &:first-child{
+                    border: none;
+                }
+            }
+            @include e(content){
+                padding-left: 4.8rem;
+                font-size: 1.3rem;
+                line-height: 2.3rem;
+                @include m(myquery){
+                    padding-left: 3.8rem;
+                    margin-top: 1rem;
+                }
+            }
+            @include e(auth){
+                @include flex($a:center);
+                padding-left: 4.5rem;
+                margin-top: 1.4rem;
+                color: #bbb;
+                font-size: 1.1rem;
+                @include m(myquery){
+                    padding-left: 3.5rem;
+                }
+                @include e(icon){
+                    position: relative;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border-radius: 100%;
+                    background: #eee;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        margin: auto;
+                    }
+                }//icon
+                @include e(name){
+                    max-width: 36rem;
+                    margin-left: .7rem;
+                    line-height: 1;
+                    @include texthide;
+                    span{
+                        margin-right: .7rem;
+                        font-weight: bold;
+                    }
+                }//name
+                @include e(time){
+                    width: 5.7rem;
+                    text-align: right;
+                    @include ff;
+                }//time
+            }//auth
+
+            @include e(quote){
+                padding-left: 1.8rem;
+                border-left: .4rem solid #bbb;
+                margin: 1.2rem 0 0 5rem;
+                @include m(myquery){
+                    margin-left: 4rem;
+                }
+                >p{
+                    font-size: 1.3rem;
+                    line-height: 2.3rem;
+                }
+                @include e(lawyer){
+                    @include flex($a:flex-start, $j:space-between);
+                    width: 30rem;
+                    padding-top: 1rem;
+                    text-decoration: none;
+                    color: #333;
+                    &:last-child{
+                        margin-bottom: .5rem;
+                    }
+                    @include e(icon){
+                        position: relative;
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }//icon
+                    @include e(main){
+                        width: 20.5rem;
+                        padding-bottom: .8rem;
+                    }
+                    @include e(name){
+                        margin: 0 0 .3rem;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                    @include e(company){
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        @include texthide;
+                    }
+                    @include e(pos){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+                    @include e(adm){
+                        margin-top: .4rem;
+                        font-size: 1rem;
+                        line-height: 1rem;
+                        color: #bbb;
+                    }
+                    @include e(meta){
+                        font-size: 1.1rem;
+                        @include texthide;
+                    }
+
+                }//lawyer
+
+                @include e(myfile){
+                    padding: 1.5rem 0;
+                    @include border(bottom);
+                    &:first-child{
+                        @include border(top);
+                    }
+                    @include e(meta){
+                        display: block;
+                        font-size: 1.1rem;
+                        color: #bbb;
+                        @include ff;
+                    }
+                    @include e(main){
+                        @include flex($a:center, $j:space-between);
+                        @include e(ttl){
+                            flex: 1;
+                            font-weight: bold;
+                            a{
+                                text-decoration: none;
+                                @include texthide;
+                                color: #333;
+                                &:hover{
+                                    color: $green;
+                                }
+                            }
+                        }//ttl
+                        @include e(icon){
+                            @include flex($a:center, $j:flex-end);
+                            width: 6rem;
+                            margin-bottom: .8rem;
+                            >a{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                cursor: pointer;
+                                @include m(share){
+                                    margin-left: 1.5rem;
+                                    background-image: url(/img/common/btn_share.png);
+                                }
+                                @include m(link){
+                                    background-image: url(/img/common/btn_detail.png);
+                                }
+                            }
+                        }//icon
+                    }//main
+
+                }//myfile
+            }//quote
+        }//msg
+    }//sec
+
+    @include e(post){
+        position: relative;
+        @include border;
+        background: #fff;
+        textarea{
+            height: 16rem;
+            padding: 3.2rem 3.5rem 2.8rem;
+            line-height: 2.1rem;
+            resize: none;
+        }
+        @include e(switch){
+            position: absolute;
+            top: 1.1rem;
+            right: 1rem;
+            width: 1.4rem;
+            height: 1.4rem;
+            background: url(/img/communication/btn_post_large.png) center center no-repeat;
+            cursor: pointer;
+            &:hover{
+                background-image: url(/img/communication/btn_post_large_on.png);
+                opacity: .7;
+            }
+            @include m(isActive){
+                background-image: url(/img/communication/btn_post_large_on.png);
+            }
+        }//switch
+
+        @include e(bottom){
+            @include flex;
+        }
+
+        @include e(btn){
+            @include flex($a:center, $j:space-between);
+            flex: 1;
+            @include border(top);
+            margin: 0 1rem;
+            @include e(add){
+                @include flex($a:center, $j:space-between);
+                width: 12.5rem;
+                margin-left: 2rem;
+                >a,
+                >span{
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: .7;
+                    }
+                    @include m(send){
+                        width: 2.6rem;
+                        background: url(/img/common/icon_to.png) center center no-repeat;
+                    }
+                    @include m(file){
+                        position: relative;
+                        background: url(/img/common/icon_clip.png) center center no-repeat;
+                        overflow: hidden;
+                        input[type="file"]{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            right: 100%;
+                            opacity: 0;
+                        }
+                    }
+                    @include m(myfile){
+                        background: url(/img/common/icon_contact.png) center center no-repeat;
+                    }
+                    @include m(conn){
+                        background: url(/img/common/icon_team.png) center center no-repeat;
+                    }
+                }
+            }
+
+            @include e(enter){
+                display: none;
+                &:checked + label:after{
+                    opacity: 1;
+                }
+                + label{
+                    position: relative;
+                    padding-left: 2rem;
+                    color: #bbb;
+                    font-size: 1.1rem;
+                    line-height: 2rem;
+                    &:before,
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                    &:before{
+                        left: 0;
+                        width: 1rem;
+                        height: 1rem;
+                        border: .1rem solid #bbb;
+                    }
+                    &:after{
+                        left: .2rem;
+                        width: .8rem;
+                        height: .8rem;
+                        opacity: 0;
+                        background: $green;
+                        transition: opacity .1s;
+                    }
+                }
+            }
+        }
+
+        @include e(submit){
+            width: 10rem;
+            height: 3.6rem;
+            font-size: 1.2rem;
+            color: #fff;
+            text-align: center;
+            line-height: 3.6rem;
+            @include ff;
+            background: $green;
+        }
+    }//post
+
+}
+
+
+.select2{
+    @include e(prof){
+        @include flex($a:center);
+        @include e(icon){
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            margin-right: 1rem;
+            overflow: hidden;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                margin: auto;
+            }
+        }//icon
+        @include e(name){
+            flex: 1;
+            font-size: 1.3rem;
+            @include texthide;
+            span{
+                margin-right: .6rem;
+                font-weight: bold;
+            }
+        }//name
+    }//prof
+}

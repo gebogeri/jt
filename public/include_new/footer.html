@@ -1,4 +1,5 @@
-</div><!-- [/ #wrapper] -->
+</div>
+<!-- [/ #wrapper] -->
 <div class="contact">
     <span class="contact_head">Report bugs suggestions</span>
     <form id="contactForm" class="contact_content">
@@ -101,13 +102,17 @@
 <div id="modalInvite">
     <div class="modal modal_invite">
         <p class="modal_invite_ttl">JURISTERRAに知人を招待</p>
-        <p class="modal_invite_description">メールまたは招待リンクから、<br>知人をJURISTERRAに招待することが出来ます。</p>
+        <p class="modal_invite_description">メールまたは招待リンクから、
+            <br>知人をJURISTERRAに招待することが出来ます。</p>
         <div class="modal_invite_btn">
             <a rel="jump" data-get="/invite_new/mail01.html" data-target="#modalInvite .modal" class="modal_invite_btn_submit mail"><span>招待メールを送る</span></a>
             <a rel="jump" data-get="/invite_new/link.html" data-target="#modalInvite .modal" class="modal_invite_btn_submit link"><span>招待リンクを発行する</span></a>
-        </div><!-- [/ .modal_invite_btn] -->
-    </div><!-- [/ .modal_invite] -->
-</div><!-- [/ #modalinvite] -->
+        </div>
+        <!-- [/ .modal_invite_btn] -->
+    </div>
+    <!-- [/ .modal_invite] -->
+</div>
+<!-- [/ #modalinvite] -->
 <!-- [/ #modalInvite] -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/common.js"></script>
@@ -138,7 +143,9 @@ var text = 'テキストを入力',
     lang = '言語',
     area = '取扱地域を入力',
     tag = '投稿タグ',
-    search = 'SEARCH';
+    search = 'SEARCH',
+    addr = '送信者を指定',
+    keyword = '検索キーワードを入力';
 
 $(function() {
     $('a[rel*="leanModal"]').leanModal({
@@ -207,11 +214,35 @@ $(function() {
         placeholder: field,
     });
 
+    $('.select2_addr').select2({
+        placeholder: addr,
+        templateResult: formatUser,
+    });
+
+    $('.select2_keyword').select2({
+        placeholder: keyword,
+    });
+
     $('.scrollArea').slimScroll({
         position: 'right',
         railVisible: true,
     });
     $('.slimScrollBar').hide();
+
+    function formatUser(user) {
+        if (!user.id) {
+            return user.text;
+        }
+
+        if (user.element.dataset.image) {
+            var imagePath = user.element.dataset.image;
+        } else {
+            var imagePath = '/images/noimage.jpg';
+        }
+        var $user = $('<div class="select2_prof"><div class="select2_prof_icon"><img src="' + imagePath + '"></div><p class="select2_prof_name"><span>' + user.text + '</span> ' + user.element.dataset.company + '</p></div>'
+        );
+        return $user;
+    };
 
 });
 </script>

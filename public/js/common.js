@@ -26,15 +26,35 @@ $(function(){
     // サイドバー上下スクロール
     ///////////////////////////////
     // サイドバーに基準位置設定
-    $aside.find('.sideLeft').append('<span id="sideHeight"></span>');
+    $aside.find('.sideLeft').append('<span id="sideHeight_A"></span>');
+    $aside.find('.sideRight').append('<span id="sideHeight_B"></span>');
 
-    // サイドバー最上部から最下部までの長さ
-    var navHeight = $('#sideHeight').offset().top - $header.offset().top;
+    function sideAdj(){
+        var headerHeight = $header.offset().top;
 
-    $body.css('minHeight',navHeight);
-    $aside.css('minHeight',navHeight);
+        // サイドバー最上部から最下部までの長さ
+        try{
+            var navHeight_A = $('#sideHeight_A').offset().top - headerHeight;
+        }catch(e){
+            var navHeight_A = 0
+        }
 
-    $win.on('load scroll resize',function(){
+        try{
+            var navHeight_B = $('#sideHeight_B').offset().top - headerHeight;
+        }catch(e){
+            var navHeight_B = 0
+        }
+
+        if(navHeight_A > navHeight_B){
+            var navHeight = navHeight_A;
+        }else{
+            var navHeight = navHeight_B;
+        }
+
+
+        $body.css('minHeight',navHeight);
+        $aside.css('minHeight',navHeight);
+
         if( $win.height() < navHeight ){
             var maxMargin = navHeight-$win.height();
             if( $win.scrollTop() >= maxMargin ){
@@ -45,7 +65,13 @@ $(function(){
         }else{
             $aside.css('marginTop',0);
         }
+    }
+
+    $win.on('load scroll resize',function(){
+        sideAdj();
     });
+
+
 
     // Notification開閉
     /////////////////////////

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>CLIENT | COMMUNICATION</title>
+<title>MESSAGE | COMMUNICATION</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <!-- stylesheet -->
@@ -18,74 +18,24 @@
 <!-- viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body class="com msg">
+<body class="com bookmark">
 <!--#include virtual="/include_new/header.html" -->
     <div id="container">
         <div class="headline">
             <div class="headline_inner">
                 <div class="ttl">
-                    <p class="ttl_summary com">
-                        QUERY - CLIENT
-                        <span class="ttl_summary_meta">
-                            <img src="/img/communication/label_question.png" alt="QUESTION">
-                            <span class="ttl_summary_meta_time">
-                                <!--
-                                    [QUESTION] : "/img/communication/label_question.png"
-                                    [CASE] : "/img/communication/label_question.png"
-                                    [QUESTION] : "/img/communication/label_question.png"
-                                -->
-                                10:30 PM
-                            </span>
-                        </span>
-                    </p><!-- [/ ttl_summary] -->
-                    <h1 class="ttl_main">タイトルを表示デューデリジェンス(DD)(財務会計税務法務)作成及びそのサポートしていただけますか？</h1>
+                    <p class="ttl_main summary">BOOKMARK</p>
                 </div><!-- [/ .ttl] -->
             </div><!-- [/ .headline_inner] -->
-            <div class="com_header_info">
-                <div class="com_header_info_main">
-                    <dl>
-                        <dt>依頼者</dt>
-                        <dd><a href="">日本郵政</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>相手方</dt>
-                        <dd><a href="">Toll Holdings Limited</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>案件規模</dt>
-                        <dd>10,000,000<span>(取引金額/USD)</span></dd>
-                    </dl>
-                    <dl>
-                        <dt>関与レベル</dt>
-                        <dd>アシスタント</dd>
-                    </dl>
-                    <dl>
-                        <dt>FREE ARGUMENT</dt>
-                        <dd>サンプルテキスト</dd>
-                    </dl>
-                </div><!-- [/ .knowledge_detail_info_main] -->
-                <div class="com_header_info_meta">
-                    <span>ジュリスディクション</span>
-                    <p>日本</p>
-                    <span>専門法分野</span>
-                    <p>M&amp;A, 株式譲渡, 株式譲渡,M&amp;A,株式譲渡 M&amp;A,</p>
-                    <span>事業領域</span>
-                    <p>IT,自動車</p>
-                </div><!-- [/ .knowledge_detail_info_meta] -->
-            </div><!-- [/ .com_header_info] -->
-            <div class="headline_inner com_header_toggleWrap">
-                <p>【詳細テキスト】　あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。<br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nulla eu auctor lacinia. Suspendisse et arcu convallis, condimentum dolor ut, faucibus nisl. Morbi placerat, purus quis laoreet mattis, dolor libero consectetur nibh, id faucibus sem quam vitae augue. Vestibulum feugiat quam quis placerat varius. Etiam aliquet velit eget nisl facilisis, eu sagittis nisl aliquam. Fusce vehicula tellus eget ipsum dapibus ultricies sed et metus. Aenean fermentum imperdiet tincidunt. In at lorem congue, congue metus lobortis, tempor tortor. In hac habitasse platea dictumst. Praesent iaculis facilisis erat vitae aliquam. Donec sagittis odio vitae lectus consectetur, at viverra orci mollis. Cras eu quam erat. Curabitur posuere quis diam et laoreet. Morbi cursus posuere nibh, et dictum sapien posuere eu. Aenean eget libero nulla.</p>
-            </div><!-- [/ .com_header_toggleWrap] -->
-            <span class="togglePrev com_header_toggleBtn"></span>
             <div class="headline_inner com_header">
-                <div class="com_header_auth">
-                    <a href="" class="com_header_auth_icon">
-                        <img src="/img/common/icon_profile_02.jpg" alt="">
-                    </a>
-                    <p class="com_header_auth_name"><a href="">早川一亮</a>NOWALL（複数の場合はテキスト表示なしで、アイコンが羅列）</p>
-                </div><!-- [/ .com_header_auth] -->
-            </div><!-- [/ .com_header] -->
+                <div class="com_header_search">
+                    <div class="com_header_search_submit"><input type="submit"></div>
+                    <select class="select2_search" multiple>
+                        <option value="1">近藤和志</option>
+                        <option value="2">近藤和志</option>
+                    </select>
+                </div><!-- [/ .com_header] -->
+            </div>
         </div><!-- [/.headline] -->
 
         <div id="content">
@@ -97,14 +47,7 @@
                     <p class="com_sec_head_name"><a href="">早川一亮</a>NOWALL</p>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_msg">
@@ -114,14 +57,7 @@
                     <div class="com_sec_head_blank"></div>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_msg">
@@ -139,14 +75,7 @@
                     <p class="com_sec_head_name"><a href="">近藤和志</a>C&amp;R リーガルエージェンシー社</p>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_reply">
@@ -163,14 +92,7 @@
                     <div class="com_sec_head_blank"></div>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_msg">
@@ -196,14 +118,7 @@
                     <p class="com_sec_head_name"><a href="">近藤和志</a>C&amp;R リーガルエージェンシー社</p>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_msg">
@@ -239,14 +154,7 @@
                     <div class="com_sec_head_blank"></div>
                     <div class="com_sec_head_meta">
                         <span class="time">10:30 PM</span>
-                        <a href="" class="bookmark"></a>
-                        <span class="setting btn_balloon">
-                            <div class="balloon">
-                                <a href="">編集する</a>
-                                <a href="">削除する</a>
-                            </div>
-                        </span>
-                        <a href="" class="quote">引用する</a>
+                        <a href="" class="bookmark isActive"></a>
                     </div><!-- [/ .com_sec_head_meta] -->
                 </div><!-- [/ .com_sec_head] -->
                 <div class="com_sec_msg">
@@ -313,7 +221,7 @@
             <div class="sideLeft">
                 <h3 class="side_ttl com">COMMUNICATION</h3>
                 <ul class="side_list">
-                    <li class="side_list_item"><a href="/communication/message" class="side_list_item_target">
+                    <li class="side_list_item"><a href="/communication/message" class="side_list_item_target isSelected">
                         <span class="side_list_item_target_alert">MESSAGE<span class="icon">2</span></span>
                         <span class="side_list_item_target_msg"></span>
                     </a></li>
@@ -323,7 +231,7 @@
                             <li class="side_list_item"><a href="/communication/query/attorney" class="side_list_item_target sub">
                                 <span class="side_list_item_target_alert">- ATTORNEY</span>
                             </a></li>
-                            <li class="side_list_item"><a href="/communication/query/client" class="side_list_item_target sub isSelected">
+                            <li class="side_list_item"><a href="/communication/query/client" class="side_list_item_target sub">
                                 <span class="side_list_item_target_alert">- CLIENT</span>
                             </a></li>
                             <li class="side_list_item"><a href="/communication/query/myquery" class="side_list_item_target sub">
@@ -335,37 +243,114 @@
                     <li class="side_list_item"><a href="/communication/bookmark" class="side_list_item_target">BOOKMARK</a></li>
                 </ul><!-- [/ .side_list] -->
             </div><!-- [/ .sideLeft] -->
-            <div id="sideCom" class="sideRight">
-                <div class="sidec_ttl">
-                    <h3>QUERY - ATTORNEY</h3>
-                    <div class="sidec_ttl_icon">
-                        <a href="/communication/message/new/" class="new"></a>
-                        <a rel="leanModal" href="#modalMsgSrch" class="search"></a>
-                    </div><!-- [/ .sidec_ttl_icon] -->
-                </div><!-- [/ .sidec_ttl] -->
-                <ol class="tabs sidec_tab">
-                    <li rel="jump" class="sidec_tab_item isSelected" data-tab="latest" data-target=".tabs_content_item[data-tab=latest]" data-get="/include_new/communication/sidebar_tabs/latest.html">LATEST</li>
-                    <li rel="jump" class="sidec_tab_item" data-tab="question" data-target=".tabs_content_item[data-tab=question]" data-get="/include_new/communication/sidebar_tabs/question.html">QUESTION</li>
-                    <li rel="jump" class="sidec_tab_item" data-tab="case" data-target=".tabs_content_item[data-tab=case]" data-get="/include_new/communication/sidebar_tabs/case.html">CASE</li>
-                    <li rel="jump" class="sidec_tab_item" data-tab="other" data-target=".tabs_content_item[data-tab=other]" data-get="/include_new/communication/sidebar_tabs/other.html">OTHER</li>
-                </ol>
-                <div class="tabs_content">
-                    <div class="tabs_content_item def" data-tab="latest">
-<!--#include virtual="/include_new/communication/sidebar_tabs/latest.html" -->
-                    </div><!-- [/ .tabs_content_item 1/4] -->
-                    <div class="tabs_content_item" data-tab="question">
-                    </div><!-- [/ .tabs_content_item 2/4] -->
-                    <div class="tabs_content_item" data-tab="case">
-                    </div><!-- [/ .tabs_content_item 3/4] -->
-                    <div class="tabs_content_item" data-tab="other">
-                    </div><!-- [/ .tabs_content_item 4/4] -->
-                </div><!-- [/ .tabs_content] -->
-            </div><!-- [/ #sideCom] -->
+            <div class="sideRight">
+                <h4 class="side_subTtl first">ARCHIVES</h4>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 下書き</a></li>
+                    <li class="side_list_item"><a href="" class="side_list_item_target">- 現在進行中</a></li>
+                    <li class="side_list_item">
+                        <span class="side_list_item_target comCale">- 2016</span>
+                        <div class="side_list_item_cale">
+                            <ul class="com_side_cale">
+                                <li class="com_side_cale_item"><a href="">01</a></li>
+                                <li class="com_side_cale_item"><a href="">02</a></li>
+                                <li class="com_side_cale_item"><a href="">03</a></li>
+                                <li class="com_side_cale_item"><a href="">04</a></li>
+                                <li class="com_side_cale_item"><a href="">05</a></li>
+                                <li class="com_side_cale_item"><a href="">06</a></li>
+                                <li class="com_side_cale_item"><a href="">07</a></li>
+                                <li class="com_side_cale_item"><a href="">08</a></li>
+                                <li class="com_side_cale_item"><a href="">09</a></li>
+                                <li class="com_side_cale_item"><a href="">10</a></li>
+                                <li class="com_side_cale_item"><a href="">11</a></li>
+                                <li class="com_side_cale_item"><a href="">12</a></li>
+                            </ul>
+                        </div><!-- [/ .side_list_item_cale] -->
+                    </li><!-- [/ .side_list_item] -->
+                    <li class="side_list_item">
+                        <span class="side_list_item_target comCale">- 2015</span>
+                        <div class="side_list_item_cale">
+                            <ul class="com_side_cale">
+                                <li class="com_side_cale_item"><a href="">01</a></li>
+                                <li class="com_side_cale_item"><a href="">02</a></li>
+                                <li class="com_side_cale_item"><a href="">03</a></li>
+                                <li class="com_side_cale_item"><a href="">04</a></li>
+                                <li class="com_side_cale_item"><a href="">05</a></li>
+                                <li class="com_side_cale_item"><a href="">06</a></li>
+                                <li class="com_side_cale_item"><a href="">07</a></li>
+                                <li class="com_side_cale_item"><a href="">08</a></li>
+                                <li class="com_side_cale_item"><a href="">09</a></li>
+                                <li class="com_side_cale_item"><a href="">10</a></li>
+                                <li class="com_side_cale_item"><a href="">11</a></li>
+                                <li class="com_side_cale_item"><a href="">12</a></li>
+                            </ul>
+                        </div><!-- [/ .side_list_item_cale] -->
+                    </li><!-- [/ .side_list_item] -->
+                    <li class="side_list_item">
+                        <span class="side_list_item_target comCale">- 2014</span>
+                        <div class="side_list_item_cale">
+                            <ul class="com_side_cale">
+                                <li class="com_side_cale_item"><a href="">01</a></li>
+                                <li class="com_side_cale_item"><a href="">02</a></li>
+                                <li class="com_side_cale_item"><a href="">03</a></li>
+                                <li class="com_side_cale_item"><a href="">04</a></li>
+                                <li class="com_side_cale_item"><a href="">05</a></li>
+                                <li class="com_side_cale_item"><a href="">06</a></li>
+                                <li class="com_side_cale_item"><a href="">07</a></li>
+                                <li class="com_side_cale_item"><a href="">08</a></li>
+                                <li class="com_side_cale_item"><a href="">09</a></li>
+                                <li class="com_side_cale_item"><a href="">10</a></li>
+                                <li class="com_side_cale_item"><a href="">11</a></li>
+                                <li class="com_side_cale_item"><a href="">12</a></li>
+                            </ul>
+                        </div><!-- [/ .side_list_item_cale] -->
+                    </li><!-- [/ .side_list_item] -->
+                    <li class="side_list_item">
+                        <span class="side_list_item_target comCale">- 2013</span>
+                        <div class="side_list_item_cale">
+                            <ul class="com_side_cale">
+                                <li class="com_side_cale_item"><a href="">01</a></li>
+                                <li class="com_side_cale_item"><a href="">02</a></li>
+                                <li class="com_side_cale_item"><a href="">03</a></li>
+                                <li class="com_side_cale_item"><a href="">04</a></li>
+                                <li class="com_side_cale_item"><a href="">05</a></li>
+                                <li class="com_side_cale_item"><a href="">06</a></li>
+                                <li class="com_side_cale_item"><a href="">07</a></li>
+                                <li class="com_side_cale_item"><a href="">08</a></li>
+                                <li class="com_side_cale_item"><a href="">09</a></li>
+                                <li class="com_side_cale_item"><a href="">10</a></li>
+                                <li class="com_side_cale_item"><a href="">11</a></li>
+                                <li class="com_side_cale_item"><a href="">12</a></li>
+                            </ul>
+                        </div><!-- [/ .side_list_item_cale] -->
+                    </li><!-- [/ .side_list_item] -->
+                    <li class="side_list_item">
+                        <span class="side_list_item_target comCale">- 2012</span>
+                        <div class="side_list_item_cale">
+                            <ul class="com_side_cale">
+                                <li class="com_side_cale_item"><a href="">01</a></li>
+                                <li class="com_side_cale_item"><a href="">02</a></li>
+                                <li class="com_side_cale_item"><a href="">03</a></li>
+                                <li class="com_side_cale_item"><a href="">04</a></li>
+                                <li class="com_side_cale_item"><a href="">05</a></li>
+                                <li class="com_side_cale_item"><a href="">06</a></li>
+                                <li class="com_side_cale_item"><a href="">07</a></li>
+                                <li class="com_side_cale_item"><a href="">08</a></li>
+                                <li class="com_side_cale_item"><a href="">09</a></li>
+                                <li class="com_side_cale_item"><a href="">10</a></li>
+                                <li class="com_side_cale_item"><a href="">11</a></li>
+                                <li class="com_side_cale_item"><a href="">12</a></li>
+                            </ul>
+                        </div><!-- [/ .side_list_item_cale] -->
+                    </li><!-- [/ .side_list_item] -->
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideRight] -->
         </aside>
     </div><!-- [/ #container] -->
 <!--#include virtual="/include_new/footer_under.html"-->
 <!--#include virtual="/include_new/communication/modal.html"-->
 <!--#include virtual="/include_new/footer.html"-->
 <script src="/js/communication/textarea.js"></script>
+<script src="/js/knowledge/cale.js"></script>
 </body>
 </html>

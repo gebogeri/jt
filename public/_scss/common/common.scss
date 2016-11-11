@@ -264,6 +264,7 @@ body > .select2-container{
         padding: .4rem .8rem;
         color: #333;
         text-decoration: none;
+        white-space: nowrap;
     }
     &:hover{
         .label{

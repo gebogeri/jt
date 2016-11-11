@@ -1,5 +1,4 @@
 $(function(){
-    var $selectedTab = $('.selectedTab');
 
     $doc.on('click', '.lawyerItem', function(e){
         if( !$(e.target).closest('a').length ){
@@ -8,15 +7,15 @@ $(function(){
             var delNum = $(this).data('num');
 
             if( $selectedArea.length ){
-                if($selectedArea.closest('.slimScrollDiv').length){
-                    $selectedArea = $selectedArea.closest('.slimScrollDiv');
+                if($selectedArea.closest('.tabs_content').length){
+                    $selectedArea = $selectedArea.closest('.tabs_content');
                 }
 
                 $(this).remove();
-                $selectedArea.prev().find('.lawyerItem[data-num='+delNum+']').removeClass('isSelected');
+                $selectedArea.find('.choiceArea .lawyerItem[data-num='+delNum+']').removeClass('isSelected');
 
                 //チェックボックス操作
-                $selectedArea.next().find('[data-num="'+delNum+'"]').prop('checked', false);
+                $selectedArea.find('.checkArea').find('[data-num="'+delNum+'"]').prop('checked', false);
 
             }else{
                 $(this).toggleClass('isSelected');
@@ -37,16 +36,13 @@ $(function(){
             }
 
         }
-    });
-
-    $selectedTab.on('click', function(){
+    }).on('click', '.selectedTab', function(){
 
         $parent = $(this).closest('.tabs').next();
 
         $parent.find('.selectedArea').html('');
 
-        $parent.find('.choiceArea')
-        .find('.lawyerItem.isSelected').each(function(){
+        $parent.find('.choiceArea .lawyerItem.isSelected').each(function(){
             $parent.find('.selectedArea').append($(this).clone());
         });
     });

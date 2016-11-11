@@ -24,7 +24,6 @@ $green: #44d095;
         max-width: $max;
     }
     .header{
-        min-width: $min;
         @include e(inner){
             min-width: $min;
             max-width: $max;
@@ -35,21 +34,25 @@ $green: #44d095;
         max-width: $max;
         padding-left: 16rem * $c;
         @include e(inner){
-            max-width: $max - 16rem * $c;
+            box-sizing: border-box;
+            max-width: 100%;
         }
         .ttl{
+            box-sizing: border-box;
             width: $ttl;
         }
         @include e(back){
             width: $ttl
         }
     }
-    .footer{
-        padding-left: 16rem * $c;
-    }
     .footer_inner{
-        min-width: $min - 16rem * $c;
-        max-width: $max - 16rem * $c;
+        box-sizing: border-box;
+        padding-left: 16rem * $c;
+        min-width: $min;
+        max-width: $max;
+    }
+    #sideBar{
+        width: 16rem * $c;
     }
 }
 
@@ -118,11 +121,15 @@ $green: #44d095;
     }
 }
 
-@mixin select2($w:100%,$m:false,$h:3.3rem,$tags:false,$t:true,$l:false,$mr:false,$box-sizing: content-box, $clear: false, $ff:false){
+@mixin select2($w:100%,$m:false,$h:3.3rem,$tags:false,$t:true,$l:false,$mr:false,$box-sizing: content-box, $clear: false, $ff:false, $fz:1.3rem){
     @at-root & + .select2-container {
         box-sizing: $box-sizing;
         min-width: $w;
         max-width: $w;
+        input{
+            height: $h;
+            font-size: $fz;
+        }
         @if $clear == false{
             @include border;
             @if $l == false{
@@ -198,8 +205,7 @@ $green: #44d095;
         width: .9rem;
         height: .6rem;
         margin: auto;
-        background: url(/sp/img/common/arrow_select.png) center center no-repeat;
-        background-size: cover;
+        background: url(/img/common/arrow_select.png) center center no-repeat;
     }
 }
 
@@ -336,6 +342,7 @@ $green: #44d095;
     }
     @else{
         position: absolute;
+        z-index: 1;
         top: $top;
         right: $right;
         display: none;
@@ -352,12 +359,16 @@ $green: #44d095;
                 color: $green;
             }
         }
+        .balloon_sub{
+            color: #bbb;
+            font-weight: bold;
+        }
         &:before,
         &:after{
             bottom: 100%;
             left: $left;
             border: solid transparent;
-            content: " ";
+            content: "";
             height: 0;
             width: 0;
             position: absolute;
@@ -407,5 +418,25 @@ $green: #44d095;
             background-size: cover;
         }
         @include balloon($top:2.5rem, $right: $space, $w: $width, $blue: true, $fz: $font-size, $p: $padding, $lh: $line-height, $s: $size);
+    }
+}
+
+@mixin placeholderColor($color) {
+    :placeholder-shown {
+        color: $color;
+    }
+    ::-webkit-input-placeholder {
+        color:$color;
+    }
+    :-moz-placeholder {
+        color:$color;
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        color:$color;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color:$color;
     }
 }

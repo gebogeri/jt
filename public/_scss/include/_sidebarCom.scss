@@ -1,0 +1,287 @@
+@charset 'utf-8';
+@import '../common/_mixin';
+
+// communication - sidebar
+
+#sideCom{
+    width: 24rem;
+    padding-top: 2.5rem;
+    background: #212931;
+}
+
+.sidec{
+    font-size: 1.1rem;
+    @include e(ttl, subTtl){
+        width: 22rem;
+        height: 3rem;
+        margin: 0 auto;
+        line-height: 3rem;
+        color: #bbb;
+        font-size: 1.1rem;
+        @include ff;
+    }
+
+    @include e(ttl){
+        @include flex($a:center, $j:space-between);
+        margin-bottom: .9rem;
+        h3{
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        @include e(icon){
+            @include flex($a:center, $j:space-between);
+            width: 4.8rem;
+            a{
+                display: block;
+                width: 1.8rem;
+                height: 2rem;
+                @include m(search){
+                    background: url(/img/common/icon_search.png) center center no-repeat;
+                }
+                @include m(new){
+                    background:url(/img/common/icon_msg_new.png) center center no-repeat;
+                }
+            }
+        }//icoon
+    }//ttl
+
+    @include e(tab){
+        @include flex;
+        margin-bottom: 1.5rem;
+        @include e(item){
+            width: 25%;
+            padding: 0 .7rem;
+            font-size: 1rem;
+            line-height: 2.6rem;
+            color: #bbb;
+            @include ff;
+            background: #35414e;
+            text-align: center;
+            cursor: pointer;
+            @include m(isSelected){
+                background: #111b25;
+                cursor: default;
+            }
+        }
+    }
+
+    @include e(addFolder){
+        @include flex;
+        width: 22rem;
+        height: 2.5rem;
+        margin: 0 auto 2rem;
+        @include placeholderColor(#35414e);
+        input{
+            color: #eee;
+            font-size: 1.1rem;
+        }
+        input[type="text"]{
+            width: 16.4rem;
+            height: 2.5rem;
+            border: .1rem solid #35414e;
+            background: transparent;
+        }
+        input[type="submit"]{
+            width: 5.4rem;
+            background: #35414e;
+        }
+    }//addFolder
+
+    @include e(folder){
+        border-top: .1rem solid #262f38;
+        @include e(item){
+            border-bottom: .1rem solid #262f38;
+            @include m(other){
+                margin-top: 3rem;
+                >span:first-child{
+                    padding-left: 1.1rem;
+                    background-image: none;
+                }
+            }
+            @include e(target){
+                @include flex($a:center, $j:space-between);
+                height: 2.8rem;
+                padding-left: 3.1rem;
+                font-size: 1.1rem;
+                background: url(/img/common/icon_folder.png) 1.1rem center no-repeat;
+                cursor: pointer;
+                @include e(name){
+                    @include flex($a:center);
+                    width: 16.5rem;
+                    color: #bbb;
+                    .name{
+                        max-width: 14.3rem;
+                        @include texthide;
+                    }
+                    .notice{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        border-radius: 100%;
+                        margin-left: .6rem;
+                        color: #fff;
+                        font-size: 1rem;
+                        text-align: center;
+                        background: $green;
+                    }
+                }
+                @include e(btn){
+                    @include flex($a:center, $j:flex-end);
+                    width: 3.3rem;
+                    margin-right: .6rem;
+                    .arrow, .setting{
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
+                    .arrow{
+                        margin-right: .1rem;
+                        background: url(/img/common/arrow_open.png) center center no-repeat;
+                    }
+                    .setting{
+                        margin-left: .4rem;
+                        background: url(/img/common/btn_gear.png) center center no-repeat;
+                        &:hover{
+                            background-image: url(/img/common/btn_gear-selected.png);
+                        }
+                        .balloon{
+                            @include balloon($top:2.6rem, $left:12.2rem , $right: -2rem, $w:12.2rem);
+                            padding: 2rem 1.3rem 1.7rem;
+                        }
+                    }
+                }//btn
+                @include m(isOpen){
+                    background-color: #111b25;
+                    .arrow{
+                        background-image: url(/img/common/arrow_close.png);
+                    }
+                }//isOpen
+            }//target
+        }//item
+    }//folder
+
+    @include e(msg){
+        display: none;
+        @include e(item){
+            @include flex($a:center, $j:space-between);
+            padding: 1.4rem 1rem 1.5rem 1.1rem;
+            border-top: .1rem solid #262f38;
+            color: #fff;
+            cursor: pointer;
+            @include m(isActive){
+                background: #262f38;
+            }
+            @include m(isNew){
+                background: #6a8e98;
+            }
+            @include e(wrap){
+                width: 100%;
+            }
+            @include e(head){
+                @include flex($a:center, $j:space-between);
+                margin-bottom: .2rem;
+                @include e(ttl){
+                    width: 14.5rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    line-height: 1.4rem;
+                    letter-spacing: .08em;
+                    @include texthide;
+                }//ttl
+                @include e(meta){
+                    @include flex($j:flex-end, $a:center);
+                    width: 6.8rem;
+                    @include e(time){
+                        color: #bbb;
+                        font-size: 1rem;
+                        @include ff;
+                    }//time
+                    .setting{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        margin-left: .6rem;
+                        background: url(/img/common/btn_gear.png) center center no-repeat;
+                        &:hover{
+                            background-image: url(/img/common/btn_gear-selected.png);
+                        }
+                        .balloon{
+                            @include balloon($top:2.6rem, $left:12.2rem , $right: -2rem, $w:12.2rem);
+                            padding: 2rem 1.3rem 1.7rem;
+                        }
+                    }//setting
+                }//meta
+            }//head
+            @include e(content){
+                @include flex($a:center, $j:space-between);
+                p{
+                    flex: 1;
+                    @include texthide;
+                }
+                @include e(icon){
+                    @include flex;
+                    width: 15.4rem;
+                    li{
+                        position: relative;
+                        width: 2rem;
+                        height: 2rem;
+                        margin-right: .2rem;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+                @include e(from){
+                    @include flex($a:center);
+                    padding-left: 1rem;
+                    .icon{
+                        position: relative;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 100%;
+                        margin-left: .2rem;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            margin: auto;
+                        }
+                    }
+                    .plus{
+                        min-width: 1.5rem;
+                        padding-left: .3rem;
+                        color: #bbb;
+                        font-size: 1.1rem;
+                        text-align: center;
+                        @include ff;
+                    }
+                }//from
+                @include e(label){
+                    display: block;
+                    height: 1.5rem;
+                    width: 5.2rem;
+                    margin: .3rem 0;
+                    background-repeat: no-repeat;
+                    @include m(question){
+                        background-image: url(/img/communication/label_question.png);
+                    }
+                    @include m(case){
+                        background-image: url(/img/communication/label_case.png);
+                    }
+                    @include m(other){
+                        background-image: url(/img/communication/label_other.png);
+                    }
+                }
+            }//content
+        }//item
+    }//msg
+}//sidec

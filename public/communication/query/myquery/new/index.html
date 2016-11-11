@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MYQUERY | COMMUNICATION</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- stylesheet -->
+<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+<link rel="stylesheet" href="/css/common/normalize.css">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/communication.css">
+<link rel="stylesheet" href="/plugin/select2/css/select2.min.css">
+<!-- cache -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body class="com msg">
+<!--#include virtual="/include_new/header.html" -->
+    <div id="container">
+        <form>
+            <div class="headline">
+                <div class="headline_inner">
+                    <div class="ttl">
+                        <p class="ttl_summary">QUERY - MYQUERY</p>
+                        <input type="text" class="ttl_input" placeholder="タイトルを入力">
+                    </div><!-- [/ .ttl] -->
+                </div><!-- [/ .headline_inner] -->
+                <div class="headline_inner com_header search">
+                    <select class="select2_addr" multiple>
+                        <option value="1" data-image="/img/common/icon_profile.jpg" data-company="C&Rリーガルエージェンシー">近藤和志</option>
+                        <option value="2" data-image="/img/common/icon_profile.jpg" data-company="C&Rリーガルエージェンシー">近藤和志</option>
+                    </select>
+                </div><!-- [/ .com_header] -->
+            </div><!-- [/.headline] -->
+
+            <div id="content">
+                <section class="com_edit">
+                    <h3 class="com_edit_ttl">基本情報</h3>
+                    <div class="com_edit_row">
+                        <h4 class="com_edit_row_head">分類</h4>
+                        <div class="com_edit_row_body">
+                            <div class="com_edit_select classify">
+                                <select id="comToggleSelect">
+                                    <option value="0">QUESTION</option>
+                                    <option value="1">CASE</option>
+                                    <option value="2">OTHER</option>
+                                </select>
+                            </div>
+                        </div><!-- [/ .com_edit_row_body] -->
+                    </div><!-- [/ .com_edit_row] -->
+                    <div class="com_edit_row">
+                        <h4 class="com_edit_row_head">ジュリスディクション</h4>
+                        <div class="com_edit_row_body">
+                            <select class="com_edit_select2 select2_juris2" multiple>
+<!--#include virtual="/include_new/select/juris.html" -->
+                            </select>
+                        </div><!-- [/ .com_edit_row_body] -->
+                    </div><!-- [/ .com_edit_row] -->
+                    <div class="com_edit_row">
+                        <h4 class="com_edit_row_head">法分野</h4>
+                        <div class="com_edit_row_body">
+                            <select class="com_edit_select2 select2_lawField2" multiple>
+<!--#include virtual="/include_new/select/lawField.html" -->
+                            </select>
+                        </div><!-- [/ .com_edit_row_body] -->
+                    </div><!-- [/ .com_edit_row] -->
+                    <div class="com_edit_row">
+                        <h4 class="com_edit_row_head">事業領域</h4>
+                        <div class="com_edit_row_body">
+                            <input type="text" placeholder="事業領域を入力">
+                        </div><!-- [/ .com_edit_row_body] -->
+                    </div><!-- [/ .com_edit_row] -->
+                    <div class="com_edit_toggleArea" id="comToggleArea">
+                        <h3 class="com_edit_ttl">詳細情報</h3>
+                        <div class="com_edit_row">
+                            <h4 class="com_edit_row_head">依頼者</h4>
+                            <div class="com_edit_row_body">
+                                <input type="text" placeholder="テキストをご入力ください。">
+                                <input type="url" placeholder="依頼者の関連URLを入力">
+                            </div><!-- [/ .com_edit_row_body] -->
+                        </div><!-- [/ .com_edit_row] -->
+                        <div class="com_edit_row">
+                            <h4 class="com_edit_row_head">相手方</h4>
+                            <div class="com_edit_row_body">
+                                <input type="text" placeholder="テキストをご入力ください。">
+                                <input type="url" placeholder="相手方の関連URLを入力">
+                            </div><!-- [/ .com_edit_row_body] -->
+                        </div><!-- [/ .com_edit_row] -->
+                        <div class="com_edit_row">
+                            <h4 class="com_edit_row_head">案件規模</h4>
+                            <div class="com_edit_row_body">
+                                <div class="com_edit_row_body_flex">
+                                    <input type="number" placeholder="金額を入力">
+                                    <div class="com_edit_select mini">
+                                        <select>
+<!--#include virtual="/include_new/select/money.html" -->
+                                        </select>
+                                    </div>
+                                    <div class="com_edit_select short">
+                                        <select>
+                                            <option disabled selected>分類</option>
+                                            <option value="">項目</option>
+                                        </select>
+                                    </div>
+                                </div><!-- [/ .com_edit_row_body_flex] -->
+                            </div><!-- [/ .com_edit_row_body] -->
+                        </div><!-- [/ .com_edit_row] -->
+                        <div class="com_edit_row">
+                            <h4 class="com_edit_row_head">役割</h4>
+                            <div class="com_edit_row_body"><input type="text" class="short"></div>
+                        </div><!-- [/ .com_edit_row] -->
+                        <div class="com_edit_row">
+                            <h4 class="com_edit_row_head">弁護料提案</h4>
+                            <div class="com_edit_row_body"><input type="text"></div>
+                        </div><!-- [/ .com_edit_row] -->
+                    </div><!-- [/ .com_edit_toggleArea] -->
+                    <div class="com_post">
+                        <span class="com_post_switch flexTextareaSwitch"></span>
+                        <textarea name="" class="flexTextarea"></textarea>
+                        <div class="com_post_bottom">
+                            <div class="com_post_btn">
+                                <div class="com_post_btn_add">
+                                    <a rel="leanModal" href="#modalComTo" class="send"></a>
+                                    <span class="file">
+                                        <input type="file">
+                                    </span>
+                                    <a rel="leanModal" href="#modalComPrj" class="myfile"></a>
+                                    <a rel="leanModal" href="#modalConn" class="conn"></a>
+                                </div><!-- [/ .com_post_btn_add] -->
+                                <input type="checkbox" id="enterSend" class="com_post_btn_enter">
+                                <label for="enterSend">Enterを押してメッセージを送信</label>
+                            </div><!-- [/ .com_post_btn] -->
+                            <input type="submit" class="com_post_submit" value="SEND">
+                        </div><!-- [/ .com_post_bottom]-->
+                    </div><!-- [/ .com_post] -->
+                </section>
+            </div><!-- [/ #content] -->
+        </form>
+
+        <aside class="side" id="sideBar">
+            <div class="sideLeft">
+                <h3 class="side_ttl com">COMMUNICATION</h3>
+                <ul class="side_list">
+                    <li class="side_list_item"><a href="/communication/message" class="side_list_item_target">
+                        <span class="side_list_item_target_alert">MESSAGE<span class="icon">2</span></span>
+                        <span class="side_list_item_target_msg"></span>
+                    </a></li>
+                    <li class="side_list_item">
+                        <span class="side_list_item_parent">QUERY</span>
+                        <ul>
+                            <li class="side_list_item"><a href="/communication/query/attorney" class="side_list_item_target sub">
+                                <span class="side_list_item_target_alert">- ATTORNEY</span>
+                            </a></li>
+                            <li class="side_list_item"><a href="/communication/query/client" class="side_list_item_target sub">
+                                <span class="side_list_item_target_alert">- CLIENT</span>
+                            </a></li>
+                            <li class="side_list_item"><a href="/communication/query/myquery" class="side_list_item_target sub isSelected">
+                                <span class="side_list_item_target_alert">- MYQUERY<span class="icon">2</span></span>
+                                <span class="side_list_item_target_msg"></span>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="side_list_item"><a href="/communication/bookmark" class="side_list_item_target">BOOKMARK</a></li>
+                </ul><!-- [/ .side_list] -->
+            </div><!-- [/ .sideLeft] -->
+            <div id="sideCom" class="sideRight">
+                <div class="sidec_ttl">
+                    <h3>QUERY - ATTORNEY</h3>
+                    <div class="sidec_ttl_icon">
+                        <a href="/communication/message/new/" class="new"></a>
+                        <a rel="leanModal" href="#modalMsgSrch" class="search"></a>
+                    </div><!-- [/ .sidec_ttl_icon] -->
+                </div><!-- [/ .sidec_ttl] -->
+                <ol class="tabs sidec_tab">
+                    <li rel="jump" class="sidec_tab_item isSelected" data-tab="latest" data-target=".tabs_content_item[data-tab=latest]" data-get="/include_new/communication/sidebar_tabs/latest.html">LATEST</li>
+                    <li rel="jump" class="sidec_tab_item" data-tab="question" data-target=".tabs_content_item[data-tab=question]" data-get="/include_new/communication/sidebar_tabs/question.html">QUESTION</li>
+                    <li rel="jump" class="sidec_tab_item" data-tab="case" data-target=".tabs_content_item[data-tab=case]" data-get="/include_new/communication/sidebar_tabs/case.html">CASE</li>
+                    <li rel="jump" class="sidec_tab_item" data-tab="other" data-target=".tabs_content_item[data-tab=other]" data-get="/include_new/communication/sidebar_tabs/other.html">OTHER</li>
+                </ol>
+                <div class="tabs_content">
+                    <div class="tabs_content_item def" data-tab="latest">
+<!--#include virtual="/include_new/communication/sidebar_tabs/latest.html" -->
+                    </div><!-- [/ .tabs_content_item 1/4] -->
+                    <div class="tabs_content_item" data-tab="question">
+                    </div><!-- [/ .tabs_content_item 2/4] -->
+                    <div class="tabs_content_item" data-tab="case">
+                    </div><!-- [/ .tabs_content_item 3/4] -->
+                    <div class="tabs_content_item" data-tab="other">
+                    </div><!-- [/ .tabs_content_item 4/4] -->
+                </div><!-- [/ .tabs_content] -->
+            </div><!-- [/ #sideCom] -->
+        </aside>
+    </div><!-- [/ #container] -->
+<!--#include virtual="/include_new/footer_under.html"-->
+<!--#include virtual="/include_new/communication/modal.html"-->
+<!--#include virtual="/include_new/footer.html"-->
+<script src="/js/communication/textarea.js"></script>
+<script src="/js/communication/selectToggleArea.js"></script>
+</body>
+</html>

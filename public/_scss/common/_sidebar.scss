@@ -42,7 +42,7 @@
     @include e(ttl){
         height: 3rem;
         padding-left: 3.6rem;
-        margin: 0 0 2rem;
+        margin: 0 0 1.7rem;
         line-height: 3rem;
         font-size: 1.1rem;
         background-position: 1.2rem center;
@@ -52,7 +52,11 @@
             background-image: url(/img/knowledge/ttl_side_knowledge.png);
         }
         @include m(knowledge){
-            background-image: url(/img/knowledge/ttl_side_knowledge.png);
+            background-image: url(/img/common/icon_contact.png);
+        }
+        @include m(com){
+            margin-bottom: .9rem;
+            background-image: url(/img/common/icon_msg.png);
         }
     }
     @include e(subTtl){
@@ -70,16 +74,49 @@
             @include e(target){
                 position: relative;
                 box-sizing: border-box;
-                @include flex($a:center);
+                @include flex($a:center, $j:space-between);
+                min-height: 4rem;
                 padding: .8rem .4rem .8rem 1.2rem;
                 color: #fff;
                 text-decoration: none;
                 @include ff;
                 cursor: pointer;
                 transition: opacity .1s;
+                @include m(sub){
+                    padding-left: 2.2rem;
+                }
                 &:hover{
                     opacity: .7;
                 }
+                @include e(alert){
+                    @include flex($a:center);
+                    width: 11rem;
+                    .icon{
+                        @include flex($a:center, $j:center);
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        border-radius: 100%;
+                        margin-left: .5rem;
+                        font-size: 1rem;
+                        background: $green;
+                    }
+                }//alert
+                @include e(msg){
+                    display: block;
+                    width: 1.3rem;
+                    height: 1.4rem;
+                    margin-right: .7rem;
+                    background: url(/img/common/icon_msg_new.png) center center no-repeat;
+                    background-size: contain;
+                }
+            }//target
+            @include e(parent){
+                position: relative;
+                box-sizing: border-box;
+                @include flex($a:center);
+                padding: .8rem .4rem .8rem 1.2rem;
+                color: #bbb;
+                @include ff;
             }
             @include e(cale){
                 display: none;
@@ -98,12 +135,13 @@
         @include e(list){
             @include e(item){
                 @include e(target){
-                    padding-left: 1.2rem;
-                    min-height: 4rem;
                     @include m(isSelected){
                         border-left: .4rem solid $green;
                         padding-left: .8rem;
                         background: #22313d;
+                        @include m(sub){
+                            padding-left: 1.8rem;
+                        }
                     }
                 }
             }
@@ -111,7 +149,7 @@
     }
 }
 .sideRight{
-    padding-top: 7.5rem;
+    padding-top: 7.2rem;
     background: #212931;
     .side{
         @include e(subTtl){
@@ -120,8 +158,6 @@
         @include e(list){
             @include e(item){
                 @include e(target){
-                    min-height: 3.6rem;
-                    padding-left: 1.2rem;
                     @include m(isSelected){
                         background: #262f38;
                     }

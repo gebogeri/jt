@@ -1,0 +1,378 @@
+@charset "UTF-8";
+#sideCom { width: 24rem; padding-top: 2.5rem; background: #212931; }
+
+.sidec { font-size: 1.1rem; }
+.sidec_ttl { width: 22rem; height: 3rem; margin: 0 auto; line-height: 3rem; color: #bbb; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.sidec_subTtl { width: 22rem; height: 3rem; margin: 0 auto; line-height: 3rem; color: #bbb; font-size: 1.1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.sidec_ttl { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; margin-bottom: .9rem; }
+.sidec_ttl h3 { margin: 0; font-size: 1.1rem; }
+.sidec_ttl_icon { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 4.8rem; }
+.sidec_ttl_icon a { display: block; width: 1.8rem; height: 2rem; }
+.sidec_ttl_icon a.search { background: url(/img/common/icon_search.png) center center no-repeat; }
+.sidec_ttl_icon a.new { background: url(/img/common/icon_msg_new.png) center center no-repeat; }
+.sidec_tab { display: -webkit-flex; display: flex; margin-bottom: 1.5rem; }
+.sidec_tab_item { width: 25%; padding: 0 .7rem; font-size: 1rem; line-height: 2.6rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: #35414e; text-align: center; cursor: pointer; }
+.sidec_tab_item.isSelected { background: #111b25; cursor: default; }
+.sidec_addFolder { display: -webkit-flex; display: flex; width: 22rem; height: 2.5rem; margin: 0 auto 2rem; }
+.sidec_addFolder :placeholder-shown { color: #35414e; }
+.sidec_addFolder ::-webkit-input-placeholder { color: #35414e; }
+.sidec_addFolder :-moz-placeholder { color: #35414e; opacity: 1; }
+.sidec_addFolder ::-moz-placeholder { color: #35414e; opacity: 1; }
+.sidec_addFolder :-ms-input-placeholder { color: #35414e; }
+.sidec_addFolder input { color: #eee; font-size: 1.1rem; }
+.sidec_addFolder input[type="text"] { width: 16.4rem; height: 2.5rem; border: .1rem solid #35414e; background: transparent; }
+.sidec_addFolder input[type="submit"] { width: 5.4rem; background: #35414e; }
+.sidec_folder { border-top: .1rem solid #262f38; }
+.sidec_folder_item { border-bottom: .1rem solid #262f38; }
+.sidec_folder_item.other { margin-top: 3rem; }
+.sidec_folder_item.other > span:first-child { padding-left: 1.1rem; background-image: none; }
+.sidec_folder_item_target { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; height: 2.8rem; padding-left: 3.1rem; font-size: 1.1rem; background: url(/img/common/icon_folder.png) 1.1rem center no-repeat; cursor: pointer; }
+.sidec_folder_item_target_name { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; width: 16.5rem; color: #bbb; }
+.sidec_folder_item_target_name .name { max-width: 14.3rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.sidec_folder_item_target_name .notice { width: 1.4rem; height: 1.4rem; border-radius: 100%; margin-left: .6rem; color: #fff; font-size: 1rem; text-align: center; background: #44d095; }
+.sidec_folder_item_target_btn { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 3.3rem; margin-right: .6rem; }
+.sidec_folder_item_target_btn .arrow, .sidec_folder_item_target_btn .setting { width: 1.6rem; height: 1.6rem; }
+.sidec_folder_item_target_btn .arrow { margin-right: .1rem; background: url(/img/common/arrow_open.png) center center no-repeat; }
+.sidec_folder_item_target_btn .setting { margin-left: .4rem; background: url(/img/common/btn_gear.png) center center no-repeat; }
+.sidec_folder_item_target_btn .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.sidec_folder_item_target_btn .setting .balloon { position: absolute; z-index: 1; top: 2.6rem; right: -2rem; display: none; width: 12.2rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; padding: 2rem 1.3rem 1.7rem; }
+.sidec_folder_item_target_btn .setting .balloon a { text-decoration: none; color: #333; }
+.sidec_folder_item_target_btn .setting .balloon a:hover { color: #44d095; }
+.sidec_folder_item_target_btn .setting .balloon .balloon_sub { color: #bbb; font-weight: bold; }
+.sidec_folder_item_target_btn .setting .balloon:before, .sidec_folder_item_target_btn .setting .balloon:after { bottom: 100%; left: 12.2rem; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; }
+.sidec_folder_item_target_btn .setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.sidec_folder_item_target_btn .setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.sidec_folder_item_target_btn .setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.sidec_folder_item_target.isOpen { background-color: #111b25; }
+.sidec_folder_item_target.isOpen .arrow { background-image: url(/img/common/arrow_close.png); }
+.sidec_msg { display: none; }
+.sidec_msg_item { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: 1.4rem 1rem 1.5rem 1.1rem; border-top: .1rem solid #262f38; color: #fff; cursor: pointer; }
+.sidec_msg_item.isActive { background: #262f38; }
+.sidec_msg_item.isNew { background: #6a8e98; }
+.sidec_msg_item_wrap { width: 100%; }
+.sidec_msg_item_head { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; margin-bottom: .2rem; }
+.sidec_msg_item_head_ttl { width: 14.5rem; font-size: 1.2rem; font-weight: bold; line-height: 1.4rem; letter-spacing: .08em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.sidec_msg_item_head_meta { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 6.8rem; }
+.sidec_msg_item_head_meta_time { color: #bbb; font-size: 1rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.sidec_msg_item_head_meta .setting { width: 1.4rem; height: 1.4rem; margin-left: .6rem; background: url(/img/common/btn_gear.png) center center no-repeat; }
+.sidec_msg_item_head_meta .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.sidec_msg_item_head_meta .setting .balloon { position: absolute; z-index: 1; top: 2.6rem; right: -2rem; display: none; width: 12.2rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; padding: 2rem 1.3rem 1.7rem; }
+.sidec_msg_item_head_meta .setting .balloon a { text-decoration: none; color: #333; }
+.sidec_msg_item_head_meta .setting .balloon a:hover { color: #44d095; }
+.sidec_msg_item_head_meta .setting .balloon .balloon_sub { color: #bbb; font-weight: bold; }
+.sidec_msg_item_head_meta .setting .balloon:before, .sidec_msg_item_head_meta .setting .balloon:after { bottom: 100%; left: 12.2rem; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; }
+.sidec_msg_item_head_meta .setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.sidec_msg_item_head_meta .setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.sidec_msg_item_head_meta .setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.sidec_msg_item_content { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.sidec_msg_item_content p { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.sidec_msg_item_content_icon { display: -webkit-flex; display: flex; width: 15.4rem; }
+.sidec_msg_item_content_icon li { position: relative; width: 2rem; height: 2rem; margin-right: .2rem; border-radius: 100%; overflow: hidden; }
+.sidec_msg_item_content_icon li img { position: absolute; width: 100%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
+.sidec_msg_item_content_from { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding-left: 1rem; }
+.sidec_msg_item_content_from .icon { position: relative; width: 2rem; height: 2rem; border-radius: 100%; margin-left: .2rem; overflow: hidden; }
+.sidec_msg_item_content_from .icon img { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; margin: auto; }
+.sidec_msg_item_content_from .plus { min-width: 1.5rem; padding-left: .3rem; color: #bbb; font-size: 1.1rem; text-align: center; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.sidec_msg_item_content_label { display: block; height: 1.5rem; width: 5.2rem; margin: .3rem 0; background-repeat: no-repeat; }
+.sidec_msg_item_content_label.question { background-image: url(/img/communication/label_question.png); }
+.sidec_msg_item_content_label.case { background-image: url(/img/communication/label_case.png); }
+.sidec_msg_item_content_label.other { background-image: url(/img/communication/label_other.png); }
+
+.com.msg { min-width: 96rem; }
+.com.msg #content { padding-left: 40rem; min-width: 96rem; max-width: 100%; }
+.com.msg .header_inner { min-width: 96rem; max-width: 100%; }
+.com.msg .headline { min-width: 96rem; max-width: 100%; padding-left: 40rem; }
+.com.msg .headline_inner { box-sizing: border-box; max-width: 100%; }
+.com.msg .headline .ttl { box-sizing: border-box; width: 100%; }
+.com.msg .headline_back { width: 100%; }
+.com.msg .footer_inner { box-sizing: border-box; padding-left: 40rem; min-width: 96rem; max-width: 100%; }
+.com.msg #sideBar { width: 40rem; }
+.com.bookmark { min-width: 96rem; }
+.com.bookmark #content { padding-left: 32rem; min-width: 96rem; max-width: 100%; }
+.com.bookmark .header_inner { min-width: 96rem; max-width: 100%; }
+.com.bookmark .headline { min-width: 96rem; max-width: 100%; padding-left: 32rem; }
+.com.bookmark .headline_inner { box-sizing: border-box; max-width: 100%; }
+.com.bookmark .headline .ttl { box-sizing: border-box; width: 100%; }
+.com.bookmark .headline_back { width: 100%; }
+.com.bookmark .footer_inner { box-sizing: border-box; padding-left: 32rem; min-width: 96rem; max-width: 100%; }
+.com.bookmark #sideBar { width: 32rem; }
+.com .ttl { padding: 0 2.9rem; }
+.com .sideRight .side_list_item_target { min-height: 2.9rem; }
+.com_header { padding: 0 2.9rem; }
+.com_header_search { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding-left: 1.7rem; margin: 0 auto; }
+.com_header_search select + .select2-container { box-sizing: border-box; min-width: 100%; max-width: 100%; font-size: 1.3rem; }
+.com_header_search select + .select2-container input { height: 3.3rem; font-size: 1.3rem; }
+.com_header_search select + .select2-container .select2-search__field { font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_header_search select + .select2-container.select2-container--open { position: relative; }
+.com_header_search select + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.com_header_search select + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.com_header_search select + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.com_header_search select + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.com_header_search select.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.com_header_search_submit { position: absolute; top: 0; bottom: 0; margin: auto; left: 0; width: 1.7rem; height: 1.7rem; background: url(/img/common/icon_search_contact.png) center center no-repeat; background-size: cover; }
+.com_header_search_submit input[type="submit"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; opacity: 0; }
+.com_header_search_field + .select2-container { box-sizing: border-box; min-width: 56.2rem; max-width: 56.2rem; font-size: 1.3rem; }
+.com_header_search_field + .select2-container input { height: 3.3rem; font-size: 1.3rem; }
+.com_header_search_field + .select2-container .select2-search__field { font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_header_search_field + .select2-container.select2-container--open { position: relative; }
+.com_header_search_field + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.com_header_search_field + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.com_header_search_field + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.com_header_search_field + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.com_header_search_field.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.com_header.search { padding: .6rem 2.9rem; }
+.com_header.search select + .select2-container { box-sizing: content-box; min-width: 100%; max-width: 100%; font-size: 1.3rem; }
+.com_header.search select + .select2-container input { height: 3.3rem; font-size: 1.3rem; }
+.com_header.search select + .select2-container.select2-container--open { position: relative; }
+.com_header.search select + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.com_header.search select + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.com_header.search select + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.com_header.search select + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.com_header.search select.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.com_header_info { display: -webkit-flex; display: flex; padding-bottom: 1.5rem; border-bottom: .1rem solid #e5e8eb; margin: 1.5rem 2.9rem 0; }
+.com_header_info_main { box-sizing: border-box; width: 38rem; padding-right: 1.9rem; border-right: .1rem solid #e5e8eb; }
+.com_header_info_main dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 0; }
+.com_header_info_main dl + dl { margin-top: 1rem; }
+.com_header_info_main dl dt { width: 7rem; font-size: 1.1rem; color: #bbb; font-weight: bold; }
+.com_header_info_main dl dd { width: 29rem; margin: 0; font-size: 1.2rem; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_info_main dl dd a { color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_info_main dl dd a:hover { color: #44d095; }
+.com_header_info_main dl dd span { margin-left: .3rem; font-size: 1.1rem; color: #bbb; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_info_meta { box-sizing: border-box; width: 24rem; padding-left: 2rem; }
+.com_header_info_meta span { display: block; font-size: .8rem; line-height: 1.2; color: #bbb; }
+.com_header_info_meta p { font-size: 1.1rem; line-height: 1.5; }
+.com_header_info_meta p + span { margin-top: .8rem; }
+.com_header_toggleWrap { display: none; padding: 1.4rem 0; border-bottom: .1rem solid #e5e8eb; margin: 0 2.9rem; line-height: 2.3rem; font-size: 1.3rem; }
+.com_header_toggleWrap.myquery { padding: 0; border: none; margin: 0; }
+.com_header_toggleTxt { padding: 2rem 0; margin: 0 2.9rem; }
+.com_header_toggleTxt + .com_header_toggleTxt { border-top: .1rem solid #e5e8eb; }
+.com_header_toggleTxt_quote { padding-left: 1.8rem; border-left: .4rem solid #bbb; margin-top: 1.2rem; line-height: 1.4; }
+.com_header_toggleTxt_quote > p { font-size: 1.3rem; line-height: 2.3rem; }
+.com_header_toggleTxt_quote_lawyer { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; width: 30rem; padding-top: 1rem; text-decoration: none; color: #333; }
+.com_header_toggleTxt_quote_lawyer:last-child { margin-bottom: .5rem; }
+.com_header_toggleTxt_quote_lawyer_icon { position: relative; width: 8rem; height: 8rem; border-radius: 100%; overflow: hidden; }
+.com_header_toggleTxt_quote_lawyer_icon img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.com_header_toggleTxt_quote_lawyer_main { width: 20.5rem; padding-bottom: .8rem; }
+.com_header_toggleTxt_quote_lawyer_name { margin: 0 0 .3rem; font-size: 1.3rem; font-weight: bold; }
+.com_header_toggleTxt_quote_lawyer_company { font-size: 1.1rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_toggleTxt_quote_lawyer_pos { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_toggleTxt_quote_lawyer_adm { margin-top: .4rem; font-size: 1rem; line-height: 1rem; color: #bbb; }
+.com_header_toggleTxt_quote_lawyer_meta { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_toggleTxt_quote_myfile { padding: 1.5rem 0; border-bottom: .1rem solid #e5e8eb; }
+.com_header_toggleTxt_quote_myfile:first-child { border-top: .1rem solid #e5e8eb; }
+.com_header_toggleTxt_quote_myfile_meta { display: block; font-size: 1.1rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_header_toggleTxt_quote_myfile_main { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.com_header_toggleTxt_quote_myfile_main_ttl { flex: 1; font-weight: bold; }
+.com_header_toggleTxt_quote_myfile_main_ttl a { text-decoration: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #333; }
+.com_header_toggleTxt_quote_myfile_main_ttl a:hover { color: #44d095; }
+.com_header_toggleTxt_quote_myfile_main_icon { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 6rem; margin-bottom: .8rem; }
+.com_header_toggleTxt_quote_myfile_main_icon > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
+.com_header_toggleTxt_quote_myfile_main_icon > a.share { margin-left: 1.5rem; background-image: url(/img/common/btn_share.png); }
+.com_header_toggleTxt_quote_myfile_main_icon > a.link { background-image: url(/img/common/btn_detail.png); }
+.com_header_addTxt { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; margin-bottom: 1rem; }
+.com_header_addTxt .label { border-radius: .2rem; padding: 0 .4rem; line-height: 1.7rem; font-size: 1rem; color: #fff; background: #44d095; }
+.com_header_addTxt .meta { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.com_header_addTxt .time { color: #bbb; font-size: 1.2rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_header_addTxt .setting { display: block; width: 1.6rem; height: 1.6rem; margin-left: 1rem; background: url(/img/common/btn_gear.png) center center no-repeat; cursor: pointer; }
+.com_header_addTxt .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.com_header_toggleBtn { display: block; border-bottom: .1rem solid #e5e8eb; margin: 0 2.9rem; text-align: center; cursor: pointer; }
+.com_header_toggleBtn.myquery { border: none; }
+.com_header_toggleBtn.myquery:before { line-height: 4.2rem; }
+.com_header_toggleBtn:before { content: "DETAIL"; display: inline-block; padding-left: .6rem; padding-right: 2.8rem; color: #bbb; font-size: 1.3rem; line-height: 3.5rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: url(/img/common/arrow_select.png) right center no-repeat; }
+.com_header_toggleBtn.isOpen:before { content: "CLOSE"; background-image: url(/img/common/arrow_select_open.png); }
+.com_header_auth { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; padding: .7rem 0; }
+.com_header_auth_icon { position: relative; display: block; width: 3rem; height: 3rem; margin-right: .5rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.com_header_auth_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.com_header_auth_name { flex: 1; margin-left: .5rem; font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_header_auth_name a { margin-right: .7rem; font-size: 1.3rem; font-weight: bold; text-decoration: none; color: #333; }
+.com_header_auth_name a:hover { color: #44d095; }
+.com_date { margin-bottom: .7rem; font-size: 1.2rem; line-height: 1.4rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; text-align: center; }
+.com_edit { padding: 0 1.9rem 1.6rem; border: .1rem solid #e5e8eb; margin: 0 1rem; background: #fff; }
+.com_edit_ttl { padding: 3.5rem 0 .5rem; border-bottom: .1rem solid #e5e8eb; margin: 0 0 2rem; font-size: 1.4rem; }
+.com_edit_select { position: relative; border-top: .1rem solid #e5e8eb; border-left: .1rem solid #e5e8eb; margin: 1rem 0; }
+.com_edit_select select { box-sizing: border-box; width: 100%; height: 3.4rem; padding: 0 2.3rem 0 1rem; }
+.com_edit_select:before { content: ""; position: absolute; top: 0; bottom: 0; right: 1.2rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
+.com_edit_select.classify { width: 13rem; }
+.com_edit_select.classify select { color: #333; }
+.com_edit_select.mini { width: 9rem; }
+.com_edit_select.short { width: 11rem; }
+.com_edit_select2 + .select2-container { box-sizing: border-box; min-width: 100%; max-width: 100%; border: .1rem solid #e5e8eb; display: block; margin: 1rem 0; position: relative; font-size: 1.3rem; }
+.com_edit_select2 + .select2-container input { height: 3.3rem; font-size: 1.3rem; }
+.com_edit_select2 + .select2-container.isOpen:after { background-image: url(/img/common/arrow_select_open.png); }
+.com_edit_select2 + .select2-container:after { content: ""; position: absolute; top: 0; bottom: 0; right: 1.1rem; width: .9rem; height: .6rem; margin: auto; background: url(/img/common/arrow_select.png) center center no-repeat; }
+.com_edit_select2 + .select2-container.select2-container--open { position: relative; }
+.com_edit_select2 + .select2-container.select2-container--open:after { background: url(/img/common/arrow_select_open.png) center center no-repeat; }
+.com_edit_select2 + .select2-container .select2-selection { box-sizing: border-box; width: 100%; height: auto; min-height: 3.3rem; border: none !important; border-radius: 0; border-left: none; padding-right: 1.8rem; vertical-align: bottom; }
+.com_edit_select2 + .select2-container .select2-selection input { margin-top: 0; padding-left: .3rem; }
+.com_edit_select2 + .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 3.3rem; }
+.com_edit_select2.first + .select2-container { border-left: .1rem solid #e5e8eb; }
+.com_edit_toggleArea { display: none; margin-bottom: 1rem; }
+.com_edit_row { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; margin-top: -1rem; }
+.com_edit_row_head { width: 12.2rem; padding-top: 1.9rem; margin: 0; font-size: 1.2rem; line-height: 1.7rem; text-align: right; }
+.com_edit_row_body { width: 36.1rem; padding-left: 1.7rem; }
+.com_edit_row_body input[type="text"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.com_edit_row_body input[type="url"] { display: block; width: 100%; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.com_edit_row_body input[type="number"] { display: block; width: 14rem; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.com_edit_row_body input[type="text"], .com_edit_row_body input[type="number"], .com_edit_row_body input[type="url"] { margin: 1rem 0; }
+.com_edit_row_body input[type="text"].short, .com_edit_row_body input[type="number"].short, .com_edit_row_body input[type="url"].short { width: 22rem; }
+.com_edit_row_body_flex { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.com_edit_row_body_flex input[type="number"] { display: block; width: 14rem; height: 3.5rem; border: .1rem solid #e5e8eb; }
+.com_sec { padding: 3.2rem 1.9rem 1.3rem; border: .1rem solid #e5e8eb; margin: 0 1rem .7rem; background: #fff; }
+.com_sec.archive { color: #bbb; }
+.com_sec.archive .com_sec_myhead:before { background: #bbb; }
+.com_sec.archive a { color: #bbb; }
+.com_sec.archive a:hover { color: #44d095; }
+.com_sec_head { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.com_sec_head_icon { position: relative; display: block; width: 3rem; height: 3rem; margin: -1rem .5rem -1rem .6rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.com_sec_head_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.com_sec_head_name { flex: 1; margin-left: .5rem; font-size: 1.1rem; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_head_name a { margin-right: .7rem; font-size: 1.3rem; text-decoration: none; font-weight: bold; color: #333; }
+.com_sec_head_name a:hover { color: #44d095; }
+.com_sec_head_blank { flex: 1; }
+.com_sec_head_meta { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 17rem; }
+.com_sec_head_meta_detail { display: block; padding-left: 2rem; color: #bbb; font-size: 1.3rem; text-decoration: none; background: url(/img/common/icon_circle_arrow_right.png) left center no-repeat; }
+.com_sec_head_meta .time { margin-right: .9rem; color: #bbb; font-size: 1.2rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_head_meta .bookmark { width: 1.6rem; height: 1.6rem; background: url(/img/common/icon_bookmark.png) center center no-repeat; }
+.com_sec_head_meta .bookmark:hover { background-image: url(/img/common/icon_bookmark-selected.png); }
+.com_sec_head_meta .bookmark.isActive { background-image: url(/img/common/icon_bookmark-selected.png); }
+.com_sec_head_meta .setting { width: 1.6rem; height: 1.6rem; margin-right: .3rem; margin-left: .5rem; background: url(/img/common/btn_gear.png) center center no-repeat; cursor: pointer; }
+.com_sec_head_meta .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.com_sec_head_meta .setting .balloon { position: absolute; z-index: 1; top: 2.6rem; right: -3rem; display: none; width: 10rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; padding: 1.5rem; }
+.com_sec_head_meta .setting .balloon a { text-decoration: none; color: #333; }
+.com_sec_head_meta .setting .balloon a:hover { color: #44d095; }
+.com_sec_head_meta .setting .balloon .balloon_sub { color: #bbb; font-weight: bold; }
+.com_sec_head_meta .setting .balloon:before, .com_sec_head_meta .setting .balloon:after { bottom: 100%; left: 9.3rem; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; }
+.com_sec_head_meta .setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.com_sec_head_meta .setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.com_sec_head_meta .setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.com_sec_head_meta .quote { margin-left: .9rem; color: #bbb; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
+.com_sec_myhead { position: relative; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding-bottom: 1rem; border-bottom: .1rem solid #e5e8eb; margin-top: -1.5rem; }
+.com_sec_myhead:before { content: ""; position: absolute; top: 0; bottom: 1rem; left: -1.9rem; width: .6rem; height: 5rem; margin: auto; background: #44d095; }
+.com_sec_myhead_icon { position: relative; display: block; width: 4rem; height: 4rem; margin-right: .6rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.com_sec_myhead_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.com_sec_myhead_name { flex: 1; margin-right: .7rem; font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_myhead_name a { font-size: 1.3rem; text-decoration: none; font-weight: bold; color: #333; }
+.com_sec_myhead_name a:hover { color: #44d095; }
+.com_sec_myhead_name .company { font-weight: bold; }
+.com_sec_myhead_blank { flex: 1; }
+.com_sec_myhead_meta { width: 17rem; }
+.com_sec_myhead_meta_box { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; margin-bottom: .3rem; }
+.com_sec_myhead_meta_box:first-child { margin-bottom: 1.1rem; }
+.com_sec_myhead_meta_detail { display: block; padding-left: 2rem; color: #bbb; font-size: 1.3rem; text-decoration: none; background: url(/img/common/icon_circle_arrow_right.png) left center no-repeat; }
+.com_sec_myhead_meta .time { margin-right: .9rem; color: #bbb; font-size: 1.2rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_myhead_meta .bookmark { width: 1.6rem; height: 1.6rem; background: url(/img/common/icon_bookmark.png) center center no-repeat; }
+.com_sec_myhead_meta .bookmark:hover { background-image: url(/img/common/icon_bookmark-selected.png); }
+.com_sec_myhead_meta .setting { width: 1.6rem; height: 1.6rem; margin-right: .3rem; margin-left: .5rem; background: url(/img/common/btn_gear.png) center center no-repeat; cursor: pointer; }
+.com_sec_myhead_meta .setting:hover { background-image: url(/img/common/btn_gear-selected.png); }
+.com_sec_myhead_meta .setting .balloon { position: absolute; z-index: 1; top: 2.6rem; right: -3rem; display: none; width: 10rem; border: .1rem solid #bbb; cursor: default; background: #fff; line-height: 2.3rem; font-size: 1.2rem; padding: 1.5rem; }
+.com_sec_myhead_meta .setting .balloon a { text-decoration: none; color: #333; }
+.com_sec_myhead_meta .setting .balloon a:hover { color: #44d095; }
+.com_sec_myhead_meta .setting .balloon .balloon_sub { color: #bbb; font-weight: bold; }
+.com_sec_myhead_meta .setting .balloon:before, .com_sec_myhead_meta .setting .balloon:after { bottom: 100%; left: 9.3rem; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; }
+.com_sec_myhead_meta .setting .balloon:before { border-color: transparent; border-bottom-color: #bbb; border-width: .7rem; margin-left: -.7rem; }
+.com_sec_myhead_meta .setting .balloon:after { border-color: transparent; border-bottom-color: #fff; border-width: .6rem; margin-left: -.6rem; }
+.com_sec_myhead_meta .setting .balloon.isOpen { display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; -webkit-flex-direction: column; flex-direction: column; }
+.com_sec_myhead_meta .quote { margin-left: .9rem; color: #bbb; font-weight: bold; text-decoration: none; font-size: 1.1rem; }
+.com_sec_myhead_meta_archive { padding-left: 1.5rem; color: #bbb; font-size: 1.1rem; line-height: 1.5rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; text-decoration: none; background: url(/img/common/icon_archive.png) left center no-repeat; }
+.com_sec_myhead_meta_archive:hover { color: #44d095; background-image: url(/img/common/icon_archive-selected.png); }
+.com_sec_myhead_meta_question { display: block; width: 1.5rem; height: 1.5rem; margin-left: .4rem; background: url(/img/setting/question_icon_circle.png) center center no-repeat; background-size: cover; }
+.com_sec_myhead_meta_question:not(.balloon):hover .balloon { display: block; }
+.com_sec_myhead_meta_question .balloon { position: absolute; top: 2.3rem; right: -1.9rem; z-index: 610; display: none; width: 15rem; padding: 1.5rem 1rem; line-height: 2.3rem; font-size: 1.2rem; color: #fff; font-weight: normal; background: #66d7db; }
+.com_sec_myhead_meta_question .balloon:before { content: ""; position: absolute; bottom: 100%; right: 2rem; height: 0; width: 0; border: .7rem solid transparent; border-bottom-color: #66d7db; margin-left: -.7rem; pointer-events: none; }
+.com_sec_info { display: -webkit-flex; display: flex; padding: 1.3rem 0; border-bottom: .1rem solid #e5e8eb; }
+.com_sec_info_meta { box-sizing: border-box; width: 18.8rem; padding-right: 4rem; border-right: .1rem solid #e5e8eb; }
+.com_sec_info_meta span { display: block; font-size: .8rem; line-height: 1.2; color: #bbb; }
+.com_sec_info_meta p { font-size: 1.1rem; line-height: 1.5; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_info_meta p + span { margin-top: .8rem; }
+.com_sec_info_field { box-sizing: border-box; width: 31.2rem; padding-left: 1.3rem; font-size: 1.1rem; }
+.com_sec_info_field_ttl { display: block; font-size: .8rem; line-height: 1.2; }
+.com_sec_info_field dl { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.com_sec_info_field dl dt { width: 12.8rem; }
+.com_sec_info_field dl dd { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; flex: 1; margin: 0; }
+.com_sec_info_field dl dd span.rec { display: block; padding-left: 1.5rem; font-size: 1rem; color: #bbb; line-height: 1.6rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_info_field dl dd span.data { display: block; padding-left: 1.5rem; font-size: 1rem; color: #bbb; line-height: 1.6rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_info_field dl dd span.rec { width: 3.1rem; background: url(/img/common/icon_medal.png) left center no-repeat; background-size: 1.1rem; }
+.com_sec_info_field dl dd span.data { width: 2.5rem; background: url(/img/common/icon_exp.png) left center no-repeat; background-size: 1.2rem; }
+.com_sec_info_field_span { width: 8.7rem; }
+.com_sec_info_field_span span { margin-right: .4rem; font-size: .8rem; color: #bbb; }
+.com_sec_myquery { padding: 1.5rem 0 2.8rem; border-bottom: .1rem solid #e5e8eb; }
+.com_sec_toggle { display: none; }
+.com_sec_toggleBtn { display: block; margin-bottom: -1.3rem; text-align: center; cursor: pointer; }
+.com_sec_toggleBtn.myquery { border: none; }
+.com_sec_toggleBtn.myquery:before { line-height: 4.2rem; }
+.com_sec_toggleBtn:before { content: "DETAIL"; display: inline-block; padding-left: .6rem; padding-right: 2.8rem; color: #bbb; font-size: 1.3rem; line-height: 3.4rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: url(/img/common/arrow_select.png) right center no-repeat; }
+.com_sec_toggleBtn.isOpen:before { content: "CLOSE"; background-image: url(/img/common/arrow_select_open.png); }
+.com_sec_reply { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; margin: 2.7rem 0 1.3rem; }
+.com_sec_reply:first-child { margin-top: 0; }
+.com_sec_reply_label { width: 3rem; height: 1.8rem; border-radius: .2rem; margin-right: 1.1rem; font-size: 1.1rem; color: #fff; line-height: 1.8rem; text-align: center; background: #44d095; }
+.com_sec_reply_label:before { content: "TO:"; }
+.com_sec_reply_icon { position: relative; display: block; width: 1.8rem; height: 1.8rem; margin-right: .5rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.com_sec_reply_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.com_sec_reply_name { flex: 1; font-size: 1.1rem; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_reply_name a { margin-right: .7rem; font-size: 1.3rem; text-decoration: none; font-weight: bold; color: #333; }
+.com_sec_reply_name a:hover { color: #44d095; }
+.com_sec_msg { padding-bottom: 1.9rem; border-bottom: .1rem solid #eee; margin: .7rem 0 1.6rem; }
+.com_sec_msg:last-child { border: none; margin-bottom: 0; }
+.com_sec_msg.myquery { margin: 0 0 .3rem; padding: 1.6rem 0; border-top: .1rem solid #eee; border-bottom: none; }
+.com_sec_msg.myquery:first-child { border: none; }
+.com_sec_msg_content { padding-left: 4.8rem; font-size: 1.3rem; line-height: 2.3rem; }
+.com_sec_msg_content.myquery { padding-left: 3.8rem; margin-top: 1rem; }
+.com_sec_msg_auth { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding-left: 4.5rem; margin-top: 1.4rem; color: #bbb; font-size: 1.1rem; }
+.com_sec_msg_auth.myquery { padding-left: 3.5rem; }
+.com_sec_msg_auth_icon { position: relative; width: 1.8rem; height: 1.8rem; border-radius: 100%; background: #eee; overflow: hidden; }
+.com_sec_msg_auth_icon img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; margin: auto; }
+.com_sec_msg_auth_name { max-width: 36rem; margin-left: .7rem; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_msg_auth_name span { margin-right: .7rem; font-weight: bold; }
+.com_sec_msg_auth_time { width: 5.7rem; text-align: right; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_msg_quote { padding-left: 1.8rem; border-left: .4rem solid #bbb; margin: 1.2rem 0 0 5rem; }
+.com_sec_msg_quote.myquery { margin-left: 4rem; }
+.com_sec_msg_quote > p { font-size: 1.3rem; line-height: 2.3rem; }
+.com_sec_msg_quote_lawyer { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; width: 30rem; padding-top: 1rem; text-decoration: none; color: #333; }
+.com_sec_msg_quote_lawyer:last-child { margin-bottom: .5rem; }
+.com_sec_msg_quote_lawyer_icon { position: relative; width: 8rem; height: 8rem; border-radius: 100%; overflow: hidden; }
+.com_sec_msg_quote_lawyer_icon img { position: absolute; width: 100%; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.com_sec_msg_quote_lawyer_main { width: 20.5rem; padding-bottom: .8rem; }
+.com_sec_msg_quote_lawyer_name { margin: 0 0 .3rem; font-size: 1.3rem; font-weight: bold; }
+.com_sec_msg_quote_lawyer_company { font-size: 1.1rem; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_msg_quote_lawyer_pos { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_msg_quote_lawyer_adm { margin-top: .4rem; font-size: 1rem; line-height: 1rem; color: #bbb; }
+.com_sec_msg_quote_lawyer_meta { font-size: 1.1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.com_sec_msg_quote_myfile { padding: 1.5rem 0; border-bottom: .1rem solid #e5e8eb; }
+.com_sec_msg_quote_myfile:first-child { border-top: .1rem solid #e5e8eb; }
+.com_sec_msg_quote_myfile_meta { display: block; font-size: 1.1rem; color: #bbb; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; }
+.com_sec_msg_quote_myfile_main { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
+.com_sec_msg_quote_myfile_main_ttl { flex: 1; font-weight: bold; }
+.com_sec_msg_quote_myfile_main_ttl a { text-decoration: none; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #333; }
+.com_sec_msg_quote_myfile_main_ttl a:hover { color: #44d095; }
+.com_sec_msg_quote_myfile_main_icon { display: -webkit-flex; display: flex; -webkit-justify-content: flex-end; justify-content: flex-end; -webkit-align-items: center; align-items: center; width: 6rem; margin-bottom: .8rem; }
+.com_sec_msg_quote_myfile_main_icon > a { width: 1.6rem; height: 1.6rem; background-size: contain; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
+.com_sec_msg_quote_myfile_main_icon > a.share { margin-left: 1.5rem; background-image: url(/img/common/btn_share.png); }
+.com_sec_msg_quote_myfile_main_icon > a.link { background-image: url(/img/common/btn_detail.png); }
+.com_post { position: relative; border: .1rem solid #e5e8eb; background: #fff; }
+.com_post textarea { height: 16rem; padding: 3.2rem 3.5rem 2.8rem; line-height: 2.1rem; resize: none; }
+.com_post_switch { position: absolute; top: 1.1rem; right: 1rem; width: 1.4rem; height: 1.4rem; background: url(/img/communication/btn_post_large.png) center center no-repeat; cursor: pointer; }
+.com_post_switch:hover { background-image: url(/img/communication/btn_post_large_on.png); opacity: .7; }
+.com_post_switch.isActive { background-image: url(/img/communication/btn_post_large_on.png); }
+.com_post_bottom { display: -webkit-flex; display: flex; }
+.com_post_btn { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; flex: 1; border-top: .1rem solid #e5e8eb; margin: 0 1rem; }
+.com_post_btn_add { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; width: 12.5rem; margin-left: 2rem; }
+.com_post_btn_add > a, .com_post_btn_add > span { width: 2.2rem; height: 2.2rem; cursor: pointer; }
+.com_post_btn_add > a:hover, .com_post_btn_add > span:hover { opacity: .7; }
+.com_post_btn_add > a.send, .com_post_btn_add > span.send { width: 2.6rem; background: url(/img/common/icon_to.png) center center no-repeat; }
+.com_post_btn_add > a.file, .com_post_btn_add > span.file { position: relative; background: url(/img/common/icon_clip.png) center center no-repeat; overflow: hidden; }
+.com_post_btn_add > a.file input[type="file"], .com_post_btn_add > span.file input[type="file"] { position: absolute; top: 0; left: 0; width: 100%; right: 100%; opacity: 0; }
+.com_post_btn_add > a.myfile, .com_post_btn_add > span.myfile { background: url(/img/common/icon_contact.png) center center no-repeat; }
+.com_post_btn_add > a.conn, .com_post_btn_add > span.conn { background: url(/img/common/icon_team.png) center center no-repeat; }
+.com_post_btn_enter { display: none; }
+.com_post_btn_enter:checked + label:after { opacity: 1; }
+.com_post_btn_enter + label { position: relative; padding-left: 2rem; color: #bbb; font-size: 1.1rem; line-height: 2rem; }
+.com_post_btn_enter + label:before, .com_post_btn_enter + label:after { content: ""; position: absolute; top: 0; bottom: 0; margin: auto; }
+.com_post_btn_enter + label:before { left: 0; width: 1rem; height: 1rem; border: .1rem solid #bbb; }
+.com_post_btn_enter + label:after { left: .2rem; width: .8rem; height: .8rem; opacity: 0; background: #44d095; transition: opacity .1s; }
+.com_post_submit { width: 10rem; height: 3.6rem; font-size: 1.2rem; color: #fff; text-align: center; line-height: 3.6rem; font-family: "Gill Sans", "Gill Sans MT", Lato, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic",sans-serif; background: #44d095; }
+
+.select2_prof { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.select2_prof_icon { position: relative; width: 3rem; height: 3rem; border-radius: 100%; margin-right: 1rem; overflow: hidden; }
+.select2_prof_icon img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; margin: auto; }
+.select2_prof_name { flex: 1; font-size: 1.3rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.select2_prof_name span { margin-right: .6rem; font-weight: bold; }
